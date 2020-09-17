@@ -1,0 +1,257 @@
+{
+    "peliculas":[
+                    {
+                        "titulo": "American pie: El reencuentro",
+                        "poster": "../static/peliculas/american-pie.jpeg",
+                        "director": "Jon Hurwitz",
+                        "precio": 22.5,
+                        "categoria": "Comedia",
+                        "anno": 2012,
+                        "actores": [
+                                        {
+                                            "nombre": "Jason Biggs",
+                                            "personaje": "Jim Levenstein"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Sean William Scott",
+                                            "personaje": "Steve Stifler"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Tara Reid",
+                                            "personaje": "Victoria Lathum"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Alyson Hannigan",
+                                            "personaje": "Michelle Flaherty"
+                                        }
+                        ],
+                        "sinopsis" : "Un grupo de viejos amigos vuelven a reunirse. Jim (Jason Biggs) y Michelle (Alyson Hannigan) siguen felizmente casados, aunque hay una vecina que se ha enamorado de él. Además, la cinta sexual con Nadia se ha convertido en uno de los vídeos más vistos de Youtube. Oz (Chris Klein) vive en una mansión de Malibú, pero su novia parece sólo interesada por su dinero. Mientras tanto, la vida de Stifler (Seann William Scott) sigue siendo un desastre. Heather (Mena Suvari) sale con un cirujano que intenta parecer más joven, y Finch (Eddie Kaye Thomas), que ha viajado mucho, intenta ligar con Trish, una camarera amiga de Michelle.",
+                        "valoracion": 3,
+                        "criticas" : "Lo más interesante de «American Pie: el reencuentro» es que su premisa –reunir a la pandilla de salidos del original trece años después de dejar de ser vírgenes– funciona como un test de madurez para el espectador que disfrutó de los onanismos pasteleros de una saga que tuvo el honor de haber adaptado las constantes de la comedia juvenil gamberra estilo «Porky's» a la era Clinton. ¿Coincide el desencanto de los personajes, ahora padres con hijos, estrellas de la televisión basura, arquitectos vestidos de amas de casa u hombres de mundo, con el desencanto del que fue su público potencial? ¿A quién van dirigidos los gags groseros, a los que quieren ejercitar el músculo de la nostalgia o a los nuevos adeptos al género? La película es demasiado pacata para los primeros y demasiado lastimera para los segundos. Su autoconsciencia es en verdad crepuscular: su verdadero tema es el paso del tiempo y cómo erosiona la mirada a la medida de la erosión de la experiencia de los personajes. Comprobar, en fin, que todo el festival de flujos y eyaculaciones de esta singular franquicia no tenía otro objetivo que celebrar la domesticación del impulso erótico y la gamberrada escatológica."
+                    },
+                    
+                    {
+                        "titulo": "Los vengadores",
+                        "poster": "../static/peliculas/avengers.jpeg",
+                        "director": "Joss Whedon",
+                        "precio": 13.4,
+                        "categoria": "Accion",
+                        "anno": 2012,
+                        "actores": [
+                                        {
+                                            "nombre": "Scarlett Johansson",
+                                            "personaje": "Viuda Negra"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Chris Evans",
+                                            "personaje": "Capitan America"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Robert Downey Jr.",
+                                            "personaje": "Iron Man"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Chris Hemsworth",
+                                            "personaje": "Thor"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Mark Ruffalo",
+                                            "personaje": "Hulk"
+                                        }
+                        ],
+                        "sinopsis" : "Cuando un enemigo inesperado surge como una gran amenaza para la seguridad mundial, Nick Fury, director de la Agencia SHIELD, decide reclutar a un equipo para salvar al mundo de un desastre casi seguro. Adaptación del cómic de Marvel Los Vengadores, el legendario grupo de superhéroes formado por Ironman, Hulk, Thor y el Capitán América entre otros.",
+                        "valoracion": 4,
+                        "criticas" : "En Los Vengadores no hay poesía, locura, ni mirada personal, pero Whedon ha armado el tebeo Marvel definitivo para multisalas, sirviéndose de una estructura impecable que dosifica —y equilibra— los clímax de acción y de unos diálogos pasados por la esmeriladora del ingenio y el guiño cómplice. La película alcanza su techo en un asombroso plano secuencia —o, más bien, su simulacro digital— que funciona como la más hiperbólica página desplegable de un comic-book imposible: una pirueta formal que saca pecho relacionando a los personajes principales en plena acción histérica. Quienes temían por la disneyización de la franquicia pueden descansar tranquilos: esto es Marvel puro —que, por cierto, nunca fue necesariamente adulto—. Lo mismo de siempre, mejor que nunca."
+                    },
+                    
+                    {
+                        "titulo": "Efecto mariposa",
+                        "poster": "../static/peliculas/efecto-mariposa.jpeg",
+                        "director": "Eric Bress",
+                        "precio": 15,
+                        "categoria": "Drama",
+                        "anno": 2004,
+                        "actores": [
+                                        {
+                                            "nombre": "Ashton Kutcher",
+                                            "personaje": "Evan Treborn"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Amy Smart",
+                                            "personaje": "Kayleigh Miller"
+                                        }
+                        ],
+                        "sinopsis" : "Evan Treborn, un joven que se está esforzando por superar unos dolorosos recuerdos de su infancia, descubre una técnica que le permite viajar atrás en el tiempo y ocupar su cuerpo de niño para poder cambiar el curso de su dolorosa historia. Sin embargo también descubre que cualquier mínimo cambio en el pasado altera enormemente su futuro.",
+                        "valoracion": 5,
+                        "criticas" : "Si Supermán daba vueltas a la Tierra para ir hacia atrás en el tiempo, el guapo de Kutcher simplemente tiene que concentrarse mientras lee sus diarios. Pero una vez en el pasado no juega a la lotería, sino que ciertamente hace de supermán local: se preocupa de corregir los errores cometidos para mejorar su futuro y el de sus amigos. Lo cierto es que, además, si analizamos la película detenidamente, el asunto no era otro que el de tener los libritos a mano, pero Bress y Gruber, estos dos avispados directores novatos, nos lo envuelven en un thriller sofisticado y aparentemente complejo... que hay que reconocer que se hace bastante entretenido. Siempre que no le hagas tu propio efecto mariposa a la película y la revises (en su segunda visión pierde mucho, pues pierde su efecto sorpresa, su mayor baza). Un intrigante pasarratos, no recomendable para los niños, que gustó especialmente a los adolescentes (fue nº1 en la taquilla americana). Provoca división de opiniones, pero si no sabes qué coger en el videoclub, y te gusta el cine comercial, ésta puede ser una buena elección."
+                    },
+                    
+                    
+                    {
+                        "titulo": "Interestellar",
+                        "poster": "../static/peliculas/interestelar.jpeg",
+                        "director": "Christopher Nolan",
+                        "precio": 9.5,
+                        "categoria": "Drama",
+                        "anno": 2014,
+                        "actores": [
+                                        {
+                                            "nombre": "Matthew McConaughey",
+                                            "personaje": "Joseph Cooper"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Anne Hathaway",
+                                            "personaje": "Amelia Brand"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Jessica Chastain",
+                                            "personaje": "Murph"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Michael Caine",
+                                            "personaje": "Profesor Brand"
+                                        }
+                        ],
+                        "sinopsis" : "Al ver que la vida en la Tierra está llegando a su fin, un grupo de exploradores dirigidos por el piloto Cooper (McConaughey) y la científica Amelia (Hathaway) emprende una misión que puede ser la más importante de la historia de la humanidad: viajar más allá de nuestra galaxia para descubrir algún planeta en otra que pueda garantizar el futuro de la raza humana.",
+                        "valoracion": 5,
+                        "criticas" : "'Interstellar', el último prodigio del mejor alumno de Stanley Kubrick (y quizá también de Spielberg desde ahora), es fundamentalmente un agujero de gusano (y, por favor, no me miren así). Lo explica uno de los personajes de la película con un folio en la mano. Imaginemos que queramos ir de un punto a otro de un espacio plano. Hay dos opciones: o trazamos una necesariamente larga línea recta o, mucho más rápido, doblamos la hoja hasta hacer coincidir los dos puntos de marras. 'Voilà': ante ustedes, y simplificando mucho eso sí, una anomalía espacio temporal con un nombre extraño. 'Agujero de gusano' lo llaman. Pues bien, gran parte del cine de Christopher Nolan es fundamentalmente eso: un declarado intento por unir, sin atender al protocolo de la intuitiva geometría euclidiana, los dos extremos cada vez más irreconciliablemente separados de eso llamado cine. ¿Cómo hacer cine del espectacular, del vibrante, del épico, sin renunciar al cada vez más raro privilegio de un guión bien redactado? ¿Cómo reescribir el esquematismo del cine de género desde la reivindicación entusiasta de la autoría? ¿Cómo repensar las coordenadas espacio-temporales del propio cine hasta volver a ese punto cero de la ciencia-ficción que inauguró '2001 una odisea del espacio'? Basta doblar el folio. 'Agujero de gusano' se podría llamar. La respuesta a tanta pregunta es una película absorbente, hipnótica y disimuladamente tramposa entregada al exorcismo de las pupilas. Desde el primer fotograma, la idea es convertir la superficie de la pantalla en el escenario de un sueño. Se trata de transformar la sala de cine en ese mismo agujero negro de antes para sencillamente transportar al espectador, y en un instante de cine inteligente y espectacular, al otro lado."
+                    },
+                    
+                    {
+                        "titulo": "La Monja",
+                        "poster": "../static/peliculas/la-monja.jpeg",
+                        "director": "Corin Hardy",
+                        "precio": 1,
+                        "categoria": "Terror",
+                        "anno": 2018,
+                        "actores": [
+                                        {
+                                            "nombre": "Taissa Farmiga",
+                                            "personaje": "Hermana Irene"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Demian Bichir",
+                                            "personaje": "Padre Burke"
+                                        }
+                        ],
+                        "sinopsis" : "Cuando una joven monja se suicida en una abadía de clausura en Rumanía, un sacerdote experto en posesiones demoniacas y una novicia a punto de tomar sus votos, son enviados por el Vaticano para investigar. Juntos descubren el profano secreto de la orden. Arriesgando no solo sus propias vidas sino su fe y hasta sus almas, se enfrentan a una fuerza maléfica en forma de monja demoníaca, en una abadía que se convierte en un campo de batalla de horror entre los vivos y los condenados.... Spin-off de la película de terror de 2016 'The Conjuring 2'. Producida por Atomic Monster, productora del director especializado en el género de terror, James Wan.",
+                        "valoracion": 1,
+                        "criticas" : "Ya puede presumir de spin-off la diabólica religiosa de los Expedientes Warren (cuyo prólogo y epílogo enlazan con tan superpoblada saga), tarea que ha sido encomendada a Corin Hardy, que tan buena impresión dejó con su opera prima The Hallow, y al guionista Gary Dauberman, responsable de la exitosa adaptación de It, además de dar cuerda narrativa a la muñeca Annabelle, otro hit de la factoría de James Wan. Gente de plena confianza en el género, como vemos, que han optado hábilmente por darle una capa de goticismo old school y europeísmo profundo a las maldiciones ancestrales de una abadía rumana donde acuden un sacerdote y una novicia (Bichir y Farmiga, metidos hasta las orejas en sus papeles) para investigar y sellar las grietas malignas de marras.Podría decirse que Hardy y Dauberman han confiado demasiado en el impacto visual de sus personajes y sus localizaciones a la hora de urdir una trama no demasiado exigente, aunque se agradecen ecos literarios clásicos a Matthew Lewis, Sheridan Le Fanu o el Poe del enterramiento prematuro. Pero un constante encadenado de sustos ultradecibélicos, hallazgos ya presentes en otras entregas de la casa y sombras más o menos telegrafiadas (más comedia involuntaria por parte del “franchute”) nos condenan a aguardar el clímax final, potente ma non troppo. En definitiva, una de las piezas menos brillantes del relicario The Conjuring."
+                    },
+                    
+                    {
+                        "titulo": "Los chicos del coro",
+                        "poster": "../static/peliculas/los-chicos-del-coro.jpeg",
+                        "director": "Christophe Barratier",
+                        "precio": 3,
+                        "categoria": "Drama",
+                        "anno": 2004,
+                        "actores": [
+                                        {
+                                            "nombre": "Jean-Baptiste Maunier",
+                                            "personaje": "Pierre Morhange"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Gerard Jugnot",
+                                            "personaje": "Clement Mathieu"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Kad Merad",
+                                            "personaje": "Chabert"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Francois Berleand",
+                                            "personaje": "Rachin"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Maxence Perrin",
+                                            "personaje": "Pepinot"
+                                        }
+                        ],
+                        "sinopsis" : "En 1948 Clément Mathieu, profesor de música desempleado, acepta un puesto como profesor vigilante en un internado de reeducación de menores. El sistema represivo aplicado por el director conmociona a Mathieu. Enseñándoles música y canto coral a estos niños tan difíciles, Mathieu transformará sus vidas cotidianas.",
+                        "valoracion": 2,
+                        "criticas" : "Obtuvo un enorme éxito de público en Francia -pasaron por taquilla más de 8 millones de espectadores-, siendo ademas la candidata a los Oscar del país galo en la categoría de mejor película de habla no inglesa."
+                    },
+                    
+                    {
+                        "titulo": "Los increibles 2",
+                        "poster": "../static/peliculas/los-increibles-2.jpeg",
+                        "director": "Brad Bird",
+                        "precio": 6.3,
+                        "categoria": "Aventuras",
+                        "anno": 2018,
+                        "actores": [
+                                        {
+                                            "nombre": "Dustin Hoffman",
+                                            "personaje": "Raymond Babbitt"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Tom Cruise",
+                                            "personaje": "Charlie Babbitt"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Valeria Golino",
+                                            "personaje": "Susanna"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Gerald R. Molen",
+                                            "personaje": "Dr. Bruner"
+                                        }
+                        ],
+                        "sinopsis" : "Secuela de los increibles. Helen tiene que liderar una campaña para que los superhéroes regresen, mientras Bob vive su vida normal con Violet, Dash y el bebé Jack-Jack —cuyos superpoderes descubriremos—. Su misión se va a pique cuando aparece un nuevo villano con un brillante plan que lo amenaza todo. Pero los Parr no se amedrentarán y menos teniendo a Frozone de su parte.",
+                        "valoracion": 4,
+                        "criticas" : "Todo resulta tan calculado, tan repensado, tan sobrescrito, que es imposible no sufrir un ligero ataque de nostalgia. Quizá, ahora lo entendemos, la ansiedad infantil no sea buena consejera. La idea es ofrecer una vuelta de tuerca a la historia que todos memorizamos como uno de los momentos culmen de Pixar. Lo complicado, nos decía la primera película, es ser normal. Es más, la normalidad no es más que un efecto secundario del consumo exagerado de publicidad. Pues bien, la continuación insiste, a la vez que incluye reflexiones sobre la crisis de la masculinidad, el heroísmo de la paternidad y hasta las neurosis de la infancia. Todo disfrutable, todo perfecto y, sin embargo, excesivo en su perfección. Basta con un Petit-suisse. Son demasiado grasos."
+                    },
+					{
+                    	"titulo": "Rain Man",
+                        "poster": "../static/peliculas/rain-man.jpeg",
+                        "director": "Barry Levinson",
+                        "precio": 15.25,
+                        "categoria": "Drama",
+                        "anno": 1988,
+                        "actores": [
+                                        {
+                                            "nombre": "Dustin Hoffman",
+                                            "personaje": "Raymond Babbitt"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Tom Cruise",
+                                            "personaje": "Charlie Babbitt"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Valeria Golino",
+                                            "personaje": "Susanna"
+                                        },
+                                        
+                                        {
+                                            "nombre": "Gerald R. Molen",
+                                            "personaje": "Dr. Bruner"
+                                        }
+                        ],
+                        "sinopsis" : "Charlie Babbitt (Tom Cruise), un joven egoísta que espera heredar la fortuna de su difunto padre, se entera de que el beneficiario es su hermano Raymond (Dustin Hoffman), un autista al que no conoce, porque ha vivido siempre recluido en un centro especial. Ambos harán un largo viaje a través de los Estados Unidos. Al principio, a Charlie, el extravagante comportamiento de su hermano lo irrita y lo desconcierta, pero, poco a poco, aprenderá a conocerlo y a quererlo.",
+                        "valoracion": 3,
+                        "criticas" : "Sabido es que los dramas con enfermedades o discapacidades siempre han hecho mella en los corazones de la academia de Hollywood. Especialmente a la hora de repartir Oscars de interpretación sobrevalorados... pero sinceramente creo que éste no es el caso. La película no es una obra maestra, ni mucho menos, pero la correcta historia de un joven ambicioso (excelente Cruise) que se tiene que hacer cargo de su hermano autista (o sea, puro argumento de telefilm), se vio engrandecida por una actuación magistral de Dustin Hoffman, que no hizo sino apuntalar aún más su extraordinaria carrera. Hay quien dijo que la interpretación de Hoffman era fácil. Tenían razón: hoy, décadas después, cuando veo Rain Man todavía pienso que este pequeño gran actor era, en esa película, verdaderamente autista."
+                    }
+                ]
+}

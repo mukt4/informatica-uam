@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="stopwatch_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="stopwatch_pkg" />
+            <top_module name="stopwatch_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="486500001fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject type="logic" fp_name="/stopwatch_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/stopwatch_tb/startStop">
+      <obj_property name="ElementShortName">startStop</obj_property>
+      <obj_property name="ObjectShortName">startStop</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/stopwatch_tb/lap">
+      <obj_property name="ElementShortName">lap</obj_property>
+      <obj_property name="ObjectShortName">lap</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/stopwatch_tb/setToZero">
+      <obj_property name="ElementShortName">setToZero</obj_property>
+      <obj_property name="ObjectShortName">setToZero</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/stopwatch_tb/endSimulation">
+      <obj_property name="ElementShortName">endSimulation</obj_property>
+      <obj_property name="ObjectShortName">endSimulation</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/stopwatch_tb/uut/s_EnableCount0">
+      <obj_property name="ElementShortName">s_EnableCount0</obj_property>
+      <obj_property name="ObjectShortName">s_EnableCount0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/stopwatch_tb/uut/s_EnableCount1">
+      <obj_property name="ElementShortName">s_EnableCount1</obj_property>
+      <obj_property name="ObjectShortName">s_EnableCount1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/stopwatch_tb/uut/s_EnableCount2">
+      <obj_property name="ElementShortName">s_EnableCount2</obj_property>
+      <obj_property name="ObjectShortName">s_EnableCount2</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/stopwatch_tb/uut/s_CountTenths">
+      <obj_property name="ElementShortName">s_CountTenths[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_CountTenths[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/stopwatch_tb/uut/s_CountSeconds">
+      <obj_property name="ElementShortName">s_CountSeconds[3:0]</obj_property>
+      <obj_property name="ObjectShortName">s_CountSeconds[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/stopwatch_tb/uut/s_CountTens">
+      <obj_property name="ElementShortName">s_CountTens[2:0]</obj_property>
+      <obj_property name="ObjectShortName">s_CountTens[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/stopwatch_tb/uut/i_stopwatch_fsm/state">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+</wave_config>

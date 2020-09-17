@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+	<div class = "informacion-peliculas-carrito">
+		{% if session['carrito'] %}
+			{% if session['carrito']|length != 0 %}
+				{% for pelicula in peliculas %}
+					<div class = "galeria">
+						<div class = "galeria-imagen">
+		                    <a target="_top" href= "info/{{ pelicula.pelicula.titulo }}">
+		                        <img class ="imagen-pelicula" src = "static/peliculas/{{ pelicula.pelicula.imagen }}"  alt = {{ pelicula.pelicula.movietitle }} width="600" height="400">				                        
+		                    </a>
+							<a href= "/info/{{ pelicula.producto.prod_id }}/del-carrito">
+								 <img class ="imagen-pelicula-cross" src = "static/aplicacion/cross.png">
+							</a>
+		                    <div class="desc"><p>Titulo: {{ pelicula.pelicula.movietitle }}<p>Product: {{ pelicula.producto.description }}</p>Cantidad: {{ pelicula.cantidad }}</div>
+	                    </div>
+                	</div>
+				{% endfor %}
+			{% else %}
+				<label>
+					Ey, por que no pruebas a a&ntilde;adir unas cuantas peliculas
+				</label>
+			{% endif %}
+		{% else %}
+			<label class = "carrito-vacio">
+				Ey, por que no pruebas a a&ntilde;adir unas cuantas peliculas
+			</label>
+		{% endif %}
+	</div>
+
+	{% if session['carrito'] %}
+		{% if session['carrito']|length %}
+			<div class = "informacion-peliculas-confirmacion">
+				{% if session['user'] %}
+					<button class = "confirmacion-button" onclick="location.href='/confirmacion'">Confirmar compra</button>
+					{% if session['precio'] %}
+						<a class = "carrito-precio">
+							Precio total: {{ session['precio'] }}$
+						</a>
+					{% endif %}
+				{% else %}
+					<label class="texto-registro">
+						Para poder confirmar la compra es necesario que antes inicies sesion, perro no te preocupes, guardaremos tu carrito ;)
+					</label>
+				{% endif %}
+			</div>
+		{% endif %}
+	{% endif %}
+{% endblock %}

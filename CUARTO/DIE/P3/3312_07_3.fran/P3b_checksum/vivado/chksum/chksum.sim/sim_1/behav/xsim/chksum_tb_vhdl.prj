@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../rtl/chksum.vhd" \
+"../../../../../../sim/tb_fifo_pkg.vhd" \
+"../../../../../../sim/chksum_tb.vhd" \
+
+# Do not sort compile order
+nosort

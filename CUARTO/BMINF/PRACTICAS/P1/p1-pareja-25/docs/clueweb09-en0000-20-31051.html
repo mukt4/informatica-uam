@@ -1,0 +1,678 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Date: Thu, 08 Jan 2009 04:20:33 GMT
+Server: Apache/2.2.9 (Unix)
+Connection: close
+Last-Modified: Thu, 08 Jan 2009 04:00:26 GMT
+ETag: "c9a2fa-10206-45ff0ae2fca80"-gzip
+Content-Length: 65536
+
+
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE- 2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+    <LINK href="http://activemq.apache.org/styles/site.css" rel="stylesheet" type="text/css">
+    <LINK href="http://activemq.apache.org/styles/type-settings.css" rel="stylesheet" type="text/css">
+    <STYLE type="text/css">
+      .maincontent { overflow:hidden; }
+    </STYLE>
+    <!--[if IE]>
+    <style type="text/css">
+      .maincontent { width:100%; }
+    </style>
+    <![endif]-->
+
+    <TITLE>
+    Apache ActiveMQ -- Getting Started
+    </TITLE>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8"></HEAD>
+<BODY>
+<DIV class="white_box">
+<DIV class="header">
+  <DIV class="header_l">
+    <DIV class="header_r">
+    </DIV>
+  </DIV>
+</DIV>
+<DIV class="content">
+  <DIV class="content_l">
+    <DIV class="content_r">
+      <DIV>
+
+<!-- Banner -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <DIV id="asf_logo">
+	<DIV id="activemq_logo">
+            <A style="float:left; width:280px;display:block;text-indent:-5000px;text-decoration:none;line-height:60px; margin-top:10px; margin-left:100px;" href="http://activemq.apache.org/" title="The most popular and powerful open source Message Broker">ActiveMQ</A>
+            <A style="float:right; width:210px;display:block;text-indent:-5000px;text-decoration:none;line-height:60px; margin-top:15px; margin-right:10px;" href="http://www.apache.org/" title="The Apache Software Foundation">ASF</A>
+	</DIV>
+        </DIV>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        <DIV class="top_red_bar">
+          <DIV id="site-breadcrumbs">
+<A href="index.html" title="Apache ActiveMQ">Apache ActiveMQ</A>&nbsp;&gt;&nbsp;<A href="using-activemq.html" title="Using ActiveMQ">Using ActiveMQ</A>&nbsp;&gt;&nbsp;<A href="" title="Getting Started">Getting Started</A>
+          </DIV>
+          <DIV id="site-quicklinks">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <P><A href="download.html" title="Download">Download</A> &#124; <SPAN class="nobr"><A href="http://activemq.apache.org/maven/activemq-core/apidocs/" title="Visit page outside Confluence" rel="nofollow">JavaDocs<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN> <A href="javadocs.html" title="JavaDocs">More...</A> &#124; <A href="source.html" title="Source">Source</A> &#124; <A href="discussion-forums.html" title="Discussion Forums">Forums</A> &#124; <A href="support.html" title="Support">Support</A></P>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </DIV>
+        </DIV>
+
+	<TABLE border="0">
+	<TBODY>
+        <TR>
+        <TD valign="top" width="100%">
+          <DIV class="wiki-content maincontent">
+          <H2><A name="GettingStarted-Introduction"></A>Introduction</H2>
+
+<P>This document describes how to install and configure ActiveMQ 4.x/5.x for both Unix and Windows' platforms.</P>
+
+<H2><A name="GettingStarted-DocumentOrganization"></A>Document Organization</H2>
+
+<P>The Getting Started Guide for ActiveMQ 4.x document contains the following sections:</P>
+<UL>
+	<LI><A href="#GettingStarted-Introduction" title="Introduction on Getting Started">Introduction</A></LI>
+	<LI><A href="#GettingStarted-DocumentOrganization" title="Document Organization on Getting Started">Document Organization</A></LI>
+	<LI><A href="#GettingStarted-PreInstallationRequirements" title="Pre-Installation Requirements on Getting Started">Pre&#45;Installation Requirements</A></LI>
+	<LI><A href="#GettingStarted-InstallationProcedureforWindows" title="Installation Procedure for Windows on Getting Started">Installation Procedure for Windows</A>
+	<UL>
+		<LI><A href="#GettingStarted-WindowsBinaryInstallation" title="Windows Binary Installation on Getting Started">Windows Binary Installation</A></LI>
+		<LI><A href="#GettingStarted-WindowsSourceInstallation" title="Windows Source Installation on Getting Started">Windows Source Installation</A></LI>
+		<LI><A href="#GettingStarted-WindowsDevelopers%2527Release" title="Windows Developers' Release on Getting Started">Windows Developers' Release</A></LI>
+	</UL>
+	</LI>
+	<LI><A href="#GettingStarted-InstallationProcedureforUnix" title="Installation Procedure for Unix on Getting Started">Installation Procedure for Unix</A>
+	<UL>
+		<LI><A href="#GettingStarted-UnixBinaryInstallation" title="Unix Binary Installation on Getting Started">Unix Binary Installation</A></LI>
+		<LI><A href="#GettingStarted-UnixSourceInstallation" title="Unix Source Installation on Getting Started">Unix Source Installation</A></LI>
+		<LI><A href="#GettingStarted-UnixDevelopers%2527Release" title="Unix Developers' Release on Getting Started">Unix Developers' Release</A></LI>
+	</UL>
+	</LI>
+	<LI><A href="#GettingStarted-StartingActiveMQ" title="Starting ActiveMQ on Getting Started">Starting ActiveMQ</A></LI>
+	<LI><A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A></LI>
+	<LI><A href="#GettingStarted-MonitoringActiveMQ" title="Monitoring ActiveMQ on Getting Started">Monitoring ActiveMQ</A></LI>
+	<LI><A href="#GettingStarted-StoppingActiveMQ" title="Stopping ActiveMQ on Getting Started">Stopping ActiveMQ</A></LI>
+	<LI><A href="#GettingStarted-ConfiguringActiveMQ" title="Configuring ActiveMQ on Getting Started">Configuring ActiveMQ</A></LI>
+</UL>
+
+
+<H2><A name="GettingStarted-PreInstallationRequirements"></A>Pre-Installation Requirements</H2>
+
+<P><B>Hardware:</B></P>
+<UL>
+	<LI>33 MB of free disk space for the ActiveMQ 4.x binary distribution.</LI>
+	<LI>200 MB of free disk space for the ActiveMQ 4.x source or developer's distributions.</LI>
+</UL>
+
+
+<P><B>Operating Systems:</B></P>
+<UL>
+	<LI>Windows: Windows XP SP2, Windows 2000.</LI>
+	<LI>Unix: Ubuntu Linux, Powerdog Linux, MacOS, AIX, HP-UX, Solaris, or any Unix platform that supports Java.</LI>
+</UL>
+
+
+<P><B>Environment:</B></P>
+<UL>
+	<LI>Java Developer Kit (JDK) 1.4.x or greater for deployment and 1.5.x (Java 5) for compiling/building.</LI>
+	<LI>The JAVA_HOME environment variable must be set to the directory where the JDK is installed, e.g., <TT>c:\Program Files\jsdk.1.4.2-09</TT>.</LI>
+	<LI>Maven 1.0.2 or greater (required when installing source or developer's releases).</LI>
+	<LI><SPAN class="nobr"><A href="http://cvs.apache.org/repository/geronimo-spec/jars/" title="Visit page outside Confluence" rel="nofollow">JARs<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN> that will be used must be added to the classpath.</LI>
+</UL>
+
+
+<H2><A name="GettingStarted-InstallationProcedureforWindows"></A>Installation Procedure for Windows</H2>
+
+<P>This section of the Getting Started Guide explains how to install binary and source distributions of ActiveMQ on a Windows system.</P>
+
+<H4><A name="GettingStarted-WindowsBinaryInstallation"></A>Windows Binary Installation</H4>
+
+<P>This procedure explains how to download and install the binary distribution on a Windows system.</P>
+<OL>
+	<LI>From a browser, navigate to <SPAN class="nobr"><A href="http://activemq.apache.org/" title="Visit page outside Confluence" rel="nofollow">activemq.apache.org/<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN>.</LI>
+	<LI>Click the <A href="#GettingStarted-Download" title="Download on Getting Started">Download</A> link in the navigation pane (the left pane).</LI>
+	<LI>Click the <A href="#GettingStarted-ActiveMQ4.xRelease" title="ActiveMQ 4.x Release on Getting Started">ActiveMQ 4.x Release</A> link under the &quot;Latest Releases&quot; section. This brings up a new page.</LI>
+	<LI>Under the <A href="#GettingStarted-DownloadHere" title="Download Here on Getting Started">Download Here</A> section, select the desired distribution (you may have to scroll down to see the &quot;Download Here&quot; section).<BR>
+For a binary distribution, the filename will be similar to: <TT>activemq-x.x.x.zip</TT>.</LI>
+	<LI>Extract the files from the ZIP file into a directory of your choice.</LI>
+	<LI>Proceed to the <A href="#GettingStarted-StartingActiveMQ" title="Starting ActiveMQ on Getting Started">Starting ActiveMQ</A> section of this document.</LI>
+	<LI>Following start-up, go to the <A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A> section of this document.</LI>
+</OL>
+
+
+<H4><A name="GettingStarted-WindowsSourceInstallation"></A>Windows Source Installation</H4>
+
+<P>This procedure explains how to download and install the source distribution on a Windows system.</P>
+
+<P><B>NOTE:</B> ActiveMQ can be run on a Java 1.4.x system, however, Java 1.5 is required to compile/build ActiveMQ.</P>
+<OL>
+	<LI>From a browser, navigate to <SPAN class="nobr"><A href="http://activemq.apache.org/" title="Visit page outside Confluence" rel="nofollow">activemq.apache.org/<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN>.</LI>
+	<LI>Click the <A href="#GettingStarted-Download" title="Download on Getting Started">Download</A> link in the navigation pane (the left pane).</LI>
+	<LI>Click the <A href="#GettingStarted-ActiveMQ4.xRelease" title="ActiveMQ 4.x Release on Getting Started">ActiveMQ 4.x Release</A> link under the &quot;Latest Releases&quot; section. This brings up another page.</LI>
+	<LI>Under the <A href="#GettingStarted-DownloadHere" title="Download Here on Getting Started">Download Here</A> section, select the desired distribution (if necessary, scroll down to see the &quot;Download Here&quot; section).<BR>
+For a source distribution, the filename will be similar to: <TT>activemq-x.x-src.zip</TT>.</LI>
+	<LI>Extract ActiveMQ from the ZIP file into a directory of your choice.</LI>
+	<LI><A name="GettingStarted-WindowsSourceInstallation"></A> Build ActiveMQ using Maven 2.0.4 or greater and Java 1.5.</LI>
+</OL>
+
+
+<P>The recommended method of building ActiveMQ is the following:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]
+mvn clean install</PRE>
+</DIV></DIV>
+<P>where [activemq_install_dir] is the directory in which ActiveMQ was installed.</P>
+
+<P>If the above build fails on some tests, type the following:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]
+mvn clean install -Dmaven.test.skip=<SPAN class="code-keyword">true</SPAN></PRE>
+</DIV></DIV>
+<OL>
+	<LI>If you prefer to use an IDE, then you can auto-generate the IDE's project file using maven plugins:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">mvn eclipse:eclipse</PRE>
+</DIV></DIV>
+<P>or</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">mvn idea:idea</PRE>
+</DIV></DIV>
+<P>Feel free to use any other applicable IDE. Please refer to the <SPAN class="nobr"><A href="http://maven.apache.org/reference/plugins/plugins.html" title="Visit page outside Confluence" rel="nofollow">plugin reference<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN> for more details.</P></LI>
+	<LI>Start ActiveMQ from the target directory, for example:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]\assembly\target
+unzip activemq-x.x-SNAPSHOT.zip
+cd activemq-x.x-SNAPSHOT
+bin\activemq</PRE>
+</DIV></DIV>
+<P><B>NOTE:</B> Working directories get created relative to the current directory. To create the working directories in the proper place, ActiveMQ must be launched from its home/installation directory.</P></LI>
+	<LI>Proceed to the <A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A> section.</LI>
+</OL>
+
+
+<TABLE cellpadding="5" width="85%" cellspacing="8px" class="warningMacro" border="0" align="center"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/forbidden.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B class="strong">Warning</B><BR>
+<P>If you are building ActiveMQ 4.x under Windows using Cygwin there is a path name length limitation. If the path name length is exceeded, you may see build errors. To correct this, move the ActiveMQ source directory higher in the file system tree, e.g., /cygdrive/c/d/sm.</P></TD></TR></TABLE>
+
+<H4><A name="GettingStarted-WindowsDeveloper%27sRelease"></A>Windows Developer's Release</H4>
+
+<P>This procedure explains how to download and install the latest developer's snapshot.</P>
+
+<P><B>NOTE:</B> ActiveMQ can be run on a Java 1.4.x system, however, Java 1.5 is required to compile/build ActiveMQ.</P>
+<OL>
+	<LI>From a browser, navigate to <SPAN class="nobr"><A href="http://activemq.apache.org/" title="Visit page outside Confluence" rel="nofollow">activemq.apache.org/<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN>.</LI>
+	<LI>Click the <A href="#GettingStarted-Download" title="Download on Getting Started">Download</A> link in the navigation pane (the left pane).</LI>
+	<LI>Click the <A href="#GettingStarted-CurrentdevelopmentSNAPSHOTrelease" title="Current development SNAPSHOT release on Getting Started">Current development SNAPSHOT release</A> link.</LI>
+	<LI>Select the version of ActiveMQ to download (if necessary, scroll down to see the ActiveMQ snapshots).</LI>
+	<LI>Extract the files from the ZIP file into a directory of your choice.</LI>
+	<LI>If a binary snapshot was downloaded, proceed to the <A href="#GettingStarted-StartingActiveMQ" title="Starting ActiveMQ on Getting Started">Starting ActiveMQ</A> section of this document.<BR>
+If a source snapshot was downloaded, perform step 6 and step 7 of the <A href="#GettingStarted-WindowsSourceInstallation" title="Windows Source Installation on Getting Started">Windows Source Installation</A> procedure.</LI>
+	<LI>Following start-up, proceed to the <A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A> section.</LI>
+</OL>
+
+
+<H2><A name="GettingStarted-InstallationProcedureforUnix"></A>Installation Procedure for Unix</H2>
+
+
+<H4><A name="GettingStarted-UnixBinaryInstallation"></A><A name="GettingStarted-UnixBinaryInstallation"></A> Unix Binary Installation</H4>
+
+<P>This procedure explains how to download and install the binary distribution on a Unix system.<BR>
+<B>NOTE:</B> There are several alternative ways to perform this type of installation.</P>
+
+<OL>
+	<LI>Download the activemq gzip file to the Unix machine, using either a browser or a tool, i.e., wget, scp, ftp, etc. for example:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">&gt; wget http:<SPAN class="code-comment">//activemq.apache.org/path/tofile/apache-activemq-4.1.0-incubator.tar.gz</SPAN></PRE>
+</DIV></DIV></LI>
+	<LI>Extract the files from the gzip file into a directory of your choice. For example:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">&gt; tar zxvf activemq-x.x.x.tar.gz</PRE>
+</DIV></DIV></LI>
+	<LI>If the <TT>ActiveMQ</TT> start-up script is not executable, change its permissions. The <TT>ActiveMQ</TT> script is located in the <TT>bin</TT> directory. For example:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">&gt; cd [activemq_install_dir]/bin
+&gt; chmod 755 activemq</PRE>
+</DIV></DIV></LI>
+	<LI>Proceed to the <A href="#GettingStarted-StartingActiveMQ" title="Starting ActiveMQ on Getting Started">Starting ActiveMQ</A> section of this document.</LI>
+	<LI>Following start-up, go to the <A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A> section.</LI>
+</OL>
+
+
+<H4><A name="GettingStarted-UnixSourceInstallation"></A>Unix Source Installation</H4>
+
+<P>This procedure explains how to download and install the source distribution on a Unix system. This procedure assumes the Unix machine has a browser. Please see the previous <A href="#GettingStarted-UnixBinaryInstallation" title="Unix Binary Installation on Getting Started">Unix Binary Installation</A> section for details on how to install ActiveMQ without a browser.</P>
+
+<P><B>NOTE:</B> ActiveMQ can be run on a Java 1.4.x system, however, Java 1.5 is required to compile/build ActiveMQ.</P>
+<OL>
+	<LI>From a browser, navigate to <SPAN class="nobr"><A href="http://activemq.apache.org/" title="Visit page outside Confluence" rel="nofollow">activemq.apache.org/<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN>.</LI>
+	<LI>Click the <A href="#GettingStarted-Download" title="Download on Getting Started">Download</A> link in the navigation pane (the left pane).</LI>
+	<LI>Click the <A href="#GettingStarted-ActiveMQ4.xRelease" title="ActiveMQ 4.x Release on Getting Started">ActiveMQ 4.x Release</A> link under the &quot;Latest Releases&quot; section. This brings up a new page.</LI>
+	<LI>Under the <A href="#GettingStarted-DownloadHere" title="Download Here on Getting Started">Download Here</A> section, select the desired distribution (if necessary, scroll down to see the &quot;Download Here&quot; section).<BR>
+For a source distribution, the filename will be similar to: <TT>activemq-x.x-src.tar.gz</TT>.</LI>
+	<LI>Extract the files from the ZIP file into a directory of your choice. For example:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">tar zxvf activemq.x.x-src.tar.gz</PRE>
+</DIV></DIV></LI>
+	<LI>Build ActiveMQ using Maven 2.0.4 or greater and Java 5:<BR>
+The preferred method of building ActiveMQ is the following:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]
+mvn clean install</PRE>
+</DIV></DIV>
+<P>If Maven crashes with a java.lang.OutOfMemoryError, you you need to do this first (assuming a Bourne-like shell):</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">export MAVEN_OPTS=-Xmx512M</PRE>
+</DIV></DIV>
+<P>If the above build fails on some tests, do the following:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]
+mvn clean install -Dmaven.test.skip=<SPAN class="code-keyword">true</SPAN></PRE>
+</DIV></DIV>
+<P>If you prefer to use an IDE then you can auto-generate the IDE's project file using maven plugins:<BR>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">mvn eclipse:eclipse</PRE>
+</DIV></DIV> or <DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">mvn idea:idea</PRE>
+</DIV></DIV><BR>
+Feel free to use any other applicable IDE. Please refer to the <SPAN class="nobr"><A href="http://maven.apache.org/reference/plugins/plugins.html" title="Visit page outside Confluence" rel="nofollow">plugin reference<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN> for more details.<BR>
+<B>NOTE:</B> Working directories get created relative to the current directory. To create working directories in the proper place, ActiveMQ must be launched from its home/installation directory.</P></LI>
+	<LI>Proceed to the <A href="#GettingStarted-StartingActiveMQ" title="Starting ActiveMQ on Getting Started">Starting ActiveMQ</A> section of this document.</LI>
+	<LI>Proceed to <A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A> section.</LI>
+</OL>
+
+
+<H4><A name="GettingStarted-UnixDeveloper%27sRelease"></A>Unix Developer's Release</H4>
+
+<P>This procedure explains how to download and install the latest developer's snapshot.</P>
+
+<P><B>NOTE:</B> ActiveMQ can be run on a Java 1.4.x system, however, Java 5 is required to compile/build ActiveMQ.</P>
+<OL>
+	<LI>From a browser, navigate to <SPAN class="nobr"><A href="http://activemq.apache.org/" title="Visit page outside Confluence" rel="nofollow">activemq.apache.org/<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN>.</LI>
+	<LI>Click the <A href="#GettingStarted-Download" title="Download on Getting Started">Download</A> link in the navigation pane (the left pane).</LI>
+	<LI>Click the <A href="#GettingStarted-CurrentdevelopmentSNAPSHOTrelease" title="Current development SNAPSHOT release on Getting Started">Current development SNAPSHOT release</A> link.</LI>
+	<LI>Select the version of ActiveMQ to download (you may have to scroll down to see the ActiveMQ snapshots). The filename will be similar to: <TT>activemq-x.x.x-tar.gz</TT> or <TT>activemq-x.x.x-src.tar.gz</TT>.</LI>
+	<LI>Extract the files from the gzip file into a directory of your choice. For example:<BR>
+For a binary developer's snapshot:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">tar zxvf activemq-x.x.x.tar.gz</PRE>
+</DIV></DIV>
+<P>For a source developer's snapshot:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">tar zxvf activemq-x.x.x-src.tar.gz</PRE>
+</DIV></DIV></LI>
+	<LI>If a binary snapshot was downloaded, to make it executable, the <TT>ActiveMQ</TT> script may need its permissions changed:
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]/bin
+chmod 755 activemq</PRE>
+</DIV></DIV></LI>
+	<LI>For a binary snapshot, proceed to the <A href="#GettingStarted-StartingActiveMQ" title="Starting ActiveMQ on Getting Started">Starting ActiveMQ</A> section of this document.</LI>
+	<LI>If a source snapshot was downloaded perform steps 6 - 8 of the <A href="#GettingStarted-UnixSourceInstallation" title="Unix Source Installation on Getting Started">Unix Source Installation</A> procedure.</LI>
+	<LI>Proceed to the <A href="#GettingStarted-TestingtheInstallation" title="Testing the Installation on Getting Started">Testing the Installation</A> section.</LI>
+</OL>
+
+
+<H2><A name="GettingStarted-StartingActiveMQ"></A><A name="GettingStarted-StartingActiveMQ"></A> Starting ActiveMQ</H2>
+
+<P>There now follows instructions on how to <A href="run-broker.html" title="Run Broker">run the ActiveMQ Message Broker</A>.</P>
+
+<H4><A name="GettingStarted-OnWindows%3A"></A>On Windows:</H4>
+
+<P>From a console window, change to the installation directory and run <TT>ActiveMQ</TT>:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]</PRE>
+</DIV></DIV>
+<P>where <TT>activemq_install_dir</TT> is the directory in which ActiveMQ was installed, e.g., <TT>c:\Program Files\ActiveMQ-4.x</TT>.
+<BR clear="all">
+Then type:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">bin\activemq</PRE>
+</DIV></DIV>
+<P><B>NOTE:</B> Working directories get created relative to the current directory. To create working directories in the proper place, ActiveMQ must be launched from its home/installation directory.</P>
+
+<H4><A name="GettingStarted-OnUnix%3A"></A>On Unix:</H4>
+
+<P>From a command shell, change to the installation directory and run <TT>ActiveMQ</TT>:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">cd [activemq_install_dir]</PRE>
+</DIV></DIV>
+<P>where <TT>activemq_install_dir</TT> is the directory in which ActiveMQ was installed, e.g., <TT>/usr/local/activemq-4.x</TT>.
+<BR clear="all">
+Then type:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">bin/activemq
+
+OR
+
+bin/activemq &gt; /tmp/smlog  2&gt;&amp;1 &amp;;
+Note: /tmp/smlog may be changed to another file name.</PRE>
+</DIV></DIV>
+<P><B>NOTE:</B> Working directories get created relative to the current directory. To create working directories in the proper place, ActiveMQ must be launched from its home/installation directory.</P>
+<TABLE cellpadding="5" width="85%" cellspacing="8px" class="warningMacro" border="0" align="center"><COLGROUP><COL width="24"><COL></COLGROUP><TR><TD valign="top"><IMG src="http://cwiki.apache.org/confluence/images/icons/emoticons/forbidden.gif" width="16" height="16" align="absmiddle" alt="" border="0"></TD><TD><B class="strong">Warning</B><BR>
+<P>Do NOT close the console or shell in which ActiveMQ was started, as that will terminate ActiveMQ (unless ActiveMQ was started with nohup).</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">nohup bin/activemq &gt; /tmp/smlog 2&gt;&amp;1 &amp;</PRE>
+</DIV></DIV></TD></TR></TABLE>
+
+<H3><A name="GettingStarted-Morehelp"></A>More help</H3>
+
+<P>For other ways of running the broker see <A href="run-broker.html" title="Run Broker">Here</A>. For example you can run an <A href="how-do-i-embed-a-broker-inside-a-connection.html" title="How do I embed a Broker inside a Connection">embedded broker</A> inside your JMS Connection to avoid starting a separate process.</P>
+
+<H2><A name="GettingStarted-TestingtheInstallation"></A><A name="GettingStarted-TestingtheInstallation"></A> Testing the Installation</H2>
+
+<P>If ActiveMQ is up and running without problems, the Window's console window or the Unix command shell will display information similar to the following log line:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">INFO  ActiveMQ JMS Message Broker (ID:apple-s-Computer.local-51222-1140729837569-0:0) has started</PRE>
+</DIV></DIV>
+<P><BR clear="all">
+ActiveMQ's default port is 61616. From another window run netstat and search for port 61616.</P>
+
+<P>From a Windows console, type:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">netstat -an|find <SPAN class="code-quote">&quot;61616&quot;</SPAN></PRE>
+</DIV></DIV>
+<P><B>OR</B></P>
+
+<P>From a Unix command shell, type:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">netstat -an|grep 61616</PRE>
+</DIV></DIV>
+
+<H2><A name="GettingStarted-MonitoringActiveMQ"></A>Monitoring ActiveMQ</H2>
+
+<P>There are various ways to <A href="how-can-i-monitor-activemq.html" title="How can I monitor ActiveMQ">monitor ActiveMQ</A>. If you are on version 4.2 or later of ActiveMQ you can then monitor ActiveMQ using the <A href="web-console.html" title="Web Console">Web Console</A> by pointing your browser at </P>
+
+<P><SPAN class="nobr"><A href="http://localhost:8161/admin" title="Visit page outside Confluence" rel="nofollow">http://localhost:8161/admin<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></P>
+
+<P>Or you can use the <A href="jmx.html" title="JMX">JMX</A> support to view the running state of ActiveMQ.</P>
+
+
+<H2><A name="GettingStarted-StoppingActiveMQ"></A>Stopping ActiveMQ</H2>
+
+<P>For both Windows and Unix installations, terminate ActiveMQ by typing &quot;CTRL-C&quot; in the console or command shell in which it is running.</P>
+
+<P>If ActiveMQ was started in the background on Unix, the process can be killed, with the following:</P>
+<DIV class="code"><DIV class="codeContent">
+<PRE class="code-java">ps -ef|grep activemq
+kill [PID]
+  where [PID] is the process id of the ActiveMQ process.</PRE>
+</DIV></DIV>
+
+<H2><A name="GettingStarted-ConfiguringActiveMQ"></A>Configuring ActiveMQ</H2>
+
+<P>The ActiveMQ broker should now run. You can configure the broker by specifying an <A href="xml-configuration.html" title="Xml Configuration">Xml Configuration</A> file as a parameter to the <EM>activemq</EM> command. An alternative is to use the <A href="broker-configuration-uri.html" title="Broker Configuration URI">Broker Configuration URI</A> to configure things on the command line in a concise format (though the configuration options are not as extensive as if you use Java or XML code). You can also</P>
+
+<P>Also see <A href="configuring-transports.html" title="Configuring Transports">Configuring Transports</A> to see how you can configure the various connection, transport and broker options using the connection URL in the ActiveMQConnectionFactory.</P>
+
+<P>See the <A href="initial-configuration.html" title="Initial Configuration">Initial Configuration</A> for details of which jars you need to add to your classpath to start using ActiveMQ in your Java code</P>
+
+<P>If you want to use JNDI to connect to your JMS provider then please view the <A href="jndi-support.html" title="JNDI Support">JNDI Support</A>. If you are a Spring user you should read about <A href="spring-support.html" title="Spring Support">Spring Support</A></P>
+
+<P>After the installation, ActiveMQ is running with a basic configuration. For details on configuring options, please see refer to the <A href="configuration.html" title="Configuration">Configuration</A> section.</P>
+
+<H2><A name="GettingStarted-AdditionalResources"></A>Additional Resources</H2>
+
+<P>If you are new to using ActiveMQ, running the <A href="web-samples.html" title="Web Samples">Web Samples</A> or the <A href="examples.html" title="Examples">Examples</A> is a good next step to learn more about ActiveMQ.</P>
+
+<P>FUSE Source <SPAN class="nobr"><A href="http://fusesource.com/docs/broker/5.0/getting_started/getting_started.pdf" title="Visit page outside Confluence" rel="nofollow">ActiveMQ Getting Started Guide<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN> (<B>Note:</B> FUSE Message Broker is an open source Apache licenced enterprise version of ActiveMQ)</P>
+          </DIV>
+        </TD>
+        <TD valign="top">
+          <DIV class="navigation">
+            <DIV class="navigation_top">
+              <DIV class="navigation_bottom">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <H3><A name="Navigation-Overview"></A><A href="overview.html" title="Overview">Overview</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="index.html" title="Index">Index</A></LI>
+	<LI><A href="news.html" title="News">News</A></LI>
+	<LI><A href="new-features.html" title="New Features">New Features</A></LI>
+	<LI><A href="" title="Getting Started">Getting Started</A></LI>
+	<LI><A href="faq.html" title="FAQ">FAQ</A></LI>
+	<LI><A href="articles.html" title="Articles">Articles</A></LI>
+	<LI><A href="download.html" title="Download">Download</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Search"></A>Search</H3>
+
+
+<DIV>
+<FORM action="http://www.google.com/search" method="get" style="font-size: 10px;">
+<INPUT name="ie" type="hidden" value="UTF-8"></INPUT>
+<INPUT name="oe" type="hidden" value="UTF-8"></INPUT>
+  <INPUT maxlength="255" name="q" size="15" type="text" value=""></INPUT><BR></BR>
+  <INPUT name="btnG" type="submit" value="Search"></INPUT>
+  <INPUT name="domains" type="hidden" value="activemq.apache.org"></INPUT>
+  <INPUT name="sitesearch" type="hidden" value="activemq.apache.org"></INPUT>
+</FORM>
+</DIV>
+
+
+<H3><A name="Navigation-SubProjects"></A>Sub Projects</H3>
+
+<UL class="alternate" type="square">
+	<LI><SPAN class="nobr"><A href="http://activemq.apache.org/camel/" title="POJO based Enterprise Integration Patterns with a typesafe Java DSL" rel="nofollow">Camel<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://activemq.apache.org/cms/" title="The C++ API for Messaging" rel="nofollow">CMS<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://activemq.apache.org/nms/" title="NMS is the .Net Messaging API" rel="nofollow">NMS<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+</UL>
+
+
+<H3><A name="Navigation-Community"></A><A href="community.html" title="Community">Community</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="support.html" title="Support">Support</A></LI>
+	<LI><A href="contributing.html" title="Contributing">Contributing</A></LI>
+	<LI><A href="discussion-forums.html" title="Discussion Forums">Discussion Forums</A></LI>
+	<LI><A href="mailing-lists.html" title="Mailing Lists">Mailing Lists</A></LI>
+	<LI><SPAN class="nobr"><A href="irc://irc.codehaus.org/activemq" title="Visit page outside Confluence" rel="nofollow">IRC<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://servlet.uwyn.com/drone/log/hausbot/activemq" title="Visit page outside Confluence" rel="nofollow">IRC Log<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><A href="site.html" title="Site">Site</A></LI>
+	<LI><A href="sponsorship.html" title="Sponsorship">Sponsorship</A></LI>
+	<LI><A href="projects-using-activemq.html" title="Projects Using ActiveMQ">Projects Using ActiveMQ</A></LI>
+	<LI><A href="users.html" title="Users">Users</A></LI>
+	<LI><A href="team.html" title="Team">Team</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Features"></A><A href="features.html" title="Features">Features</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="advisory-message.html" title="Advisory Message">Advisory Message</A></LI>
+	<LI><A href="clustering.html" title="Clustering">Clustering</A></LI>
+	<LI><A href="cross-language-clients.html" title="Cross Language Clients">Cross Language Clients</A></LI>
+	<LI><A href="enterprise-integration-patterns.html" title="Enterprise Integration Patterns">Enterprise Integration Patterns</A></LI>
+	<LI><A href="jmx.html" title="JMX">JMX</A></LI>
+	<LI><A href="jms-to-jms-bridge.html" title="JMS to JMS Bridge">JMS to JMS Bridge</A></LI>
+	<LI><A href="masterslave.html" title="MasterSlave">MasterSlave</A></LI>
+	<LI><A href="message-groups.html" title="Message Groups">Message Groups</A></LI>
+	<LI><A href="networks-of-brokers.html" title="Networks of Brokers">Networks of Brokers</A></LI>
+	<LI><A href="performance.html" title="Performance">Performance</A></LI>
+	<LI><A href="persistence.html" title="Persistence">Persistence</A></LI>
+	<LI><A href="security.html" title="Security">Security</A></LI>
+	<LI><A href="virtual-destinations.html" title="Virtual Destinations">Virtual Destinations</A></LI>
+	<LI><A href="visualisation.html" title="Visualisation">Visualisation</A></LI>
+	<LI><A href="features.html" title="Features">More ...</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Connectivity"></A><A href="connectivity.html" title="Connectivity">Connectivity</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="ajax.html" title="Ajax">Ajax</A></LI>
+	<LI><A href="amqp.html" title="AMQP">AMQP</A></LI>
+	<LI><A href="axis-and-cxf-support.html" title="Axis and CXF Support">Axis and CXF Support</A></LI>
+	<LI><A href="c-integration.html" title="C Integration">C Integration</A></LI>
+	<LI><A href="activemq-c-clients.html" title="ActiveMQ C++ Clients">C+&#43;</A></LI>
+	<LI><SPAN class="nobr"><A href="http://activemq.apache.org/nms/" title="Visit page outside Confluence" rel="nofollow">C# and .Net Integration<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://activemq.apache.org/cms/" title="Visit page outside Confluence" rel="nofollow">CMS<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><A href="j2ee.html" title="J2EE">J2EE</A></LI>
+	<LI><A href="jboss-integration.html" title="JBoss Integration">JBoss Integration</A></LI>
+	<LI><SPAN class="nobr"><A href="http://docs.codehaus.org/display/JETTY/Integrating%20with%20ActiveMQ" title="Visit page outside Confluence" rel="nofollow">Jetty<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><A href="jndi-support.html" title="JNDI Support">JNDI Support</A></LI>
+	<LI><SPAN class="nobr"><A href="http://activemq.apache.org/nms/" title="NMS is the .Net Messaging API" rel="nofollow">NMS<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><A href="rest.html" title="REST">REST</A></LI>
+	<LI><A href="rss-and-atom.html" title="RSS and Atom">RSS and Atom</A></LI>
+	<LI><A href="spring-support.html" title="Spring Support">Spring Support</A></LI>
+	<LI><A href="stomp.html" title="Stomp">Stomp</A></LI>
+	<LI><A href="tomcat.html" title="Tomcat">Tomcat</A></LI>
+	<LI><A href="unix-service.html" title="Unix Service">Unix Service</A></LI>
+	<LI><A href="weblogic-integration.html" title="WebLogic Integration">WebLogic Integration</A></LI>
+	<LI><A href="xmpp.html" title="XMPP">XMPP</A></LI>
+	<LI><A href="connectivity.html" title="Connectivity">More ...</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-UsingActiveMQ5UsingActiveMQ5"></A><A href="using-activemq-5.html" title="Using ActiveMQ 5">Using ActiveMQ 5</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="version-5-getting-started.html" title="Version 5 Getting Started">Getting Started</A></LI>
+	<LI><A href="version-5-initial-configuration.html" title="Version 5 Initial Configuration">Initial Configuration</A></LI>
+	<LI><A href="version-5-run-broker.html" title="Version 5 Run Broker">Running a Broker</A></LI>
+	<LI><A href="how-do-i-embed-a-broker-inside-a-connection.html" title="How do I embed a Broker inside a Connection">Embedded Brokers</A></LI>
+	<LI><A href="activemq-command-line-tools-reference.html" title="ActiveMQ Command Line Tools Reference">Command Line Tools</A></LI>
+	<LI><A href="configuring-version-5-transports.html" title="Configuring Version 5 Transports">Configuring Transports</A></LI>
+	<LI><A href="version-5-examples.html" title="Version 5 Examples">Examples</A></LI>
+	<LI><A href="version-5-web-samples.html" title="Version 5 Web Samples">Web Samples</A></LI>
+	<LI><A href="how-can-i-monitor-activemq.html" title="How can I monitor ActiveMQ">Monitoring the Broker</A></LI>
+	<LI><A href="version-5-xml-configuration.html" title="Version 5 XML Configuration">Xml Configuration</A></LI>
+	<LI><A href="xml-reference.html" title="Xml Reference">Xml Reference</A></LI>
+	<LI><A href="using-activemq-5.html" title="Using ActiveMQ 5">More ...</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-UsingActiveMQ4UsingActiveMQ"></A><A href="using-activemq.html" title="Using ActiveMQ">Using ActiveMQ 4</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="" title="Getting Started">Getting Started</A></LI>
+	<LI><A href="initial-configuration.html" title="Initial Configuration">Initial Configuration</A></LI>
+	<LI><A href="run-broker.html" title="Run Broker">Running a Broker</A></LI>
+	<LI><A href="how-do-i-embed-a-broker-inside-a-connection.html" title="How do I embed a Broker inside a Connection">Embedded Brokers</A></LI>
+	<LI><A href="activemq-command-line-tools-reference.html" title="ActiveMQ Command Line Tools Reference">Command Line Tools</A></LI>
+	<LI><A href="configuring-transports.html" title="Configuring Transports">Configuring Transports</A></LI>
+	<LI><A href="examples.html" title="Examples">Examples</A></LI>
+	<LI><A href="web-samples.html" title="Web Samples">Web Samples</A></LI>
+	<LI><A href="how-can-i-monitor-activemq.html" title="How can I monitor ActiveMQ">Monitoring the Broker</A></LI>
+	<LI><A href="xml-configuration.html" title="Xml Configuration">Xml Configuration</A></LI>
+	<LI><A href="xml-reference.html" title="Xml Reference">Xml Reference</A></LI>
+	<LI><A href="using-activemq.html" title="Using ActiveMQ">More ...</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Tools"></A><A href="tools.html" title="Tools">Tools</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="web-console.html" title="Web Console">Web Console</A></LI>
+	<LI><A href="hermes-jms.html" title="Hermes Jms">Hermes Jms</A></LI>
+	<LI><A href="activemq-performance-module-users-manual.html" title="ActiveMQ Performance Module Users Manual">Maven2 Performance Plugin</A></LI>
+	<LI><SPAN class="nobr"><A href="http://jakarta.apache.org/jmeter" title="Visit page outside Confluence" rel="nofollow">JMeter<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+</UL>
+
+
+<H3><A name="Navigation-Support"></A><A href="support.html" title="Support">Support</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><SPAN class="nobr"><A href="http://issues.apache.org/activemq/browse/AMQ" title="Visit page outside Confluence" rel="nofollow">Issues<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://issues.apache.org/activemq/browse/AMQ?report=com.atlassian.jira.plugin.system.project:roadmap-panel" title="Visit page outside Confluence" rel="nofollow">Roadmap<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://issues.apache.org/activemq/browse/AMQ?report=com.atlassian.jira.plugin.system.project:changelog-panel" title="Visit page outside Confluence" rel="nofollow">Change log<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+</UL>
+
+
+<H3><A name="Navigation-RelatedProjects"></A>Related Projects</H3>
+
+<UL class="alternate" type="square">
+	<LI><SPAN class="nobr"><A href="http://incubator.apache.org/servicemix/" title="Distributed Enterprise Service Bus based on JBI" rel="nofollow">Apache ServiceMix<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://lingo.codehaus.org/" title="POJO Remoting using JMS" rel="nofollow">Lingo<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://jencks.codehaus.org/" title="Message Driven POJOs and pooling for JMS and JDBC" rel="nofollow">Jencks<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://stomp.codehaus.org/" title="A simple protocol for messaging middleware interop and the easy development of custom clients" rel="nofollow">Stomp<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://www.springframework.org/" title="Visit page outside Confluence" rel="nofollow">Spring<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://openejb.apache.org/" title="Visit page outside Confluence" rel="nofollow">OpenEJB<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+	<LI><SPAN class="nobr"><A href="http://geronimo.apache.org/" title="Visit page outside Confluence" rel="nofollow">Geronimo<SUP><IMG class="rendericon" src="http://cwiki.apache.org/confluence/images/icons/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></SUP></A></SPAN></LI>
+</UL>
+
+
+<H3><A name="Navigation-Developers"></A><A href="developers.html" title="Developers">Developers</A></H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="source.html" title="Source">Source</A></LI>
+	<LI><A href="building.html" title="Building">Building</A></LI>
+	<LI><A href="developer-guide.html" title="Developer Guide">Developer Guide</A></LI>
+	<LI><A href="becoming-a-committer.html" title="Becoming a committer">Becoming a committer</A></LI>
+	<LI><A href="code-overview.html" title="Code Overview">Code Overview</A></LI>
+	<LI><A href="wire-protocol.html" title="Wire Protocol">Wire Protocol</A></LI>
+	<LI><A href="release-guide.html" title="Release Guide">Release Guide</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Tests"></A>Tests</H3>
+
+<UL class="alternate" type="square">
+	<LI><A href="activemq-performance-module-users-manual.html" title="ActiveMQ Performance Module Users Manual">Maven2 Performance Plugin</A></LI>
+	<LI><A href="benchmark-tests.html" title="Benchmark Tests">Benchmark Tests</A></LI>
+	<LI><A href="jmeter-system-tests.html" title="JMeter System Tests">JMeter System Tests</A></LI>
+	<LI><A href="jmeter-performance-tests.html" title="JMeter Performance Tests">JMeter Performance Tests</A></LI>
+	<LI><A href="integration-tests.html" title="Integration Tests">Integration Tests</A></LI>
+</UL>
+
+
+
+<H3><A name="Navigation-ProjectReports"></A>Project Reports</H3>
+<UL class="alternate" type="square">
+	<LI><A href="junit-reports.html" title="JUnit Reports">JUnit Reports</A></LI>
+	<LI><A href="source-xref.html" title="Source XRef">Source XRef</A></LI>
+	<LI><A href="test-source-xref.html" title="Test Source XRef">Test Source XRef</A></LI>
+	<LI><A href="xml-reference.html" title="Xml Reference">Xml Reference</A></LI>
+</UL>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </DIV>
+            </DIV>
+          </DIV>
+        </TD>
+        </TR>
+	</TBODY>
+        </TABLE>
+
+
+        <DIV class="bottom_red_bar"></DIV>
+      </DIV>
+    </DIV>
+  </DIV>
+</DIV>
+<DIV class="black_box">
+<DIV class="footer">
+  <DIV class="footer_l">
+    <DIV class="footer_r">
+      <DIV>
+        &copy; 2004-2008 The Apache Software Foundation.
+          - <A href="http://activemq.apache.org/privacy-policy.html">Privacy Policy</A> -
+        (<A href="http://cwiki.apache.org/confluence/pages/editpage.action?pageId=36037">edit this page</A>)
+      </DIV>
+    </DIV>
+  </DIV>
+</DIV>
+</DIV>
+</DIV>
+<DIV class="design_attribution"><A href="http://hiramchirino.com/">Graphic Design By Hiram</A></DIV>
+
+<!-- delay the loading of large javascript files to the end so that they don't interfere with the loading of page content -->
+<SPAN style="display: none">
+  <SCRIPT src="http://activemq.apache.org/styles/prototype.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="http://activemq.apache.org/styles/rico.js" type="text/javascript"></SCRIPT>
+  <SCRIPT src="http://activemq.apache.o
+

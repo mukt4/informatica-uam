@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1574628078">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="sumador_reg.drc"/>
+  <File Type="BG-BGN" Name="sumador_reg.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="sumador_reg.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="sumador_reg.ltx"/>
+  <File Type="BITSTR-MMI" Name="sumador_reg.mmi"/>
+  <File Type="BITSTR-BMM" Name="sumador_reg_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="sumador_reg.nky"/>
+  <File Type="BITSTR-RBT" Name="sumador_reg.rbt"/>
+  <File Type="BITSTR-MSK" Name="sumador_reg.msk"/>
+  <File Type="BG-BIN" Name="sumador_reg.bin"/>
+  <File Type="BG-BIT" Name="sumador_reg.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="sumador_reg_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="sumador_reg_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="sumador_reg_bus_skew_postroute_physopted.rpt"/>
+  <File Type="RDI-RDI" Name="sumador_reg.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="sumador_reg_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="sumador_reg_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="sumador_reg_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sumador_reg_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sumador_reg_postroute_physopt.dcp"/>
+  <File Type="ROUTE-BUS-SKEW" Name="sumador_reg_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="sumador_reg_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="sumador_reg_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="sumador_reg_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="sumador_reg_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="sumador_reg_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="sumador_reg_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="sumador_reg_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="sumador_reg_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="sumador_reg_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="sumador_reg_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="sumador_reg_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="sumador_reg_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="sumador_reg_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="sumador_reg_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="sumador_reg_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="sumador_reg_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sumador_reg_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="sumador_reg_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sumador_reg_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="sumador_reg_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="sumador_reg_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="sumador_reg_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="sumador_reg_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sumador_reg_postplace_pwropt.dcp"/>
+  <File Type="PLACE-TIMING" Name="sumador_reg_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="sumador_reg_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="sumador_reg_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="sumador_reg_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="sumador_reg_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="sumador_reg_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="sumador_reg_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="sumador_reg_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="sumador_reg_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="sumador_reg_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="sumador_reg_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="sumador_reg_pwropt.dcp"/>
+  <File Type="OPT-TIMING" Name="sumador_reg_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="sumador_reg.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="sumador_reg_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="sumador_reg_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="sumador_reg_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="sumador_reg_timing_summary_init.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="sumador_reg_bus_skew_routed.rpx"/>
+  <File Type="REPORTS-TCL" Name="sumador_reg_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="sumador_reg_bus_skew_routed.pb"/>
+  <File Type="PA-TCL" Name="sumador_reg.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/static_timing_analysis/sumador_reg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/static_timing_analysis/sumador_reg.vhd"/>
+        <Attr Name="ImportTime" Val="1539585004"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/static_timing_analysis/mux8_1.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/static_timing_analysis/mux8_1.vhd"/>
+        <Attr Name="ImportTime" Val="1539584592"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/static_timing_analysis/mux2_8.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/static_timing_analysis/mux2_8.vhd"/>
+        <Attr Name="ImportTime" Val="1572209412"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sumador_reg"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/restricciones.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/restricciones.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

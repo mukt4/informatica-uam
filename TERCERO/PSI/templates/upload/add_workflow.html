@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+	<div>
+		{% if error %}
+			<a id="mensaje-error">
+				Mensaje de error -> {{ error }}
+			</a>
+		{% else %}
+			<form class="pure-form-stacked" action="{% url "upload:add_workflow" %}" method="POST" enctype="multipart/form-data"> 
+				{% csrf_token %}
+
+				<h1>
+					Add a Workflow
+				</h1>
+
+				<table cellpadding="10">
+				{{ workflow_form.as_table }}
+				</table> <br />
+				<input type="submit" name="submit_workflow" value="Create workflow">
+			</form>
+		{% endif %}
+	</div>
+{% endblock %}

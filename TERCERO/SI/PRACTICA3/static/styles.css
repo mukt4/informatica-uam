@@ -1,0 +1,549 @@
+/*Contenedor principal que contiene toda la pagina*/
+body{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+/*Contenedor que contiene el header de la pagina*/
+header{
+    height: 18%;
+    background-color: #2196f3;
+    border-bottom-style: solid;
+}
+
+.error-index{
+    color: red;
+    display: block;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    font-size: 20px;
+}
+
+.compras-carrito{
+    color: red;
+    position: fixed;
+    right: 32%;
+    top: 12%;
+}
+
+/*Contenedor que contiene tanto el menu como la parte de informacion de la pagina*/
+.info-container{
+    height: 74%;
+    border-bottom-style: solid;
+}
+
+.info-container2{
+    height: 74%;
+    display: flex;
+    flex-direction: column;
+    border-bottom-style: solid;
+}
+
+/*Contenedor dentro de info-container que contiene el menu lateral de la pagina*/
+.filtros{
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: #a4dcf6;
+    border-right-style : solid;
+    text-align: left;
+    font-size: 40px;
+}
+
+/*Contenedor dentro de info-container qe contiene la informacion de las peliculas de la pagina*/
+.informacion-peliculas{
+    float: left;
+    height: 100%;
+    width: 79%;
+    overflow: auto;
+}
+
+/*Contenedor que contiene el pie de pagina*/
+footer{
+    background-color: #2196f3;
+    text-align: center;
+    height: 6%;
+    border-bottom-style: solid;
+    width: 100%;
+}
+
+/*Descriptor del estilo del icono que representa nuestra aplicacion*/
+.icono{
+    display: block;
+    max-width: 8%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 4%;
+    float: left;
+}
+
+/******************CONTENIDO HEADER******************/
+.search{
+    position: absolute;
+    display: block;
+    left: 30%;
+    top: 5%;
+    width:20%;
+}
+
+.submit{
+    position: absolute;
+    display: block;
+    top: 5%;
+    left: 50%;
+}
+
+.log-in{
+    display: block;
+    position: absolute;
+    float: right;
+    top: 4%;
+    right: 4%;
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.register{
+    display: block;
+    position: absolute;
+    float: right;
+    top: 4%;
+    right: 17%;
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.carrito{
+    display: block;
+    position: absolute;
+    float: left;
+    top: 2%;
+    right: 33%;
+    min-height: 10%;
+    max-width: 70%;
+    max-height: 5%;
+    height: auto;
+    width: auto;
+}
+
+.usuario{
+    display: block;
+    position: relative;
+    float: right;
+    top: 17%;
+    right: 15%;
+    min-height: 60%;
+    max-width: 70%;
+    max-height: 5%;
+    height: auto;
+    width: auto;
+}
+
+/*Desplegable al acercar el raton a la imagen que representa el perfil de usuario*/
+
+.dropdown-usuario {
+    position: absolute;
+    display: block;
+    float: right;
+    right: 1%;
+    width: 12%;
+    height: 18%;
+}
+
+.dropdown-usuario b{
+    top: 75%;
+    position: absolute;
+    float: inherit;
+    display: block;
+    right: 25%;
+    font-size: 20px;
+}
+
+.dropdown-content-usuario {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top:100%;
+    right:1%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content-usuario a {
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dropdown-usuario:hover .dropdown-content-usuario {
+    display: block;
+}
+
+/****************************************************/
+
+/*******************CONTENIDO MENU*******************/
+
+/*Boton desplegable genero*/
+.dropdown-genero{
+    margin-left:3%;
+    margin-bottom: 5%;
+}
+
+.dropdown-genero select{
+    font-size:17px;
+    background: white;
+    -webkit-appearance: none;
+    text-indent: 1px;
+    width: 50%;
+}
+
+
+/*Boton desplegable valoracion*/
+.dropdown-valoracion {
+    margin-left:3%;
+}
+
+.dropdown-valoracion select{
+    font-size:17px;
+    background: white;
+    -webkit-appearance: none;
+    text-indent: 1px;
+    width: 50%;
+}
+
+/****************************************************/
+
+/**********INFORMACION DE LAS PELICULAS**************/
+
+
+.galeria {
+    margin: 40px;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+    display: inline-block;
+    width: 180px;
+}
+
+.galeria:hover {
+    border:solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+
+
+.pelicula-index {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/*Info-container de la ventana login y register*/
+.info-login{
+    text-align: center;
+    font-size: 25px;
+}
+
+.nombre-usuario{
+    height: 20%;
+    width: 20%;
+    margin-bottom: 2%;
+}
+
+.contrasenia{
+    height: 20%;
+    width: 20%;
+}
+
+.log-in-1{
+    height: 20%;
+    width: 10%;
+    margin-bottom: 2%;
+    font-size: 20px;
+    margin-top: 2%;
+    border-radius: 5px;
+}
+
+.register-1{
+    height: 20%;
+    width: 10%;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+/*Info-container en la ventana de registros*/
+
+.info-register{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-register a{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    padding:1%;
+    width:50%;
+}
+
+.info-register span{
+    position: absolute;
+    left: 80%;
+    color: red;
+}
+
+.info-register a input{
+    height:5%;
+    width:30%;
+    margin-left: auto;
+}
+
+.botones-registrar input{
+    display:flex;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:2%;
+    width:auto;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.header-register{
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/*CSS para mostrar la informacion de una pelicula*/
+.informacion-pelicula{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.imagen-y-texto{
+    display: flex;
+    height: 90%;
+}
+
+.imagen-y-texto img{
+    width: auto;
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10%;
+}
+
+.text-pelicula{
+    margin-left: 5%;
+    width: auto;
+    overflow: auto;
+    margin-right: 3%;
+}
+
+.valoracion-boton-y-precio{
+    display: flex;
+    height: 30%;
+}
+
+.valoracion-boton-y-precio img{
+    height: 39%;
+    width: 29%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.valoracion-boton-y-precio input{
+    height: 40%;
+    margin-top: 20%;
+    margin-left: 30%;
+}
+
+.valoracion-boton-y-precio label{
+    font-size: 50px;
+    margin-top: 3%;
+    margin-left: 12%;
+}
+
+/*CSS historial de compra*/
+
+.informacion-historial{
+    float: none;
+    height: 100%;
+    overflow: auto;
+    background-color: #E8E8E8;
+    margin-right: 0.5%;
+}
+
+#historial-title {
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+#tabla-historial {
+    text-align: left;
+}
+
+#tabla-historial {
+    width: 100%;
+}
+
+#show_hide_row tr:hover{
+    background-color:red;
+}
+
+#show_hide_row tr{
+    display:none;
+}
+
+.error{
+    color: red;
+    display: block;
+    font-size: 18px;
+    margin-top: 1%;
+    text-align: center;
+}
+
+/*CSS del carrito de compra*/
+.carrito-vacio{
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 20%;
+}
+
+.imagen-pelicula{
+    width: 100%;
+    height: auto;
+}
+
+.imagen-pelicula-cross{
+    width: 15%;
+}
+/*CSS de la galeria de compra*/
+.informacion-peliculas-carrito{
+    height: 80%;
+    width: 79%;
+    overflow: auto;
+}
+
+.informacion-peliculas-confirmacion{
+    height: 20%;
+    width: 79%;
+    overflow: auto;
+}
+
+.confirmacion-button{
+    display: block;
+    margin-top: 4%;
+    margin-left: 3%;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.texto-registro{
+    font-weight: bold;
+    text-align: center;
+    display:block;
+    margin-top:3%;
+    font-size: 17px;
+}
+
+.carrito-precio{
+    display: block;
+    right: 10%;
+    position: relative;
+    font-size: 25px;
+    float: right;
+    bottom: 11.5%;
+}
+
+/*CSS PARA LA VENTANA DE CONFIRMACION DE COMPRA*/
+.resumen-compra{
+    height: 100%;
+    width: 79%;
+    overflow: auto;
+}
+
+.resumen-label{
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    margin-bottom: 3%;
+    font-weight: bold;
+}
+
+.contenido-compra{
+    float: none;
+    height: 50%;
+    overflow: auto;
+    margin-right: 0.5%;
+}
+
+.contenido-compra table{
+    width: 100%;
+}
+
+.contenido-compra td{
+    padding: 10px;
+    overflow: auto;
+    margin-right: 2%;
+}
+
+.contenido-compra th{
+    padding: 10px;
+    overflow: auto;
+    margin-right: 2%;
+    text-align: left;
+}
+
+.contenido-compra tr{
+    border: solid;
+}
+
+.confirmacion-pedido{
+    width: 100%;
+    height: 30%;
+}
+
+.confirmacion-label{
+    text-align: left;
+    font-size: 25px;
+    margin-top: 2%;
+    display: block;
+    margin-left: 3%;
+}
+
+.boton-confirmacion{
+    margin-top: 5%;
+    font-size: 20px;
+    margin-left: 3%;
+    border-radius: 5px;
+}
+

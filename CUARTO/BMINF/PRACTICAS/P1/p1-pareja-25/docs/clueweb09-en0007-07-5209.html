@@ -1,0 +1,450 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Apache/1.3.37 (Unix) PHP/5.2.1 mod_auth_passthrough/1.8 mod_log_bytes/1.2 mod_bwlimited/1.4 FrontPage/5.0.2.2635.SR1.2 mod_ssl/2.8.28 OpenSSL/0.9.7a
+X-Powered-By: PHP/5.2.1
+Date: Mon, 19 Jan 2009 06:17:30 GMT
+Connection: close
+Content-Length: 50818
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="keywords" content="Connecticut Science Colleges - Education Reference" />
+<META NAME=Description CONTENT="Connecticut Science Colleges">
+<title>Connecticut Science Colleges - Education Reference</title>
+<link href="/css/style.css" media="screen" rel="Stylesheet" type="text/css" />
+<script src="/js/mootools.js" type="text/javascript"></script>
+</head>
+<script language="javascript" type="text/javascript">
+<!--
+function IsNumeric(strString)
+   //  check for valid numeric strings
+   {
+   var strValidChars = "0123456789.-";
+   var strChar;
+   var blnResult = true;
+
+   if (strString.length == 0) return false;
+
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && blnResult == true; i++)
+      {
+      strChar = strString.charAt(i);
+      if (strValidChars.indexOf(strChar) == -1)
+         {
+         blnResult = false;
+         }
+      }
+   return blnResult;
+}
+
+function search(formName) {
+	if (IsNumeric(document.forms[formName].zipcode.value)==false) {
+		alert('The zipcode is not valid.');
+		document.forms[formName].zipcode.select();
+	} else if (IsNumeric(document.forms[formName].distance.value)==false) {
+		alert('The distance is not valid.');
+		document.forms[formName].distance.select();
+	} else {
+		document.forms[formName].action = 'http://ed-reference.us/colleges-within-'+document.forms[formName].distance.value+'-miles-of-'+document.forms[formName].zipcode.value;
+		document.forms[formName].submit();
+//		location=('http://ed-reference.us/colleges-within-'+document.forms[0].distance.value+'-miles-of-'+document.forms[0].zipcode.value);
+	}
+}
+
+// -->
+</script>
+<script type="text/javascript">
+ function CreateBookmarkLink() {
+
+ title = "www.ed-reference.us";
+  // Blogger - Replace with <$BlogItemTitle$>
+  // MovableType - Replace with <$MTEntryTitle$>
+
+ url = "http://www.ed-reference.us/10100/connecticut/science/colleges";
+
+	if (window.sidebar) { // Mozilla Firefox Bookmark
+		window.sidebar.addPanel(title, url,"");
+	} else if( window.external ) { // IE Favorite
+		window.external.AddFavorite( url, title); }
+	else if(window.opera && window.print) { // Opera Hotlist
+		return true; }
+ }
+
+ function displayAddFav() {
+	 if (window.external) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Add to Favorites</a>');
+	 } else  if (window.sidebar) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Bookmark Page</a>');
+	 } else if (window.opera && window.print) {
+	   document.write('<a href ="javascript:CreateBookmarkLink()");">Add Bookmark</a>');
+	 }
+ }
+</script>
+<body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-338608-26");
+	pageTracker._trackPageview();
+}
+catch(err)
+{}
+</script>
+		<div id="top-container">
+			<div class="transparentheader" style="width: 100%; height: 99px;z-index:1;">
+				<a href="/">
+					<img width="100%" height="99" title="" alt="" style="border-width:0px;" src="http://ed-reference.us/images/headerBG_transparent.png"/>
+				</a>
+			</div>
+			<div id="logo" style="width: 394px; height: 75px; z-index:2;">
+				<a href="/">
+					<img src="http://ed-reference.us/images/logo.png" width="394px" height="75px" border="0px"/>
+				</a>
+			</div>
+			<div style="position:absolute; top:0; left:0; width:100%; height:99px; z-index:1;">
+				<div id="main-menu">
+					<ul>
+						<li><a href="/states/">Search By State</a></li> |
+						<li><a href="/degrees/">Search By Degree</a></li> |
+						<li><a href="/colleges/">Search By Name</a></li> |
+						<li><a href="/search-online-schools/">Search Online Schools</a></li>
+					</ul>
+				</div>
+				<div style="clear:right;" class="search searchTop">
+					<form method="POST" id="search1" onsubmit="search('search1');">
+						Search By Zip Code <input type="text" name="zipcode" maxlength="5" size="5" value=""> Within (miles) <input type="text" name="distance" maxlength="5" size="5" onkeypress="return handleKeyPress(event);" value=""><span class="button"><input class="go" type="submit" value="Go"></span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="wrap">
+		<div id="wrap-inner">
+			<div id="leftSideNav">
+<script>
+function submit_perPageFrm() {
+	var frm = document.forms['perPageFrm'];
+	frm.action='/10100/connecticut/science/colleges/i'+frm.itemPerPage.options[frm.itemPerPage.selectedIndex].value+'/';
+	frm.submit();
+}
+function insertPagination(strText) {
+	var ele = document.getElementById("pagination");
+	ele.innerHTML = strText;
+}
+</script>
+			<div id="nav1List">			<div class="nav1">
+				<div class="nav1Title">Connecticut Cities:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItemCity0" onmouseover="document.getElementById('listItemCity0').className='listOn';" onmouseout="document.getElementById('listItemCity0').className='';"><a href="/11000/connecticut/branford/colleges">Branford</a></li>
+					<li id="listItemCity1" onmouseover="document.getElementById('listItemCity1').className='listOn';" onmouseout="document.getElementById('listItemCity1').className='';"><a href="/11000/connecticut/bridgeport/colleges">Bridgeport</a></li>
+					<li id="listItemCity2" onmouseover="document.getElementById('listItemCity2').className='listOn';" onmouseout="document.getElementById('listItemCity2').className='';"><a href="/11000/connecticut/cromwell/colleges">Cromwell</a></li>
+					<li id="listItemCity3" onmouseover="document.getElementById('listItemCity3').className='listOn';" onmouseout="document.getElementById('listItemCity3').className='';"><a href="/11000/connecticut/danbury/colleges">Danbury</a></li>
+					<li id="listItemCity4" onmouseover="document.getElementById('listItemCity4').className='listOn';" onmouseout="document.getElementById('listItemCity4').className='';"><a href="/11000/connecticut/danielson/colleges">Danielson</a></li>
+					<li id="listItemCity5" onmouseover="document.getElementById('listItemCity5').className='listOn';" onmouseout="document.getElementById('listItemCity5').className='';"><a href="/11000/connecticut/east+hartford/colleges">East Hartford</a></li>
+					<li id="listItemCity6" onmouseover="document.getElementById('listItemCity6').className='listOn';" onmouseout="document.getElementById('listItemCity6').className='';"><a href="/11000/connecticut/east+windsor/colleges">East Windsor</a></li>
+					<li id="listItemCity7" onmouseover="document.getElementById('listItemCity7').className='listOn';" onmouseout="document.getElementById('listItemCity7').className='';"><a href="/11000/connecticut/enfield/colleges">Enfield</a></li>
+					<li id="listItemCity8" onmouseover="document.getElementById('listItemCity8').className='listOn';" onmouseout="document.getElementById('listItemCity8').className='';"><a href="/11000/connecticut/fairfield/colleges">Fairfield</a></li>
+					<li id="listItemCity9" onmouseover="document.getElementById('listItemCity9').className='listOn';" onmouseout="document.getElementById('listItemCity9').className='';"><a href="/11000/connecticut/farmington/colleges">Farmington</a></li>
+					<li id="listItemCity10" onmouseover="document.getElementById('listItemCity10').className='listOn';" onmouseout="document.getElementById('listItemCity10').className='';"><a href="/11000/connecticut/groton/colleges">Groton</a></li>
+					<li id="listItemCity11" onmouseover="document.getElementById('listItemCity11').className='listOn';" onmouseout="document.getElementById('listItemCity11').className='';"><a href="/11000/connecticut/hamden/colleges">Hamden</a></li>
+					<li id="listItemCity12" onmouseover="document.getElementById('listItemCity12').className='listOn';" onmouseout="document.getElementById('listItemCity12').className='';"><a href="/11000/connecticut/hartford/colleges">Hartford</a></li>
+					<li id="listItemCity13" onmouseover="document.getElementById('listItemCity13').className='listOn';" onmouseout="document.getElementById('listItemCity13').className='';"><a href="/11000/connecticut/hartford+(farmington)/colleges">Hartford (Farmington)</a></li>
+					<li id="listItemCity14" onmouseover="document.getElementById('listItemCity14').className='listOn';" onmouseout="document.getElementById('listItemCity14').className='';"><a href="/11000/connecticut/manchester/colleges">Manchester</a></li>
+					<li id="listItemCity15" onmouseover="document.getElementById('listItemCity15').className='listOn';" onmouseout="document.getElementById('listItemCity15').className='';"><a href="/11000/connecticut/meriden/colleges">Meriden</a></li>
+					<li id="listItemCity16" onmouseover="document.getElementById('listItemCity16').className='listOn';" onmouseout="document.getElementById('listItemCity16').className='';"><a href="/11000/connecticut/middletown/colleges">Middletown</a></li>
+					<li id="listItemCity17" onmouseover="document.getElementById('listItemCity17').className='listOn';" onmouseout="document.getElementById('listItemCity17').className='';"><a href="/11000/connecticut/milford/colleges">Milford</a></li>
+					<li id="listItemCity18" onmouseover="document.getElementById('listItemCity18').className='listOn';" onmouseout="document.getElementById('listItemCity18').className='';"><a href="/11000/connecticut/new+britain/colleges">New Britain</a></li>
+					<li id="listItemCity19" onmouseover="document.getElementById('listItemCity19').className='listOn';" onmouseout="document.getElementById('listItemCity19').className='';"><a href="/11000/connecticut/new+haven/colleges">New Haven</a></li>
+					<li id="listItemCity20" onmouseover="document.getElementById('listItemCity20').className='listOn';" onmouseout="document.getElementById('listItemCity20').className='';"><a href="/11000/connecticut/new+london/colleges">New London</a></li>
+					<li id="listItemCity21" onmouseover="document.getElementById('listItemCity21').className='listOn';" onmouseout="document.getElementById('listItemCity21').className='';"><a href="/11000/connecticut/newington/colleges">Newington</a></li>
+					<li id="listItemCity22" onmouseover="document.getElementById('listItemCity22').className='listOn';" onmouseout="document.getElementById('listItemCity22').className='';"><a href="/11000/connecticut/north+haven/colleges">North Haven</a></li>
+					<li id="listItemCity23" onmouseover="document.getElementById('listItemCity23').className='listOn';" onmouseout="document.getElementById('listItemCity23').className='';"><a href="/11000/connecticut/norwalk/colleges">Norwalk</a></li>
+					<li id="listItemCity24" onmouseover="document.getElementById('listItemCity24').className='listOn';" onmouseout="document.getElementById('listItemCity24').className='';"><a href="/11000/connecticut/norwich/colleges">Norwich</a></li>
+					<li id="listItemCity25" onmouseover="document.getElementById('listItemCity25').className='listOn';" onmouseout="document.getElementById('listItemCity25').className='';"><a href="/11000/connecticut/oakville/colleges">Oakville</a></li>
+					<li id="listItemCity26" onmouseover="document.getElementById('listItemCity26').className='listOn';" onmouseout="document.getElementById('listItemCity26').className='';"><a href="/11000/connecticut/old+lyme/colleges">Old Lyme</a></li>
+					<li id="listItemCity27" onmouseover="document.getElementById('listItemCity27').className='listOn';" onmouseout="document.getElementById('listItemCity27').className='';"><a href="/11000/connecticut/shelton/colleges">Shelton</a></li>
+					<li id="listItemCity28" onmouseover="document.getElementById('listItemCity28').className='listOn';" onmouseout="document.getElementById('listItemCity28').className='';"><a href="/11000/connecticut/somers/colleges">Somers</a></li>
+					<li id="listItemCity29" onmouseover="document.getElementById('listItemCity29').className='listOn';" onmouseout="document.getElementById('listItemCity29').className='';"><a href="/11000/connecticut/southington/colleges">Southington</a></li>
+					<li id="listItemCity30" onmouseover="document.getElementById('listItemCity30').className='listOn';" onmouseout="document.getElementById('listItemCity30').className='';"><a href="/11000/connecticut/stamford/colleges">Stamford</a></li>
+					<li id="listItemCity31" onmouseover="document.getElementById('listItemCity31').className='listOn';" onmouseout="document.getElementById('listItemCity31').className='';"><a href="/11000/connecticut/storrs/colleges">Storrs</a></li>
+					<li id="listItemCity32" onmouseover="document.getElementById('listItemCity32').className='listOn';" onmouseout="document.getElementById('listItemCity32').className='';"><a href="/11000/connecticut/stratford/colleges">Stratford</a></li>
+					<li id="listItemCity33" onmouseover="document.getElementById('listItemCity33').className='listOn';" onmouseout="document.getElementById('listItemCity33').className='';"><a href="/11000/connecticut/suffield/colleges">Suffield</a></li>
+					<li id="listItemCity34" onmouseover="document.getElementById('listItemCity34').className='listOn';" onmouseout="document.getElementById('listItemCity34').className='';"><a href="/11000/connecticut/waterbury/colleges">Waterbury</a></li>
+					<li id="listItemCity35" onmouseover="document.getElementById('listItemCity35').className='listOn';" onmouseout="document.getElementById('listItemCity35').className='';"><a href="/11000/connecticut/watertown/colleges">Watertown</a></li>
+					<li id="listItemCity36" onmouseover="document.getElementById('listItemCity36').className='listOn';" onmouseout="document.getElementById('listItemCity36').className='';"><a href="/11000/connecticut/west+hartford/colleges">West Hartford</a></li>
+					<li id="listItemCity37" onmouseover="document.getElementById('listItemCity37').className='listOn';" onmouseout="document.getElementById('listItemCity37').className='';"><a href="/11000/connecticut/west+haven/colleges">West Haven</a></li>
+					<li id="listItemCity38" onmouseover="document.getElementById('listItemCity38').className='listOn';" onmouseout="document.getElementById('listItemCity38').className='';"><a href="/11000/connecticut/westport/colleges">Westport</a></li>
+					<li id="listItemCity39" onmouseover="document.getElementById('listItemCity39').className='listOn';" onmouseout="document.getElementById('listItemCity39').className='';"><a href="/11000/connecticut/willimantic/colleges">Willimantic</a></li>
+					<li id="listItemCity40" onmouseover="document.getElementById('listItemCity40').className='listOn';" onmouseout="document.getElementById('listItemCity40').className='';"><a href="/11000/connecticut/windsor/colleges">Windsor</a></li>
+					<li id="listItemCity41" onmouseover="document.getElementById('listItemCity41').className='listOn';" onmouseout="document.getElementById('listItemCity41').className='';"><a href="/11000/connecticut/winsted/colleges">Winsted</a></li>
+					<li id="listItemCity42" onmouseover="document.getElementById('listItemCity42').className='listOn';" onmouseout="document.getElementById('listItemCity42').className='';"><a href="/11000/connecticut/wolcott/colleges">Wolcott</a></li>
+				</ul>
+				</div>
+			</div>
+</div>
+		</div>
+		<div class="content-container">
+			<div class="content">
+				<span class="breadcrumb"><a href="/10000/connecticut/colleges">Connecticut Colleges</a> > <a href="/10100/connecticut/science/colleges">Science Colleges</a></span>
+				<div  id="sticky">
+					<!-- AddThis Bookmark Button BEGIN -->
+					<script type="text/javascript">
+					  addthis_url    = location.href;
+					  addthis_title  = document.title;
+					  addthis_pub    = 'baymarketing';
+					</script><script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12 " ></script>
+					<!-- AddThis Bookmark Button END -->
+				</div>
+				<div class="contentHeader">
+					<span class="pageTitle">Connecticut Science Colleges</span>
+					<span class="numberPerPage">
+						<form id="perPageFrm" method="POST">
+						<select class="itemsPerPage" id="itemPerPage" onchange="submit_perPageFrm();">
+<option value="50" selected>50</option>
+<option value="100" >100</option>
+<option value="150" >150</option>
+	</select>
+ Per Page
+						</form>
+					</span>
+				</div>
+				<div class="clearall"></div>
+				<div id="pagination"></div>
+		<p>The Ed-Reference database currently includes 69 Connecticut Science Colleges, Universities in Connecticut with Science Degree Programs , and Connecticut Schools for Science. The Ed-Reference database is continually updated and currently includes over 9000 schools. You can narrow your search by city or degree in the right hand column.</p>
+
+				<span class="title">Featured Science Schools, Colleges and Universities in Connecticut</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1095&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sacred-heart/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sacred-heart/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/connecticut/fairfield/science/sacred+heart+university+-+fairfield-1095/">Sacred Heart University - Fairfield</a></span> - <a href="/11100/connecticut/fairfield/science/colleges">Fairfield</a>, CT<br/>
+Science Programs at Sacred Heart University - Fairfield include: Chemistry, <a href="/11100/connecticut/fairfield/science/sacred+heart+university+-+fairfield-1095/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1150&page=http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=1009&csrc=ed-reference" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=1009&csrc=ed-reference');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/connecticut/west+hartford/science/university+of+hartford+-+west+hartford-1150/">University of Hartford - West Hartford</a></span> - <a href="/11100/connecticut/west+hartford/science/colleges">West Hartford</a>, CT<br/>
+Science Programs at University of Hartford - West Hartford include: Chemistry, Social Sciences, <a href="/11100/connecticut/west+hartford/science/university+of+hartford+-+west+hartford-1150/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1118&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/albertus-magnus/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/albertus-magnus/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/connecticut/new+haven/science/albertus+magnus+college+-+new+haven-1118/">Albertus Magnus College - New Haven</a></span> - <a href="/11100/connecticut/new+haven/science/colleges">New Haven</a>, CT<br/>
+Science Programs at Albertus Magnus College - New Haven include: Chemistry, Social Sciences, <a href="/11100/connecticut/new+haven/science/albertus+magnus+college+-+new+haven-1118/">more...</a>						</li>
+					</ul>
+				</div>
+				<span class="title">Online Options for Science</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8627&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=16355" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=16355');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/norwich+university+-+online-8627/">Norwich University - Online</a></span><br/>
+Online Science programs at Norwich University - Online includes: Biochemistry, Chemistry, Environmental Science, Geology, Physics						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=6890&page=http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=879&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=879&csrc=');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/strayer+university+-+online-6890/">Strayer University - Online</a></span><br/>
+Online Science programs at Strayer University - Online includes: Science						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9562&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sacred-heart/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sacred-heart/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/university+college+of+sacred+heart+university-9562/">University College of Sacred Heart University</a></span><br/>
+Online Science programs at University College of Sacred Heart University includes: Chemistry						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8695&page=http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=479&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=479&csrc=');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/western+international+university+-+online-8695/">Western International University - Online</a></span><br/>
+Online Science programs at Western International University - Online includes: Bachelor of Arts - Behavioral Science						</li>
+					</ul>
+				</div>
+				<span class="title">Connecticut</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/bridgeport/science/university+of+bridgeport+-+bridgeport-1084/">University of Bridgeport - Bridgeport</a></span> - Bridgeport, CT<br/>
+Science Programs at University of Bridgeport - Bridgeport include: Social Sciences, <a href="/11100/connecticut/bridgeport/science/university+of+bridgeport+-+bridgeport-1084/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/cromwell/science/holy+apostles+college+and+seminary+-+cromwell-1085/">Holy Apostles College And Seminary - Cromwell</a></span> - Cromwell, CT<br/>
+Science Programs at Holy Apostles College And Seminary - Cromwell include: Social Sciences, <a href="/11100/connecticut/cromwell/science/holy+apostles+college+and+seminary+-+cromwell-1085/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/danbury/science/western+connecticut+state+university+-+danbury-1088/">Western Connecticut State University - Danbury</a></span> - Danbury, CT<br/>
+Science Programs at Western Connecticut State University - Danbury include: Chemistry, Geology, Earth Science, Social Sciences, Atmospheric Sciences and Meteorology, <a href="/11100/connecticut/danbury/science/western+connecticut+state+university+-+danbury-1088/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/fairfield/science/fairfield+university+-+fairfield-1094/">Fairfield University - Fairfield</a></span> - Fairfield, CT<br/>
+Science Programs at Fairfield University - Fairfield include: Chemistry, <a href="/11100/connecticut/fairfield/science/fairfield+university+-+fairfield-1094/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1095&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sacred-heart/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sacred-heart/');" onMouseOver="window.status='Request more information from Sacred Heart University - Fairfield'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/connecticut/fairfield/science/sacred+heart+university+-+fairfield-1095/">Sacred Heart University - Fairfield</a></span> - Fairfield, CT<br/>
+Science Programs at Sacred Heart University - Fairfield include: Chemistry, <a href="/11100/connecticut/fairfield/science/sacred+heart+university+-+fairfield-1095/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/hamden/science/quinnipiac+university+-+hamden-1103/">Quinnipiac University - Hamden</a></span> - Hamden, CT<br/>
+Science Programs at Quinnipiac University - Hamden include: Chemistry, Social Sciences, <a href="/11100/connecticut/hamden/science/quinnipiac+university+-+hamden-1103/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/hartford/science/trinity+college+-+hartford-1109/">Trinity College - Hartford</a></span> - Hartford, CT<br/>
+Science Programs at Trinity College - Hartford include: Chemistry, Anthropology, Physical Sciences, <a href="/11100/connecticut/hartford/science/trinity+college+-+hartford-1109/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/hartford/science/capital+community+college+-+hartford-1105/">Capital Community College - Hartford</a></span> - Hartford, CT<br/>
+Science Programs at Capital Community College - Hartford include: Social Sciences, Chemical Technology, Technician, <a href="/11100/connecticut/hartford/science/capital+community+college+-+hartford-1105/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/manchester/science/manchester+community+college+-+manchester-1110/">Manchester Community College - Manchester</a></span> - Manchester, CT<br/>
+Science Programs at Manchester Community College - Manchester include: Science Technologies, Technicians, <a href="/11100/connecticut/manchester/science/manchester+community+college+-+manchester-1110/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/middletown/science/wesleyan+university+-+middletown-1113/">Wesleyan University - Middletown</a></span> - Middletown, CT<br/>
+Science Programs at Wesleyan University - Middletown include: Chemistry, Anthropology, Geology, Earth Science, Social Sciences, Physical Sciences, Archeology, <a href="/11100/connecticut/middletown/science/wesleyan+university+-+middletown-1113/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/new+britain/science/central+connecticut+state+university+-+new+britain-1115/">Central Connecticut State University - New Britain</a></span> - New Britain, CT<br/>
+Science Programs at Central Connecticut State University - New Britain include: Chemistry, Anthropology, Geography, Geology, Earth Science, Social Sciences, Physical Sciences, <a href="/11100/connecticut/new+britain/science/central+connecticut+state+university+-+new+britain-1115/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/new+haven/science/southern+connecticut+state+university+-+new+haven-1121/">Southern Connecticut State University - New Haven</a></span> - New Haven, CT<br/>
+Science Programs at Southern Connecticut State University - New Haven include: Chemistry, Anthropology, Geography, Geology, Earth Science, <a href="/11100/connecticut/new+haven/science/southern+connecticut+state+university+-+new+haven-1121/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/new+haven/science/yale+university+-+new+haven-1123/">Yale University - New Haven</a></span> - New Haven, CT<br/>
+Science Programs at Yale University - New Haven include: Chemistry, Anthropology, Astrophysics, Archeology, Geological and Earth Sciences, Geosciences, Systems Science and Theory, <a href="/11100/connecticut/new+haven/science/yale+university+-+new+haven-1123/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1118&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/albertus-magnus/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/albertus-magnus/');" onMouseOver="window.status='Request more information from Albertus Magnus College - New Haven'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/connecticut/new+haven/science/albertus+magnus+college+-+new+haven-1118/">Albertus Magnus College - New Haven</a></span> - New Haven, CT<br/>
+Science Programs at Albertus Magnus College - New Haven include: Chemistry, Social Sciences, <a href="/11100/connecticut/new+haven/science/albertus+magnus+college+-+new+haven-1118/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/new+london/science/connecticut+college+-+new+london-1124/">Connecticut College - New London</a></span> - New London, CT<br/>
+Science Programs at Connecticut College - New London include: Chemistry, Anthropology, Social Sciences, Astrophysics, Ecology, <a href="/11100/connecticut/new+london/science/connecticut+college+-+new+london-1124/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/new+london/science/united+states+coast+guard+academy+-+new+london-1127/">United States Coast Guard Academy - New London</a></span> - New London, CT<br/>
+Science Programs at United States Coast Guard Academy - New London include: Oceanography, Chemical and Physical, <a href="/11100/connecticut/new+london/science/united+states+coast+guard+academy+-+new+london-1127/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/new+london/science/mitchell+college+-+new+london-1125/">Mitchell College - New London</a></span> - New London, CT<br/>
+Science Programs at Mitchell College - New London include: Social Sciences, <a href="/11100/connecticut/new+london/science/mitchell+college+-+new+london-1125/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/norwalk/science/norwalk+community+college+-+norwalk-1131/">Norwalk Community College - Norwalk</a></span> - Norwalk, CT<br/>
+Science Programs at Norwalk Community College - Norwalk include: Archeology, <a href="/11100/connecticut/norwalk/science/norwalk+community+college+-+norwalk-1131/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/storrs/science/university+of+connecticut+-+storrs-1140/">University of Connecticut - Storrs</a></span> - Storrs, CT<br/>
+Science Programs at University of Connecticut - Storrs include: Chemistry, Anthropology, Geography, Geology, Earth Science, Audiology, Audiologist and Hearing Sciences, Materials Science, Oceanography, Chemical and Physical, Ecology, Polymer Chemistry, Actuarial Science, <a href="/11100/connecticut/storrs/science/university+of+connecticut+-+storrs-1140/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/waterbury/science/naugatuck+valley+community+college+-+waterbury-1144/">Naugatuck Valley Community College - Waterbury</a></span> - Waterbury, CT<br/>
+Science Programs at Naugatuck Valley Community College - Waterbury include: Science Technologies, Technicians, <a href="/11100/connecticut/waterbury/science/naugatuck+valley+community+college+-+waterbury-1144/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/west+hartford/science/saint+joseph+college+-+west+hartford-1149/">Saint Joseph College - West Hartford</a></span> - West Hartford, CT<br/>
+Science Programs at Saint Joseph College - West Hartford include: Chemistry, Social Sciences, Physical Sciences, <a href="/11100/connecticut/west+hartford/science/saint+joseph+college+-+west+hartford-1149/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1150&page=http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=1009&csrc=ed-reference" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=1009&csrc=ed-reference');" onMouseOver="window.status='Request more information from University of Hartford - West Hartford'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/connecticut/west+hartford/science/university+of+hartford+-+west+hartford-1150/">University of Hartford - West Hartford</a></span> - West Hartford, CT<br/>
+Science Programs at University of Hartford - West Hartford include: Chemistry, Social Sciences, <a href="/11100/connecticut/west+hartford/science/university+of+hartford+-+west+hartford-1150/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/west+haven/science/university+of+new+haven+-+west+haven-1151/">University of New Haven - West Haven</a></span> - West Haven, CT<br/>
+Science Programs at University of New Haven - West Haven include: Chemistry, Chemical Technology, Technician, Ecology, Operations Research, <a href="/11100/connecticut/west+haven/science/university+of+new+haven+-+west+haven-1151/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/connecticut/willimantic/science/eastern+connecticut+state+university+-+willimantic-1153/">Eastern Connecticut State University - Willimantic</a></span> - Willimantic, CT<br/>
+Science Programs at Eastern Connecticut State University - Willimantic include: Physical Sciences, <a href="/11100/connecticut/willimantic/science/eastern+connecticut+state+university+-+willimantic-1153/">more...</a>						</li>
+					</ul>
+				</div>
+<div class="pagination">Page 1 </div>			</div>
+			<script>insertPagination('<div class=\"pagination\">Page 1 </div>');</script>
+			<div id="rightSideNav">
+			<div class="nav1">
+				<div class="nav1Title">Specific Science Degree Programs:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItem001100" onmouseover="document.getElementById('listItem001100').className='listOn';" onmouseout="document.getElementById('listItem001100').className='';"><a href="/00110/science/actuarial-science/colleges">Actuarial Science Colleges</a></li>
+					<li id="listItem001101" onmouseover="document.getElementById('listItem001101').className='listOn';" onmouseout="document.getElementById('listItem001101').className='';"><a href="/00110/science/analytical-chemistry/colleges">Analytical Chemistry Colleges</a></li>
+					<li id="listItem001102" onmouseover="document.getElementById('listItem001102').className='listOn';" onmouseout="document.getElementById('listItem001102').className='';"><a href="/00110/science/anthropology/colleges">Anthropology Colleges</a></li>
+					<li id="listItem001103" onmouseover="document.getElementById('listItem001103').className='listOn';" onmouseout="document.getElementById('listItem001103').className='';"><a href="/00110/science/anthropology/archaeology/colleges">Anthropology/Archaeology Colleges</a></li>
+					<li id="listItem001104" onmouseover="document.getElementById('listItem001104').className='listOn';" onmouseout="document.getElementById('listItem001104').className='';"><a href="/00110/science/applied-science/colleges">Applied Science Colleges</a></li>
+					<li id="listItem001105" onmouseover="document.getElementById('listItem001105').className='listOn';" onmouseout="document.getElementById('listItem001105').className='';"><a href="/00110/science/applied-service-management/colleges">Applied Service Management Colleges</a></li>
+					<li id="listItem001106" onmouseover="document.getElementById('listItem001106').className='listOn';" onmouseout="document.getElementById('listItem001106').className='';"><a href="/00110/science/archeology/colleges">Archeology Colleges</a></li>
+					<li id="listItem001107" onmouseover="document.getElementById('listItem001107').className='listOn';" onmouseout="document.getElementById('listItem001107').className='';"><a href="/00110/science/astronomy-and-astrophysics/colleges">Astronomy And Astrophysics Colleges</a></li>
+					<li id="listItem001108" onmouseover="document.getElementById('listItem001108').className='listOn';" onmouseout="document.getElementById('listItem001108').className='';"><a href="/00110/science/astrophysics/colleges">Astrophysics Colleges</a></li>
+					<li id="listItem001109" onmouseover="document.getElementById('listItem001109').className='listOn';" onmouseout="document.getElementById('listItem001109').className='';"><a href="/00110/science/atmospheric-physics-and-dynamics/colleges">Atmospheric Physics And Dynamics Colleges</a></li>
+					<li id="listItem0011010" onmouseover="document.getElementById('listItem0011010').className='listOn';" onmouseout="document.getElementById('listItem0011010').className='';"><a href="/00110/science/atmospheric-sciences-and-meteorology/colleges">Atmospheric Sciences And Meteorology Colleges</a></li>
+					<li id="listItem0011011" onmouseover="document.getElementById('listItem0011011').className='listOn';" onmouseout="document.getElementById('listItem0011011').className='';"><a href="/00110/science/atomic,-molecular-physics/colleges">Atomic, Molecular Physics Colleges</a></li>
+					<li id="listItem0011012" onmouseover="document.getElementById('listItem0011012').className='listOn';" onmouseout="document.getElementById('listItem0011012').className='';"><a href="/00110/science/audiology,-audiologist-and-hearing-sciences/colleges">Audiology, Audiologist And Hearing Sciences Colleges</a></li>
+					<li id="listItem0011013" onmouseover="document.getElementById('listItem0011013').className='listOn';" onmouseout="document.getElementById('listItem0011013').className='';"><a href="/00110/science/behavioral-sciences/colleges">Behavioral Sciences Colleges</a></li>
+					<li id="listItem0011014" onmouseover="document.getElementById('listItem0011014').className='listOn';" onmouseout="document.getElementById('listItem0011014').className='';"><a href="/00110/science/biology-general/colleges">Biology General Colleges</a></li>
+					<li id="listItem0011015" onmouseover="document.getElementById('listItem0011015').className='listOn';" onmouseout="document.getElementById('listItem0011015').className='';"><a href="/00110/science/biologycolleges">BiologyColleges</a></li>
+					<li id="listItem0011016" onmouseover="document.getElementById('listItem0011016').className='listOn';" onmouseout="document.getElementById('listItem0011016').className='';"><a href="/00110/science/bioscience-technologies/colleges">Bioscience Technologies Colleges</a></li>
+					<li id="listItem0011017" onmouseover="document.getElementById('listItem0011017').className='listOn';" onmouseout="document.getElementById('listItem0011017').className='';"><a href="/00110/science/chemical-physics/colleges">Chemical Physics Colleges</a></li>
+					<li id="listItem0011018" onmouseover="document.getElementById('listItem0011018').className='listOn';" onmouseout="document.getElementById('listItem0011018').className='';"><a href="/00110/science/chemical-technology,-technician/colleges">Chemical Technology, Technician Colleges</a></li>
+					<li id="listItem0011019" onmouseover="document.getElementById('listItem0011019').className='listOn';" onmouseout="document.getElementById('listItem0011019').className='';"><a href="/00110/science/chemistry/colleges">Chemistry Colleges</a></li>
+					<li id="listItem0011020" onmouseover="document.getElementById('listItem0011020').className='listOn';" onmouseout="document.getElementById('listItem0011020').className='';"><a href="/00110/science/chemistry-general/colleges">Chemistry General Colleges</a></li>
+					<li id="listItem0011021" onmouseover="document.getElementById('listItem0011021').className='listOn';" onmouseout="document.getElementById('listItem0011021').className='';"><a href="/00110/science/chemistrycolleges">ChemistryColleges</a></li>
+					<li id="listItem0011022" onmouseover="document.getElementById('listItem0011022').className='listOn';" onmouseout="document.getElementById('listItem0011022').className='';"><a href="/00110/science/cognitive-science/colleges">Cognitive Science Colleges</a></li>
+					<li id="listItem0011023" onmouseover="document.getElementById('listItem0011023').className='listOn';" onmouseout="document.getElementById('listItem0011023').className='';"><a href="/00110/science/dairy-science/colleges">Dairy Science Colleges</a></li>
+					<li id="listItem0011024" onmouseover="document.getElementById('listItem0011024').className='listOn';" onmouseout="document.getElementById('listItem0011024').className='';"><a href="/00110/science/demography-and-population-studies/colleges">Demography And Population Studies Colleges</a></li>
+					<li id="listItem0011025" onmouseover="document.getElementById('listItem0011025').className='listOn';" onmouseout="document.getElementById('listItem0011025').className='';"><a href="/00110/science/ecology/colleges">Ecology Colleges</a></li>
+					<li id="listItem0011026" onmouseover="document.getElementById('listItem0011026').className='listOn';" onmouseout="document.getElementById('listItem0011026').className='';"><a href="/00110/science/ecology,-evolution,-systematics-and-population-biology/colleges">Ecology, Evolution, Systematics And Population Biology Colleges</a></li>
+					<li id="listItem0011027" onmouseover="document.getElementById('listItem0011027').className='listOn';" onmouseout="document.getElementById('listItem0011027').className='';"><a href="/00110/science/environmental-science/colleges">Environmental Science Colleges</a></li>
+					<li id="listItem0011028" onmouseover="document.getElementById('listItem0011028').className='listOn';" onmouseout="document.getElementById('listItem0011028').className='';"><a href="/00110/science/geochemistry/colleges">Geochemistry Colleges</a></li>
+					<li id="listItem0011029" onmouseover="document.getElementById('listItem0011029').className='listOn';" onmouseout="document.getElementById('listItem0011029').className='';"><a href="/00110/science/geochemistry-and-petrology/colleges">Geochemistry And Petrology Colleges</a></li>
+					<li id="listItem0011030" onmouseover="document.getElementById('listItem0011030').className='listOn';" onmouseout="document.getElementById('listItem0011030').className='';"><a href="/00110/science/geography/colleges">Geography Colleges</a></li>
+					<li id="listItem0011031" onmouseover="document.getElementById('listItem0011031').className='listOn';" onmouseout="document.getElementById('listItem0011031').className='';"><a href="/00110/science/geological-and-earth-sciences,-geosciences/colleges">Geological And Earth Sciences, Geosciences Colleges</a></li>
+					<li id="listItem0011032" onmouseover="document.getElementById('listItem0011032').className='listOn';" onmouseout="document.getElementById('listItem0011032').className='';"><a href="/00110/science/geology,-earth-science/colleges">Geology, Earth Science Colleges</a></li>
+					<li id="listItem0011033" onmouseover="document.getElementById('listItem0011033').className='listOn';" onmouseout="document.getElementById('listItem0011033').className='';"><a href="/00110/science/geophysics-and-seismology/colleges">Geophysics And Seismology Colleges</a></li>
+					<li id="listItem0011034" onmouseover="document.getElementById('listItem0011034').className='listOn';" onmouseout="document.getElementById('listItem0011034').className='';"><a href="/00110/science/hydrology-and-water-resources-science/colleges">Hydrology And Water Resources Science Colleges</a></li>
+					<li id="listItem0011035" onmouseover="document.getElementById('listItem0011035').className='listOn';" onmouseout="document.getElementById('listItem0011035').className='';"><a href="/00110/science/inorganic-chemistry/colleges">Inorganic Chemistry Colleges</a></li>
+					<li id="listItem0011036" onmouseover="document.getElementById('listItem0011036').className='listOn';" onmouseout="document.getElementById('listItem0011036').className='';"><a href="/00110/science/marine-science,-merchant-marine-officer/colleges">Marine Science, Merchant Marine Officer Colleges</a></li>
+					<li id="listItem0011037" onmouseover="document.getElementById('listItem0011037').className='listOn';" onmouseout="document.getElementById('listItem0011037').className='';"><a href="/00110/science/materials-science/colleges">Materials Science Colleges</a></li>
+					<li id="listItem0011038" onmouseover="document.getElementById('listItem0011038').className='listOn';" onmouseout="document.getElementById('listItem0011038').className='';"><a href="/00110/science/microbiological-sciences-and-immunology/colleges">Microbiological Sciences And Immunology Colleges</a></li>
+					<li id="listItem0011039" onmouseover="document.getElementById('listItem0011039').className='listOn';" onmouseout="document.getElementById('listItem0011039').className='';"><a href="/00110/science/natural-science-composite/colleges">Natural Science Composite Colleges</a></li>
+					<li id="listItem0011040" onmouseover="document.getElementById('listItem0011040').className='listOn';" onmouseout="document.getElementById('listItem0011040').className='';"><a href="/00110/science/natural-sciences/colleges">Natural Sciences Colleges</a></li>
+					<li id="listItem0011041" onmouseover="document.getElementById('listItem0011041').className='listOn';" onmouseout="document.getElementById('listItem0011041').className='';"><a href="/00110/science/oceanography,-chemical-and-physical/colleges">Oceanography, Chemical And Physical Colleges</a></li>
+					<li id="listItem0011042" onmouseover="document.getElementById('listItem0011042').className='listOn';" onmouseout="document.getElementById('listItem0011042').className='';"><a href="/00110/science/operations-research/colleges">Operations Research Colleges</a></li>
+					<li id="listItem0011043" onmouseover="document.getElementById('listItem0011043').className='listOn';" onmouseout="document.getElementById('listItem0011043').className='';"><a href="/00110/science/parasitology/colleges">Parasitology Colleges</a></li>
+					<li id="listItem0011044" onmouseover="document.getElementById('listItem0011044').className='listOn';" onmouseout="document.getElementById('listItem0011044').className='';"><a href="/00110/science/philosophyminor)colleges">PhilosophyMinor)Colleges</a></li>
+					<li id="listItem0011045" onmouseover="document.getElementById('listItem0011045').className='listOn';" onmouseout="document.getElementById('listItem0011045').className='';"><a href="/00110/science/physical-sciences/colleges">Physical Sciences Colleges</a></li>
+					<li id="listItem0011046" onmouseover="document.getElementById('listItem0011046').className='listOn';" onmouseout="document.getElementById('listItem0011046').className='';"><a href="/00110/science/planetary-astronomy-and-science/colleges">Planetary Astronomy And Science Colleges</a></li>
+					<li id="listItem0011047" onmouseover="document.getElementById('listItem0011047').className='listOn';" onmouseout="document.getElementById('listItem0011047').className='';"><a href="/00110/science/polymer-chemistry/colleges">Polymer Chemistry Colleges</a></li>
+					<li id="listItem0011048" onmouseover="document.getElementById('listItem0011048').className='listOn';" onmouseout="document.getElementById('listItem0011048').className='';"><a href="/00110/science/range-science-and-management/colleges">Range Science And Management Colleges</a></li>
+					<li id="listItem0011049" onmouseover="document.getElementById('listItem0011049').className='listOn';" onmouseout="document.getElementById('listItem0011049').className='';"><a href="/00110/science/science-technologies,-technicians/colleges">Science Technologies, Technicians Colleges</a></li>
+					<li id="listItem0011050" onmouseover="document.getElementById('listItem0011050').className='listOn';" onmouseout="document.getElementById('listItem0011050').className='';"><a href="/00110/science/science,-technology-and-society/colleges">Science, Technology And Society Colleges</a></li>
+					<li id="listItem0011051" onmouseover="document.getElementById('listItem0011051').className='listOn';" onmouseout="document.getElementById('listItem0011051').className='';"><a href="/00110/science/social-sciences/colleges">Social Sciences Colleges</a></li>
+					<li id="listItem0011052" onmouseover="document.getElementById('listItem0011052').className='listOn';" onmouseout="document.getElementById('listItem0011052').className='';"><a href="/00110/science/systems-science-and-theory/colleges">Systems Science And Theory Colleges</a></li>
+					<li id="listItem0011053" onmouseover="document.getElementById('listItem0011053').className='listOn';" onmouseout="document.getElementById('listItem0011053').className='';"><a href="/00110/science/virology/colleges">Virology Colleges</a></li>
+					<li id="listItem0011054" onmouseover="document.getElementById('listItem0011054').className='listOn';" onmouseout="document.getElementById('listItem0011054').className='';"><a href="/00110/science/vision-science,-physiological-optics/colleges">Vision Science, Physiological Optics Colleges</a></li>
+				</ul>
+				</div>
+			</div>
+			</div>
+ 		</div>
+	<div id="footer">
+	Copyright &copy 2009 <a href="/">Ed-Reference.us</a>. All Rights Reserved.
+	</div>
+		</div>
+		</div>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2604016;
+var sc_invisible=0;
+var sc_partition=25;
+var sc_security="4b91cb87";
+var sc_remove_link=1;
+</script>
+
+<script type="text/javascript" language="javascript" src=" http://www.statcounter.com/counter/counter.js"></script><noscript><img  src=" http://c26.statcounter.com/counter.php?sc_project=2604016&java=0&security=4b91cb87&invisible=0" alt="blog counter" border="0"> </noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>
+
+
+

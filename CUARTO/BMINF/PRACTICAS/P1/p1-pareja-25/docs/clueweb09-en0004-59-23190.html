@@ -1,0 +1,330 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Apache/1.3.41 (Unix) Sun-ONE-ASP/4.0.2 Resin/2.1.13 mod_fastcgi/2.4.6 mod_log_bytes/1.2 mod_bwlimited/1.4 mod_auth_passthrough/1.8 FrontPage/5.0.2.2635 mod_ssl/2.8.31 OpenSSL/0.9.7a
+X-Powered-By: PHP/4.4.9
+Date: Sat, 17 Jan 2009 13:56:53 GMT
+Connection: close
+Content-Length: 24663
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+<title>Professional Organizing News - Getting Organized - Arranging It All</title>
+<meta name="title" content="Professional Organizing News - Getting Organized - Arranging It All" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Austin professional organizers organize offices, homes, closets, garages, and filing systems to boost personal productivity in Austin, Texas and surrounding areas." />
+<meta name="ROBOTS" content="NOODP" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" media="print" href="print.css" type="text/css" />
+<link rel="shortcut icon" href="favicon.ico" />
+<script language="JavaScript" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="jquery.hoverIntent.minified.js"></script>
+<script language="JavaScript" type="text/javascript" src="arrangingitall.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+function tipShows() {
+	
+	 var hoverText = $(this).attr("tiptitle");
+         var offset = $(this).offset();
+         vertSpot = offset.top + $(this).height();
+                horizSpot = offset.left + ($(this).width() / 2) + 45;
+
+          if (hoverText){
+                $("div.tip").css("top", vertSpot);
+                $("div.tip").css("left", horizSpot);
+                
+        	     
+          $("div#tipcontent").html(hoverText);
+          
+          $("div.tip").slideDown("fast");
+          }
+	}
+        
+        function tipShow() {
+	
+	 var hoverText = $(this).attr("tiptitle");
+         var offset = $(this).offset();
+         vertSpot = offset.top + $(this).height() + 6;
+                horizSpot = offset.left + ($(this).width() / 2) - 50;
+
+          if (hoverText){
+                $("div.tip").css("top", vertSpot);
+                $("div.tip").css("left", horizSpot);
+                
+        	     
+          $("div#tipcontent").html(hoverText);
+          
+          $("div.tip").slideDown("fast");
+          }
+	}
+        
+        function tipHide() {
+
+	  $("div.tip").hide();
+	}
+        
+function menShow() {
+  	$("#menuitems > li > a").siblings().hide();
+	var $kids = $(this).siblings();
+
+		$kids.show("fast");
+                var hoverText = $(this).attr("tiptitle");
+         var offset = $(this).offset();
+         vertSpot = offset.top + $(this).height();
+                horizSpot = offset.left + ($(this).width() / 2) + 5;
+
+          if (hoverText){
+                $("div.tip").css("top", vertSpot);
+                $("div.tip").css("left", horizSpot);
+                
+        	     
+          $("div#tipcontent").html(hoverText);
+          
+          $("div.tip").slideDown("fast");
+          }
+	}
+        
+        function menHide() {
+	$("div.tip").hide();
+	}
+	
+function menbShow() {
+	$(this).show();
+        var hoverText = $(this).attr("tiptitle");
+         var offset = $(this).offset();
+         vertSpot = offset.top + $(this).height() + 6;
+                horizSpot = offset.left + ($(this).width() / 2) - 50;
+
+          if (hoverText){
+                $("div.tip").css("top", vertSpot);
+                $("div.tip").css("left", horizSpot);
+                
+        	     
+          $("div#tipcontent").html(hoverText);
+          
+          $("div.tip").slideDown("fast");
+          }
+	}
+        
+        function menbHide() {
+          $("div.tip").hide();
+ $(this).hide("fast");
+	
+	}	
+	
+var config = {    
+     sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)    
+     interval: 250, // number = milliseconds for onMouseOver polling interval    
+     over: menShow,
+     timeout: 0, // number = milliseconds delay before onMouseOut    
+     out: menHide
+};
+
+var config2 = {    
+     sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)    
+     interval: 250, // number = milliseconds for onMouseOver polling interval    
+     over: menbShow,
+     timeout: 0, // number = milliseconds delay before onMouseOut    
+     out: menbHide
+};
+
+$(document).ready(function(){
+	
+$("#menuitems > li > a").mouseover(function(){
+			$("#menuitems > li > a").siblings().hide("fast");	
+			});
+$("#page_content").mouseover(function(){
+			$("#menuitems > li > a").siblings().hide("fast");	
+			});
+	$("#menuitems > li > a").hoverIntent(config);
+       $("#menuitems > li > a").siblings().hoverIntent(config2);
+if ( $("#page_content > p").slice(0, 1).length > 0 ) {
+    
+       var firstpoff = $("#page_content > p").slice(0, 1).offset();
+       if (firstpoff.top < 325){
+ $("#page_content > p").slice(0, 1).css("margin-left", "143px");
+       }
+       
+}
+
+if ( $("#page_content > p").slice(2, 3).length > 0 ) {
+             var secondp = $("#page_content > p").slice(2, 3).html();
+              var secondpoff = $("#page_content > p").slice(2, 3).offset();
+
+       if (secondpoff.top < 325 && secondp.length < 150){
+ $("#page_content > p").slice(2, 3).css("margin-left", "143px");
+       }
+}
+
+if ( $("#page_content > p").slice(4, 5).length > 0 ) {
+       var thirdp = $("#page_content > p").slice(4, 5).html();
+        var thirdpoff = $("#page_content > p").slice(4, 5).offset();
+
+       if (thirdpoff.top < 325 && thirdp.length < 150){
+ $("#page_content > p").slice(4, 5).css("margin-left", "143px");
+       }
+       }
+       var config3 = {    
+     sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)    
+     interval: 200, // number = milliseconds for onMouseOver polling interval    
+     over: tipShow,
+     timeout: 0, // number = milliseconds delay before onMouseOut    
+     out: tipHide
+};
+
+       var config4 = {    
+     sensitivity: 1, // number = sensitivity threshold (must be 1 or higher)    
+     interval: 200, // number = milliseconds for onMouseOver polling interval    
+     over: tipShows,
+     timeout: 0, // number = milliseconds delay before onMouseOut    
+     out: tipHide
+};
+       
+
+       $("#page_content a").hoverIntent(config3);
+       $(".scontainer a").hoverIntent(config3);
+       $("#menuitems > li > ul > li > a").hoverIntent(config4);
+       
+       var atag, sTitle;
+	var anchors = document.getElementsByTagName ("a");
+
+	for (var i = 0; i < anchors.length; i ++) {
+		atag = anchors[i];
+		sTitle = atag.getAttribute("title");
+		if(sTitle) {
+			atag.setAttribute("tiptitle", sTitle);
+			atag.removeAttribute("title");
+                }
+        }
+       
+});
+
+// ]]>
+</script>
+<script type="text/javascript" src="swfobject.js"></script>
+</head>
+
+<body>
+<div id="containertop"><p>&nbsp;</p></div>
+<div id="container">
+<div id="masthead">
+<div style="float:right; margin-top: -65px; margin-right: -32px; margin-bottom: 0px; z-index: 1000; position: relative;" id="flashtop">
+Our solutions will reduce stress.</div><script type="text/javascript">
+		// <![CDATA[
+		
+		var so = new SWFObject("badge.swf", "badge", "150", "150", "6.0.79.0", "");
+		so.addParam("wmode", "transparent");
+		so.addVariable("splashtext", "Our solutions will reduce stress.");
+		so.write("flashtop");
+		
+		// ]]>
+	</script>
+	<div style="float: right; margin-right: 0px;"><h2 style=" margin-top: 25px; margin-bottom: 0px;">512-419-7526</h2><h3><a href="mailto:info@arrangingitall.com">info@arrangingitall.com</a></h3></div>
+	<div id="logo"><a href="http://www.arrangingitall.com/" title="Arranging it All, Austin, Texas Professional Organizers"><img alt="Arranging it All, Austin, Texas Professional Organizers" src="arranging_it_all_austin_professional_organizers_logo.gif" width="500" height="100" /></a></div>
+
+	</div>
+
+	<div id="navlist"><ul id="menuitems"><li><a href="index.php" title="Arranging it All, Austin, Texas Professional Organizers"><img src="organizing_home_icon.gif" alt="Arranging it All, Austin Professional Organizers Home" title="Arranging it All, Austin Professional Organizers Home" width="30" height="30" class="menuicon" />Home</a></li>
+<li><a href="organizing_services_austin_central_texas.php" title="Professional organizer services in Austin and central Texas"><img src="organizing_services_icon.gif" alt="Organizing Services" title="Organizing Services" width="30" height="30" class="menuicon" />Organizing Services</a><ul><li><a href="organizing_services_1-Office_and_Business_Organization" title="Office organizing solutions">Office &amp; Business Organization</a></li><li><a href="organizing_services_2-Home_and_Closet_Organization" title="Home and closet organizing">Home &amp; Closet Organization</a></li><li><a href="organizing_services_5-Paper_and_Filing_Systems" title="Filing systems and paper management solutions from office organizers in Austin, TX">Paper &amp; Filing Systems</a></li><li><a href="organizing_services_6-Garage_and_Storage_Organization" title="Garage organizing">Garage &amp; Storage Organization</a></li><li><a href="organizing_services_7-Moving_and_Relocation" title="Professional organizers and senior move managers in Austin, Texas provide moving and relocation assistance.">Moving &amp; Relocation</a></li></ul></li> 
+<li><a href="organizing_presentations.php" title="Professional organizing expert and speaker"><img src="organizing_presentations_icon.gif" alt="Organizing Presentations" title="Organizing Presentations" width="30" height="30" class="menuicon" />Presentations</a><ul>
+<li><a href="organizing_presentations_1-Working_Smarter_Not_Harder_Organizing_Strategies_That_Work" title="Basic seminar on getting organized">Working Smarter - Not Harder: Organizing Strategies That Work</a></li><li><a href="organizing_presentations_2-Managing_Your_Time_When_You_Dont_Have_The_Time" title="Time Management seminar">Managing Your Time When You Don&#039;t Have The Time</a></li><li><a href="organizing_presentations_3-Taming_the_Paper_Tiger_in_Your_Life" title="Paper management seminar">Taming the Paper Tiger in Your Life</a></li><li><a href="organizing_presentations_8-Take_Back_Your_Day_Managing_Time_Voice_Mail_and_E_Mail" title="E-mail management seminar">Take Back Your Day: Managing Time, Voice Mail and E-Mail</a></li></ul></li> 
+<li><a href="in_the_news.php" title="What the media says about Austin organizing expert and certified professional organizer"><img src="in_the_news_icon.gif" alt="Arranging it All, Austin Professional Organizers In The News" title="Arranging it All, Austin Professional Organizers In The News" width="30" height="30" class="menuicon" />In The News</a></li> 
+<li><a href="professional_organizing_tips_hints.php" title="Get organized now with tips from certified Austin organizing expert"><img src="organizing_tips_icon.gif" alt="Organizing Tips" title="Organizing Tips" width="30" height="30" class="menuicon" />Organizing Tips</a></li> 
+<li><a href="organizing_quiz.php" title="How organized are you? Take our quiz!"><img src="organizing_quiz_icon.gif" alt="Organizing Quiz" title="Organizing Quiz" width="30" height="30" class="menuicon" />Organizing Quiz</a></li>
+<li><a href="about_us.php" title="Austin organizing expert and Certified Professional Organizer, CPO&reg;"><img src="about_arranging_it_all_austin_professional_organizer_icon.gif" alt="About Us, Arranging it All, Austin Professional Organizers" title="About Us, Arranging it All, Austin Professional Organizers" width="30" height="30" class="menuicon" />About Us</a></li>
+<li><a href="contact_us.php" title="Contact a Certified Professional Organizer, CPO&reg; today!"><img src="contact_us_icon.gif" alt="Contact Us, Arranging it All, Austin Professional Organizers" title="Contact Us, Arranging it All, Austin Professional Organizers" width="30" height="30" class="menuicon" />Contact Us</a></li>
+</ul><div style="margin-top: 10px"></div>
+<div style="float:left; margin-left: 0px; margin-bottom: -40px; z-index: 1000; position: relative;"><img src="updates.gif" alt="Updates" title="Updates" width="50" height="50" /></div>
+<div class="scontainertop"></div>
+<div class="scontainer">
+<h2>&nbsp;&nbsp;News Flash</h2>
+<div style="margin-right: auto; margin-left: auto; padding: 0px 10px 0px 10px;">
+<p>January is National Get Organized Month and we are prepared to help you honor those new year resolutions you made to yourself! <a href="http://www.arrangingitall.com/contact_us.php">Contact us</a> today and ask us about our ARRANGING IT ALL Get Organized Month specials. It's as easy as saying &quot;Get Organized!&quot;</p></div>
+</div>
+<div class="scontainerbottom"></div>
+</div><div id="sidebar" style="float: right; width: 181px; margin: 10px 5px 0px 25px; background: transparent;">
+<div style="float:left; margin-left: -20px; margin-bottom: -40px; z-index: 1000; position: relative;"><img src="organizing_tips.gif" alt="Organizing Tips" title="Organizing Tips" width="50" height="50" /></div>
+<div class="scontainertop"></div>
+<div class="scontainer">
+<h2>Organizing Tips</h2>
+<div style="margin-right: auto; margin-left: auto; padding: 0px 10px 0px 10px;"><p style="margin-bottom: 8px">Store similar items together and as close as possible to where they will be used.<br /></p><p style="margin-bottom: 8px">US businesses generate over 2 trillion pieces of paper every year.<br /></p><p style="margin-bottom: 8px">Create a move calendar starting with moving date and working backwards.</p>
+</div>
+</div>
+<div class="scontainerbottom"></div>
+
+<div style="float:left; margin-left: -20px; margin-bottom: -40px; z-index: 1000; position: relative;"><img src="happy.gif" alt="Testimonials" title="Testimonials" width="50" height="50" /></div>
+<div class="scontainertop"></div>
+<div class="scontainer">
+<h2>Testimonials</h2>
+<div style="margin-right: auto; margin-left: auto; padding: 0px 10px 0px 10px;">
+"My move was a breeze with Arranging it All<sup>SM</sup>. All of the boxes were unpacked and my entire home was set up and organized in two days. I don't know how I would have survived this move without you!"<br /><br />-Maxine D., Austin, TX</div>
+
+
+</div>
+<div class="scontainerbottom"></div>
+
+<div style="float:left; margin-left: -20px; margin-bottom: -40px; z-index: 1000; position: relative;"><img src="shop.gif" alt="Buy Organize Your Garage In No Time" title="Buy Organize Your Garage In No Time" width="50" height="50" /></div>
+<div class="scontainertop"></div>
+<div class="scontainer">
+<h2>Do-It-Yourselfer?</h2>
+<div style="text-align: center; margin-right: auto; margin-left: auto;"><a href="http://www.amazon.com/Organize-Your-Garage-No-Time/dp/078973219X/ref=pd_bbs_sr_1?ie=UTF8&amp;s=books&amp;qid=1196431495&amp;sr=8-1" target="_blank" title="Buy Barry Izsak's book, Organizing Your Garage...In No Time...filled with great garage organzing advice from an Austin professional organizer."><img src="Organize_your_garage_in_no_time.jpg" alt="Organize Your Garage In No Time" width="160" height="197" /></a></div>
+
+
+</div>
+<div class="scontainerbottom"></div>
+
+</div><div id="page_content">
+<div style="float: left;">
+<img src="inthenewsiconlarge.gif" alt="Professional Organizing News with Arranging it All - Professional Organizers" title="Professional Organizing News with Arranging it All - Professional Organizers" width="133" height="133" class="headimage" />
+<div style="clear: left"></div>
+</div>
+<h3>Professional Organizing News - Getting Organized - Arranging It All</h3><ul class="resultslist"><li><h3 class="newshead"><a href="organizing_news_32-Anxious_About_What_to_Pack_for_Your_College_Kid%5Cs_Dorm">Anxious About What to Pack for Your College Kid&#039;s Dorm?</a></h3><p class="credits">By Erin White<em> - Fort Worth Star Telegram</em><span>August 4th 2008</span></p><p><p>&nbsp;</p><p>Thinking about getting your first-time college student packed for dorm life can overwhelm even the most organized parent. Plenty of...</p><p style="float:right"><a href="organizing_news_32-Anxious_About_What_to_Pack_for_Your_College_Kid%5Cs_Dorm">Read Full Story</a></p></li><li><h3 class="newshead"><a href="organizing_news_15-Marking_the_Holidays_Gently">Marking the Holidays Gently</a></h3><p class="credits">By Jura Koncius<em> - The Washington Post</em><span>November 29th 2007</span></p><p><p>&quot;Gift giving is a good place to start thinking about being environmentally aware this holiday season,&quot; says Bonnie Trust Dahan,...</p><p style="float:right"><a href="organizing_news_15-Marking_the_Holidays_Gently">Read Full Story</a></p></li><li><h3 class="newshead"><a href="organizing_news_25-Getting_Organized__A_New_National_Pastime">Getting Organized--A New National Pastime</a></h3><p class="credits">By Manav Tanneeru<em> - CNN.com</em><span>April 19th 2007</span></p><p><p>As the cameras and crew of cable TV's &quot;Clean Sweep&quot; descend on the three-bedroom house of Frazier and Cynthia Watts,...</p><p style="float:right"><a href="organizing_news_25-Getting_Organized__A_New_National_Pastime">Read Full Story</a></p></li></ul><a href="in_the_news.php" title="Back to the main News area"><<-Back to In The News</a><div style="clear: both; margin: 0;"></div>
+<div id="orgorg">
+    <p style="padding:0; margin-top: 0;">Arranging it All<span class="sm">SM</span> is owned and operated by a Certified Professional Organizer&reg; (CPO&reg;) and a Certified Relocation and Transition Specialist (CRTS).</p>
+    <img src="Senior-Certified-Relocation-And-Transition-Specialist-CRTS.jpg" alt="Senior Certified Relocation and Transition Specialist" title="Senior Certified Relocation and Transition Specialist" width="96" height="100" />
+<img src="The-Board-of-Certification-For-Professional-Organizers-logo.gif" alt="The Board of Certification For Professional Organizers Certified" title="The Board of Certification For Professional Organizers Certified" width="100" height="100" />
+<img src="napo_golden_circle_member.gif" alt="NAPO - National Association of Professional Organizers Golden Circle Member" title="NAPO - National Association of Professional Organizers Golden Circle Member" width="142" height="100" />
+<img src="napo_national_association_of_professional_organizers_member.gif" alt="NAPO - National Association of Professional Organizers Member" title="NAPO - National Association of Professional Organizers Member" width="134" height="100" />
+<img src="paper_tiger_authorized_consultant.gif" alt="Paper Tiger Productivity Trainer Authorized Consultant" title="Paper Tiger Productivity Trainer Authorized Consultant" width="119" height="100" />
+<img src="National-Association-of-Senior-Move-Managers-NASMM.jpg" alt="National Association of Senior Move Managers Member" title="National Association of Senior Move Managers Member" width="150" height="62" style="padding-bottom: 25px;" />
+<br /><br />
+<div style="font-size: 10px;">We accept all major credit cards. <img src="accepted-credit-cards.gif" width="223" height="38" alt="Visa, MasterCard, Discover, American Express" title="Pay for organizing services with these credit cards." style="margin-bottom: -12px; padding: 0px;" /></div><br /><br />
+<p>&copy; 2002-2009 Arranging it All<span class="sm">SM</span>. All rights reserved.</p></div>
+</div>
+</div>
+
+<div id="containerbottom"></div>
+<div id="footertab">
+
+<div style="margin-left: 10px; margin-right: 10px;">
+    <h3 style="float:left; margin:0px; color: #6D6D6D;">Site Map</h3>
+    <div style=" clear: both;"></div>
+<ul id="sitemap">
+    <li><a href="index.php" title="Arranging it All, Austin, Texas Professional Organizers">Home</a></li>
+<li><a href="organizing_services_austin_central_texas.php" title="Professional organizer services in Austin and central Texas">Organizing Services</a>>><ul><li><a href="organizing_services_1-Office_and_Business_Organization" title="Office organizing solutions">Office &amp; Business Organization</a></li><li><a href="organizing_services_2-Home_and_Closet_Organization" title="Home and closet organizing">Home &amp; Closet Organization</a></li><li><a href="organizing_services_5-Paper_and_Filing_Systems" title="Filing systems and paper management solutions from office organizers in Austin, TX">Paper &amp; Filing Systems</a></li><li><a href="organizing_services_6-Garage_and_Storage_Organization" title="Garage organizing">Garage &amp; Storage Organization</a></li><li><a href="organizing_services_7-Moving_and_Relocation" title="Professional organizers and senior move managers in Austin, Texas provide moving and relocation assistance.">Moving &amp; Relocation</a></li></ul></li> 
+<li><a href="organizing_presentations.php" title="Professional organizing expert and speaker">Presentations</a>>><ul>
+<li><a href="organizing_presentations_1-Working_Smarter_Not_Harder_Organizing_Strategies_That_Work" title="Basic seminar on getting organized">Working Smarter - Not Harder: Organizing Strategies That Work</a></li><li><a href="organizing_presentations_2-Managing_Your_Time_When_You_Dont_Have_The_Time" title="Time Management seminar">Managing Your Time When You Don&#039;t Have The Time</a></li><li><a href="organizing_presentations_3-Taming_the_Paper_Tiger_in_Your_Life" title="Paper management seminar">Taming the Paper Tiger in Your Life</a></li><li><a href="organizing_presentations_8-Take_Back_Your_Day_Managing_Time_Voice_Mail_and_E_Mail" title="E-mail management seminar">Take Back Your Day: Managing Time, Voice Mail and E-Mail</a></li></ul></li> 
+<li><a href="in_the_news.php" title="What the media says about Austin organizing expert and certified professional organizer">In The News</a>>><ul><li><a href="cat_2-Garage_Organization" title="Garage organizing expert">Garage Organization</a></li><li><a href="cat_1-Getting_Organized" title="Organizing expert">Getting Organized</a></li><li><a href="cat_3-Home_Organization" title="Home organizing expert">Home Organization</a></li><li><a href="cat_6-Moving_and_Relocation" title="Certified Relocation and Transition Specialist">Moving &amp; Relocation</a></li><li><a href="cat_4-Office_Organization" title="Office organizing expert">Office Organization</a></li><li><a href="cat_5-Organizing_Industry" title="Organizing industry spokesperson">Organizing Industry</a></li><li><a href="cat_8-Press_Releases" title="What's new at Arranging It All in Austin, TX">Press Releases</a></li><li><a href="cat_7-Time_Management" title="Time management expert">Time Management</a></li></ul></li> 
+<li><a href="professional_organizing_tips_hints.php" title="Get organized now with tips from certified Austin organizing expert">Organizing Tips</a>>><ul><li><a href="organizing_tips_2-Closet" title="Closet organizing tips">Closet</a></li><li><a href="organizing_tips_9-De_cluttering" title="De-cluttering tips">De-cluttering</a></li><li><a href="organizing_tips_10-E_mail" title="Tips to manage e-mail">E-mail</a></li><li><a href="organizing_tips_11-Filing" title="Filing tips">Filing</a></li><li><a href="organizing_tips_3-Garage" title="Garage organizing tips">Garage</a></li><li><a href="organizing_tips_4-Garage_Safety" title="Garage safety tips">Garage Safety</a></li><li><a href="organizing_tips_5-Kitchen" title="Kitchen organizing tips">Kitchen</a></li><li><a href="organizing_tips_15-Moving_and_Relocation" title="Moving tips">Moving &amp; Relocation</a></li><li><a href="organizing_tips_6-Office" title="Office organizing tips">Office</a></li><li><a href="organizing_tips_12-Paper" title="Paper management tips">Paper</a></li><li><a href="organizing_tips_13-Planning" title="Tips on getting organized">Planning</a></li><li><a href="organizing_tips_7-Purse" title="Purse organizing tips">Purse</a></li><li><a href="organizing_tips_8-RefrigeratorFreezer" title="Kitchen organizing tips">Refrigerator/Freezer</a></li><li><a href="organizing_tips_14-Time_Management" title="Time management tips">Time Management</a></li></ul></li> 
+<li><a href="organizing_quiz.php" title="How organized are you? Take our quiz!"><br />Organizing Quiz</a></li>
+<li><a href="about_us.php" title="Austin organizing expert and Certified Professional Organizer, CPO&reg;">About Us</a></li>
+<li><a href="contact_us.php" title="Contact a Certified Professional Organizer, CPO&reg; today!">Contact Us</a></li>
+</ul>
+</div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3766115-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<div class="tip"><div id="tiptop"></div><div id="tipcontent"></div><div id="tipbot"></div></div>
+</body>
+
+</html>
+
+

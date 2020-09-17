@@ -1,0 +1,41 @@
+Practica 3 por Tomas Higuera Viso y Manuel Chamorro Martinez de Aragon.
+
+Ficheros entregados:
+PRACTICA3
+├── interface.c
+├── interface.h
+├── leeme.txt
+├── makefile
+├── practica3.c
+└── practica3.h
+
+Requisitos:
+- ICMP y echo/ping dentro de la red local: Realizado.
+	Hemos rellenado la cabecera con los datos especificados en el enunciado y hemos tenido en cuenta la transformacion de bytes de formato big endian a little endian con la funcion ntohs en todas las variables de mas de 8 bits. Una vez creada la cabecera hemos escrito el mensaje especificado en la cabecera de practica3.h (ICMP_DATA) y hemos enviado el mismo al siguiente protocolo(IP) para seguir rellenando las cabeceras. Para este protocolo nos hemos apoyado en gran medida en la pagina "https://es.wikipedia.org/wiki/Cabecera_IP" que explica de una manera sencilla que valores es necesario escribir en todos los campos de la cabecera. Hemos seteado todos los campos de la cabecera como se especifica en el enunciado y los campos por ejemplo el de tipo de servicio, en el que no se especificaba la informacion que habia que escribir, lo hemos seteado como si nuestro paquete fuera de maxima prioridad. En esta cabecera ip hacemos  las comprobaciones de si es necesario fragmentar el paquete, asi como la comprobacion de si la ip destino se encuentra en la subred o no. Antes de enviar nuestro segmento a la cabecera ethernet hemos seteado en los parametros la ethdestino que hemos calculado utilizando la funcion de ARPRequest proporcionada. En la cabcera ethernet seteamos todos los campos y si no se produce ningun error enviamos el paquete.
+
+- ICMP y echo/ping en un equipo no adyacente: 
+	Para el correcto funcionamiento de este punto hemos realizado el mismo proceso que en el punto anterior, con la diferencia de que al darnos cuenta, tras aplicar la mascara, de que vamos a enviar el paquete a una ip fuera de nuestra subred hemos necesitado utilizar la funcion obtenerGateway, que nos dice la ip por la que debe salir nuestro paquete, y con esta ip relaizamos la arp request para poder conocer la ethernet destino y poder generar la cabecera de nivel de enlace de manera correcta.
+
+- Formación correcta de un paquete UDP dentro de la red local: Realizado
+	Para generar este tipo de paquete seguimos el mismo funcionamiento que al generar el paquete de tipo ICMP con la diferencia que en vez de generar una cabecera ICMP como en los casos anteriores generamos una cabecera UDP. Esta cabecera UDP la seteamos con los valores especificados en el enunciado.
+
+- Envío y Recepción de un paquete UDP en un equipo no adyacente (externo a la LAN): Realizado
+	Para cumplir este requisito no ha sido necesario modificar el codigo, ya que el funcionamiento de los paquetes hace que a pesar de que cambiemos la cabecera de nivel de transporte no es necesario que cambiemos la cabecera de nivel de red, ya que estas son independientes. La unica diferencia con la cabecera de tipo ICMP es que en el campo protocolo de la cabecera IP seteamos este campo con identificador del protocolo de nivel de transporte.
+
+- Envío y Recepción de paquetes UDP que hayan sufrido fragmentación: Realizado
+	Para cumplir con la fragmentacion hemos tenido que aniadir una serie de variables globales que nos permiten conocer si el paquete esta siendo fragmentado, el offset en el mensaje y si el paquete que se etsa enviando es el ultimo fragmento del paquete original. Hemos tenido en cuenta que el primer fragmento se envia con las cabeceras UDP|IP|Ethernet y el resto de fragmentos solo se envian con las cabeceras IP|Ethernet, omitiendo la cabecera UDP que es innecesaria.
+
+- Implementación del bit DF: Realizado
+	Para cumplir con este hemos tenido que realizar dos cambios. En la cabecera IP comprobamos si es necesario fragmentar y el paquete, y si lo es comprobamos si en el parametro que contiene la flag de fragmentacion se permite fragmentar o no, si no se permite simplemente devolvemos error y no enviamos el paquete. El otro cambio es que si en el paquete no es necesario fragmentar el paquete simplemente seteamos la flag DF a 1.
+
+- Lectura de datos para paquetes UDP desde archivo: Realizado
+	Para cumplir con este requisito abrimos el fichero especificado, comprobamos si este se abierto correctamente o por el contrario no existe, y si podemos leerlo enviamoos la informacion leida asi como la longitud de nuestro fichero a la cabecera UDP.
+
+- Impresión de tramas enviadas por pantalla en hexadecimal: Realizado
+	Para imprimir las tramas hemos utilizado una variable global y al terminar de generar la cabecera si comprobamos que la flag que solicita mostrar las tramas por pantalla esta a 1 hacemos uso de la funcion mostrarHex para imprimir el paquete segun lo vamos generando.
+
+- Fichero leeme.txt: Realizado
+
+- Aclaraciones: 
+	Para comprobar el correcto funcionamiento de todos los puntos hemos analizado las trazas generadas al final del programa con wireshark y comprbado si todos los campos eran correctos. Para saber si enviabamos bien los paquetes en la misma subred nos hemos conectado ambos a la wifi generada por un movil y hemos probado a enviarnos paquetes mientras analizabamos el trafico en wireshark. Para el caso de enviar paquetes fuera de la subred hemos seguido el procedimiento anterior, con la diferencia de que cada uno se cocetaba a la red wifi generada por su movil.
+	

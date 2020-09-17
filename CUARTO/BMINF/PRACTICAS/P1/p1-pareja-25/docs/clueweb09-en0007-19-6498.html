@@ -1,0 +1,1077 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=ISO-8859-1
+X-Powered-By: PHP/5.2.8
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Date: Fri, 09 Jan 2009 17:23:02 GMT
+Pragma: no-cache
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Connection: close
+Set-Cookie: PHPSESSID=p1aikll5c763ae6uv786r5ndo1; path=/
+Content-Length: 62979
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+
+
+	
+					<title>Dynamic-Living.com :: Toilet</title>
+			
+			<meta name="keywords" content="Toileting toilet seat riser raised safety frame tissue holder"><meta name="description" content="Toileting aids for independent living.  Toilet seat risers, safety frames, Bottom Buddy toilet tissue holder, bidets and more. Keep your independence even with a disability."><meta name="robots" content="index,follow">
+			
+	
+
+	<link href="http://www.dynamic-living.com/www/css/form.css" rel="stylesheet" type="text/css" />
+	<link href="http://www.dynamic-living.com/www/css/style.css" rel="stylesheet" type="text/css" />
+    
+	<script type="text/javascript">
+	var JURL;
+	
+			JURL="http://www.dynamic-living.com";
+		
+	</script>
+	
+	<script type="text/javascript" src="http://www.dynamic-living.com/www/js/product.js"></script>
+	<script type="text/javascript" src="http://www.dynamic-living.com/www/js/leftMenu.js"></script>
+	<script type="text/javascript" src="http://www.dynamic-living.com/www/js/cart.js"></script>
+	<script type="text/javascript" src="http://www.dynamic-living.com/www/js/search.js"></script>
+	<script type="text/javascript" src="http://www.dynamic-living.com/www/js/rightbutton.js"></script>
+	<script type="text/javascript" src="http://www.dynamic-living.com/www/js/tabcontent.js"></script>
+   
+	
+	
+		<script src="http://www.dynamic-living.com/__utm.js" type="text/javascript"></script>
+
+	
+    
+    
+    
+<script> 
+function toggle(theDiv) {
+    var elem = document.getElementById(theDiv);
+    elem.style.display = (elem.style.display == "none")?"":"none";
+
+}
+
+
+
+
+function createAjax(){
+
+  var objectAjax=false;
+  try {
+   
+   objectAjax = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (e) {
+   try {
+     
+     objectAjax = new ActiveXObject("Microsoft.XMLHTTP");
+     } 
+     catch (E) {
+     objectAjax = false;
+   }
+  }
+
+  if (!objectAjax && typeof XMLHttpRequest!='undefined') {
+   objectAjax = new XMLHttpRequest();
+  }
+  return objectAjax;
+}
+
+ function FAjax (url,layer,values,method)
+{
+
+   var ajax=createAjax();
+   var contentLayer = document.getElementById(layer);
+
+
+ if(method.toUpperCase()=='POST'){
+    
+    ajax.open ('POST', url, true);
+	
+    ajax.onreadystatechange = function() {
+         if (ajax.readyState==1) {
+                 contentLayer.innerHTML='<div align="left">Logging in...</div>';
+         }
+         else if (ajax.readyState==4){
+		 
+            if(ajax.status==200)
+            {
+				if(ajax.responseText.indexOf("passSh")==0)	
+					window.location = JURL+"/shippingInformationUser/";
+				else if(ajax.responseText.indexOf("pass")==0)			
+					window.location = JURL+"/myAccount/";
+				else
+					document.getElementById(layer).innerHTML=ajax.responseText; 
+            }
+            else if(ajax.status==404)
+                 {
+
+                     contentLayer.innerHTML = "Message";
+                 }
+             else
+                 {
+                     contentLayer.innerHTML = "Error: ".ajax.status;
+                 }
+        }
+    }
+    ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    ajax.send(values);
+    return;
+}
+
+if (method.toUpperCase()=='GET'){
+
+    ajax.open ('GET', url, true);
+    ajax.onreadystatechange = function() {
+         if (ajax.readyState==1) {
+                 contentLayer.innerHTML="<div align='left'>Logging in...</div>";
+         }
+         else if (ajax.readyState==4){
+            if(ajax.status==200){ 
+                 document.getElementById(layer).innerHTML=ajax.responseText; 
+            }
+            else if(ajax.status==404)
+                 {
+
+                     contentLayer.innerHTML = "Message";
+                 }
+                 else
+                 {
+                     contentLayer.innerHTML = "Error: ".ajax.status;
+                 }
+        }
+    }
+    ajax.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    ajax.send(null);
+    return
+}
+}
+
+</script>
+
+	<link rel="stylesheet" type="text/css" href="http://www.dynamic-living.com/www/searchtabs/searchtabs.css" />
+	
+</head>
+<body>
+
+<a name="name_top" id="name_top"></a>
+<div id="top"></div>
+<div id="SiteContainer">
+
+
+	<div id="ShadowTop">
+		&nbsp;
+	</div>
+	<div id="ShadowBg">
+		<div id="Header1">
+		<div class="loginLink">
+       <b><a href="https://www.dynamic-living.com/myAccount/" style="text-decoration:none;">My Account</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                  
+    	     <b><a href="https://www.dynamic-living.com/myAccount/" style="text-decoration:none;">Login</a></b> 
+         
+                  
+        		<div class="ShoppingCartContainer">
+			
+				<div class="FloatRight">
+					<img src="http://www.dynamic-living.com/www/img/shopping-cart-curve.gif" alt="ShoppingCart" oncontextmenu="return false" />
+				</div>
+				<div class="FloatLeft">
+					<img src="http://www.dynamic-living.com/www/img/shopping-cart-icon.gif" alt="ShoppingCart" oncontextmenu="return false" />
+				</div>
+				<div class="ShoppingCartTxt">
+					<strong>Cart:</strong>
+										Empty
+					
+										 <br />
+					<span class="ShoppingCartLink">
+						<a href="http://www.dynamic-living.com/page/safe-shopping/" title="Safe shopping">Safe Shopping</a>
+						&nbsp;&nbsp;&nbsp;
+						<a href="http://www.dynamic-living.com/cart/" title="Check out">Check Out</a>
+					</span>
+				</div>
+			</div>
+			</div>
+			<div class="FloatLeft" style="vertical-align:middle;">
+				<a href="http://www.dynamic-living.com/" title="Dynamic-Living"><img src="http://www.dynamic-living.com/www/img/dynamic-living-logo.gif" alt="Dynamic-Living.com" oncontextmenu="return false" /></a>  
+                                	<a href="#name_Center"><img src="http://www.dynamic-living.com/www/img/spacer.gif" alt="Skip to main content" width="5" height="5" border="0"></a>
+                                   
+			</div>
+            
+			<div class="CallNow">
+				<span class="PhoneNo">(888) 940-0605</span>
+                <div>
+				Monday to Friday
+                </div>
+                <div>
+			    9 am to 6 pm EST
+                </div>
+			</div>
+		</div>
+        
+		<div id="NavBar">
+			<a href="http://www.dynamic-living.com/products-new/" class="NavLink" title="New products">New Products</a> 
+			<a href="http://www.dynamic-living.com/products-on-sale/" class="NavLink" title="On sale products">On Sale</a> 
+			<a href="http://www.dynamic-living.com/page/ask-gladys/" class="NavLink" title="Ask Gladys">Ask Gladys</a> 
+			<a href="http://www.dynamic-living.com/free-catalog/" class="NavLink" title="Free catalog">Free Catalog</a> 
+			<a href="http://www.dynamic-living.com/customer-service/" class="NavLink" title="Customer service">Customer Service</a> 
+			<a href="http://www.dynamic-living.com/newsletter-sign-up/" class="NavLink" title="Newsletter sign-up">Newsletter Sign-up</a>
+		</div>
+
+			<script type="text/javascript">
+<!--
+	var subCats = new Array();
+	var html = '';
+										htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/accessability/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Accessibility">Accessibility</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/transferring-4/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Transferring">Transferring</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/rollatorswalkers/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Rollators/Walkers">Rollators/Walkers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/mobility-accessories/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Mobility Accessories">Mobility Accessories</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/canes/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Canes">Canes</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/traveling/" class="CategoryLinkSub"  title="Traveling">Traveling</a>';
+									
+				 subCats[12] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/support-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Support">Support</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bedrails/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Bed-Rails">Bed-Rails</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/lifting-aids/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Lifting Aids">Lifting Aids</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/seating-accessories/" class="CategoryLinkSub"  title="Seating Accessories">Seating Accessories</a>';
+									
+				 subCats[9] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/arthritis/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Arthritis">Arthritis</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/hands-free/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Hands Free">Hands Free</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/singlehanded/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Singlehanded">Singlehanded</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/holding/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Holding">Holding</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/turning/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Turning">Turning</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/recreation-3/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Recreation">Recreation</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/dressing-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Dressing">Dressing</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/dining/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Dining">Dining</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/cooking/" class="CategoryLinkSub"  title="Cooking">Cooking</a>';
+									
+				 subCats[7] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/clocks--watches/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Clocks &amp; Watches">Clocks &amp; Watches</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/magnifiers/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Magnifiers">Magnifiers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/talking/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Talking">Talking</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/voice-interactive/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Voice Interactive">Voice Interactive</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/telephones-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Telephones">Telephones</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/recreation-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Recreation">Recreation</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/general-aids/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[11] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/amplified-telephones/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Amplified Telephones">Amplified Telephones</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/clocks--watches-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Clocks &amp; Watches">Clocks &amp; Watches</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/hearing-general/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[6] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/telephones/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Telephones">Telephones</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/hands-free-phones/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Hands Free Phones">Hands Free Phones</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/calling-for-assistance/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Calling For Assistance">Calling For Assistance</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/alerting-devices-2/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Alerting Devices">Alerting Devices</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/speech-aids/" class="CategoryLinkSub"  title="Speech Aids">Speech Aids</a>';
+									
+				 subCats[3] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/alerting-devices-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Alerting Devices">Alerting Devices</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/fall-prevention/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Fall Prevention">Fall Prevention</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/transferring-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Transferring">Transferring</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/moving-someone/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Moving Someone">Moving Someone</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/helping-with-hygiene/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Helping With Hygiene">Helping With Hygiene</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bathing-someone/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Bathing Someone">Bathing Someone</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/general-aids-2/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[5] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/clocks-with-day-and-date/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Clocks With Day And Date">Clocks With Day And Date</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/pill-organizers/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Pill Organizers">Pill Organizers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/reminders-and-timers/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Reminders And Timers">Reminders And Timers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/general-aids-1/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[8] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/standing/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Standing">Standing</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/transferring/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Transferring">Transferring</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/personal-care-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Personal Care">Personal Care</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/dressing/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Dressing">Dressing</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/support/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Support">Support</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bariatric-aids/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[10] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/reachers/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Reachers">Reachers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/personal-hygiene/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Personal Hygiene">Personal Hygiene</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/grooming/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Grooming">Grooming</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/general-aids-4/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[32] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/favorites/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Favorites">Favorites</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/gifts-under-10/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Gifts Under $10">Gifts Under $10</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/kitchen-gadgets/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Kitchen Gadgets">Kitchen Gadgets</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/recreation-2/" class="CategoryLinkSub"  title="Recreation">Recreation</a>';
+									
+				 subCats[13] = htmlList;
+															htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/transferring-2/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Transferring">Transferring</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/comfort/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Comfort">Comfort</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/driving-aids/" class="CategoryLinkSub"  title="Driving Aids">Driving Aids</a>';
+									
+				 subCats[131] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/grooming-aids/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Grooming Aids">Grooming Aids</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/hair-care/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Hair Care">Hair Care</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/skin-care/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Skin Care">Skin Care</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bath-aids/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[14] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/hand-shower/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Hand Held Showers">Hand Held Showers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/grab-bars/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Grab Bars">Grab Bars</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/washing-aids/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Washing Aids">Washing Aids</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bath-chairs/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Bath Chairs">Bath Chairs</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/transferring-3/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Transferring">Transferring</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bath-add-on/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Bath Accessories">Bath Accessories</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bathing-alternatives/" class="CategoryLinkSub"  title="Bathing Alternatives">Bathing Alternatives</a>';
+									
+				 subCats[136] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/personal-hygiene-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Personal Hygiene">Personal Hygiene</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/incontinence/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Incontinence">Incontinence</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/sitting--standing/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Sitting &amp; Standing">Sitting &amp; Standing</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/commodes/" class="CategoryLinkSub"  title="Commodes">Commodes</a>';
+									
+				 subCats[137] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/medication-timer/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Medication Timers">Medication Timers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/dispensing-aids/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Dispensing Aids">Dispensing Aids</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/health-monitoring/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Health Monitoring">Health Monitoring</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/pill-organizers-1/" class="CategoryLinkSub"  title="Pill Organizers">Pill Organizers</a>';
+									
+				 subCats[134] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/dressing-aids/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Dressing Aids">Dressing Aids</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/jewelry-1/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Jewelry">Jewelry</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/comfort-and-wellness/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Comfort And Wellness">Comfort And Wellness</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/clothing/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Easy to Wear Clothing">Easy to Wear Clothing</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bed-clothes/" class="CategoryLinkSub"  title="Bed Clothes">Bed Clothes</a>';
+									
+				 subCats[132] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bed-rails/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Bed Rails">Bed Rails</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/getting-in--out/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Getting In &amp; Out">Getting In &amp; Out</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/on-the-bed/" class="CategoryLinkSub" style="margin-bottom:3px;" title="On The Bed">On The Bed</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/bedside-furnishing/" class="CategoryLinkSub"  title="Bedside Furnishing">Bedside Furnishing</a>';
+									
+				 subCats[15] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/openers/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Openers">Openers</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/preparing-food/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Preparing Food">Preparing Food</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/cutting/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Cutting">Cutting</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/cleaning/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Cleaning &amp; Safety">Cleaning &amp; Safety</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/gadgets-kitchen/" class="CategoryLinkSub"  title="Other Gadgets">Other Gadgets</a>';
+									
+				 subCats[17] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/utensils/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Utensils">Utensils</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/dishes--cups/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Dishes &amp; Cups">Dishes &amp; Cups</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/tableware/" class="CategoryLinkSub"  title="Table Accessories">Table Accessories</a>';
+									
+				 subCats[135] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/watching-television/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Watching Television">Watching Television</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/reading/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Reading">Reading</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/cards-and-games/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Cards and Games">Cards and Games</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/needlecraft/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Needlecraft">Needlecraft</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/furniture/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Furniture">Furniture</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/fitness/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Fitness">Fitness</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/officehomework/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Office/Homework">Office/Homework</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/pet-care/" class="CategoryLinkSub"  title="Pet Care">Pet Care</a>';
+									
+				 subCats[16] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/monitoringsafety/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Monitoring &amp; Safety">Monitoring &amp; Safety</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/recreation-4/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Recreation">Recreation</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/kids-dining/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Kids Dining">Kids Dining</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/general-aids-5/" class="CategoryLinkSub"  title="General Aids">General Aids</a>';
+									
+				 subCats[133] = htmlList;
+							htmlList = '';
+
+																				
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/building-supplies/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Building Supplies">Building Supplies</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/doors/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Doors">Doors</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/plumbing/" class="CategoryLinkSub" style="margin-bottom:3px;" title="Plumbing">Plumbing</a>';
+																									
+											htmlList = htmlList + '<a href="http://www.dynamic-living.com/category/gardening/" class="CategoryLinkSub"  title="Gardening">Gardening</a>';
+									
+				 subCats[138] = htmlList;
+						//-->
+</script>
+
+<div>
+	<div id="Left">
+		<div class="SearchContainer">
+        
+              
+              
+              
+              	 <form action="http://www.dynamic-living.com/searchSite/" method="POST" style="margin:0px;">
+                 
+                      
+			<div class="SearchHeader">
+            
+				<label for="searchsiteid">Search the Site</label>
+			</div>
+			<div class="SearchContent">
+				
+					<div class="FloatLeft">
+						<input name="search" type="text" class="LeftSearchInput"
+
+						
+						 id="searchsiteid"/>
+
+					</div>
+
+					<div class="GoBtn">
+						<input type="image" src="http://www.dynamic-living.com/www/img/go-btn.gif" border="0" alt="Search the site" class="GoBtn" />
+					</div>
+				
+			</div>
+            
+            </form>
+			<div class="SearchFooter"><img src="http://www.dynamic-living.com/www/img/search-footer.gif" alt="Search" oncontextmenu="return false" /></div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<div class="LeftBoxContainer">
+				<div class="LeftBoxHeader" align="left">
+					Shop By Use
+				</div>
+				<div class="LeftBoxContent">
+																																	
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(12); return false;" title="Moving Around"><img id="imgSubCat12" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Moving Around" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/moving-around/" class="CategoryLink" title="Moving Around">Moving Around</a></td></tr></table>
+									
+									<div id="subCatsList12"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(9); return false;" title="Sitting/Standing"><img id="imgSubCat9" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Sitting/Standing" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/standing-sitting/" class="CategoryLink" title="Sitting/Standing">Sitting/Standing</a></td></tr></table>
+									
+									<div id="subCatsList9"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(7); return false;" title="Hands"><img id="imgSubCat7" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Hands" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/hands/" class="CategoryLink" title="Hands">Hands</a></td></tr></table>
+									
+									<div id="subCatsList7"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(11); return false;" title="Vision"><img id="imgSubCat11" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Vision" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/vision/" class="CategoryLink" title="Vision">Vision</a></td></tr></table>
+									
+									<div id="subCatsList11"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(6); return false;" title="Hearing"><img id="imgSubCat6" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Hearing" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/hearing/" class="CategoryLink" title="Hearing">Hearing</a></td></tr></table>
+									
+									<div id="subCatsList6"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(3); return false;" title="Communicating"><img id="imgSubCat3" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Communicating" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/communicating/" class="CategoryLink" title="Communicating">Communicating</a></td></tr></table>
+									
+									<div id="subCatsList3"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(5); return false;" title="Caregiving"><img id="imgSubCat5" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Caregiving" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/caregiving/" class="CategoryLink" title="Caregiving">Caregiving</a></td></tr></table>
+									
+									<div id="subCatsList5"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(8); return false;" title="Memory"><img id="imgSubCat8" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Memory" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/memory/" class="CategoryLink" title="Memory">Memory</a></td></tr></table>
+									
+									<div id="subCatsList8"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(10); return false;" title="Generously Sized"><img id="imgSubCat10" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Generously Sized" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/generously-sized/" class="CategoryLink" title="Generously Sized">Generously Sized</a></td></tr></table>
+									
+									<div id="subCatsList10"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(32); return false;" title="Reaching"><img id="imgSubCat32" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Reaching" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/reaching/" class="CategoryLink" title="Reaching">Reaching</a></td></tr></table>
+									
+									<div id="subCatsList32"></div>
+								</div>
+																																			
+															<div class="CategoryLink" >
+																			<a href="" onClick="setCatList(13); return false;" title="Gifts"><img id="imgSubCat13" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Gifts" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/gifts/" class="CategoryLink" title="Gifts">Gifts</a></td></tr></table>
+									
+									<div id="subCatsList13"></div>
+								</div>
+																						</div>
+				
+				
+				<div id="LeftBoxFooter">
+					&nbsp;
+				</div>
+				</div>
+							<div class="LeftBoxContainer">
+				<div class="LeftBoxHeader" align="left">
+					Shop By Location
+				</div>
+				<div class="LeftBoxContent">
+																																	
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(131); return false;" title="Car"><img id="imgSubCat131" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Car" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/car/" class="CategoryLink" title="Car">Car</a></td></tr></table>
+									
+									<div id="subCatsList131"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(14); return false;" title="Bathroom"><img id="imgSubCat14" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Bathroom" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/bathroom/" class="CategoryLink" title="Bathroom">Bathroom</a></td></tr></table>
+									
+									<div id="subCatsList14"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(136); return false;" title="Shower & Tub"><img id="imgSubCat136" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Shower & Tub" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/shower-tub/" class="CategoryLink" title="Shower & Tub">Shower & Tub</a></td></tr></table>
+									
+									<div id="subCatsList136"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(137); return false;" title="Toilet"><img id="imgSubCat137" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Toilet" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/toilet/" class="CategoryLink" title="Toilet">Toilet</a></td></tr></table>
+									
+									<div id="subCatsList137"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(134); return false;" title="Medicine Cabinet"><img id="imgSubCat134" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Medicine Cabinet" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/medicine-cabinet/" class="CategoryLink" title="Medicine Cabinet">Medicine Cabinet</a></td></tr></table>
+									
+									<div id="subCatsList134"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(132); return false;" title="Dressing Room"><img id="imgSubCat132" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Dressing Room" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/dressing-room/" class="CategoryLink" title="Dressing Room">Dressing Room</a></td></tr></table>
+									
+									<div id="subCatsList132"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(15); return false;" title="Bedroom"><img id="imgSubCat15" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Bedroom" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/bedroom/" class="CategoryLink" title="Bedroom">Bedroom</a></td></tr></table>
+									
+									<div id="subCatsList15"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(17); return false;" title="Kitchen"><img id="imgSubCat17" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Kitchen" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/kitchen/" class="CategoryLink" title="Kitchen">Kitchen</a></td></tr></table>
+									
+									<div id="subCatsList17"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(135); return false;" title="Dining Room"><img id="imgSubCat135" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Dining Room" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/dining-room/" class="CategoryLink" title="Dining Room">Dining Room</a></td></tr></table>
+									
+									<div id="subCatsList135"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(16); return false;" title="Family Room"><img id="imgSubCat16" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Family Room" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/family-room/" class="CategoryLink" title="Family Room">Family Room</a></td></tr></table>
+									
+									<div id="subCatsList16"></div>
+								</div>
+																																			
+															<div class="CategoryLink" style="margin-bottom:6px;">
+																			<a href="" onClick="setCatList(133); return false;" title="Kid's Corner"><img id="imgSubCat133" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Kid's Corner" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/kids-corner/" class="CategoryLink" title="Kid's Corner">Kid's Corner</a></td></tr></table>
+									
+									<div id="subCatsList133"></div>
+								</div>
+																																			
+															<div class="CategoryLink" >
+																			<a href="" onClick="setCatList(138); return false;" title="Tool Shed"><img id="imgSubCat138" src="http://www.dynamic-living.com/www/img/arrow-category.gif" align="left" style="padding-top:3px;" oncontextmenu="return false" alt="Tool Shed" /></a>
+										<table cellpadding="0" cellspacing="0" border="0" summary="Categories of the site"><tr><td>&nbsp;</td><td><a href="http://www.dynamic-living.com/category/tool-shed/" class="CategoryLink" title="Tool Shed">Tool Shed</a></td></tr></table>
+									
+									<div id="subCatsList138"></div>
+								</div>
+																						</div>
+				
+				
+				<div id="LeftBoxFooter">
+					&nbsp;
+				</div>
+				</div>
+			<br />
+				<div class="LeftBoxHeader">
+					Resources
+				</div>
+				<div class="LeftBoxContent">
+                
+                						<div class="CategoryLink">
+						<a href="http://www.dynamic-living.com/page/article-archive/">Articles</a>
+					</div>
+                    					<div class="CategoryLink">
+						<a href="http://www.dynamic-living.com/page/links/">Links</a>
+					</div>
+                    					<div class="CategoryLink">
+						<a href="http://www.dynamic-living.com/page/service-faq/">F.A.Q.</a>
+					</div>
+                                        
+				</div>
+				<div id="LeftBoxFooter">
+					&nbsp;
+				</div>
+				<br />
+            
+           
+                      
+           			<a href="http://www.dynamic-living.com/page/newsletters/"><img src="http://www.dynamic-living.com/www/img/tip-button.jpg" border="0" alt="Great Tips!"></a>
+<br>
+<a href="http://www.dynamic-living.com/page/announcements/"><img src="http://www.dynamic-living.com/www/img/deal-button.jpg" border="0" alt="Great Deals!"></a><br><br>
+
+<center>
+<a href="http://www.bbbonline.org/cks.asp?ID=111001706" target="window" onclick="window.open(&#039;&#039;,&#039;window&#039;, &#039;width=600,height=450,status,toolbar,resizable,scrollbars&#039;)"class="top-nav"><img src="../../www/img/bbb.gif" width="89" alt="Members of the Connecticut Better Business Bureau since 1997" height="30" border="0"></a><br>
+
+<img src="../../www/img/credit.gif" alt="We accept MasterCard, Visa, Discover and American Express" width="83" height="71"><br>
+
+     <!-- GeoTrust True Site[tm] Smart Icon tag. Do not edit. -->
+     <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript"
+      SRC="//smarticon.geotrust.com/si.js"></SCRIPT>
+                    <!-- end GeoTrust Smart Icon tag --><br><br>
+</center>
+
+                       
+						</div>
+	    
+
+
+<div>
+
+<a name="name_Center" id="name_Center"></a>
+<div id="Center">
+<div style="height:50px; margin:0pt;">
+
+<table width="100%">
+<tr>
+<td class="BreadCrumb1" align="left">
+	
+											
+				<b>
+							Shop By Location
+							</b>
+												&gt;
+									   <a href="http://www.dynamic-living.com/category/toilet/">
+							Toilet
+							</a>
+					</td>
+<td align="right" style="font-size:12px;">
+		<b><a href="http://www.dynamic-living.com/tellAFriend/" target="window" onclick="window.open('','window', 'scrollbars=yes, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=yes, width=600, height=500, top=85, left=140');">Email a Friend</a></b><br />
+        <b><a href="http://www.dynamic-living.com/printPage/category/toilet/" target="_blank">Print this page</a></b>
+</td>
+</tr>
+<tr>
+	<td class="PageTitle1" colspan="2">
+		Toileting Aids
+	</td>
+</tr>
+</table>
+</div>
+	
+		
+		<div class="BodyText">
+		<br />It's hard to talk about, but toileting is an important part of our daily needs. Here are some products that can help.
+	</div>
+	<br />
+			<div class="LeftPart">
+				<div class="CommunicatorBox">
+					<div class="CommunicatorHeader">
+						Toilet
+					</div>
+					<div class="CommunicatorBoxPadding">
+						
+
+
+																				<a href="http://www.dynamic-living.com/category/personal-hygiene-1/" title="Personal Hygiene"><span class="Heading">Personal Hygiene</span></a>
+							<br />
+							Maintain your privacy in the bathroom with these toileting aids.<br />
+
+							<div class="TextAlignRight">
+								<a href="http://www.dynamic-living.com/category/personal-hygiene-1/" title="Personal Hygiene">See Personal Hygiene</a>
+							</div>
+																					<br />
+														<a href="http://www.dynamic-living.com/category/incontinence/" title="Incontinence"><span class="Heading">Incontinence</span></a>
+							<br />
+							From spotting to overnight incontinence protection, we have the solution!<br />
+
+							<div class="TextAlignRight">
+								<a href="http://www.dynamic-living.com/category/incontinence/" title="Incontinence">See Incontinence</a>
+							</div>
+																					<br />
+														<a href="http://www.dynamic-living.com/category/sitting--standing/" title="Sitting & Standing"><span class="Heading">Sitting & Standing</span></a>
+							<br />
+							Seat risers, safety frames and portable toileting solutions.<br />
+
+							<div class="TextAlignRight">
+								<a href="http://www.dynamic-living.com/category/sitting--standing/" title="Sitting & Standing">See Sitting & Standing</a>
+							</div>
+																					<br />
+														<a href="http://www.dynamic-living.com/category/commodes/" title="Commodes"><span class="Heading">Commodes</span></a>
+							<br />
+							Commodes for bedside, over the toilet or in the shower.<br />
+
+							<div class="TextAlignRight">
+								<a href="http://www.dynamic-living.com/category/commodes/" title="Commodes">See Commodes</a>
+							</div>
+											</div>
+					<div>
+						<img src="http://www.dynamic-living.com/www/img/commu-box-bot.gif" oncontextmenu="return false" style="margin:0px; padding:0px;" />
+					</div><br />
+
+					
+				</div>
+
+			<div class="Padding" style="font-size:13px;"></div>
+			</div>
+
+						
+				<div class="CommunicatorHeaderCust" align="center">
+					Customer Favorites
+				</div>
+	
+				
+				<table style="vertical-align:top; margin-top:0px;">
+									
+					
+                    <tr height="100px">
+						<td height="100px">
+													<div class="ProductThumbImg">
+							<a href="http://www.dynamic-living.com/product/toilet-safety-frame/" title="Toilet Safety Frame">
+								<img border="0" src="http://www.dynamic-living.com/www/img/products/dl6002_toilet_frame_small.jpg" oncontextmenu="return false" title="The Toilet Safety Frame provides support on both sides of the toilet" alt="The Toilet Safety Frame provides support on both sides of the toilet" width="75px"/>
+								</a>
+							</div></td>
+                        <td>
+						<a href="http://www.dynamic-living.com/product/toilet-safety-frame/" title="Toilet Safety Frame">Toilet Safety Frame</a>
+				
+						<br />
+						                        								<span>$50.00</span>
+                            			            						<br />
+						<div>
+						<a href="http://www.dynamic-living.com/product/toilet-safety-frame/"><img src="http://www.dynamic-living.com/www/img/more_info_button.gif" alt="Info about Toilet Safety Frame" title="Info about Toilet Safety Frame" oncontextmenu="return false" /></a>
+						</div>
+                        </td>              
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;
+                        </td>
+                        <td>&nbsp;
+                        </td>
+                    </tr>
+                  
+									
+					
+                    <tr height="100px">
+						<td height="100px">
+													<div class="ProductThumbImg">
+							<a href="http://www.dynamic-living.com/product/bottom-buddy-toilet-tissue-holder/" title="Bottom Buddy Toilet Tissue Holder">
+								<img border="0" src="http://www.dynamic-living.com/www/img/products/dl6005_bottom-buddy1_small.jpg" oncontextmenu="return false" title="Bottom Buddy holds toilet paper for you when reaching is difficult" alt="Bottom Buddy holds toilet paper for you when reaching is difficult" width="75px"/>
+								</a>
+							</div></td>
+                        <td>
+						<a href="http://www.dynamic-living.com/product/bottom-buddy-toilet-tissue-holder/" title="Bottom Buddy Toilet Tissue Holder">Bottom Buddy Toilet Tissue Holder</a>
+				
+						<br />
+						                        								<span>$45.00</span>
+                            			            						<br />
+						<div>
+						<a href="http://www.dynamic-living.com/product/bottom-buddy-toilet-tissue-holder/"><img src="http://www.dynamic-living.com/www/img/more_info_button.gif" alt="Info about Bottom Buddy Toilet Tissue Holder" title="Info about Bottom Buddy Toilet Tissue Holder" oncontextmenu="return false" /></a>
+						</div>
+                        </td>              
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;
+                        </td>
+                        <td>&nbsp;
+                        </td>
+                    </tr>
+                  
+									
+					
+                    <tr height="100px">
+						<td height="100px">
+													<div class="ProductThumbImg">
+							<a href="http://www.dynamic-living.com/product/toilevator-a-raised-seat-alternative/" title="Toilevator (a Raised Seat Alternative)">
+								<img border="0" src="http://www.dynamic-living.com/www/img/products/dl6006_toilevator_small.jpg" oncontextmenu="return false" title="Instead of raising the toilet seat, the Tolevator raises the whole toilet 35 inches" alt="Instead of raising the toilet seat, the Tolevator raises the whole toilet 35 inches" width="75px"/>
+								</a>
+							</div></td>
+                        <td>
+						<a href="http://www.dynamic-living.com/product/toilevator-a-raised-seat-alternative/" title="Toilevator (a Raised Seat Alternative)">Toilevator (a Raised Seat Alternative)</a>
+				
+						<br />
+						                        								<span>$89.00</span>
+                            			            						<br />
+						<div>
+						<a href="http://www.dynamic-living.com/product/toilevator-a-raised-seat-alternative/"><img src="http://www.dynamic-living.com/www/img/more_info_button.gif" alt="Info about Toilevator (a Raised Seat Alternative)" title="Info about Toilevator (a Raised Seat Alternative)" oncontextmenu="return false" /></a>
+						</div>
+                        </td>              
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;
+                        </td>
+                        <td>&nbsp;
+                        </td>
+                    </tr>
+                  
+									
+					
+                    <tr height="100px">
+						<td height="100px">
+													<div class="ProductThumbImg">
+							<a href="http://www.dynamic-living.com/product/incontinence-sheet-protector/" title="Incontinence Sheet Protector">
+								<img border="0" src="http://www.dynamic-living.com/www/img/products/DL6400-sheet-protector-2_small.jpg" oncontextmenu="return false" title="Waterproof Sheet Protector Pad keeps sensitive skin away from moisture." alt="Waterproof Sheet Protector Pad keeps sensitive skin away from moisture." width="75px"/>
+								</a>
+							</div></td>
+                        <td>
+						<a href="http://www.dynamic-living.com/product/incontinence-sheet-protector/" title="Incontinence Sheet Protector">Incontinence Sheet Protector</a>
+				
+						<br />
+						                        								<span>$20.00</span>
+                            			            						<br />
+						<div>
+						<a href="http://www.dynamic-living.com/product/incontinence-sheet-protector/"><img src="http://www.dynamic-living.com/www/img/more_info_button.gif" alt="Info about Incontinence Sheet Protector" title="Info about Incontinence Sheet Protector" oncontextmenu="return false" /></a>
+						</div>
+                        </td>              
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;
+                        </td>
+                        <td>&nbsp;
+                        </td>
+                    </tr>
+                  
+								</table>
+								
+	<div class="clear"></div>
+</div>
+</div>
+			             
+			<script>
+			setCatList(137);
+			</script>
+			 
+            			</div>
+	    </div>
+	<div id="ShadowBot">
+		<img src="http://www.dynamic-living.com/www/img/shadow-bot.gif" alt="Dynamic-Living.com" oncontextmenu="return false" />
+	</div>
+	<div id="Footer">
+		<a href="http://www.dynamic-living.com/products-new/" title="New products">New Products</a> |
+		<a href="http://www.dynamic-living.com/products-on-sale/" title="On sale products">On Sale</a> |
+		<a href="http://www.dynamic-living.com/clearance/" title="Clearance items">Clearance Items</a>
+		<br />
+		<a href="http://www.dynamic-living.com/ordering-help/" title="Ordering info">Ordering Info</a> |
+		<a href="http://www.dynamic-living.com/shipping-info/" title="Shipping info">Shipping Info</a> |
+		<a href="http://www.dynamic-living.com/return-info/" title="Return info">Return Info</a> |
+		<a href="http://www.dynamic-living.com/privacy/" title="Privacy">Privacy</a> |
+		<a href="http://www.dynamic-living.com/page/about-us/" title="About us">About Us</a> |
+		<a href="http://www.dynamic-living.com/sitemap/" title="Sitemap">SiteMap</a> |
+		<a href="http://www.dynamic-living.com/cart/" title="Checkout">Checkout</a>
+		<br />
+        <a href="https://www.dynamic-living.com/register/" title="Resellers ">Resellers</a> |
+		<a href="https://www.dynamic-living.com/register/" title="Contractors/Home Modification">Contractors/Home Modification</a> |
+		<a href="https://www.dynamic-living.com/register/" title="Non-Profit/Governmental">Non-Profit/Government</a> |
+		<a href="https://www.dynamic-living.com/register/" title="Medical Professionals">Medical Professionals</a>		
+        <br />
+		Still don't see what you've been searching for?
+		Let us help. E-mail <a href="mailto:product-finder&#064;dynamic-living&#046;&#099;&#111;&#109;">product-finder</a>
+		<br />
+        Problems with the website? E-mail the <a href="mailto:&#119;&#101;&#098;&#109;&#097;&#115;&#116;&#101;&#114;&#064;&#100;&#121;&#110;&#097;&#109;&#105;&#099;&#045;&#108;&#105;&#118;&#105;&#110;&#103;&#046;&#099;&#111;&#109;">webmaster</a><br />
+        
+		&copy; 1997 - 2009 Dynamic Living, Inc.
+		<br /><br />
+
+	</div>
+</div>
+
+</body>
+
+</html>
+

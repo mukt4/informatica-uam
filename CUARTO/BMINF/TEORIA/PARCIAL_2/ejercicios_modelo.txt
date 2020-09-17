@@ -1,0 +1,53 @@
+Ejercicio pageRank:
+	1. Nodo a nodo vamos calculando:
+		P(A) = r/n + (1 - r) * Sumatorio de P(X)/N (N es el nodo que le apunta y X es el numero de nodos que apunta X)
+		Si el nodo es sumidero, es decir, no tiene enlaces salientes, hay que anadir otro sumatorio con(todos los nodos su		  mideros / Total nodos)
+	2. Si es un un grafo no dirigido PageRank es 1/N
+	3. La suma de los pageRank es siempre 1
+	4. Si te piden hacerlo de manera iterativa
+		
+
+Ejercicios similitud:
+	1. Similitud coseno:
+		cos(x, y) = Sumatorio de (a*b siendo a y b doc coincidentes) / Raiz(Sumatorio de A cuadrado) * Raiz(Sumatorio de B 		  cuadrado)
+		A, son los documentos de de x y B son los documentes de y
+	
+	2. Similitud de Pearson:
+		Pearson(x, y) = Sumatorio de (a*b siendo a = coincidente - promedio x) / Raiz(Sumatorio de a cuadrado) * Raiz(Suma		  torio de b cuadrado)
+	
+	3. Prediccion mediante kNN (basado en usuario):
+		Con los valores de similitud anteriores Sumatorio(similitud * similitud con el otro user) / Sumatorio(similitud)
+
+	4. Prediccion basada en contenido:
+		1. Calculamos matriz tf-idf:
+			Para calcular tf: 1 + log(frecuencia) , 0 en otro caso
+			Para calcular idf: log(Total de documentos / total de documentos que contienen el termino)
+			Matriz tf-idf: Multiplicacion de tf * idf
+
+		Centroide:
+			Obtenemos los documentos del usuario: u = 4d1 + 2d2 + 3d3
+			cos(u, d2) = Multiplicacion de matrices / Raiz(Sumatorio de valores de matriz al cuadrado) * Raiz(Sumator			  io de valores de matriz al cuadrado)
+				
+		kNN normalizado:
+			Con todos los documentos:
+				cos(d2, d1): Igual que con similitud de coseno pero usando tf-idf
+				Igual que la otra prediccion kNN  pero con contenido
+	5. Similitu de Jaccard:
+		Interseccion / Union
+
+Ejercicio de metricas
+	1. Betweenness
+		Calcular las distancias mas cortas
+		Hay que calcular primero los CDMs que es un poco fumada
+		Aplicar formula: 2/n(n-1) * Sumatorio(CDM entre nodos/ Total de CDM que pasan por nuestro nodo)
+	2. Closeness
+		Aplicar la formula:
+			(n - 1) / Sumatorio(distancia minima media)
+	3. Arraigo de arcos
+		Aplicar Jaccard > Interseccion / Union
+	4. Coeficiente de clustering local
+		Numero de enlaces que conectan nodos diferentes a X / (a * (a - 1) / 2) 
+			a = vecinos de x
+	5. Coeficiente de clustering global y promedio
+		Promedio haciendo la media de custeing
+		Global

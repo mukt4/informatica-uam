@@ -1,0 +1,227 @@
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 1
+pract3b.ASM
+
+
+
+      1				     ;********************************************************************************
+      2				     ; PRACTICA	3, EJERCICIO A -> TOMAS	HIGUERA	VISO Y GUILLERMO HOYO BRAVO, PAREJA 1*
+      3				     ;********************************************************************************
+      4				     ; DEFINICION DEL SEGMENTO DE CODIGO					     *
+      5				     ;********************************************************************************
+      6
+      7	0000			     PRACT3B SEGMENT BYTE PUBLIC 'CODE'
+      8					     PUBLIC _calcularAciertos, _calcularSemiaciertos
+      9					     ASSUME CS:	PRACT3B
+     10
+     11	0000					     _calcularAciertos PROC FAR
+     12							     ; PUSHEAMOS BP EN LA PILA
+     13	0000  55					     PUSH BP
+     14							     ; GUARDAMOS EN BP EL STACK	POINTER	DE LA PILA
+     15	0001  8B EC					     MOV BP, SP
+     16							     ; GUARDAMOS TODOS LOS REGISTROS QUE VAMOS A USAR EN LA PILA
+     17	0003  53 51 52 57				     PUSH BX CX	DX DI
+     18							     ; GUARDAMOS EN BX EL SEGMENTO DE NUMSECRETO
+     19	0007  8B 5E 08					     MOV BX, [BP + 8]
+     20							     ; GUARDAMOS EL DS EN CX
+     21	000A  8C D9					     MOV CX, DS
+     22							     ; PUSHEAMOS CX EN LA PILA
+     23	000C  51					     PUSH CX
+     24							     ; COLOCAMOS EL DATA SEGMENT EN EL SEGMENTO	DE DATOS DE NUMSECRETO
+     25	000D  8E DB					     MOV DS, BX
+     26							     ; GUARDAMOS EN DX EL SEGMENTO DE INTENTODIGITOS
+     27	000F  8B 56 0C					     MOV DX, [BP + 12]
+     28							     ; GUARDAMOS EN BX EL EXTRA	SEGMENT
+     29	0012  8C C3					     MOV BX, ES
+     30							     ; PUSHEAMOS BX EN LA PILA
+     31	0014  53					     PUSH BX
+     32							     ; COLOCAMOS EL EXTRA SEGMENT EN EL	SEGMENTO DE DATOS DE INTENTODIGITOS
+     33	0015  8E C2					     MOV ES, DX
+     34							     ; INICIALIZAMOS DI	A 0
+     35	0017  BF 0000					     MOV DI, 0
+     36							     ; INICIALIZAMOS AX	A 0, QUE LO UTILIZAREMOS COMO CONTADOR
+     37	001A  B8 0000					     MOV AX, 0
+     38	001D						     bucle:
+     39								     ; GUARDAMOS EN BX EL OFFSET DE NUMSECRETO
+     40	001D  8B 5E 06						     MOV BX, [BP + 6]
+     41								     ; GUARDAMOS EN BX EL CONTENIDO DE UNA POSICION DE NUMSECRETO EN+
+     42				     FUNCION DE	DI
+     43	0020  8A 29						     MOV CH, DS:[BX][DI]
+     44								     ; GUARDAMOS EN BX EL OFFSET DE INTENTODIGITOS
+     45	0022  8B 5E 0A						     MOV BX, [BP + 10]
+     46								     ; GUARDAMOS EN DX EL CONTENIDO DE UNA POSICION DE		    +
+     47				     INTENTODIGITOS EN FUNCION DE DI
+     48	0025  26: 8A 31						     MOV DH, ES:[BX][DI]
+     49								     ; COMPROBAMOS  SI LOS DOS NUMEROS SON IGUALES
+     50	0028  3A EE						     CMP CH, DH
+     51								     ; SI SON IGUALES SALTAMOS A LA RUTINA ACIERTO
+     52	002A  74 09						     JE	acierto
+     53	002C							     continuar:
+     54									     ; INCREMENTAMOS EL	INDICE DEL ARRAY
+     55	002C  47							     INC DI
+     56									     ; COMPROBAMOS SI HEMOS LLEGADO AL FINAL DEL ARRAY
+     57	002D  83 FF 04							     CMP DI, 4
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 2
+pract3b.ASM
+
+
+
+     58									     ; SI EL INDICE NO ES IGUAL	A 4 SEGUIMOS COMPROBANDO
+     59	0030  75 EB							     JNE bucle
+     60									     ; UNA VEZ HEMOS TERMINADO LA COMPROBACION SALTAMOS	A LA+
+     61				     RUTINA FINAL
+     62	0032  EB 06 90							     JMP final
+     63	0035							     acierto:
+     64									     ; INCREMENTAMOS EL	CONTADOR DE ACIERTOS
+     65	0035  05 0001							     ADD AX, 1
+     66									     ; VOLVEMOS	A LA RUTINA DE COMPROBACION
+     67	0038  EB F2							     JMP continuar
+     68	003A						     final:
+     69								     ; POPEAMOS	EL SEGMENTO DE EXTRA SEGMENT Y COLOCAMOS EXTRA	    +
+     70				     SEGMENT
+     71	003A  5B						     POP BX
+     72								     ; COLOCAMOS EXTRA SEGMENT
+     73	003B  8E C3						     MOV ES, BX
+     74								     ; POPEAMOS	EL SEGMENTO DATA SEGMENT Y COLOCAMOS DATA SEGMENT
+     75	003D  5B						     POP BX
+     76								     ; COLOCAMOS EL DATA SEGMENT
+     77	003E  8E DB						     MOV DS, BX
+     78								     ; POPEAMOS	LOS REGISTROS QUE HEMOS	USADO
+     79	0040  5F 5A 59 5B					     POP DI DX CX BX
+     80								     ; POPEAMOS	EL BP
+     81	0044  5D						     POP BP
+     82								     ; VOLVEMOS	AL PROGRAMA DE CMP
+     83	0045  CB						     RET
+     84	0046					     _calcularAciertos ENDP
+     85
+     86	0046					     _calcularSemiaciertos PROC	FAR
+     87							     ; PUSHEAMOS BP EN LA PILA
+     88	0046  55					     PUSH BP
+     89							     ; GUARDAMOS EN BP EL STACK	POINTER	DE LA PILA
+     90	0047  8B EC					     MOV BP, SP
+     91							     ; GUARDAMOS LOS REGISTROS QUE VAMOS A USAR
+     92	0049  53 51 52 57 56				     PUSH BX CX	DX DI SI
+     93							     ; GUARDAMOS EN BX EL SEGMENTO DE NUMSECRETO
+     94	004E  8B 5E 08					     MOV BX, [BP + 8]
+     95							     ; GUARDAMOS EL DATA SEGMENT EN CX
+     96	0051  8C D9					     MOV CX, DS
+     97							     ; PUSHEAMOS EL DATA SEGMENT EN LA PILA
+     98	0053  51					     PUSH CX
+     99							     ; COLOCAMOS EL SEGMENTO DE	DATOS CON EL DE	NUMSECRETO
+    100	0054  8E DB					     MOV DS, BX
+    101							     ; GUARDAMOS EN CX EL SEGMENTO DE INTENTODIGITOS
+    102	0056  8B 4E 0C					     MOV CX, [BP + 12]
+    103							     ; GUARDAMOS EN DX EL EXTRA	SEGMENT
+    104	0059  8C C2					     MOV DX, ES
+    105							     ; PUSHEAMOS EL EXTRA SEGMENT EN LA	PILA
+    106	005B  52					     PUSH DX
+    107							     ; COLOCAMOS EL EXTRA SEGMENT CON EL DE INTENTODIGITOS
+    108	005C  8E C2					     MOV ES, DX
+    109							     ; INICIALIZAMOS DI	A 0
+    110	005E  BF 0000					     MOV DI, 0
+    111							     ; INICIALIZAMOS AX	A 0 PARA USARLO	COMO CONTADOR
+    112	0061  B8 0000					     MOV AX, 0
+    113	0064						     comprobacion:
+    114								     ; INICIALIZAMOS SI	A 0
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 3
+pract3b.ASM
+
+
+
+    115	0064  BE 0000						     MOV SI, 0
+    116								     ; GUARDAMOS EN BX EL OFFSET DE NUMSECRETO
+    117	0067  8B 5E 06						     MOV BX, [BP + 6]
+    118								     ; GUARDAMOS EN DL EL CONTENIDO DE LA POSICION DI DE NUMSECRETO
+    119	006A  8A 11						     MOV DL, DS:[BX][DI]
+    120								     ; GUARDAMOS EN BX EL OFFSET DE INTENTODIGITOS
+    121	006C  8B 5E 0A						     MOV BX, [BP + 10]
+    122	006F							     bucle2:
+    123									     ; GUARDAMOS EL CONTENIDO DE LA POSICION SI	DE	    +
+    124				     INTENTODIGITOS EN CL
+    125	006F  26: 8A 08							     MOV CL, ES:[BX][SI]
+    126									     ; COMPROBAMOS SI CL Y AL SON IGUALES
+    127	0072  3A D1							     CMP DL, CL
+    128									     ; SI SON IGUALES SALTAMOS A LA RUTINA INCREMENTAR
+    129	0074  74 19							     JE	incrementar
+    130	0076								     continuar2:
+    131										     ; INCREMENTAMOS SI	PARA SEGUIR COMPROBANDO	EL  +
+    132				     ARRAY DE INTENTODIGITOS
+    133	0076  46								     INC SI
+    134										     ; COMPROBAMOS SI SI HA LLEGADO AL FINAL DE	ARRAY
+    135	0077  83 FE 04								     CMP SI, 4
+    136										     ; SI SI NO	ES 4 CONTINUAMOS CON LA	COMPROBACION
+    137	007A  75 F3								     JNE bucle2
+    138									     ; INCREMENTAMOS DI
+    139	007C  47							     INC DI
+    140									     ; SI DI ES	DISTINTO DE 4 CONTINUAMOS CON EL BUCLE PARA +
+    141				     SEGUIR COMPROBANDO
+    142	007D  83 FF 04							     CMP DI, 4
+    143									     ; SI NO ES	IGUAL A	4 CONTINUAMOS CON EL BUCLE
+    144	0080  75 E2							     JNE comprobacion
+    145	0082							     final2:
+    146									     ; POPEAMOS	EL SEGMENTO DE EXTRA SEGMENT Y COLOCAMOS    +
+    147				     EXTRA SEGMENT
+    148	0082  5B							     POP BX
+    149									     ; COLOCAMOS EXTRA SEGMENT
+    150	0083  8E C3							     MOV ES, BX
+    151									     ; POPEAMOS	EL SEGMENTO DATA SEGMENT Y COLOCAMOS DATA   +
+    152				     SEGMENT
+    153	0085  5B							     POP BX
+    154									     ; COLOCAMOS EL DATA SEGMENT
+    155	0086  8E DB							     MOV DS, BX
+    156									     ; POPEAMOS	TODOS LOS REGISTROS
+    157	0088  5E 5F 5A 59 5B						     POP SI DI DX CX BX
+    158									     ; POPEAMOS	EL BP
+    159	008D  5D							     POP BP
+    160									     ; VOLVEMOS	AL PROGRAMA DE CMP
+    161	008E  CB							     RET
+    162	008F							     incrementar:
+    163									     ; COMPROBAMOS SI ES UN ACIERTO TOTAL O PARCIAL
+    164	008F  3B F7							     CMP SI, DI
+    165									     ; SI SON IGUALES CONTINUAMOS CON LA COMPROBACION
+    166	0091  74 E3							     JE	continuar2
+    167									     ; SI NO SON IGUALES INCREMENTAMOS AX
+    168	0093  05 0001							     ADD AX, 1
+    169									     ; SEGUIMOS	COMPROBANDO LOS	ARRAYS
+    170	0096  EB DE							     JMP continuar2
+    171
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 4
+pract3b.ASM
+
+
+
+    172	0098					     _calcularSemiaciertos ENDP
+    173
+    174	0098			     PRACT3B ENDS ; FIN	DEL SEGMENTO DE	CODIGO
+    175				     END ; FIN DE pract3a.asm
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 5
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??date				  Text	 "04/18/18"
+??filename			  Text	 "pract3b "
+??time				  Text	 "16:25:52"
+??version			  Number 0200
+@Cpu				  Text	 0101H
+@FileName			  Text	 pract3b
+@WordSize			  Text	 2
+@curseg				  Text	 PRACT3B
+_calcularAciertos		  Far	 PRACT3B:0000
+_calcularSemiaciertos		  Far	 PRACT3B:0046
+acierto				  Near	 PRACT3B:0035
+bucle				  Near	 PRACT3B:001D
+bucle2				  Near	 PRACT3B:006F
+comprobacion			  Near	 PRACT3B:0064
+continuar			  Near	 PRACT3B:002C
+continuar2			  Near	 PRACT3B:0076
+final				  Near	 PRACT3B:003A
+final2				  Near	 PRACT3B:0082
+incrementar			  Near	 PRACT3B:008F
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+PRACT3B				  16  0098 Byte	  Public  CODE
+

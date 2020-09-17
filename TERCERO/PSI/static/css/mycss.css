@@ -1,0 +1,52 @@
+#cabecera{
+	padding-top: 2%;
+	width: 100%;
+	padding-bottom: 2%;
+	padding-left: 20%;
+}
+
+#about{
+	margin-left: 10%;
+}
+
+#subir{
+	margin-left: 10%;
+}
+
+#buscador {
+	width: 100%;
+	padding-left: 20%;
+	background-color: rgb(180, 180, 180);
+}
+
+.sidebar {
+    padding:20px 20px 20px 20px;
+    float:left;
+}
+
+footer{
+ 	clear: both;
+ 	position: relative;
+ 	z-index: 10;
+ 	text-align: center;
+ 	font-size: 1em;
+}
+.footerStyle {
+	background: #eee;
+	text-align: center;
+}
+.footerText {
+	color: gray;
+}
+
+.item{
+	font-size: 15px;
+}
+
+#mensaje-error{
+	color: red;
+}
+
+#subir{
+
+}

@@ -1,0 +1,9 @@
+NOTA IMPORTANTE
+
+Se recomienda no subir la carpeta "media" al repositorio de GitLab. No se debe ubicar en repositorios Git ficheros que sean binarios o muy pesados, ya que no sirve para control de versiones de este tipo.
+
+Por ello, os recomendamos subir un fichero comprimido a vuestra wiki con estos videos/imagenes, junto con las instrucciones de prueba de vuestro servidor.
+
+Parte de la evaluacion incluye cuanto ocupa vuestro repositorio Git, ya que debe contener principalmente codigo y ficheros de texto.
+
+Los scripts y html si conviene que esten en el repositorio para llevar bien el control de versiones.

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Nov 28 00:05:03 2019
+# Process ID: 2526
+# Current directory: /home/f/workspace/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.runs/impl_1
+# Command line: vivado -log chksum.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source chksum.tcl -notrace
+# Log file: /home/f/workspace/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.runs/impl_1/chksum.vdi
+# Journal file: /home/f/workspace/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source chksum.tcl -notrace

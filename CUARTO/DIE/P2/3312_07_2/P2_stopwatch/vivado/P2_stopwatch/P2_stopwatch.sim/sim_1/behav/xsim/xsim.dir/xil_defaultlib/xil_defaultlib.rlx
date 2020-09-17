@@ -1,0 +1,12 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/counter.vhd,1573507372,vhdl,,,,counter,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/debounce.vhd,1573507372,vhdl,,,,debounce,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/freq_divider.vhd,1573507695,vhdl,,,,freq_divider,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/rst_adapt.vhd,1573507372,vhdl,,,,rst_adapt,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch.vhd,1573507372,vhdl,,,,stopwatch,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch_fsm.vhd,1573507372,vhdl,,,,stopwatch_fsm,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch_pkg.vhd,1573507372,vhdl,/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/counter.vhd;/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch.vhd,,,stopwatch_pkg,,,,,,,,
+/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/sim/stopwatch_tb.vhd,1573507372,vhdl,,,,stopwatch_tb,,,,,,,,

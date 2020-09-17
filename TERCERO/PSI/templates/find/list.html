@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+	<div class="sidebar pure-u-1-5">
+		{% if categories %}
+			<h1>
+				Categorias
+			</h1>
+			<u1>
+				<li {% if not category %}class="selected"{% endif %}>
+					<a href="{% url "find:workflow_list" %}">All</a>
+				</li>
+
+				{% for c in categories %}
+					<li {% if category.slug == c.slug %}class="selected"{% endif %}>
+	                <a title="{{ c.tooltip}}" href="/workflow_list/{{ c.slug }}/">{{ c.name }}</a>
+	           		</li>
+				{% endfor %}
+			</u1>
+		{% else %}
+			<h1>
+				No hay categorias que mostrar
+			</h1>
+		{% endif %}
+	</div>
+
+	<div class = "sidebar pure-u-4-5">
+		{% if result == True %}
+				{% if category %}
+					<h1>
+						{{ category.name }}
+					</h1>
+					{% for workflow in workflows %}
+						<div class="item">
+								<a href="/workflow_detail/{{ workflow.id }}/{{ workflow.slug }}/">{{ workflow.name }}</a> : {{ workflow.description | truncatechars:255 }}
+
+						</div>
+					{% endfor %}
+				{% else %}
+					<h1>
+						Workflows
+					</h1>
+					{% for workflow in workflows %}
+						<div class="item">
+							<a href="/workflow_detail/{{ workflow.id }}/{{ workflow.slug }}/">{{ workflow.name }}</a>
+						</div>
+					{% endfor %}
+				{% endif %}
+		{% else %}
+			<h1>
+				No hay workflows que mostrar
+			</h1>
+
+			<a id= "mensaje-error">
+				Mensaje de error-> 
+				{{ error }}
+			</a>
+		{% endif %}
+
+	</div>
+{% endblock %}
+
+

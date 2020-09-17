@@ -1,0 +1,1 @@
+-wto "6c171e663f7448d293001050db66b4c2" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "chksum_tb_behav" "xil_defaultlib.chksum_tb" -log "elaborate.log" 

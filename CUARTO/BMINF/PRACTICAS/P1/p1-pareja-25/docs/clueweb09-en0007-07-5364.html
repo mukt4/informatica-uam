@@ -1,0 +1,537 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Apache/1.3.37 (Unix) PHP/5.2.1 mod_auth_passthrough/1.8 mod_log_bytes/1.2 mod_bwlimited/1.4 FrontPage/5.0.2.2635.SR1.2 mod_ssl/2.8.28 OpenSSL/0.9.7a
+X-Powered-By: PHP/5.2.1
+Date: Sat, 17 Jan 2009 23:09:27 GMT
+Connection: close
+Content-Length: 61538
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="keywords" content="Minnesota Legal Colleges - Education Reference" />
+<META NAME=Description CONTENT="Minnesota Legal Colleges">
+<title>Minnesota Legal Colleges - Education Reference</title>
+<link href="/css/style.css" media="screen" rel="Stylesheet" type="text/css" />
+<script src="/js/mootools.js" type="text/javascript"></script>
+</head>
+<script language="javascript" type="text/javascript">
+<!--
+function IsNumeric(strString)
+   //  check for valid numeric strings
+   {
+   var strValidChars = "0123456789.-";
+   var strChar;
+   var blnResult = true;
+
+   if (strString.length == 0) return false;
+
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && blnResult == true; i++)
+      {
+      strChar = strString.charAt(i);
+      if (strValidChars.indexOf(strChar) == -1)
+         {
+         blnResult = false;
+         }
+      }
+   return blnResult;
+}
+
+function search(formName) {
+	if (IsNumeric(document.forms[formName].zipcode.value)==false) {
+		alert('The zipcode is not valid.');
+		document.forms[formName].zipcode.select();
+	} else if (IsNumeric(document.forms[formName].distance.value)==false) {
+		alert('The distance is not valid.');
+		document.forms[formName].distance.select();
+	} else {
+		document.forms[formName].action = 'http://ed-reference.us/colleges-within-'+document.forms[formName].distance.value+'-miles-of-'+document.forms[formName].zipcode.value;
+		document.forms[formName].submit();
+//		location=('http://ed-reference.us/colleges-within-'+document.forms[0].distance.value+'-miles-of-'+document.forms[0].zipcode.value);
+	}
+}
+
+// -->
+</script>
+<script type="text/javascript">
+ function CreateBookmarkLink() {
+
+ title = "www.ed-reference.us";
+  // Blogger - Replace with <$BlogItemTitle$>
+  // MovableType - Replace with <$MTEntryTitle$>
+
+ url = "http://www.ed-reference.us/10100/minnesota/legal/colleges";
+
+	if (window.sidebar) { // Mozilla Firefox Bookmark
+		window.sidebar.addPanel(title, url,"");
+	} else if( window.external ) { // IE Favorite
+		window.external.AddFavorite( url, title); }
+	else if(window.opera && window.print) { // Opera Hotlist
+		return true; }
+ }
+
+ function displayAddFav() {
+	 if (window.external) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Add to Favorites</a>');
+	 } else  if (window.sidebar) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Bookmark Page</a>');
+	 } else if (window.opera && window.print) {
+	   document.write('<a href ="javascript:CreateBookmarkLink()");">Add Bookmark</a>');
+	 }
+ }
+</script>
+<body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-338608-26");
+	pageTracker._trackPageview();
+}
+catch(err)
+{}
+</script>
+		<div id="top-container">
+			<div class="transparentheader" style="width: 100%; height: 99px;z-index:1;">
+				<a href="/">
+					<img width="100%" height="99" title="" alt="" style="border-width:0px;" src="http://ed-reference.us/images/headerBG_transparent.png"/>
+				</a>
+			</div>
+			<div id="logo" style="width: 394px; height: 75px; z-index:2;">
+				<a href="/">
+					<img src="http://ed-reference.us/images/logo.png" width="394px" height="75px" border="0px"/>
+				</a>
+			</div>
+			<div style="position:absolute; top:0; left:0; width:100%; height:99px; z-index:1;">
+				<div id="main-menu">
+					<ul>
+						<li><a href="/states/">Search By State</a></li> |
+						<li><a href="/degrees/">Search By Degree</a></li> |
+						<li><a href="/colleges/">Search By Name</a></li> |
+						<li><a href="/search-online-schools/">Search Online Schools</a></li>
+					</ul>
+				</div>
+				<div style="clear:right;" class="search searchTop">
+					<form method="POST" id="search1" onsubmit="search('search1');">
+						Search By Zip Code <input type="text" name="zipcode" maxlength="5" size="5" value=""> Within (miles) <input type="text" name="distance" maxlength="5" size="5" onkeypress="return handleKeyPress(event);" value=""><span class="button"><input class="go" type="submit" value="Go"></span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="wrap">
+		<div id="wrap-inner">
+			<div id="leftSideNav">
+<script>
+function submit_perPageFrm() {
+	var frm = document.forms['perPageFrm'];
+	frm.action='/10100/minnesota/legal/colleges/i'+frm.itemPerPage.options[frm.itemPerPage.selectedIndex].value+'/';
+	frm.submit();
+}
+function insertPagination(strText) {
+	var ele = document.getElementById("pagination");
+	ele.innerHTML = strText;
+}
+</script>
+			<div id="nav1List">			<div class="nav1">
+				<div class="nav1Title">Minnesota Cities:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItemCity0" onmouseover="document.getElementById('listItemCity0').className='listOn';" onmouseout="document.getElementById('listItemCity0').className='';"><a href="/11000/minnesota/alexandria/colleges">Alexandria</a></li>
+					<li id="listItemCity1" onmouseover="document.getElementById('listItemCity1').className='listOn';" onmouseout="document.getElementById('listItemCity1').className='';"><a href="/11000/minnesota/anoka/colleges">Anoka</a></li>
+					<li id="listItemCity2" onmouseover="document.getElementById('listItemCity2').className='listOn';" onmouseout="document.getElementById('listItemCity2').className='';"><a href="/11000/minnesota/austin/colleges">Austin</a></li>
+					<li id="listItemCity3" onmouseover="document.getElementById('listItemCity3').className='listOn';" onmouseout="document.getElementById('listItemCity3').className='';"><a href="/11000/minnesota/bemidji/colleges">Bemidji</a></li>
+					<li id="listItemCity4" onmouseover="document.getElementById('listItemCity4').className='listOn';" onmouseout="document.getElementById('listItemCity4').className='';"><a href="/11000/minnesota/blaine/colleges">Blaine</a></li>
+					<li id="listItemCity5" onmouseover="document.getElementById('listItemCity5').className='listOn';" onmouseout="document.getElementById('listItemCity5').className='';"><a href="/11000/minnesota/bloomington/colleges">Bloomington</a></li>
+					<li id="listItemCity6" onmouseover="document.getElementById('listItemCity6').className='listOn';" onmouseout="document.getElementById('listItemCity6').className='';"><a href="/11000/minnesota/brainerd/colleges">Brainerd</a></li>
+					<li id="listItemCity7" onmouseover="document.getElementById('listItemCity7').className='listOn';" onmouseout="document.getElementById('listItemCity7').className='';"><a href="/11000/minnesota/brooklyn+center/colleges">Brooklyn Center</a></li>
+					<li id="listItemCity8" onmouseover="document.getElementById('listItemCity8').className='listOn';" onmouseout="document.getElementById('listItemCity8').className='';"><a href="/11000/minnesota/brooklyn+park/colleges">Brooklyn Park</a></li>
+					<li id="listItemCity9" onmouseover="document.getElementById('listItemCity9').className='listOn';" onmouseout="document.getElementById('listItemCity9').className='';"><a href="/11000/minnesota/burnsville/colleges">Burnsville</a></li>
+					<li id="listItemCity10" onmouseover="document.getElementById('listItemCity10').className='listOn';" onmouseout="document.getElementById('listItemCity10').className='';"><a href="/11000/minnesota/cass+lake/colleges">Cass Lake</a></li>
+					<li id="listItemCity11" onmouseover="document.getElementById('listItemCity11').className='listOn';" onmouseout="document.getElementById('listItemCity11').className='';"><a href="/11000/minnesota/cloquet/colleges">Cloquet</a></li>
+					<li id="listItemCity12" onmouseover="document.getElementById('listItemCity12').className='listOn';" onmouseout="document.getElementById('listItemCity12').className='';"><a href="/11000/minnesota/collegeville/colleges">Collegeville</a></li>
+					<li id="listItemCity13" onmouseover="document.getElementById('listItemCity13').className='listOn';" onmouseout="document.getElementById('listItemCity13').className='';"><a href="/11000/minnesota/coon+rapids/colleges">Coon Rapids</a></li>
+					<li id="listItemCity14" onmouseover="document.getElementById('listItemCity14').className='listOn';" onmouseout="document.getElementById('listItemCity14').className='';"><a href="/11000/minnesota/crookston/colleges">Crookston</a></li>
+					<li id="listItemCity15" onmouseover="document.getElementById('listItemCity15').className='listOn';" onmouseout="document.getElementById('listItemCity15').className='';"><a href="/11000/minnesota/crystal/colleges">Crystal</a></li>
+					<li id="listItemCity16" onmouseover="document.getElementById('listItemCity16').className='listOn';" onmouseout="document.getElementById('listItemCity16').className='';"><a href="/11000/minnesota/dultuh/colleges">Dultuh</a></li>
+					<li id="listItemCity17" onmouseover="document.getElementById('listItemCity17').className='listOn';" onmouseout="document.getElementById('listItemCity17').className='';"><a href="/11000/minnesota/duluth/colleges">Duluth</a></li>
+					<li id="listItemCity18" onmouseover="document.getElementById('listItemCity18').className='listOn';" onmouseout="document.getElementById('listItemCity18').className='';"><a href="/11000/minnesota/eagan/colleges">Eagan</a></li>
+					<li id="listItemCity19" onmouseover="document.getElementById('listItemCity19').className='listOn';" onmouseout="document.getElementById('listItemCity19').className='';"><a href="/11000/minnesota/eagn/colleges">Eagn</a></li>
+					<li id="listItemCity20" onmouseover="document.getElementById('listItemCity20').className='listOn';" onmouseout="document.getElementById('listItemCity20').className='';"><a href="/11000/minnesota/eden+prairie/colleges">Eden Prairie</a></li>
+					<li id="listItemCity21" onmouseover="document.getElementById('listItemCity21').className='listOn';" onmouseout="document.getElementById('listItemCity21').className='';"><a href="/11000/minnesota/edina/colleges">Edina</a></li>
+					<li id="listItemCity22" onmouseover="document.getElementById('listItemCity22').className='listOn';" onmouseout="document.getElementById('listItemCity22').className='';"><a href="/11000/minnesota/ely/colleges">Ely</a></li>
+					<li id="listItemCity23" onmouseover="document.getElementById('listItemCity23').className='listOn';" onmouseout="document.getElementById('listItemCity23').className='';"><a href="/11000/minnesota/falcon+heights/colleges">Falcon Heights</a></li>
+					<li id="listItemCity24" onmouseover="document.getElementById('listItemCity24').className='listOn';" onmouseout="document.getElementById('listItemCity24').className='';"><a href="/11000/minnesota/fergus+falls/colleges">Fergus Falls</a></li>
+					<li id="listItemCity25" onmouseover="document.getElementById('listItemCity25').className='listOn';" onmouseout="document.getElementById('listItemCity25').className='';"><a href="/11000/minnesota/fridley/colleges">Fridley</a></li>
+					<li id="listItemCity26" onmouseover="document.getElementById('listItemCity26').className='listOn';" onmouseout="document.getElementById('listItemCity26').className='';"><a href="/11000/minnesota/grand+rapids/colleges">Grand Rapids</a></li>
+					<li id="listItemCity27" onmouseover="document.getElementById('listItemCity27').className='listOn';" onmouseout="document.getElementById('listItemCity27').className='';"><a href="/11000/minnesota/granite+falls/colleges">Granite Falls</a></li>
+					<li id="listItemCity28" onmouseover="document.getElementById('listItemCity28').className='listOn';" onmouseout="document.getElementById('listItemCity28').className='';"><a href="/11000/minnesota/hibbing/colleges">Hibbing</a></li>
+					<li id="listItemCity29" onmouseover="document.getElementById('listItemCity29').className='listOn';" onmouseout="document.getElementById('listItemCity29').className='';"><a href="/11000/minnesota/hopkins/colleges">Hopkins</a></li>
+					<li id="listItemCity30" onmouseover="document.getElementById('listItemCity30').className='listOn';" onmouseout="document.getElementById('listItemCity30').className='';"><a href="/11000/minnesota/international+falls/colleges">International Falls</a></li>
+					<li id="listItemCity31" onmouseover="document.getElementById('listItemCity31').className='listOn';" onmouseout="document.getElementById('listItemCity31').className='';"><a href="/11000/minnesota/inver+grove+heights/colleges">Inver Grove Heights</a></li>
+					<li id="listItemCity32" onmouseover="document.getElementById('listItemCity32').className='listOn';" onmouseout="document.getElementById('listItemCity32').className='';"><a href="/11000/minnesota/kragnes/colleges">Kragnes</a></li>
+					<li id="listItemCity33" onmouseover="document.getElementById('listItemCity33').className='listOn';" onmouseout="document.getElementById('listItemCity33').className='';"><a href="/11000/minnesota/lake+elmo/colleges">Lake Elmo</a></li>
+					<li id="listItemCity34" onmouseover="document.getElementById('listItemCity34').className='listOn';" onmouseout="document.getElementById('listItemCity34').className='';"><a href="/11000/minnesota/mahnomen/colleges">Mahnomen</a></li>
+					<li id="listItemCity35" onmouseover="document.getElementById('listItemCity35').className='listOn';" onmouseout="document.getElementById('listItemCity35').className='';"><a href="/11000/minnesota/mankato/colleges">Mankato</a></li>
+					<li id="listItemCity36" onmouseover="document.getElementById('listItemCity36').className='listOn';" onmouseout="document.getElementById('listItemCity36').className='';"><a href="/11000/minnesota/maplewood/colleges">Maplewood</a></li>
+					<li id="listItemCity37" onmouseover="document.getElementById('listItemCity37').className='listOn';" onmouseout="document.getElementById('listItemCity37').className='';"><a href="/11000/minnesota/marshall/colleges">Marshall</a></li>
+					<li id="listItemCity38" onmouseover="document.getElementById('listItemCity38').className='listOn';" onmouseout="document.getElementById('listItemCity38').className='';"><a href="/11000/minnesota/mendota+heights/colleges">Mendota Heights</a></li>
+					<li id="listItemCity39" onmouseover="document.getElementById('listItemCity39').className='listOn';" onmouseout="document.getElementById('listItemCity39').className='';"><a href="/11000/minnesota/minneapolis/colleges">Minneapolis</a></li>
+					<li id="listItemCity40" onmouseover="document.getElementById('listItemCity40').className='listOn';" onmouseout="document.getElementById('listItemCity40').className='';"><a href="/11000/minnesota/minneapolis+/+st.+paul/colleges">Minneapolis / St. Paul</a></li>
+					<li id="listItemCity41" onmouseover="document.getElementById('listItemCity41').className='listOn';" onmouseout="document.getElementById('listItemCity41').className='';"><a href="/11000/minnesota/minnetonka/colleges">Minnetonka</a></li>
+					<li id="listItemCity42" onmouseover="document.getElementById('listItemCity42').className='listOn';" onmouseout="document.getElementById('listItemCity42').className='';"><a href="/11000/minnesota/moorhead/colleges">Moorhead</a></li>
+					<li id="listItemCity43" onmouseover="document.getElementById('listItemCity43').className='listOn';" onmouseout="document.getElementById('listItemCity43').className='';"><a href="/11000/minnesota/morris/colleges">Morris</a></li>
+					<li id="listItemCity44" onmouseover="document.getElementById('listItemCity44').className='listOn';" onmouseout="document.getElementById('listItemCity44').className='';"><a href="/11000/minnesota/new+brighton/colleges">New Brighton</a></li>
+					<li id="listItemCity45" onmouseover="document.getElementById('listItemCity45').className='listOn';" onmouseout="document.getElementById('listItemCity45').className='';"><a href="/11000/minnesota/new+hope/colleges">New Hope</a></li>
+					<li id="listItemCity46" onmouseover="document.getElementById('listItemCity46').className='listOn';" onmouseout="document.getElementById('listItemCity46').className='';"><a href="/11000/minnesota/new+ulm/colleges">New Ulm</a></li>
+					<li id="listItemCity47" onmouseover="document.getElementById('listItemCity47').className='listOn';" onmouseout="document.getElementById('listItemCity47').className='';"><a href="/11000/minnesota/north+mankato/colleges">North Mankato</a></li>
+					<li id="listItemCity48" onmouseover="document.getElementById('listItemCity48').className='listOn';" onmouseout="document.getElementById('listItemCity48').className='';"><a href="/11000/minnesota/northfield/colleges">Northfield</a></li>
+					<li id="listItemCity49" onmouseover="document.getElementById('listItemCity49').className='listOn';" onmouseout="document.getElementById('listItemCity49').className='';"><a href="/11000/minnesota/oakdale/colleges">Oakdale</a></li>
+					<li id="listItemCity50" onmouseover="document.getElementById('listItemCity50').className='listOn';" onmouseout="document.getElementById('listItemCity50').className='';"><a href="/11000/minnesota/owatonna/colleges">Owatonna</a></li>
+					<li id="listItemCity51" onmouseover="document.getElementById('listItemCity51').className='listOn';" onmouseout="document.getElementById('listItemCity51').className='';"><a href="/11000/minnesota/pine+city/colleges">Pine City</a></li>
+					<li id="listItemCity52" onmouseover="document.getElementById('listItemCity52').className='listOn';" onmouseout="document.getElementById('listItemCity52').className='';"><a href="/11000/minnesota/plymouth/colleges">Plymouth</a></li>
+					<li id="listItemCity53" onmouseover="document.getElementById('listItemCity53').className='listOn';" onmouseout="document.getElementById('listItemCity53').className='';"><a href="/11000/minnesota/richfield/colleges">Richfield</a></li>
+					<li id="listItemCity54" onmouseover="document.getElementById('listItemCity54').className='listOn';" onmouseout="document.getElementById('listItemCity54').className='';"><a href="/11000/minnesota/ridgedale/colleges">Ridgedale</a></li>
+					<li id="listItemCity55" onmouseover="document.getElementById('listItemCity55').className='listOn';" onmouseout="document.getElementById('listItemCity55').className='';"><a href="/11000/minnesota/rochester/colleges">Rochester</a></li>
+					<li id="listItemCity56" onmouseover="document.getElementById('listItemCity56').className='listOn';" onmouseout="document.getElementById('listItemCity56').className='';"><a href="/11000/minnesota/rosemount/colleges">Rosemount</a></li>
+					<li id="listItemCity57" onmouseover="document.getElementById('listItemCity57').className='listOn';" onmouseout="document.getElementById('listItemCity57').className='';"><a href="/11000/minnesota/roseville/colleges">Roseville</a></li>
+					<li id="listItemCity58" onmouseover="document.getElementById('listItemCity58').className='listOn';" onmouseout="document.getElementById('listItemCity58').className='';"><a href="/11000/minnesota/saint+cloud/colleges">Saint Cloud</a></li>
+					<li id="listItemCity59" onmouseover="document.getElementById('listItemCity59').className='listOn';" onmouseout="document.getElementById('listItemCity59').className='';"><a href="/11000/minnesota/saint+joseph/colleges">Saint Joseph</a></li>
+					<li id="listItemCity60" onmouseover="document.getElementById('listItemCity60').className='listOn';" onmouseout="document.getElementById('listItemCity60').className='';"><a href="/11000/minnesota/shakopee/colleges">Shakopee</a></li>
+					<li id="listItemCity61" onmouseover="document.getElementById('listItemCity61').className='listOn';" onmouseout="document.getElementById('listItemCity61').className='';"><a href="/11000/minnesota/st+bonifacius/colleges">St Bonifacius</a></li>
+					<li id="listItemCity62" onmouseover="document.getElementById('listItemCity62').className='listOn';" onmouseout="document.getElementById('listItemCity62').className='';"><a href="/11000/minnesota/st+cloud/colleges">St Cloud</a></li>
+					<li id="listItemCity63" onmouseover="document.getElementById('listItemCity63').className='listOn';" onmouseout="document.getElementById('listItemCity63').className='';"><a href="/11000/minnesota/st+louis+park/colleges">St Louis Park</a></li>
+					<li id="listItemCity64" onmouseover="document.getElementById('listItemCity64').className='listOn';" onmouseout="document.getElementById('listItemCity64').className='';"><a href="/11000/minnesota/st+paul/colleges">St Paul</a></li>
+					<li id="listItemCity65" onmouseover="document.getElementById('listItemCity65').className='listOn';" onmouseout="document.getElementById('listItemCity65').className='';"><a href="/11000/minnesota/st+peter/colleges">St Peter</a></li>
+					<li id="listItemCity66" onmouseover="document.getElementById('listItemCity66').className='listOn';" onmouseout="document.getElementById('listItemCity66').className='';"><a href="/11000/minnesota/st.+cloud/colleges">St. Cloud</a></li>
+					<li id="listItemCity67" onmouseover="document.getElementById('listItemCity67').className='listOn';" onmouseout="document.getElementById('listItemCity67').className='';"><a href="/11000/minnesota/st.+louis+park/colleges">St. Louis Park</a></li>
+					<li id="listItemCity68" onmouseover="document.getElementById('listItemCity68').className='listOn';" onmouseout="document.getElementById('listItemCity68').className='';"><a href="/11000/minnesota/st.+paul/colleges">St. Paul</a></li>
+					<li id="listItemCity69" onmouseover="document.getElementById('listItemCity69').className='listOn';" onmouseout="document.getElementById('listItemCity69').className='';"><a href="/11000/minnesota/thief+river+falls/colleges">Thief River Falls</a></li>
+					<li id="listItemCity70" onmouseover="document.getElementById('listItemCity70').className='listOn';" onmouseout="document.getElementById('listItemCity70').className='';"><a href="/11000/minnesota/twin+cities/colleges">Twin Cities</a></li>
+					<li id="listItemCity71" onmouseover="document.getElementById('listItemCity71').className='listOn';" onmouseout="document.getElementById('listItemCity71').className='';"><a href="/11000/minnesota/virginia/colleges">Virginia</a></li>
+					<li id="listItemCity72" onmouseover="document.getElementById('listItemCity72').className='listOn';" onmouseout="document.getElementById('listItemCity72').className='';"><a href="/11000/minnesota/waite+park/colleges">Waite Park</a></li>
+					<li id="listItemCity73" onmouseover="document.getElementById('listItemCity73').className='listOn';" onmouseout="document.getElementById('listItemCity73').className='';"><a href="/11000/minnesota/white+bear+lake/colleges">White Bear Lake</a></li>
+					<li id="listItemCity74" onmouseover="document.getElementById('listItemCity74').className='listOn';" onmouseout="document.getElementById('listItemCity74').className='';"><a href="/11000/minnesota/willmar/colleges">Willmar</a></li>
+					<li id="listItemCity75" onmouseover="document.getElementById('listItemCity75').className='listOn';" onmouseout="document.getElementById('listItemCity75').className='';"><a href="/11000/minnesota/winona/colleges">Winona</a></li>
+					<li id="listItemCity76" onmouseover="document.getElementById('listItemCity76').className='listOn';" onmouseout="document.getElementById('listItemCity76').className='';"><a href="/11000/minnesota/woodbury/colleges">Woodbury</a></li>
+				</ul>
+				</div>
+			</div>
+</div>
+		</div>
+		<div class="content-container">
+			<div class="content">
+				<span class="breadcrumb"><a href="/10000/minnesota/colleges">Minnesota Colleges</a> > <a href="/10100/minnesota/legal/colleges">Legal Colleges</a></span>
+				<div  id="sticky">
+					<!-- AddThis Bookmark Button BEGIN -->
+					<script type="text/javascript">
+					  addthis_url    = location.href;
+					  addthis_title  = document.title;
+					  addthis_pub    = 'baymarketing';
+					</script><script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12 " ></script>
+					<!-- AddThis Bookmark Button END -->
+				</div>
+				<div class="contentHeader">
+					<span class="pageTitle">Minnesota Legal Colleges</span>
+					<span class="numberPerPage">
+						<form id="perPageFrm" method="POST">
+						<select class="itemsPerPage" id="itemPerPage" onchange="submit_perPageFrm();">
+<option value="50" selected>50</option>
+<option value="100" >100</option>
+<option value="150" >150</option>
+	</select>
+ Per Page
+						</form>
+					</span>
+				</div>
+				<div class="clearall"></div>
+				<div id="pagination"></div>
+		<p>The Ed-Reference database currently includes 33 Minnesota Legal Colleges, Universities in Minnesota with Legal Degree Programs , and Minnesota Schools for Legal. The Ed-Reference database is continually updated and currently includes over 9000 schools. You can narrow your search by city or degree in the right hand column.</p>
+
+				<span class="title">Featured Legal Schools, Colleges and Universities in Minnesota</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=3184&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/rasmussen/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/rasmussen/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/minnesota/st.+cloud/legal/rasmussen+college+st.+cloud-3184/">Rasmussen College St. Cloud</a></span> - <a href="/11100/minnesota/st.+cloud/legal/colleges">St. Cloud</a>, MN<br/>
+Legal Programs at Rasmussen College St. Cloud include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/st.+cloud/legal/rasmussen+college+st.+cloud-3184/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=3179&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/minnesota-school-business/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/minnesota-school-business/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/minnesota/roseville/legal/minneapolis+business+college+-+roseville-3179/">Minneapolis Business College - Roseville</a></span> - <a href="/11100/minnesota/roseville/legal/colleges">Roseville</a>, MN<br/>
+Legal Programs at Minneapolis Business College - Roseville include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/roseville/legal/minneapolis+business+college+-+roseville-3179/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8544&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/cardinal-stritch-university/minneapolis.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/cardinal-stritch-university/minneapolis.htm');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/minnesota/minneapolis/legal/cardinal+stritch+-+minneapolis-8544/">Cardinal Stritch - Minneapolis</a></span> - <a href="/11100/minnesota/minneapolis/legal/colleges">Minneapolis</a>, MN<br/>
+Legal Programs at Cardinal Stritch - Minneapolis include: Pre-Law <a href="/11100/minnesota/minneapolis/legal/cardinal+stritch+-+minneapolis-8544/">more...</a>						</li>
+					</ul>
+				</div>
+				<span class="title">Online Options for Legal</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9510&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/bryant-and-stratton-online/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/bryant-and-stratton-online/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/bryant+&+stratton+college+-+online-9510/">Bryant & Stratton College - Online</a></span><br/>
+Online Legal programs at Bryant & Stratton College - Online includes: Court Reporting						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8552&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/kaplan/concord-law-school/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/kaplan/concord-law-school/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/concord+law+school+-+online-8552/">Concord Law School - Online</a></span><br/>
+Online Legal programs at Concord Law School - Online includes: Juris Doctor Program						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7030&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/cci/everest/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/cci/everest/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/everest+college+distance+learning+programs-7030/">Everest College Distance Learning Programs</a></span><br/>
+Online Legal programs at Everest College Distance Learning Programs includes: Paralegal Associate's, Paralegal Bachelor's, Homeland Security (Bachelor's), Homeland Security (Associate's)						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=6792&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/kaplan/kaplan-university/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/kaplan/kaplan-university/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/kaplan+university+-+online-6792/">Kaplan University - Online</a></span><br/>
+Online Legal programs at Kaplan University - Online includes: Personal Injury, Law, MSCJ/Leadership/Executive Management, MSCJ/Law						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=904&page=http://college.us.com/Aff/?source=3908&partner=1064&key=ed-reference.us" onClick="javascript: pageTracker._trackPageview('/outgoing/http://college.us.com/Aff/?source=3908&partner=1064&key=ed-reference.us');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/mti+business+college+-+online-904/">MTI Business College - Online</a></span><br/>
+Online Legal programs at MTI Business College - Online includes: Legal Administrative Assistant, Secretary						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8636&page=http://aftrk.com/c/c?b=49831&h=21047&sh=318670&bt=1x1 " onClick="javascript: pageTracker._trackPageview('/outgoing/http://aftrk.com/c/c?b=49831&h=21047&sh=318670&bt=1x1 ');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/professional+career+development+institute+(pcdi)+-+online-8636/">Professional Career Development Institute (PCDI) - Online</a></span><br/>
+Online Legal programs at Professional Career Development Institute (PCDI) - Online includes: Paralegal Studies						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8638&page=http://college.us.com/Aff/?source=3720&partner=1064&key=ed-reference.us" onClick="javascript: pageTracker._trackPageview('/outgoing/http://college.us.com/Aff/?source=3720&partner=1064&key=ed-reference.us');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/rasmussen+college+distance+learning-8638/">Rasmussen College Distance Learning</a></span><br/>
+Online Legal programs at Rasmussen College Distance Learning includes: Paralegal, Paralegal Certificate						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9546&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sage-college/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/sage-college/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/sage+college+-+online-9546/">Sage College - Online</a></span><br/>
+Online Legal programs at Sage College - Online includes: Legal Studies						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8659&page=http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=345&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=345&csrc=');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/south+university-+online-8659/">South University- Online</a></span><br/>
+Online Legal programs at South University- Online includes: Associate of Science in Paralegal Studies, Bachelor of Science in Legal Studies						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=6890&page=http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=879&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=879&csrc=');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/strayer+university+-+online-6890/">Strayer University - Online</a></span><br/>
+Online Legal programs at Strayer University - Online includes: Acquisition & Contract Management, Acquisition and Contract Management, Concentration in Legal Studies						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9563&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/umuc/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/umuc/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/university+of+maryland+-+online-9563/">University of Maryland - Online</a></span><br/>
+Online Legal programs at University of Maryland - Online includes: Legal Studies						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8692&page=http://college.us.com/Aff/?source=3488&partner=1064&key=ed-reference.us" onClick="javascript: pageTracker._trackPageview('/outgoing/http://college.us.com/Aff/?source=3488&partner=1064&key=ed-reference.us');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/webster+college+-+online-8692/">Webster College - Online</a></span><br/>
+Online Legal programs at Webster College - Online includes: Legal/Criminal Justice Emphasis, Paralegal AS Degree						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8695&page=http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=479&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=479&csrc=');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/western+international+university+-+online-8695/">Western International University - Online</a></span><br/>
+Online Legal programs at Western International University - Online includes: Bachelor of Arts - Administration of Justice						</li>
+					</ul>
+				</div>
+				<span class="title">Minnesota</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/alexandria/legal/alexandria+technical+college+-+alexandria-3089/">Alexandria Technical College - Alexandria</a></span> - Alexandria, MN<br/>
+Legal Programs at Alexandria Technical College - Alexandria include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/alexandria/legal/alexandria+technical+college+-+alexandria-3089/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/anoka/legal/anoka+technical+college+-+anoka-3090/">Anoka Technical College - Anoka</a></span> - Anoka, MN<br/>
+Legal Programs at Anoka Technical College - Anoka include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/anoka/legal/anoka+technical+college+-+anoka-3090/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/austin/legal/riverland+community+college+-+austin-3091/">Riverland Community College - Austin</a></span> - Austin, MN<br/>
+Legal Programs at Riverland Community College - Austin include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/austin/legal/riverland+community+college+-+austin-3091/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/brooklyn+park/legal/north+hennepin+community+college+-+brooklyn+park-3104/">North Hennepin Community College - Brooklyn Park</a></span> - Brooklyn Park, MN<br/>
+Legal Programs at North Hennepin Community College - Brooklyn Park include: Legal Assistant, Paralegal, <a href="/11100/minnesota/brooklyn+park/legal/north+hennepin+community+college+-+brooklyn+park-3104/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/duluth/legal/lake+superior+college+-+duluth-3113/">Lake Superior College - Duluth</a></span> - Duluth, MN<br/>
+Legal Programs at Lake Superior College - Duluth include: Legal Assistant, Paralegal, Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/duluth/legal/lake+superior+college+-+duluth-3113/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/fergus+falls/legal/minnesota+state+comm+and+tech+college+-+fergus+falls-3123/">Minnesota State Comm And Tech College - Fergus Falls</a></span> - Fergus Falls, MN<br/>
+Legal Programs at Minnesota State Comm And Tech College - Fergus Falls include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/fergus+falls/legal/minnesota+state+comm+and+tech+college+-+fergus+falls-3123/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/grand+rapids/legal/itasca+community+college+-+grand+rapids-3124/">Itasca Community College - Grand Rapids</a></span> - Grand Rapids, MN<br/>
+Legal Programs at Itasca Community College - Grand Rapids include: Legal Assistant, Paralegal, <a href="/11100/minnesota/grand+rapids/legal/itasca+community+college+-+grand+rapids-3124/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/inver+grove+heights/legal/inver+hills+community+college+-+inver+grove+heights-3130/">Inver Hills Community College - Inver Grove Heights</a></span> - Inver Grove Heights, MN<br/>
+Legal Programs at Inver Hills Community College - Inver Grove Heights include: Legal Assistant, Paralegal, Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/inver+grove+heights/legal/inver+hills+community+college+-+inver+grove+heights-3130/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/minneapolis/legal/university+of+minnesota+-+twin+cities-3153/">University of Minnesota - Twin Cities</a></span> - Minneapolis, MN<br/>
+Legal Programs at University of Minnesota - Twin Cities include: Law LLB, JD, Legal Research and Advanced Professional Studies, <a href="/11100/minnesota/minneapolis/legal/university+of+minnesota+-+twin+cities-3153/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8544&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/cardinal-stritch-university/minneapolis.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/cardinal-stritch-university/minneapolis.htm');" onMouseOver="window.status='Request more information from Cardinal Stritch - Minneapolis'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/minnesota/minneapolis/legal/cardinal+stritch+-+minneapolis-8544/">Cardinal Stritch - Minneapolis</a></span> - Minneapolis, MN<br/>
+Legal Programs at Cardinal Stritch - Minneapolis include: Pre-Law <a href="/11100/minnesota/minneapolis/legal/cardinal+stritch+-+minneapolis-8544/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/minnetonka/legal/rasmussen+college+minnetonka-3155/">Rasmussen College Minnetonka</a></span> - Minnetonka, MN<br/>
+Legal Programs at Rasmussen College Minnetonka include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/minnetonka/legal/rasmussen+college+minnetonka-3155/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/moorhead/legal/minnesota+state+university+-+moorhead-3157/">Minnesota State University - Moorhead</a></span> - Moorhead, MN<br/>
+Legal Programs at Minnesota State University - Moorhead include: Legal Assistant, Paralegal, Legal Professions and Studies, <a href="/11100/minnesota/moorhead/legal/minnesota+state+university+-+moorhead-3157/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/north+mankato/legal/south+central+technical+college+-+north+mankato-3163/">South Central Technical College - North Mankato</a></span> - North Mankato, MN<br/>
+Legal Programs at South Central Technical College - North Mankato include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/north+mankato/legal/south+central+technical+college+-+north+mankato-3163/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/oakdale/legal/globe+college+-+oakdale-3166/">Globe College - Oakdale</a></span> - Oakdale, MN<br/>
+Legal Programs at Globe College - Oakdale include: Legal Assistant, Paralegal, <a href="/11100/minnesota/oakdale/legal/globe+college+-+oakdale-3166/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/pine+city/legal/pine+technical+college+-+pine+city-3169/">Pine Technical College - Pine City</a></span> - Pine City, MN<br/>
+Legal Programs at Pine Technical College - Pine City include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/pine+city/legal/pine+technical+college+-+pine+city-3169/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=3179&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/minnesota-school-business/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/minnesota-school-business/');" onMouseOver="window.status='Request more information from Minneapolis Business College - Roseville'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/minnesota/roseville/legal/minneapolis+business+college+-+roseville-3179/">Minneapolis Business College - Roseville</a></span> - Roseville, MN<br/>
+Legal Programs at Minneapolis Business College - Roseville include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/roseville/legal/minneapolis+business+college+-+roseville-3179/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/st+paul/legal/hamline+university+-+st.+paul-3196/">Hamline University - St. Paul</a></span> - St Paul, MN<br/>
+Legal Programs at Hamline University - St. Paul include: Legal Assistant, Paralegal, Law LLB, JD, Legal Professions and Studies, Legal Research and Advanced Professional Studies, <a href="/11100/minnesota/st+paul/legal/hamline+university+-+st.+paul-3196/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/st+paul/legal/university+of+st+thomas+-+st+paul-3205/">University of St Thomas - St Paul</a></span> - St Paul, MN<br/>
+Legal Programs at University of St Thomas - St Paul include: Law LLB, JD, Legal Professions and Studies, <a href="/11100/minnesota/st+paul/legal/university+of+st+thomas+-+st+paul-3205/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/st+paul/legal/william+mitchell+college+of+law+-+st+paul-3206/">William Mitchell College of Law - St Paul</a></span> - St Paul, MN<br/>
+Legal Programs at William Mitchell College of Law - St Paul include: Law LLB, JD, <a href="/11100/minnesota/st+paul/legal/william+mitchell+college+of+law+-+st+paul-3206/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=3184&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/rasmussen/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/rasmussen/');" onMouseOver="window.status='Request more information from Rasmussen College St. Cloud'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/minnesota/st.+cloud/legal/rasmussen+college+st.+cloud-3184/">Rasmussen College St. Cloud</a></span> - St. Cloud, MN<br/>
+Legal Programs at Rasmussen College St. Cloud include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/st.+cloud/legal/rasmussen+college+st.+cloud-3184/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/st.+cloud/legal/saint+cloud+technical+college+-+st.+cloud-3186/">Saint Cloud Technical College - St. Cloud</a></span> - St. Cloud, MN<br/>
+Legal Programs at Saint Cloud Technical College - St. Cloud include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/st.+cloud/legal/saint+cloud+technical+college+-+st.+cloud-3186/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/white+bear+lake/legal/century+community+and+technical+college+-+white+bear+lake-3211/">Century Community And Technical College - White Bear Lake</a></span> - White Bear Lake, MN<br/>
+Legal Programs at Century Community And Technical College - White Bear Lake include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/white+bear+lake/legal/century+community+and+technical+college+-+white+bear+lake-3211/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/willmar/legal/ridgewater+college+-+willmar-3212/">Ridgewater College - Willmar</a></span> - Willmar, MN<br/>
+Legal Programs at Ridgewater College - Willmar include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/willmar/legal/ridgewater+college+-+willmar-3212/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/winona/legal/minnesota+state+college+-+southeast+technical+-+winona-3213/">Minnesota State College - Southeast Technical - Winona</a></span> - Winona, MN<br/>
+Legal Programs at Minnesota State College - Southeast Technical - Winona include: Legal Administrative Assistant, Secretary, <a href="/11100/minnesota/winona/legal/minnesota+state+college+-+southeast+technical+-+winona-3213/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/minnesota/winona/legal/winona+state+university+-+winona-3215/">Winona State University - Winona</a></span> - Winona, MN<br/>
+Legal Programs at Winona State University - Winona include: Legal Assistant, Paralegal, <a href="/11100/minnesota/winona/legal/winona+state+university+-+winona-3215/">more...</a>						</li>
+					</ul>
+				</div>
+<div class="pagination">Page 1 </div>			</div>
+			<script>insertPagination('<div class=\"pagination\">Page 1 </div>');</script>
+			<div id="rightSideNav">
+			<div class="nav1">
+				<div class="nav1Title">Specific Legal Degree Programs:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItem001100" onmouseover="document.getElementById('listItem001100').className='listOn';" onmouseout="document.getElementById('listItem001100').className='';"><a href="/00110/legal/advanced-legal-research,-studies,-gen-llm,-mcl,-mli,-msl,-jsd,-sjd/colleges">Advanced Legal Research, Studies, Gen LLM, MCL, MLI, MSL, JSD, SJD Colleges</a></li>
+					<li id="listItem001101" onmouseover="document.getElementById('listItem001101').className='listOn';" onmouseout="document.getElementById('listItem001101').className='';"><a href="/00110/legal/associate-of-applied-science-(aas)---paralegal/colleges">Associate Of Applied Science (AAS) - Paralegal Colleges</a></li>
+					<li id="listItem001102" onmouseover="document.getElementById('listItem001102').className='listOn';" onmouseout="document.getElementById('listItem001102').className='';"><a href="/00110/legal/bs-in-legal-studies/colleges">BS In Legal Studies Colleges</a></li>
+					<li id="listItem001103" onmouseover="document.getElementById('listItem001103').className='listOn';" onmouseout="document.getElementById('listItem001103').className='';"><a href="/00110/legal/certificate-in-paralegal/colleges">Certificate In Paralegal Colleges</a></li>
+					<li id="listItem001104" onmouseover="document.getElementById('listItem001104').className='listOn';" onmouseout="document.getElementById('listItem001104').className='';"><a href="/00110/legal/certificate-in-paralegal-studies/colleges">Certificate In Paralegal Studies Colleges</a></li>
+					<li id="listItem001105" onmouseover="document.getElementById('listItem001105').className='listOn';" onmouseout="document.getElementById('listItem001105').className='';"><a href="/00110/legal/general-practice-paralegal/colleges">General Practice Paralegal Colleges</a></li>
+					<li id="listItem001106" onmouseover="document.getElementById('listItem001106').className='listOn';" onmouseout="document.getElementById('listItem001106').className='';"><a href="/00110/legal/general-practice-paralegal-program/colleges">General Practice Paralegal Program Colleges</a></li>
+					<li id="listItem001107" onmouseover="document.getElementById('listItem001107').className='listOn';" onmouseout="document.getElementById('listItem001107').className='';"><a href="/00110/legal/health-law/colleges">Health Law Colleges</a></li>
+					<li id="listItem001108" onmouseover="document.getElementById('listItem001108').className='listOn';" onmouseout="document.getElementById('listItem001108').className='';"><a href="/00110/legal/juris-doctor-law-program/colleges">Juris Doctor Law Program Colleges</a></li>
+					<li id="listItem001109" onmouseover="document.getElementById('listItem001109').className='listOn';" onmouseout="document.getElementById('listItem001109').className='';"><a href="/00110/legal/jurisprudence,-legal-studies/colleges">Jurisprudence, Legal Studies Colleges</a></li>
+					<li id="listItem0011010" onmouseover="document.getElementById('listItem0011010').className='listOn';" onmouseout="document.getElementById('listItem0011010').className='';"><a href="/00110/legal/justice-administration/colleges">Justice Administration Colleges</a></li>
+					<li id="listItem0011011" onmouseover="document.getElementById('listItem0011011').className='listOn';" onmouseout="document.getElementById('listItem0011011').className='';"><a href="/00110/legal/law-and-corporate-governance/colleges">Law And Corporate Governance Colleges</a></li>
+					<li id="listItem0011012" onmouseover="document.getElementById('listItem0011012').className='listOn';" onmouseout="document.getElementById('listItem0011012').className='';"><a href="/00110/legal/law-llb,-jd/colleges">Law LLB, JD Colleges</a></li>
+					<li id="listItem0011013" onmouseover="document.getElementById('listItem0011013').className='listOn';" onmouseout="document.getElementById('listItem0011013').className='';"><a href="/00110/legal/legal-administrative-assistant/colleges">Legal Administrative Assistant Colleges</a></li>
+					<li id="listItem0011014" onmouseover="document.getElementById('listItem0011014').className='listOn';" onmouseout="document.getElementById('listItem0011014').className='';"><a href="/00110/legal/legal-administrative-assistant,-secretary/colleges">Legal Administrative Assistant, Secretary Colleges</a></li>
+					<li id="listItem0011015" onmouseover="document.getElementById('listItem0011015').className='listOn';" onmouseout="document.getElementById('listItem0011015').className='';"><a href="/00110/legal/legal-assistant,-paralegal/colleges">Legal Assistant, Paralegal Colleges</a></li>
+					<li id="listItem0011016" onmouseover="document.getElementById('listItem0011016').className='listOn';" onmouseout="document.getElementById('listItem0011016').className='';"><a href="/00110/legal/legal-assisting/colleges">Legal Assisting Colleges</a></li>
+					<li id="listItem0011017" onmouseover="document.getElementById('listItem0011017').className='listOn';" onmouseout="document.getElementById('listItem0011017').className='';"><a href="/00110/legal/legal-office-assistant/colleges">Legal Office Assistant Colleges</a></li>
+					<li id="listItem0011018" onmouseover="document.getElementById('listItem0011018').className='listOn';" onmouseout="document.getElementById('listItem0011018').className='';"><a href="/00110/legal/legal-professions-and-studies/colleges">Legal Professions And Studies Colleges</a></li>
+					<li id="listItem0011019" onmouseover="document.getElementById('listItem0011019').className='listOn';" onmouseout="document.getElementById('listItem0011019').className='';"><a href="/00110/legal/legal-research-and-advanced-professional-studies/colleges">Legal Research And Advanced Professional Studies Colleges</a></li>
+					<li id="listItem0011020" onmouseover="document.getElementById('listItem0011020').className='listOn';" onmouseout="document.getElementById('listItem0011020').className='';"><a href="/00110/legal/legal-secretary/colleges">Legal Secretary Colleges</a></li>
+					<li id="listItem0011021" onmouseover="document.getElementById('listItem0011021').className='listOn';" onmouseout="document.getElementById('listItem0011021').className='';"><a href="/00110/legal/legal-studies/colleges">Legal Studies Colleges</a></li>
+					<li id="listItem0011022" onmouseover="document.getElementById('listItem0011022').className='listOn';" onmouseout="document.getElementById('listItem0011022').className='';"><a href="/00110/legal/paralegal/colleges">Paralegal Colleges</a></li>
+					<li id="listItem0011023" onmouseover="document.getElementById('listItem0011023').className='listOn';" onmouseout="document.getElementById('listItem0011023').className='';"><a href="/00110/legal/paralegal-aas-degree/colleges">Paralegal AAS Degree Colleges</a></li>
+					<li id="listItem0011024" onmouseover="document.getElementById('listItem0011024').className='listOn';" onmouseout="document.getElementById('listItem0011024').className='';"><a href="/00110/legal/paralegal-aos/colleges">Paralegal AOS Colleges</a></li>
+					<li id="listItem0011025" onmouseover="document.getElementById('listItem0011025').className='listOn';" onmouseout="document.getElementById('listItem0011025').className='';"><a href="/00110/legal/paralegal-assistant/colleges">Paralegal Assistant Colleges</a></li>
+					<li id="listItem0011026" onmouseover="document.getElementById('listItem0011026').className='listOn';" onmouseout="document.getElementById('listItem0011026').className='';"><a href="/00110/legal/paralegal-associate-degree/colleges">Paralegal Associate Degree Colleges</a></li>
+					<li id="listItem0011027" onmouseover="document.getElementById('listItem0011027').className='listOn';" onmouseout="document.getElementById('listItem0011027').className='';"><a href="/00110/legal/paralegal-bachelor's/colleges">Paralegal Bachelor's Colleges</a></li>
+					<li id="listItem0011028" onmouseover="document.getElementById('listItem0011028').className='listOn';" onmouseout="document.getElementById('listItem0011028').className='';"><a href="/00110/legal/paralegal-certificate/colleges">Paralegal Certificate Colleges</a></li>
+					<li id="listItem0011029" onmouseover="document.getElementById('listItem0011029').className='listOn';" onmouseout="document.getElementById('listItem0011029').className='';"><a href="/00110/legal/paralegal-communications/colleges">Paralegal Communications Colleges</a></li>
+					<li id="listItem0011030" onmouseover="document.getElementById('listItem0011030').className='listOn';" onmouseout="document.getElementById('listItem0011030').className='';"><a href="/00110/legal/paralegal-law-degree-massage-therapy-degree/colleges">Paralegal Law Degree Massage Therapy Degree Colleges</a></li>
+					<li id="listItem0011031" onmouseover="document.getElementById('listItem0011031').className='listOn';" onmouseout="document.getElementById('listItem0011031').className='';"><a href="/00110/legal/paralegal-law-degree-paralegal-law-degree/colleges">Paralegal Law Degree Paralegal Law Degree Colleges</a></li>
+					<li id="listItem0011032" onmouseover="document.getElementById('listItem0011032').className='listOn';" onmouseout="document.getElementById('listItem0011032').className='';"><a href="/00110/legal/paralegal-specialist/colleges">Paralegal Specialist Colleges</a></li>
+					<li id="listItem0011033" onmouseover="document.getElementById('listItem0011033').className='listOn';" onmouseout="document.getElementById('listItem0011033').className='';"><a href="/00110/legal/paralegal-technology/colleges">Paralegal Technology Colleges</a></li>
+					<li id="listItem0011034" onmouseover="document.getElementById('listItem0011034').className='listOn';" onmouseout="document.getElementById('listItem0011034').className='';"><a href="/00110/legal/paralegal,applied-science/colleges">Paralegal,Applied Science Colleges</a></li>
+					<li id="listItem0011035" onmouseover="document.getElementById('listItem0011035').className='listOn';" onmouseout="document.getElementById('listItem0011035').className='';"><a href="/00110/legal/paralegal,legal-assistant/colleges">Paralegal,Legal Assistant Colleges</a></li>
+					<li id="listItem0011036" onmouseover="document.getElementById('listItem0011036').className='listOn';" onmouseout="document.getElementById('listItem0011036').className='';"><a href="/00110/legal/paralegal,legal-secretary/colleges">Paralegal,Legal Secretary Colleges</a></li>
+					<li id="listItem0011037" onmouseover="document.getElementById('listItem0011037').className='listOn';" onmouseout="document.getElementById('listItem0011037').className='';"><a href="/00110/legal/pathway-to-paralegal/colleges">Pathway To Paralegal Colleges</a></li>
+					<li id="listItem0011038" onmouseover="document.getElementById('listItem0011038').className='listOn';" onmouseout="document.getElementById('listItem0011038').className='';"><a href="/00110/legal/pre-law/colleges">Pre-Law Colleges</a></li>
+					<li id="listItem0011039" onmouseover="document.getElementById('listItem0011039').className='listOn';" onmouseout="document.getElementById('listItem0011039').className='';"><a href="/00110/legal/pre-lawcolleges">Pre-LawColleges</a></li>
+					<li id="listItem0011040" onmouseover="document.getElementById('listItem0011040').className='listOn';" onmouseout="document.getElementById('listItem0011040').className='';"><a href="/00110/legal/professional-legal-assistant/colleges">Professional Legal Assistant Colleges</a></li>
+					<li id="listItem0011041" onmouseover="document.getElementById('listItem0011041').className='listOn';" onmouseout="document.getElementById('listItem0011041').className='';"><a href="/00110/legal/tax-law,-taxation-llm,-jsd,-sjd/colleges">Tax Law, Taxation LLM, JSD, SJD Colleges</a></li>
+				</ul>
+				</div>
+			</div>
+			</div>
+ 		</div>
+	<div id="footer">
+	Copyright &copy 2009 <a href="/">Ed-Reference.us</a>. All Rights Reserved.
+	</div>
+		</div>
+		</div>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2604016;
+var sc_invisible=0;
+var sc_partition=25;
+var sc_security="4b91cb87";
+var sc_remove_link=1;
+</script>
+
+<script type="text/javascript" language="javascript" src=" http://www.statcounter.com/counter/counter.js"></script><noscript><img  src=" http://c26.statcounter.com/counter.php?sc_project=2604016&java=0&security=4b91cb87&invisible=0" alt="blog counter" border="0"> </noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>
+
+
+

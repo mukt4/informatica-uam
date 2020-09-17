@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang = "es">
+    <head>
+        <title>Spotifylm</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="shortcut icon" href="../static/aplicacion/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="../static/javascript/validation.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            jQuery.fn.fortalezaClave = function(){
+                $(this).each(function(){
+                    elem = $(this);
+                    //creo el elemento HTML para el mensaje
+                    msg = $('<span>No segura</span>');
+                    //inserto el mensaje en la página, justo después del campo input password
+                    elem.after(msg)
+                    //almaceno la referencia del elemento del mensaje dentro del campo input
+                    elem.data("mensaje", msg);
+
+                    elem.keyup(function(e){
+                        elem = $(this);
+                        //recupero la referencia al elemento del mensaje
+                        msg = elem.data("mensaje")
+                        //miro la fortaleza
+                        //extraigo el atributo value del campo input password
+                        claveActual = elem.attr("value");
+                        var fortalezaActual = "";
+                        //saco la fortaleza en función de los caracteres que tenga la clave
+                        if (claveActual.length < 5){
+                            fortalezaActual = "No segura";
+                        }else{
+                            if(claveActual.length < 8){
+                                fortalezaActual = "Medianamente segura";
+                            }else{
+                                fortalezaActual = "Segura";
+                            }
+                        }
+                        //cambio el texto del elemento mensaje para mostrar la fortaleza actual
+                        msg.html(fortalezaActual);
+                    });
+                });
+                return this;
+            }
+
+            //cuando la página esté lista, cargo la funcionalidad del plugin sobre el elemento password
+            $(document).ready(function(){
+                $("#clave").fortalezaClave();
+            });
+        </script>
+    </head>
+    
+    <body>
+        <header>
+            <a target = "_top" href = "/">
+                <img class = "icono" src="../static/aplicacion/icono.png" alt ="icono">
+            </a>
+        </header>
+        
+        <div class = "info-container2">
+            <div class = "header-register">
+                Formulario de registro
+            </div>
+            
+            <form name = "formulario-registro" onsubmit = "return validateForm()" method="POST">
+                <div class = "info-register">
+                    <a>Nombre completo
+                        <input type="text" name="cuestionario_nombreCompleto"/>
+                    </a>                    
+                    <a>Nombre de usuario
+                        <input type="text" name="cuestionario_nombre"/>
+                    </a>
+                    
+                    <a>Contrase&ntilde;a
+                        <input type="password" name="cuestionario_contrasenia" id = "clave"/>
+                    </a>
+                    
+                    <a>Repetir contrase&ntilde;a
+                        <input type="password" name="cuestionario_contrasenia2"/>
+                    </a>
+                    
+                    <a>Correo electronico
+                        <input type="text" name="cuestionario_correo"/>
+                    </a>
+
+                    <a>Numero de cuenta
+                        <input type="text" name="cuestionario_cuenta"/>
+                    </a>
+                </div>
+                <div class = "botones-registrar">
+                    <input type = "submit" value = "Registrar">
+                </div>
+            </form>
+
+            {% if error %}
+                <a class = "error">
+                    {{ error }}
+                </a>
+            {% endif %}
+        </div>
+
+        <footer>
+            <b>Copyright © 2018 Tomas Higuera Viso y Manuel Chamorro Martinez de Aragon</b>
+        </footer>
+    </body>
+</html> 
+
+
+

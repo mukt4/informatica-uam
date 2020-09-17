@@ -1,0 +1,488 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Accept-Ranges: bytes
+Server: Apache/1.3.27 (Unix)  (Red-Hat/Linux) mod_fastcgi/2.2.12 mod_perl/1.26 PHP/4.3.3 FrontPage/5.0.2 mod_ssl/2.8.12 OpenSSL/0.9.6b
+Last-Modified: Wed, 31 Jan 2007 04:46:31 GMT
+ETag: "bf021c-550f-45c01f27"
+Date: Wed, 07 Jan 2009 18:24:12 GMT
+Connection: close
+Content-Length: 21775
+
+<!doctype html public "-//W3C//DTD HTML 3.2//EN">
+<html><!-- #BeginTemplate "/Templates/aids.dwt" --><!-- DW6 -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Tracing your Family Tree</title>
+<!-- #EndEditable --> 
+<meta name="keywords" content="Alberta Family Histories Society, Alberta Family History Society, AFHS">
+<link rel=stylesheet type="text/css" href="../../stylesheet.css">
+<script src="../../js/safemail.js"></script>
+<script language="JavaScript">
+<!--
+function breadCrumbs(base, delStr, defp, cStyle, tStyle, dStyle, nl) {
+    loc = window.location.toString();
+    subs = loc.substr(loc.indexOf(base) + base.length + 1).split("/");
+    document.write("<a href=\"" + getLoc(subs.length - 1) + defp + "\" class=\"" + cStyle + "\">Home</a>  " + "<span class=\"" + dStyle + "\">" + delStr + "</span> ");
+    a = (loc.indexOf(defp) == -1) ? 1 : 2;
+    for (i = 0; i < (subs.length - a); i++) {
+        subs[i] = makeCaps(unescape(subs[i]));
+        document.write("<a href=\"" + getLoc(subs.length - i - 2) + defp + "\" class=\"" + cStyle + "\">" + subs[i] + "</a>  " + "<span class=\"" + dStyle + "\">" + delStr + "</span> ");
+    }
+    if (nl == 1) {
+        document.write("<br>");
+    }
+    document.write("<span class=\"" + tStyle + "\">" + document.title + "</span>");
+}
+
+function makeCaps(a) {
+    g = a.split(" ");
+    for (l = 0; l < g.length; l++) {
+        g[l] = g[l].toUpperCase().slice(0, 1) + g[l].slice(1);
+    }
+    return g.join(" ");
+}
+ 
+function getLoc(c) {
+    var d = "";
+    if (c > 0) {
+        for (k = 0; k < c; k++) {
+            d = d + "../";
+        }
+    }
+    return d;
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+background-color:#CC9900;
+color:#000000;
+width:140px;
+padding:2px;
+text-align:center;
+font-weight:bold;
+/*/*/border:1px solid #000000;/* */
+}
+
+.submenu{
+margin-bottom: 0.5em;
+}
+</style>
+<script type="text/javascript">
+
+/***********************************************
+* Switch Menu script- by Martial B of http://getElementById.com/
+* Modified by Dynamic Drive for format & NS4/IE4 compatibility
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+
+if (document.getElementById){ //DynamicDrive.com change
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+		if(el.style.display != "block"){ //DynamicDrive.com change
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") //DynamicDrive.com change
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function onloadfunction(){
+if (persistmenu=="yes"){
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=get_cookie(cookiename)
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
+}
+}
+
+function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}
+
+if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunction
+
+if (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate
+
+</script>
+</head>
+<body bgcolor="#ffffff" onLoad="MM_preloadImages('../../images/aboutus-on.gif','../../images/aids-on.gif','../../images/data-on.gif','../../images/events-on.gif','../../images/publications-on.gif','../../images/queries-on.gif')">
+<table border=0 cellpadding=2 cellspacing=0>
+  <tr> 
+    <td valign=top colspan="3"><center><a href="/index.html"><img src="/images/afhs_masthead_a.jpg" width=560 height=43 border=0 alt="Alberta Family Histories Society"></a> 
+      <br><img src="../../images/Banner_sm_1x2.jpg" align="middle"></center><p></p>
+      <script language="JavaScript">
+ breadCrumbs("http://www.afhs.ab.ca","<img src='http://afhs.ab.ca/images/separator.jpg'>","index.html","AiryContent","AiryContent","AiryContent","0");
+</script>
+      <hr size=1 width="100%">
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" rowspan="2" align="center"> 
+       <!-- Keep all menus within masterdiv-->
+<div id="masterdiv">
+
+	<div class="menutitle" onclick="SwitchMenu('sub1')">The Society</div>
+	<span class="submenu" id="sub1">
+		- <a href="../../society/about_us.html">About the Society</a><br>
+		- <a href="../../society/bylaws.html">By-Laws</a><br>
+		- <a href="../../society/memship.html">Membership</a><br>
+		- <a href="../../society/contacts/contacts.html">Contact Us</a><br>
+		- <a href="../../society/sigs/index.html">Special Interest Groups</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub2')">Meetings and Events</div>
+	<span class="submenu" id="sub2">
+		- <a href="../../cgi-bin/calendar.pl?CalendarName=AFHS&Op=ShowIt"><strong>Calendar</strong></a><br>
+		- <a href="../../events/program.html">Monthly Programs</a><br>
+		- <a href="../talks/index.html">Talks</a><br>
+		- <a href="http://www.family-roots.ca"> Family Roots 2004 </a><br>
+		<a href="../../society/education/index.html">AFHS Led Genealogy Courses</a><br>
+		<a href="../../society/sigs/sig_events.html#lds">Calgary LDS Family History Centre Hours</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub3')">Publications</div>
+	<span class="submenu" id="sub3">
+		- <a href="../../publications/index.html#chinook">Chinook</a><br>
+		- <a href="../../queries/chinook.html">Submit a Chinook query</a><br>
+		- <a href="../../publications/index.html">Publications</a><br>
+		- <a href="../../publications/cemetery.html#publications">Publications for Sale</a>
+	</span>
+	
+	<div class="menutitle" onclick="SwitchMenu('sub4')">Transcriptions</div>
+	<span class="submenu" id="sub4">
+		- <a href="../../data/census/index.html">Censuses</a><br>
+		- <a href="../../data/announcements/index.html">Newspaper Announcements</a><br>
+        - <a href="../../data/index.html">Various Transcriptions</a><br>
+		Searcheable Databases<br>
+		 - </a><a href="../../data/cemeteries/index.html">Cemeteries</a><br>
+        - <a href="../../data/surnames/index.html">Members' Surname Interests</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub5')">Research Aids</div>
+	<span class="submenu" id="sub5">
+		  
+		  - <a href="../../registry/index.html">Canadian Genealogical <br>
+          Projects Registry</a><br>
+		- <a href="../geographic/index.html">Geographic Links</a><br>
+		 <a href="../index.html">Omnibus Research Aids</a>
+	    </span>
+		
+		<div class="menutitle" onclick="SwitchMenu('sub6')">Libraries</div>
+	<span class="submenu" id="sub6">
+		  - <a href="../../afhs_library/index.html">AFHS Library</a><br>
+		  - <a href="../localhistory/index.html">Local Histories in Libraries</a>
+	    </span>
+		  
+		  <div class="menutitle" onclick="SwitchMenu('sub7')">Getting Started & Help</div>
+	<span class="submenu" id="sub7">
+		  - <a href="../../queries/index.html">Queries</a> <br>
+		  - <a href="index.html">Getting Started</a><br>
+		- <a href="../../society/service.html">Local Commercial Services</a>
+	    </span>
+		  
+		  <div class="menutitle" onclick="SwitchMenu('sub8')">Software</div>
+	<span class="submenu" id="sub8">
+		  - <a href="http://www.timeanddate.com/worldclock/personalapplet.html?cities=256,55,265,250,286,749,136,78,304,309,166">What 
+          Time is It?</a><br>
+          - <a href="../software.html">Software</a><br>
+          - <a href="../xls.html">Microsoft File Viewers</a><br>
+	      - <a href="../pdf.html">PDF files & Acrobat Reader</a>
+	    </span>
+		
+		<div class="menutitle" onclick="SwitchMenu('sub9')">What's New</div>
+	<span class="submenu" id="sub9">
+		  - <a href="../../society/new.html">What's new on the Site</a><br>
+		  - <a href="../../data/census/challenge/index.html">1911 Census Challenge</a> <b>Bill S-18 Passed</b><br>
+                    - <a href="../../data/census/1911/index.html">1911 Census Transcription</a></span>
+					
+					<div class="menutitle" onclick="SwitchMenu('sub10')">Awards & Scholarships</div>
+	<span class="submenu" id="sub10">
+		  - <a href="../../awards/index.html">Awards</a><br>
+			- <a href="../../scholarship/index.html">Brian W. Hutchison Scholarship Award</a></span>
+</div>
+<div class="menutitle" onclick="SwitchMenu('sub11')">Publications & Items for Sale</div>
+	<span class="submenu" id="sub11">
+		  - <a href="../../publications/cemetery.html#publications">Publications for Sale</a><br>
+			- <a href="../../society/sale_items.html">Items for Sale</a></span>
+</div><p></p>
+        
+      <img src="../../images/projectregistry.gif" align="middle" width=250 height=200 border=0 alt="Canadian Genealogical Projects Registry"><br>
+<form name="doublecombo">
+        <select name="example" size="1" onChange="redirect(this.options.selectedIndex)">
+          <option>Canada</option>
+          <option>BC</option>
+          <option>Alberta</option>
+          <option>Saskatchewan</option>
+          <option>Manitoba</option>
+          <option>Ontario</option>
+          <option>Quebec</option>
+          <option>Newfoundland</option>
+          <option>New Brunswick</option>
+          <option>Nova Scotia</option>
+          <option>PEI</option>
+          <option>YK</option>
+          <option>NT</option>
+        </select>
+        <br>
+        <select name="stage2" size="1">
+          <option value="/registry/regcan_birth.html">Birth</option>
+          <option value="/registry/regcan_marr.html">Marriage</option>
+          <option value="/registry/regcan_census.html">Census</option>
+          <option value="/registry/regcan_death.html">Death</option>
+          <option value="/registry/regcan_other.html">Other</option>
+        </select>
+        <br>
+        <input type="button" name="test" value="Go!"
+onClick="go()">
+        <script>
+<!--
+/*
+Double Combo Script Credit
+By Website Abstraction (www.wsabstract.com)
+Over 200+ free JavaScripts here!
+*/
+var groups=document.doublecombo.example.options.length
+var group=new Array(groups)
+for (i=0; i<groups; i++)
+group[i]=new Array()
+group[0][0]=new Option("Birth","/registry/regcan_birth.html")
+group[0][1]=new Option("Marriage","/registry/regcan_marr.html")
+group[0][2]=new Option("Census","/registry/regcan_census.html")
+group[0][3]=new Option("Death","/registry/regcan_death.html")
+group[0][4]=new Option("Other","/registry/regcan_other.html")
+group[1][0]=new Option("Birth","/registry/regbc_birth.html")
+group[1][1]=new Option("Marriage","/registry/regbc_marr.html")
+group[1][2]=new Option("Census","/registry/regbc_census.html")
+group[1][3]=new Option("Death","/registry/regbc_death.html")
+group[1][4]=new Option("Other","/registry/regbc_other.html")
+group[2][0]=new Option("Birth","/registry/regab_birth.html")
+group[2][1]=new Option("Marriage","/registry/regab_marr.html")
+group[2][2]=new Option("Census","/registry/regab_census.html")
+group[2][3]=new Option("Death","/registry/regab_death.html")
+group[2][4]=new Option("Other","/registry/regab_other.html")
+group[3][0]=new Option("Birth","/registry/regsk_birth.html")
+group[3][1]=new Option("Marriage","/registry/regsk_marr.html")
+group[3][2]=new Option("Census","/registry/regsk_census.html")
+group[3][3]=new Option("Death","/registry/regsk_death.html")
+group[3][4]=new Option("Other","/registry/regsk_other.html")
+group[4][0]=new Option("Birth","/registry/regmb_birth.html")
+group[4][1]=new Option("Marriage","/registry/regmb_marr.html")
+group[4][2]=new Option("Census","/registry/regmb_census.html")
+group[4][3]=new Option("Death","/registry/regmb_death.html")
+group[4][4]=new Option("Other","/registry/regmb_other.html")
+group[5][0]=new Option("Birth","/registry/regon_birth.html")
+group[5][1]=new Option("Marriage","/registry/regon_marr.html")
+group[5][2]=new Option("Census","/registry/regon_census.html")
+group[5][3]=new Option("Death","/registry/regon_death.html")
+group[5][4]=new Option("Other","/registry/regon_other.html")
+group[6][0]=new Option("Birth","/registry/regqc_birth.html")
+group[6][1]=new Option("Marriage","/registry/regqc_marr.html")
+group[6][2]=new Option("Census","/registry/regqc_census.html")
+group[6][3]=new Option("Death","/registry/regqc_death.html")
+group[6][4]=new Option("Other","/registry/regqc_other.html")
+group[7][0]=new Option("Birth","/registry/regnf_birth.html")
+group[7][1]=new Option("Marriage","/registry/regnf_marr.html")
+group[7][2]=new Option("Census","/registry/regnf_census.html")
+group[7][3]=new Option("Death","/registry/regnf_death.html")
+group[7][4]=new Option("Other","/registry/regnf_other.html")
+group[8][0]=new Option("Birth","/registry/regnb_birth.html")
+group[8][1]=new Option("Marriage","/registry/regnb_marr.html")
+group[8][2]=new Option("Census","/registry/regnb_census.html")
+group[8][3]=new Option("Death","/registry/regnb_death.html")
+group[8][4]=new Option("Other","/registry/regnb_other.html")
+
+group[9][0]=new Option("Birth","/registry/regns_birth.html")
+group[9][1]=new Option("Marriage","/registry/regns_marr.html")
+group[9][2]=new Option("Census","/registry/regns_census.html")
+group[9][3]=new Option("Death","/registry/regns_death.html")
+group[9][4]=new Option("Other","/registry/regns_other.html")
+
+group[10][0]=new Option("Birth","/registry/regpe_birth.html")
+group[10][1]=new Option("Marriage","/registry/regpe_marr.html")
+group[10][2]=new Option("Census","/registry/regpe_census.html")
+group[10][3]=new Option("Death","/registry/regpe_death.html")
+group[10][4]=new Option("Other","/registry/regpe_other.html")
+group[11][0]=new Option("Birth","/registry/regyk_birth.html")
+group[11][1]=new Option("Marriage","/registry/regyk_marr.html")
+group[11][2]=new Option("Census","/registry/regyk_census.html")
+group[11][3]=new Option("Death","/registry/regyk_death.html")
+group[11][4]=new Option("Other","/registry/regyk_other.html")
+group[12][0]=new Option("Birth","/registry/regnt_birth.html")
+group[12][1]=new Option("Marriage","/registry/regnt_marr.html")
+group[12][2]=new Option("Census","/registry/regnt_census.html")
+group[12][3]=new Option("Death","/registry/regnt_death.html")
+group[12][4]=new Option("Other","/registry/regnt_other.html")
+var temp=document.doublecombo.stage2
+
+function redirect(x){
+for (m=temp.options.length-1;m>0;m--)
+temp.options[m]=null
+for (i=0;i<group[x].length;i++){
+temp.options[i]=new Option(group[x][i].text,group[x][i].value)
+}
+temp.options[0].selected=true
+}
+
+function go(){
+location=temp.options[temp.selectedIndex].value
+}
+//-->
+</script>
+      </form>
+      <!-- #BeginEditable "details" --> 
+      <p> <a href="../../society/contacts/contacts.html">Contact Assistant Webster</a> </p>
+      <p class="s">&copy; 2002-07 AFHS<br>
+        27 Feb 2003</p>
+      <!-- #EndEditable -->
+<p class="s">&nbsp;</p> </td>
+    <td valign=top rowspan="2" width="1"><img src="../../images/greenvertbar.gif" width=1 height=500 border=0 alt="|"></td>
+    <td valign=top class="content"> 
+      <h1><!-- #BeginEditable "Page Title" -->Tracing your Family Tree<!-- #EndEditable --></h1>
+      <!-- #BeginEditable "PageContent" --> 
+      <table border=0 cellpadding=2 cellspacing=0>
+        <tr> 
+          <td valign=top>by 
+            Brian Hutchison,  B.Comm., C.M.A. <br>
+            <a href="http://www.gen-find.com">Gen-Find Research Associates</a><br>
+            Date: February 1, 1998 (Edmonton, Alberta) 
+            <!-- end forward navigation as necessary -->
+            <!-- content -->
+            <h2>Genealogy versus Family History</h2>
+            <p>Genealogy is a collection of relating names, dates and places and 
+              provides the framework for a Family History compilation. A Family 
+              History contains not only a genealogical collection but a textual 
+              story and history of individuals and the events that shaped their 
+              lives. The profession of genealogy recognizes equally the different 
+              audiences these two directions reach.</p>
+            <p>Probably, no other topic in genealogy is more important than knowing 
+              how to &quot;trace your family tree&quot; effectively. The quality 
+              and quantity of your performance here will determine your success 
+              or failure in your genealogical work! Your knowledge on the basics 
+              will be the podium upon which your project will succeed or fall 
+              into a maze of frustration and discouragement.</p>
+            <p>Remember, it is a genealogical axiom that only organized genealogists 
+              succeed. Inexperience or a poor memory is not the main cause or 
+              failure; it is the lack of a good note-keeping system and organized 
+              research strategies.</p>
+            <p>By proceeding through the links provided at the top of the page, 
+              you should have a very good start. However, there is another source 
+              of introductory guidance that you may wish to investigate. It is 
+              an online (free) course found at the <a href="http://www.genealogy.com/university.html">Genealogy.com 
+              website</a>.</p>
+            <p>Read the whole online &quot;book&quot; on Getting Started by Brian 
+              Hutchison</p>
+            <ul>
+              <li><a href="bhmethod.html">Introduction for Beginning Methodology</a> 
+              <li><a href="bhplan.html">Developing a Research Plan</a> 
+              <li><a href="bhobject.html">What Is It That Genealogists Are Trying 
+                To Accomplish?</a> 
+              <li><a href="bhprinc.html">Understanding the Principles for Effective 
+                Search Techniques</a> 
+              <li><a href="bhmatch.html">Matching Goals With Potential Resources 
+                With Available Repositories</a> 
+              <li><a href="bhbasic.html">Basic Rules for Undertaking Genealogical 
+                Research</a> 
+              <li><a href="bhsteps.html">Basic Steps for Starting and Progressing 
+                With Your Research</a> 
+              <li><a href="bhcompl.html">Compiling Your Basic Information</a> 
+              <li><a href="bhsource.html">Sources of Information</a> 
+              <li><a href="bhletter.html">Essentials of a Genealogical Letter</a> 
+              <li><a href="bhmethod.html">Beginning Methods</a> 
+              <li><a href="bhdata.html">Categorization of Data Type</a> 
+              <li><a href="calgene.html">Local Calgary Sources</a> 
+              <li><a href="bhsource.html">Checklist of Source Material for Access</a> 
+              <li><a href="bhprime.html">Index of Prime Genealogical Sources to 
+                Search</a> 
+              <li><a href="bhcomput.html">Computer Hardware and Software for the 
+                Genealogist</a> 
+              <li><a href="bhauthor.html">About the Author</a> 
+            </ul>
+            <!-- end content -->
+          </td>
+        </tr>
+      </table>
+      <p class="s">&nbsp;</p>
+      <!-- #EndEditable --> </td>
+  </tr>
+  <tr> 
+    <td valign=top class="content"><img src="../../images/transparent.gif" 
+      width="430" height="3"></td>
+  </tr>
+</table>
+
+<hr size=1 width="100%">
+</body>
+<!-- #EndTemplate --></html>
+
+

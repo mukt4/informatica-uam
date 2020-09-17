@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- Ejemplo de pagina web para la P1 de Redes 2 -->
+<!-- Ingenieria Informatica UAM - 2019 -->
+<!-- Autor: Carlos Garcia Saura -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            var timerStart = Date.now();
+        </script>
+    </head>
+    <body>
+        <p>Imagenes JPEG:</p>
+        Ligera:<img src="img_small.jpeg" alt="error" height="50">
+        Pesada:<img src="img_big.jpeg" alt="error" height="50">
+        
+        <p>Secuencia de 10 fotos JPG:</p>
+        1<img src="img1.jpg" alt="error" height="25">
+        2<img src="img2.jpg" alt="error" height="25">
+        3<img src="img3.jpg" alt="error" height="25">
+        4<img src="img4.jpg" alt="error" height="25">
+        5<img src="img5.jpg" alt="error" height="25">
+        
+        <p>Animacion GIF:</p>
+        <img src="animacion.gif" alt="error">
+        
+        <p></p>
+        No existente: <a href="kjhdsfkjhdk.html">enlace</a>
+        
+        <p></p>
+        Nota importante: <a href="IMPORTANTE.txt">enlace</a>
+
+        <p></p>
+        Video: <a href="video.mpeg">enlace</a>
+        
+        <p></p>
+        Texto .txt: <a href="texto.txt">enlace</a>
+        
+        <p>Scripts:</p>
+        
+        <table>
+            <tr>
+                <td>
+                    <form action="test.py" method="get">
+                      <input type="hidden" name="variableGET" value="hola mundo GET">
+                      <input type="submit" value="GET .py">
+                    </form>
+                </td>
+                <td>
+                    <form action="test.py" method="post">
+                      <input type="hidden" name="variablePOST" value="hola mundo POST">
+                      <input type="submit" value="POST .py">
+                    </form>
+                </td>
+                <td>
+                    <form action="test.py?variableGET=hola+mundo+GET" method="post">
+                      <input type="hidden" name="variablePOST" value="hola mundo POST">
+                      <input type="submit" value="GET/POST .py">
+                    </form>
+                </td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <td>
+                    <form action="test.php" method="get">
+                      <input type="hidden" name="variableGET" value="hola mundo GET">
+                      <input type="submit" value="GET .php">
+                    </form>
+                </td>
+                <td>
+                    <form action="test.php" method="post">
+                      <input type="hidden" name="variablePOST" value="hola mundo POST">
+                      <input type="submit" value="POST .php">
+                    </form>
+                </td>
+                <td>
+                    <form action="test.php?variableGET=hola+mundo+GET" method="post">
+                      <input type="hidden" name="variablePOST" value="hola mundo POST">
+                      <input type="submit" value="GET/POST .php">
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <p></p>
+        <span id="texto_timing" style="font-size: 26px;">Cargando...</span>
+
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById("texto_timing").textContent="La página cargó en: "+(Date.now()-timerStart)+"ms";
+            }
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,956 @@
+El dia 17 de febrero de 2017, fuiste a una taberna con tus friends,
+al ver que os aburrias decidisteis salir a tomar el aire, y de repente
+aparecieron los Secrets, y os robaron vuestro mas preciado tesoro...
+
+		-.THE GOLDEN ROE.-
+
+
+Al dia siguiente saliste a la calle dispuesto a no volver hasta
+darles vendeta, no sabias por donde empezar,
+hasta que pasado un largo viaje topaste con ellos de nuevo,
+pero esta vez no te vieron, y les seguiste hasta un descampado
+un tanto siniestro.
+
++-----------------------_-----------------------+      
+|'''''''''''''''''''''''''''''''''''''''''''''''| 1.- INICIO 
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''___'''''''''''''''''''''''''''''''''''''|
+|'''''''[=]'''''''''''''0'''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''P'''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
++-----------------------------------------------+
+DESCRIPCÓN: Es una descampado practicamente vacio, menos por una extraña trampilla y una pequeña "llave oxidada"
+
+OBJETO: --> Name: llave oxidada
+	--> Id: 0
+	--> Descripcion: Una llave oxidada por el tiempo y la humedad, parece que sigue algo humeda
+	--> Descripcion movil: Una llave oxidada por el tiempo y la humedad, parece que sigue algo humeda
+	--> Movible: 1 (SI)
+	--> Movido: 0 (NO)
+	--> Oculto: 0 (NO ESTA OCULTO)
+	--> Abre: 5 (id)(LINK: Puerta Oxidada))
+	--> Ilumina: 0 (NO)
+	--> Encendido: 0 (NO)
+	--> Hp: 0
+	--> Ad: 0
+	--> Def: 0
+ 	--> Speed: 0
+
+NORTE:LINK: 	--> Id: 0
+	--> Name: INICIO -- Fortaleza 
+	--> Tied1: 1
+	--> Tied2: 2
+	--> Status: 0 (ABIERTO)
+
+BAJO:LINK: 	--> Id: 1
+	--> Name: INICIO -- Trampilla
+	--> Tied1: 1
+	--> Tied2: 10
+	--> Status: 0 (ABIERTO)
+
+2.- Castillo
++-----------------------------------------------+      
+|'|                                             | 
+|'|       | |      |----------|       | |       |                                              
+  |                |~~|    |~~|                 |
+|'|   \________/   |~~|    |~~|   \________/    |
+|'|                |~~| E  |~~|                 |
+|'\_______________/~~~      ~~~\_______________/|
+|'''''''''''''''''             '''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''''''''''''''''''''''''''|
+|'''''''''''''''''''''''P'''''''''''''''''''''''|
+|'''''''''''''''''''''''_'''''''''''''''''''''''|
++----------------------- -----------------------+
+DESCRIPCÓN: El descampado parece acabar en una castillo, y parece ser que no les gusta las visitas como has comprobado.
+		No puedes seguir por la fortaleza, pero ves un pequeño pasadizo al oeste (izquierda). Tambien ves que 
+		el guardia solo llevaba el "peto" de la armadura.
+
+ENEMIGO:--> Id: 0
+	--> Nombre: Manco
+	--> (ID)Space: 2
+	--> Stats: DEFINIR
+
+OBJETO: --> Name: peto
+	--> Id: 1
+	--> Descripcion: Es un peto de cuero
+	--> Descripcion movil: Es un peto de cuero
+	--> Movible: 1
+	--> Movido: 0
+	--> Oculto: 1 (ESTA OCULTO HASTA QUE MATAS AL TIO)
+	--> Abre: 0
+	--> Ilumina: 0 
+	--> Encendido: 0 
+	--> Hp: 15
+	--> Ad: 0
+	--> Def: 0
+ 	--> Speed: -5
+
+SUR:LINK: 	--> Id: 2
+	--> Name: Castillo -- INICIO
+	--> Tied1: 2
+	--> Tied2: 1
+	--> Status: 0 (ABIERTO)
+
+OESTE:LINK: 	--> Id: 3
+	--> Name: Castillo -- Bosque
+	--> Tied1: 2
+	--> Tied2: 3
+	--> Status: 0 (ABIERTO)
+3.- Bosque
++-----------------------------------------------+      
+|  ***  '   ***   ''''  ''''  ''' *** ********''| 
+| *****   *******    ***''' ***  ***** ********'|
+|  *** ''''*******  ************  ***   | ***''
+|   |   *** |******* **********    | '''''' |'' |
+|'''''*********''***''' 0***'' '    ~~~~~~~'''''|
+|  ***  ***  |  *****    |        ~~~~~~~~~~'' '|
+| *****  |  ***  ***  **   '''  ~~~~~~~~~~~~~'''|
+|~~***~~********* |~~***~~~~~~~~~~~~~~~~~~~~~  '|
+|~~~|~~***********~~*****~~~~~~~~~~~~~~~~~~~~~ '|
+|'''~~~~********* ''****P'    '''''~~~~~~~~~~'''|
+|  ***   |     | '''' |      ''''''''  ~~~~'''''|
++-----------------------------------------------+
+
+DESCRIPCÓN: Por el pasadizo llegas a un bosque con un rio, parece mucho mas tranquilo que el lugar anterior,
+	donde puedes ver que hay un pequeño fuego y un curioso olor a gasolina, al fijarte mas de cerca, ves 
+	que lo que proboco el fuego es un "cipo".
+
+OBJETO: --> Name: cipo
+	--> Id: 2
+	--> Descripcion: Es un mechero que está encendido
+	--> Descripcion movil: Es un mechero
+	--> Movible: 1
+	--> Movido: 0
+	--> Oculto: 0
+	--> Abre: 0
+	--> Ilumina: 1
+	--> Encendido: 1
+	--> Hp: 0
+	--> Ad: 0
+	--> Def: 0
+ 	--> Speed: 0
+
+ESTE:LINK: 	--> Id: 4
+	--> Name: Bosque -- Castillo
+	--> Tied1: 3
+	--> Tied2: 2
+	--> Status: 0 (ABIERTO)
+
+
+10.- Trampilla
++-----------------------_-----------------------+
+|~ ~~  ~~~ ~~  ~|   ^^^    ^^ ^^|~ ~~  ~~~ ~~  ~| 
+| ~  ~   ~ ~  ~~|^ ^^ ^   ^  ^  | ~  ~   ~ ~  ~~|
+|~ ~  ~   ~~   ~|  ^^^ ^^   ^ ^^|~ ~  ~   ~~   ~|
+|~~  ~~~ ~~ ~~~~|^^   ^   ^^ ^ ^|~~  ~~~ ~~ ~~~~|
+| ~~~~ ~ ~~  ~~~|^ ^^   0 ^	^^  | ~~~~ ~ ~~  ~~~|
+|~~ ~~ ~   ~ ~ ~|  ^ ^^ ^  ^ ^^^|~~ ~~ ~   ~ ~ ~|
+|~~  ~ ~  ~~ ~~ |   ^  ^^ ^   ^^|~~  ~ ~  ~~ ~~ |
+|~ ~~~~  ~~ ~  ~|   |_|  ^^ ^ ^^|~ ~~~~  ~~ ~  ~|
+|  ~~   ~ ~ ~~~~|   |_|     ^^  |  ~~   ~ ~ ~~~~|
+|~~~ ~~~  ~~~ ~~| ^ |-| P	  ^ |~~~ ~~~  ~~~ ~~|
+|~~  ~~  ~~ ~~~~|   ^  ^^ ^   ^^|~~  ~~  ~~ ~~~~|
++-----------------------------------------------+
+DESCRIPCIÓN APAGADA: Al bajar te das cuenta de que no hay luz, puedes escuchar liquido en movimiento
+y olor a humedad, como si fuese una cueva, pero esto solo son suposiciones ya que todo
+esta oscuro
+
+DESCRIPCION ENCENDIDAD: YEAH!, estabas en lo cierto, es una cueva, con estalactitas, agua... lo tipico,
+tambien puedes ver que hay una puerta algo oxidada y una "espada" al lado de unos cadaveres
+
+OBJETO: --> Name: Espada
+    	--> Id: 3
+    	--> Descripcion: es una espada oxidada
+    	--> Descripcion movil: es una espada oxidada
+    	--> Movible: 1
+    	--> Movido: 0
+    	--> Oculto: 0
+    	--> Abre: -1
+    	--> Ilumina: 0
+    	--> Encendido: 0
+    	--> Hp: 0
+    	--> Ad: 20
+    	--> Def: 0
+     	--> Speed: 0
+
+NORTE:LINK:   --> Id: 5
+    	--> Name: Tarmpilla -- Tunel (Puerta Oxidada)
+    	--> Tied1: 10
+    	--> Tied2: 11
+    	--> Status: 1 (CERRADO)
+
+ARRIBA:LINK:   --> Id: 6
+    	--> Name: Trampilla -- INICIO
+    	--> Tied1: 10
+    	--> Tied2: 1
+    	--> Status: 0 
+
+11.- Tunel
++-----------------------_-----------------------+
+|---------------|   ^^^    ^^ ^^|---------------| 
+|---------------|^ ^^    ^  ^ ^ |---------------|
+|---------------|  ^^  ^^   ^ ^^|---------------|
+|---------------|^^   ^   ^^ ^ ^|---------------|
+|---------------|^ ^   ^^ ^	 ^  |---------------|
+|---------------|   ^   ^  ^ ^^^|---------------|
+|---------------|   ^  ^^ ^^  ^^|---------------|
+|---------------|   ^  ^  ^   ^^|---------------|
+|---------------|^ ^^   ^ ^	^^  |---------------|
+|---------------| ^ ^^ ^  ^^^ ^ |---------------|
+|---------------|  ^^^ ^_   ^ ^^|---------------|
++----------------------- -----------------------+
+DESCRIPCION: Es un tunel, sin mas, le has dado tal paliza al guardia que solo ha sobrevivido su "casco"
+
+ENEMIGO:--> Id: 1
+    	--> Nombre: LessManco
+    	--> (ID)Space: 11
+    	--> Stats: DEFINIR
+
+OBJETO: --> Name: casco
+    	--> Id: 4
+    	--> Descripcion: es un viejo casco de metal
+    	--> Descripcion movil: es un viejo casco de metal
+    	--> Movible: 1
+    	--> Movido: 0
+    	--> Oculto: 1 (HASTA QUE MATES AL TIO)
+    	--> Abre: -1
+    	--> Ilumina: 0
+    	--> Encendido: 0
+    	--> Hp: 5
+    	--> Ad: 0
+    	--> Def: 10
+     	--> Speed: 0
+
+SUR:LINK:   --> Id: 7
+    	--> Name: Tunel -- Trampilla 
+    	--> Tied1: 11
+    	--> Tied2: 10
+    	--> Status: 0 
+
+NORTE:LINK:   --> Id: 8
+    	--> Name: Tunel -- Cruz
+    	--> Tied1: 11
+    	--> Tied2: 12
+    	--> Status: 0 
+
+12.- Cruz
++-----------------------_-----------------------+
+|---------------|               |---------------| 
+|---------------|               |---------------|
+|---------------|               |---------------|
+|---------------|               |---------------|
+|---------------|       E 	     |---------------|
+|                                               | 
+                                                
+|                                               |
+|                                               |
+|---------------|       P	      |---------------|
+|---------------|       -       |---------------|
++----------------------- -----------------------+
+DESCRIPCION: Parece ser que has llegado a una interseccion de tuneles, donde tienes cuatro direcciones a elegir,
+	y puedes observar que el guardia tenia una nota que decides leer, y dice lo siguiente:
+	Oeste: cancerbero (M)
+	Este: Los lolos (O)
+	Norte: Mazmorras
+
+ENEMIGO:--> Id: 2
+    	--> Nombre: Normal
+    	--> (ID)Space: 12
+    	--> Stats: DEFINIR
+
+SUR:LINK:   --> Id: 9
+    	--> Name: Cruz -- Tunel
+    	--> Tied1: 12
+    	--> Tied2: 11
+    	--> Status: 0 
+
+OESTE:LINK:   --> Id: 10
+    	--> Name: Cruz -- Cancerbero
+    	--> Tied1: 12
+    	--> Tied2: 14
+    	--> Status: 0 
+
+ESTE:LINK:   --> Id: 11
+    	--> Name: Cruz -- Lolos
+    	--> Tied1: 12
+    	--> Tied2: 13
+    	--> Status: 0 
+
+NORTE:LINK:   --> Id: 12
+    	--> Name: Cruz -- Mazmorras
+    	--> Tied1: 12
+    	--> Tied2: 15
+    	--> Status: 1  
+
+13.- Lolos
++-----------------------------------------------+
+|-----------------------------------------------| 
+|--------------                  ---------------|
+|--------------                  ---------------|
+|--------------                  ---------------|
+|--------------        E 	       ---------------|
+                                                |
+|----------------             ------------------|
+|----------------             ------------------|
+|----------------             ------------------|
+|----------------      P      ------------------|
+|----------------             ------------------|
++-----------------------------------------------+
+DESCRIPCION: Te encuentras en una sala cerrada, al parecer el unico objetivo que para lo que se creo esa sala 
+	era que te matasen o para que tu matases. Parece ser que los dos lolos tenian una "pipa" y unas "Jordan"
+
+ENEMIGO:--> Id: 3
+    	--> Nombre: Lolos
+    	--> (ID)Space: 13
+    	--> Stats: DEFINIR
+
+OBJETO: --> Name: pipa 
+    	--> Id: 5
+    	--> Descripcion: Es una Desset Eagle
+    	--> Descripcion movil: Es una Desset Eagle
+    	--> Movible: 1
+    	--> Movido: 0
+    	--> Oculto: 1 (HASTA QUE MATES AL TIO)
+    	--> Abre: -1
+    	--> Ilumina: 0
+    	--> Encendido: 0
+    	--> Hp: 0
+    	--> Ad: 30
+    	--> Def: 0
+     	--> Speed: 0
+
+OBJETO: --> Name: Jordan
+    	--> Id: 6
+    	--> Descripcion: cacho zapas guapas
+    	--> Descripcion movil: Se ven bonitas en tus pies
+    	--> Movible: 1
+    	--> Movido: 0
+    	--> Oculto: 1 (HASTA QUE MATES AL TIO)
+    	--> Abre: -1
+    	--> Ilumina: 0
+    	--> Encendido: 0
+    	--> Hp: 0
+    	--> Ad: 0
+    	--> Def: 0
+     	--> Speed: 30
+
+OESTE:LINK:   --> Id: 13
+    	--> Name: Lolos -- Cruz
+    	--> Tied1: 13
+    	--> Tied2: 12
+    	--> Status: 0
+    	
+14.- Cancerbero
++-----------------------------------------------+
+|-----------------------------------------------| 
+|--------------                  ---------------|
+|--------------                  ---------------|
+|--------------                  ---------------|
+|--------------        E 	       ---------------|
+|                                               
+|----------------             ------------------|
+|----------------             ------------------|
+|----------------             ------------------|
+|----------------      P      ------------------|
+|----------------             ------------------|
++-----------------------------------------------+
+DESCRIPCION: Te encuentras en una sala cerrada, al parecer el unico objetivo que para lo que se creo esa sala 
+	era que te matasen o para que tu matases. Parece ser que cancerbero tenia la "llave de la mazmorra"
+	
+	ENEMIGO:--> Id: 4
+    	    --> Nombre: Cancerbero
+    	    --> (ID)Space: 14
+    	    --> Stats: DEFINIR
+	
+	OBJETO: --> Name: llave de la mazmorra
+        	--> Id: 7
+        	--> Descripcion: adivina
+        	--> Descripcion movil: si, abres la puerta de la mazmorra, bravo...
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0 
+        	--> Abre: 12
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 0
+
+	
+	ESTE:LINK:   --> Id: 14
+	        --> Name: Cancerbero -- Cruz
+	        --> Tied1: 14
+	        --> Tied2: 12
+        	--> Status: 0
+        	
+ 15.- Mazmorras       	
++-----------------------------------------------+
+|-----------------------------------------------| 
+|             |               |             D:  |
+|      :4     |      |-|      |      :E         |
+|_____________|      |-|      |_________________|
+|             |      |-|O	    |                 |
+|           :3|               |  D:             |
+|             |               |           :C    |
+|_____________|               |_________________|
+|             |               |                 |
+|    :9       |        P      |   D:     L:     |
+|             |        -      |                 |
++---------------------- ------------------------+
+DESCRIPCION: En las mazmorras encuentras unos seres horribles, bueno, nos hemos pasado, pero no son agradables a la vista,
+    este lugar no es solo repugnante en cuanto a las personas, en cuanto a higiene tambien, hay hasta una "mierda", por suerte,
+    es facil salir de ahi sin pelear, aunque cuando te dirijes a la escalera el nº 3 saca sus manos y te agarra, susurrandote:
+    lo rosa con lo rosa y lo de piedra con lo de piedra.
+    
+    
+    OBJETO: --> Name: mierda
+        	--> Id: 8
+        	--> Descripcion: Asqueroso....
+        	--> Descripcion movil: En serio, porque lo haces??
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 40
+        	--> Ad: 20
+        	--> Def: 5
+         	--> Speed: 5
+         	
+    SUR:LINK:   --> Id: 15
+	        --> Name: Mazmorras -- Cruz
+	        --> Tied1: 15
+	        --> Tied2: 12
+        	--> Status: 0
+    
+    ARRIBA:LINK:   --> Id: 16
+	        --> Name: Mazmorras -- Torreon
+	        --> Tied1: 15
+	        --> Tied2: 20
+        	--> Status: 0
+        	
+ 20.- Torreon   	
++-----------------------------------------------+
+| '''   '   ''        '   ''     '              | 
+|    ***   '  ''   '     '    ''  ''' '   ***   |
+|   *****       ' '     '  '          ********  |
+|    ***      '_______________       ********   |
+|  '  |       |       O	      |   '   ***  |    |
+|        ''   |               |    ''  |        |
+|             |      ___      |      '     '    |
+| ''     '    |      [=]      |   '      '      |
+|  ''         |               |    '    '  '    |
+|     '       |       P       |      '          |
+|   '     ''  |       -       |  ''     '''     |
++--------------------- -------------------------+
+DESCRIPCION: Has llegado al torreon de la Fortaleza, el cual tiene muy bonitas vistas,
+    pero nada interesante, excepto un bonito "vestido rosa"
+    
+    OBJETO: --> Name: vestido rosa
+        	--> Id: 9
+        	--> Descripcion: Muy masculino
+        	--> Descripcion movil: Te resalta los biceps
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: 21
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 30
+         	
+    ABAJO:LINK:   --> Id: 17
+	        --> Name:  Torreon -- Mazmorras
+	        --> Tied1: 20
+	        --> Tied2: 15
+        	--> Status: 0
+        	
+    SUR:LINK:   --> Id: 18
+	        --> Name:  Torreon -- Cruz del Castillo
+	        --> Tied1: 20
+	        --> Tied2: 21
+        	--> Status: 0
+        	
+21.- Cruz del Castillo
++-----------------------_-----------------------+
+|---------------|       "       |---------------| 
+|---------------|       "   |-| |---------------|
+|---------------|       "   |-| |---------------|
+|---------------|       "   |-| |---------------|
+|---------------|       E 	     |---------------|
+|                       "                       | 
+== = = = = = = = = = = === = = = = = = = = = = ==                                              
+|                       "                       |
+|                       "                       |
+|---------------|       P	      |---------------|
+|---------------|       -       |---------------|
++----------------------- -----------------------+
+DESCRIPCION: Parece ser que el castillo tiene una construccion parecida a la del subterraneo, o al menos por ahora,
+    las "musleras de templario" parecen bastante buenas.
+    Puedes observar una puerta de piedra al oeste, una rosa al este, al sur no hay puerta y parece dar a un gran salón, y unas escaleras
+    que tampoco puedes ver a donde llevan
+
+    ENEMIGO:--> Id: 5
+        	--> Nombre: Templario
+        	--> (ID)Space: 21
+        	--> Stats: DEFINIR
+
+    OBJETO: --> Name: musleras de templario
+        	--> Id: 10
+        	--> Descripcion: Una bonita y resistente armadura de los grandes templarios
+        	--> Descripcion movil: Parece ser que estan demasiado mugrientas
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: -30
+        	--> Ad: -15
+        	--> Def: -5
+         	--> Speed: -10
+    
+    NORTE:LINK:   --> Id: 19
+	        --> Name: Cruz del Castillo -- Torreon
+	        --> Tied1: 21
+	        --> Tied2: 20
+        	--> Status: 0
+         	
+    OESTE:LINK:   --> Id: 20
+	        --> Name: Cruz del Castillo -- Habitacion de Piedra
+	        --> Tied1: 21
+	        --> Tied2: 22
+        	--> Status: 1
+    
+    ESTE:LINK:   --> Id: 21
+	        --> Name: Cruz del Castillo -- Habitacion Rosa
+	        --> Tied1: 21
+	        --> Tied2: 23
+        	--> Status: 1
+    
+    SUR:LINK:   --> Id: 22
+	        --> Name: Cruz del Castillo -- Gran Salon
+	        --> Tied1: 21
+	        --> Tied2: 24
+        	--> Status: 0
+    
+    UP:LINK:   --> Id: 23
+	        --> Name: Cruz del Castillo -- Escaleras imposibles
+	        --> Tied1: 21
+	        --> Tied2: 30
+        	--> Status: 1
+        	
+24.- Gran Salon
++-----------------------_-----------------------+
+|--------------------       --------------------| 
+|--------------                  ---------------|
+|--------------                  ---------------|
+|--------------                  ---------------|
+|--------------        E 	       ---------------|
+|                                               |
+|----------------             ------------------|
+|----------------             ------------------|
+|----------------             ------------------|
+|----------------      P      ------------------|
+|----------------             ------------------|
++-----------------------------------------------+
+DESCRIPCION: Te encuentras en una sala cerrada, exactamente igual que las anteriores,
+    ese golem de piedra era duro, pero ganarlo merecio la pena, al mirar al suelo ves una
+    "llave de piedra" que creo que ya sabes donde va.
+    
+    ENEMIGO:--> Id: 6
+        	--> Nombre: GOLEEEM
+        	--> (ID)Space: 23
+        	--> Stats: DEFINIR
+        	
+    OBJETO: --> Name: llave de piedra
+        	--> Id: 11
+        	--> Descripcion: Es la llave que abre la puerta de piedra
+        	--> Descripcion movil: mas que una llave es un dedo :/
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 1
+        	--> Abre: 20
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 0    
+    
+    NORTE:LINK:   --> Id: 24
+	        --> Name: Gran Salon -- Cruz del Castillo 
+	        --> Tied1: 24
+	        --> Tied2: 21
+        	--> Status: 0
+        	
+22.- Habitacion de Piedra
++-----------------------------------------------+
+|     E                  |        _             | 
+|    H S                 |    |  |  |      _____|
+|  ¡C   T!               |    |  |  |___  |     |
+|   _____                |  | |  |        |  |  |
+|  |__-__|               |    |      ---- |  |  |
+|                       |     |   |     |    |   
+|                       |    |||  | |   |    |  |
+|                       |     |   |  __ |    |  |
+|                       |     |______      | |  |
+|                      P|       ____ |___|__  | |
+|                                    |_______   |
++-----------------------------------------------+
+DESCRIPCION: Nada mas abrir la puerta ves un muro de pierda, miras hacia los lados y lo mismo..., empiezas a andar y solo ves
+    muros de piedra, vale, por fin caes, es un laberinto, gracias a tu gran intelecto vuelves al principio y vas tocando un lado
+    de la pared, sabiendo que solo será cuestion de tiempo encontrar la salida de este. Cuando lo consigues, ves un cofre medio abierto,
+    lo abres del todo, y encuentras una nota, donde dice que si has llegado aqui mejor que te des media vueta, consigas entrar en el
+    Torreon y te pongas el vestido rosa, solo asi se abre la puerta rosa.
+    
+   ESTE:LINK:   --> Id: 25
+	        --> Name: Habitacion de Piedra -- Cruz del Castillo 
+	        --> Tied1: 22
+	        --> Tied2: 21
+        	--> Status: 0
+        	
+        	
+23.- Habitacion Rosa
++-----------------------------------------------+
+|                       " [----]       |~~~~~[|]| 
+|                       "  """"        |--------|
+|                       "                       |
+|                       "                       |
+|                       E                       |
+ ===============================================|
+|                       "                       |
+|                       "                       |
+|                       "                       |
+|       |_  ___         P                       |
+|       " " ! !         "                       |
++-----------------------------------------------+
+DESCRIPCION: Una habitacion bastante amplia y vacia, se nota que es de una mujer, no porque todo sea rosa, si no porque
+    en la cama hay una mujer expectante, la cual rapidamente te da las gracias por salvarla, y tu la repondes con tu tipico heroico: KLK!!,
+    y rapidamente la preguntas que si sabe donde estan los Secrets, y ella te dice que no lo sabe con exactitud, pero sabe que tienes que ir por
+    las escaleras de la Cruz del Castillo, y seguidamente te deja la "llave imposible" en el suelo.
+    
+    ENEMIGO:--> Id: 7
+        	--> Nombre: Arpia
+        	--> (ID)Space: 23
+        	--> Stats: DEFINIR
+        	
+    OBJETO: --> Name: llave imposible
+        	--> Id: 12
+        	--> Descripcion: Es la llave que abre la puerta de las escaleras al cielo
+        	--> Descripcion movil: Sigue siendo lo mismo
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: 23
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 0    
+         	
+    OESTE:LINK:   --> Id: 26
+	        --> Name: Habitacion Rosa -- Cruz del Castillo 
+	        --> Tied1: 23
+	        --> Tied2: 21
+        	--> Status: 0
+         	
+30.- Escaleras Imposibles
++-----------------------P--__-------------------+
+|  (~~~)    (~~~)       |______|      (~~~)     | 
+|             (~~~)     |______|                |
+|       (~~~)           |______|  (~~~)         |
+|               (~~~)   |______|          (~~~) |
+|---------------  (~~~) |______|    ------------|
+|    _____     |        |______|    |    _____  |
+|   |     |    |--------|______|----|   |     | |
+|   |_____|  ___________|______|----|   |_____| |
+|           |      ___         |    |           |
+|-----------|      [=]   P     |    |-----------|
+|  |-|  |-| |__________________|    |  |-|  |-| |
++-----------------------------------------------+
+DESCRIPCION: Nada mas subir por las escaleras empieza a hacer un viento infernal, hasta ahora no
+    te habias dado cuenta de la gran altura del castillo. Te encuentras en un pequeño rectangulo por donde
+    solo se puede continuar por unas escaleras las cuales no parecen acabar
+
+ DOWN:LINK:   --> Id: 27
+	        --> Name: Escaleras Imposibles -- Cruz del Castillo 
+	        --> Tied1: 30
+	        --> Tied2: 21
+        	--> Status: 0
+        	
+ UP:LINK:   --> Id: 28
+	        --> Name: Escaleras Imposibles -- Level 1
+	        --> Tied1: 30
+	        --> Tied2: 31
+        	--> Status: 0
+        	
+31.- Level 1
++-----------------------_-----------------------+
+| (~~~)     (~~~)   |_______|        (~~~)      | 
+|                   |_______|                   |
+|        (~~~~)     |_______|    (~~~~~)        |
+|                   |_______|             (~~~) |
+|     (~~~)   (~~~) |_______| (~~~)             |
+|   (~~~~~)         |___E___|                   |
+|           (~~~)   |_______|       (~~~~~)     |
+| (~~~)             |_______|(~~~)              |
+|        (~~~)      |_______|   (~~~~~~~)       |
+|                   |___P___|                   |
+| (~~~~~)           |_______|      (~~~~~)      |
++-------------------|--   --|-------------------+
+DESCRIPCION: Al vencer al Guardian de las Alturas, observas que este llevaba consigo lo que parece ser
+    un "CascoEspacial", y colgando de su cinturon la "LlaveEspacial" .Las escaleras obviamente continuan, 
+    sin ningún final aparente a la vista, aunque esta claro que en algún lado tienen que terminar, 
+    porque es imposible construir unas escaleras infinitas, no?...
+    
+    ENEMIGO:--> Id: 8
+        	--> Nombre: Guardian de las Alturas
+        	--> (ID)Space: 31
+        	--> Stats: DEFINIR
+    
+    OBJETO: --> Name: CascoEspacial
+        	--> Id: 13
+        	--> Descripcion: Es un casco de astronauta modificado
+        	--> Descripcion movil: Sirve muy bien de armadura
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 1
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 40
+        	--> Ad: 10
+        	--> Def: 0
+         	--> Speed: 0
+    
+    OBJETO: --> Name: LlaveEspacial
+        	--> Id: 14
+        	--> Descripcion: Quizás pueda abrir algún tipo de puerta...
+        	--> Descripcion movil: Podria ser de ayuda que la utilizases
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 1
+        	--> Abre: 33
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 0
+    
+DOWN:LINK:  --> Id: 29
+	        --> Name: Level 1 -- Escaleras Imposibles
+	        --> Tied1: 31
+	        --> Tied2: 30
+        	--> Status: 0
+        	
+ UP:LINK:   --> Id: 30
+	        --> Name: Level 1 -- Level 2
+	        --> Tied1: 31
+	        --> Tied2: 32
+        	--> Status: 0
+        	
+32.- Level 2
++-----------------------_-----------------------+
+| (~~~)     (~~~)   |_______|        (~~~)      | 
+|                   |_______|                   |
+|        (~~~~)     |_______|    (~~~~~)        |
+|                   |_______|             (~~~) |
+|     (~~ ________  |_______| (~~~)             |
+|   (~~~~|   ___  | |_______|                   |
+|        |  |_-_| |_|       |       (~~~~~)     |
+| (~~~)  |__________________|(~~~)              |
+|        (~~~)      |_______|   (~~~~~~~)       |
+|                   |___P___|                   |
+| (~~~~~)           |_______|      (~~~~~)      |
++-------------------|--   --|-------------------+
+DESCRIPCION: Despues de subir muchos escalones encuentas una especie de
+"sala de descanso se podria llamar??", donde hay un cofre, aunque un tanto siniestro,
+como se abrira??, lo único que ves es a los pies del cofre una nota donde pone: "open and go in ;D(g w)".
+
+DOWN:LINK:  --> Id: 31
+	        --> Name: Level 2 -- Level 1
+	        --> Tied1: 32
+	        --> Tied2: 31
+        	--> Status: 0
+        	
+ UP:LINK:   --> Id: 32
+	        --> Name: Level 2 -- Level 3
+	        --> Tied1: 32
+	        --> Tied2: 33
+        	--> Status: 0
+        	
+WEST:LINK:  --> Id: 33
+	        --> Name: Level 2 -- Cofre Espacial
+	        --> Tied1: 32
+	        --> Tied2: 40
+        	--> Status: 1
+        	
+40.- Cofre Espacial
++-----------------------------------------------+
+|   .    ***    .  ··  .          · .           | 
+|  .   ******   ·                  .    .       |
+|       ****    .        { "··¨¨]               |
+|       .  .        ·  {""_""_¨¨]      ·        |
+|       ~_~_~~  ..          ¬¬¬                 |
+| .    ---##_-          ·              ..             
+| .      """        .               .  \ | /    |
+|   .       ·    ·.           ·   \ \   \|/   / |
+|       . .              .·      . \ \  _|_  / /|
+|       .            P          ______\/&&&\/___|
+|  .                            ----- /\___/\---|
++-----------------------------------------------+
+DESCRIPCION: QUUEEE!!!?!?!?!?!... Parece ser que el cofre te ha trasladado
+    a una especia de abitación en otra dimension!!!!... geeee locura. Puedes observar que estan flotando
+    4 objetos (no te creas que son los unicos que flotan). Estos son "PechoEspacial", "PiesEspaciales",
+    "EspadaEspacial" y "PocionEspacial"
+    
+OBJETO: --> Name: PecheraEspacial
+        	--> Id: 15
+        	--> Descripcion: Es una pechera de astronauta modificada
+        	--> Descripcion movil: Sirve muy bien de armadura
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 25
+        	--> Ad: 0
+        	--> Def: 25
+         	--> Speed: 0
+         	
+OBJETO: --> Name: BotasEspaciales
+        	--> Id: 16
+        	--> Descripcion: Son unas botas de astronauta modificadas
+        	--> Descripcion movil: Sirve muy bien de armadura
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 25
+         	--> Speed: 25
+         	
+OBJETO: --> Name: EspadaEspacial
+        	--> Id: 17
+        	--> Descripcion: Es una espada proveniente del espacio
+        	--> Descripcion movil: Podría ser de ayuda contra los proximos enemigos
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 50
+        	--> Def: 0
+         	--> Speed: 0
+         	
+OBJETO: --> Name: PocionEspacial
+        	--> Id: 18
+        	--> Descripcion: Es una pocion
+        	--> Descripcion movil: Puedo llevarla para curar mis heridas
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 70
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 0
+         	
+EAST:LINK:  --> Id: 34
+	        --> Name: Cofre Espacial -- Level 2
+	        --> Tied1: 40
+	        --> Tied2: 32
+        	--> Status: 0
+        	
+33.- Level 3
++-----------------------------------------------+
+| (~~~)    ____________________________         | 
+|         |        ///  /==---         |        |
+|        (|  /_    ||| |//__--\\\      |        |
+|         |   /    ||| \|_|\\  |||  /_ |  (~~~) |
+|     (~~)|     /_ \\\\___/ || |||   / |        |
+|   (~~~~)|      /  \\\____// ///      |        |
+|         |__________\------- _________|~~~)    |
+| (~~~)             |_______|(~~~)              |
+|        (~~~)      |_______|   (~~~~~~~)       |
+|                   |___P___|                   |
+| (~~~~~)           |_______|      (~~~~~)      |
++-------------------|--   --|-------------------+
+DESCRIPCION: vaaaale, un agujero negro, creo que se empezo a oler
+    desde hace tiempo y parece que detras estaran los Secrets...
+    parece ser que no tienes alternativa, entra y afronta tu destino
+
+DOWN:LINK:  --> Id: 35
+	        --> Name: Level 3 -- Level 2
+	        --> Tied1: 33
+	        --> Tied2: 32
+        	--> Status: 1
+        	
+ UP:LINK:   --> Id: 36
+	        --> Name: Level 3 -- 4ª Dimension
+	        --> Tied1: 33
+	        --> Tied2: 34
+        	--> Status: 0
+        	
+34.- 4ª Dimension
++-----------------------------------------------+
+|                                               | 
+|                                               |
+|                                               |
+|                                               |
+|                                               |
+|                                               |
+|                                               |
+|                                               |
+|                                               |
+|                                               |
+|                                               |
++-----------------------------------------------+
+DESCRIPCION: por fin ganaste... ahora mejor que disfrutes de esto un tiempo,
+    no creo que vuelvas a llegar hasta aqui... y no se si algun alumno o profesor
+    te ayudará o lo lograra, lo importante esque ahora lo estas.
+    
+    
+    ENJOY LIFE
+    
+ENEMIGO:--> Id: 9
+        	--> Nombre: Secrets
+        	--> (ID)Space: 34
+        	--> Stats: DEFINIR
+        	
+        	
+OBJETO: --> Name: MatriculaDeHonor
+        	--> Id: 19
+        	--> Descripcion: Después de todo este esfuerzo deberías llevartela y fardar de ella con tus colegas
+        	--> Descripcion movil: No le 0|des más vueltas, lo has logrado
+        	--> Movible: 1
+        	--> Movido: 0
+        	--> Oculto: 0
+        	--> Abre: -1
+        	--> Ilumina: 0
+        	--> Encendido: 0
+        	--> Hp: 0
+        	--> Ad: 0
+        	--> Def: 0
+         	--> Speed: 0

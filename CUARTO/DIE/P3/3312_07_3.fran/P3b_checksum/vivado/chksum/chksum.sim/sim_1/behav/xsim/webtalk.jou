@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 26 10:50:33 2019
+# Process ID: 19953
+# Current directory: /home/alumnos/e338239/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/alumnos/e338239/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.sim/sim_1/behav/xsim/xsim.dir/chksum_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/alumnos/e338239/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/alumnos/e338239/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/alumnos/e338239/die/3312_07_3/P3/P3b_checksum/vivado/chksum/chksum.sim/sim_1/behav/xsim/xsim.dir/chksum_tb_behav/webtalk/xsim_webtalk.tcl -notrace

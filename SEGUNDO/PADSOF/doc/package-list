@@ -1,0 +1,12 @@
+es.uam.padsof
+es.uam.padsof.controlador
+es.uam.padsof.gui
+es.uam.padsof.gui.estilos
+es.uam.padsof.modelo
+es.uam.padsof.modelo.colectivo
+es.uam.padsof.modelo.excepcion
+es.uam.padsof.modelo.fechasimulada
+es.uam.padsof.modelo.proyecto
+es.uam.padsof.modelo.test
+es.uam.padsof.modelo.usuario.registrado
+es.uam.padsof.modelo.validar

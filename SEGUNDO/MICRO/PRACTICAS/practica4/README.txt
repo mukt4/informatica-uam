@@ -1,0 +1,1 @@
+Buenas, no hemos sido capaces de realizar el apartado C de la practica.

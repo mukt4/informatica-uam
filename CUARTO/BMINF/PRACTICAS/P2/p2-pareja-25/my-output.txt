@@ -1,0 +1,161 @@
+No index in here
+-----------------------
+Checking index correction on URL collection
+  LuceneForwardIndex
+	Word "information" occurs in 3 documents: 0 (35) 1 (203) 3 (12) 
+  LuceneIndex
+	Word "information" occurs in 3 documents: 0 (35) 1 (203) 3 (12) 
+  SerializedRAMIndex
+	Word "information" occurs in 3 documents: 0 (35) 1 (12) 5 (204) 
+  DiskIndex
+	Word "information" occurs in 3 documents: 0 (35) 1 (12) 5 (204) 
+-----------------------
+Testing index performance on 1k document collection
+  Build time...
+	LuceneForwardIndex:	10s 944ms 
+	LuceneIndex:	7s 259ms 
+	RAMIndex:	18s 953ms 
+	DiskIndex:	28s 957ms 
+  Load time...
+	LuceneForwardIndex:	18ms 
+	LuceneIndex:	7ms 
+	RAMIndex:	3s 878ms 
+	DiskIndex:	2s 446ms 
+  Disk space...
+	LuceneForwardIndex:	4997K
+	LuceneIndex:	2016K
+	RAMIndex:	28728K
+	DiskIndex:	10256K
+-----------------------
+Testing index performance on 10k document collection
+  Build time...
+	LuceneForwardIndex:	48s 198ms 
+	LuceneIndex:	35s 405ms 
+	RAMIndex:	1min 18s 279ms 
+	DiskIndex:	2min 30s 156ms 
+  Load time...
+	LuceneForwardIndex:	36ms 
+	LuceneIndex:	36ms 
+	RAMIndex:	26s 209ms 
+	DiskIndex:	7s 175ms 
+  Disk space...
+	LuceneForwardIndex:	35773K
+	LuceneIndex:	12646K
+	RAMIndex:	188501K
+	DiskIndex:	65974K
+-----------------------
+Checking engine results on URL collection
+  LuceneEngine + LuceneIndex: top 3 of 3 for query "information probability"
+	1.6511130332946777	https://en.wikipedia.org/wiki/Information_theory
+	1.4544458389282227	https://en.wikipedia.org/wiki/Entropy
+	0.6658865213394165	http://sigir.org/sigir2019/calls/long
+  SlowVSMCosineEngine + LuceneForwardIndex: top 3 of 3 for query "information probability"
+	0.11099175972764566	https://en.wikipedia.org/wiki/Information_theory
+	0.07607738863968067	http://sigir.org/sigir2019/calls/long
+	0.057031806863097376	https://en.wikipedia.org/wiki/Entropy
+  TermBasedVSMCosineEngine + LuceneIndex: top 3 of 3 for query "information probability"
+	1.487210725421178	https://en.wikipedia.org/wiki/Information_theory
+	0.20699195164228854	https://en.wikipedia.org/wiki/Entropy
+	0.19880867343186556	http://sigir.org/sigir2019/calls/long
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 3 of 3 for query "information probability"
+	1.5591946737662616	https://en.wikipedia.org/wiki/Information_theory
+	0.22245023291925828	https://en.wikipedia.org/wiki/Entropy
+	0.20154640188322653	http://sigir.org/sigir2019/calls/long
+  TermBasedVSMCosineEngine + DiskIndex: top 3 of 3 for query "information probability"
+	1.5591946737662616	https://en.wikipedia.org/wiki/Information_theory
+	0.22245023291925828	https://en.wikipedia.org/wiki/Entropy
+	0.20154640188322653	http://sigir.org/sigir2019/calls/long
+  DocBasedVSMCosineEngine + LuceneIndex: top 1 of 1 for query "information probability"
+	6.810626300140764	https://en.wikipedia.org/wiki/Entropy
+  DocBasedVSMCosineEngine + SerializedRAMIndex: top 1 of 1 for query "information probability"
+	4.584962500721155	http://sigir.org/sigir2019/calls/long
+  DocBasedVSMCosineEngine + DiskIndex: top 1 of 1 for query "information probability"
+	4.584962500721155	http://sigir.org/sigir2019/calls/long
+-----------------------
+Testing engine performance on 1k document collection
+  LuceneEngine + LuceneIndex: top 5 of 469 for query "obama family tree"
+	4.620633125305176	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0010-79-2218.html
+	4.546961307525635	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0001-02-21241.html
+	4.480912208557129	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0010-57-32937.html
+	4.392874240875244	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp01-59-16163.html
+	4.392719268798828	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp02-06-15081.html
+  --> 14ms 
+  SlowVSMCosineEngine + LuceneForwardIndex: top 5 of 469 for query "obama family tree"
+	0.2844815542426866	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0010-79-2218.html
+	0.26811410835190663	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0001-02-21241.html
+	0.22217107488156024	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2441.html
+	0.22176734218452632	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2755.html
+	0.22150920277442854	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2912.html
+  --> 485ms 
+  TermBasedVSMCosineEngine + LuceneIndex: top 5 of 469 for query "obama family tree"
+	10.742624531394098	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2638.html
+	10.720581157127766	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2476.html
+	10.702203750211039	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2579.html
+	10.680585795652853	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2728.html
+	10.679604979190474	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2830.html
+  --> 10ms 
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 5 of 470 for query "obama family tree"
+	10.819210428988256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2570.html
+	10.780089937367608	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2638.html
+	10.778360376556586	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2581.html
+	10.766482147291915	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2579.html
+	10.747329278375952	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2476.html
+  --> 8ms 
+  TermBasedVSMCosineEngine + DiskIndex: top 5 of 470 for query "obama family tree"
+	10.819210428988256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2570.html
+	10.780089937367608	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2638.html
+	10.778360376556586	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2581.html
+	10.766482147291915	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2579.html
+	10.747329278375952	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-en0009-30-2476.html
+  --> 164ms 
+  DocBasedVSMCosineEngine + DiskIndex: top 5 of 467 for query "obama family tree"
+	32.390073251097256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp00-04-9625.html
+	32.390073251097256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp00-96-9495.html
+	32.390073251097256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp01-17-11114.html
+	32.390073251097256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp01-27-11404.html
+	32.390073251097256	/home/tomas/IdeaProjects/P2_BMINF/collections/docs1k.zip/clueweb09-enwp01-46-8867.html
+  --> 40ms 
+-----------------------
+Testing engine performance on 10k document collection
+  LuceneEngine + LuceneIndex: top 5 of 1808 for query "air travel information"
+	3.2214577198028564	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0006-02-32959.html
+	3.2040460109710693	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0001-94-20373.html
+	3.192282199859619	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0006-02-32957.html
+	3.1891098022460938	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0009-48-10665.html
+	3.1850595474243164	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0008-57-27844.html
+  --> 192ms 
+  SlowVSMCosineEngine + LuceneForwardIndex: top 5 of 7054 for query "air travel information"
+	0.37588764605676905	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0000-06-04760.html
+	0.3211834866659541	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0007-59-22958.html
+	0.30669326782672124	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0005-92-15288.html
+	0.29992253691871756	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0000-14-05156.html
+	0.2986404401726358	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0002-43-02204.html
+  --> 1s 756ms 
+  TermBasedVSMCosineEngine + LuceneIndex: top 5 of 7054 for query "air travel information"
+	6.368934821349419	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0009-07-07584.html
+	4.902775565081141	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0004-12-24987.html
+	4.403856136810616	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-07-27242.html
+	4.316814168404217	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-07-27487.html
+	4.116183339584757	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0001-66-18809.html
+  --> 70ms 
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 5 of 7060 for query "air travel information"
+	6.477441663749764	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0009-07-07584.html
+	5.22420571836938	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0004-12-24987.html
+	4.734913671595879	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-07-27242.html
+	4.429438795745352	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-07-27487.html
+	4.323151582571762	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0001-18-32624.html
+  --> 64ms 
+  TermBasedVSMCosineEngine + DiskIndex: top 5 of 7060 for query "air travel information"
+	6.477441663749764	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0009-07-07584.html
+	5.22420571836938	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0004-12-24987.html
+	4.734913671595879	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-07-27242.html
+	4.429438795745352	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-07-27487.html
+	4.323151582571762	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0001-18-32624.html
+  --> 939ms 
+  DocBasedVSMCosineEngine + DiskIndex: top 5 of 7057 for query "air travel information"
+	23.673204074796004	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0004-37-01667.html
+	22.714122208891716	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0004-07-04424.html
+	22.577328890842455	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0003-13-14625.html
+	21.520753754516555	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0004-37-02106.html
+	21.40904953723725	/home/tomas/IdeaProjects/P2_BMINF/collections/docs10k.zip/clueweb09-en0009-07-07584.html
+  --> 1s 45ms 

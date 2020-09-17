@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+	<br />
+	Esta es la pagina about, aqui deberia aparecer informacion acerca del funcionamiento de la pagina.
+	<br />
+	He realizado cambios en el test de de search para asemejarlo a la solictud de mi formulario POST. Lo unico que he modificado ha sido que he cambiado el campo del POST 'name' por 'key' que es el nombre que uso yo en el formulario de busqueda.
+	<br />
+	En la parte del captcha he dejado la validacion comentada, ya que si la hacia antes de realizar la descarga los test de download dejaban de funcionar.
+{% endblock %}

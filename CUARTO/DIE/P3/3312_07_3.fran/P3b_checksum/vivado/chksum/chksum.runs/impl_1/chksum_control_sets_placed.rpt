@@ -1,0 +1,71 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Thu Nov 28 00:05:41 2019
+| Host         : fpc running 64-bit Ubuntu 18.04.3 LTS
+| Command      : report_control_sets -verbose -file chksum_control_sets_placed.rpt
+| Design       : chksum
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    16 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      5 |            1 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            3 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             267 |           67 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------+------------------+------------------+----------------+
+|  Clock Signal  |  Enable Signal  | Set/Reset Signal | Slice Load Count | Bel Load Count |
++----------------+-----------------+------------------+------------------+----------------+
+|  Clk_IBUF_BUFG |                 |                  |                3 |              5 |
+|  Clk_IBUF_BUFG | s3_SoP          |                  |                3 |             16 |
+|  Clk_IBUF_BUFG | s2_SoP          |                  |                5 |             19 |
+|  Clk_IBUF_BUFG | s1_SoP          |                  |               10 |             36 |
+|  Clk_IBUF_BUFG | chksumValid_reg |                  |               20 |             68 |
+|  Clk_IBUF_BUFG | SoP_IBUF        |                  |               29 |            128 |
++----------------+-----------------+------------------+------------------+----------------+
+
+

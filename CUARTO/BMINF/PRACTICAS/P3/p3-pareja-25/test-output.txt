@@ -1,0 +1,184 @@
+=======================
+Building indices...
+-----------------------
+Toy collection
+-----------------------
+URLs collection
+-----------------------
+1k collection
+--> 13s 875ms 
+=======================
+Checking indices...
+-----------------------
+Toy collection
+  LuceneIndex
+	Word "a" occurs in 2 documents:
+		0 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\example.txt (4) 
+		1 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\hamlet.txt (2) 
+  LucenePositionalIndex
+	Word "a" occurs in 2 documents:
+		0 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\example.txt (4 ( 0 4 8 9 )) 
+		1 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\hamlet.txt (2 ( 13 33 )) 
+  PositionalIndex
+	Word "a" occurs in 2 documents:
+		0 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\example.txt (4 ( 0 4 8 9 )) 
+		1 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\hamlet.txt (2 ( 13 33 )) 
+  LuceneIndex
+	Word "sleep" occurs in 1 documents:
+		1 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\hamlet.txt (5) 
+  LucenePositionalIndex
+	Word "sleep" occurs in 1 documents:
+		1 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\hamlet.txt (5 ( 8 14 42 44 55 )) 
+  PositionalIndex
+	Word "sleep" occurs in 1 documents:
+		1 - C:\Users\Javier\IdeaProjects\bmi-p1\collections\toy\hamlet.txt (5 ( 8 14 42 44 55 )) 
+-----------------------
+URLs collection
+  LuceneIndex
+	Word "channel" occurs in 2 documents:
+		0 - https://en.wikipedia.org/wiki/Entropy (2) 
+		1 - https://en.wikipedia.org/wiki/Information_theory (55) 
+  LucenePositionalIndex
+	Word "channel" occurs in 2 documents:
+		0 - https://en.wikipedia.org/wiki/Entropy (2 ( 7879 13944 )) 
+		1 - https://en.wikipedia.org/wiki/Information_theory (55 ( 51 54 270 364 416 422 518 561 580 587 597 611 622 740 756 1213 1218 1231 1244 1249 1388 1398 3170 3253 3289 3308 3355 3362 3368 3652 3657 3662 3707 3738 3768 3777 3791 3810 3831 3849 3957 3977 3988 3993 4001 4013 4025 4045 4062 4074 4077 4111 4843 4846 4852 )) 
+  PositionalIndex
+	Word "channel" occurs in 2 documents:
+		0 - https://en.wikipedia.org/wiki/Entropy (2 ( 7879 13944 )) 
+		1 - https://en.wikipedia.org/wiki/Information_theory (55 ( 51 54 270 364 416 422 518 561 580 587 597 611 622 740 756 1213 1218 1231 1244 1249 1388 1398 3170 3253 3289 3308 3355 3362 3368 3652 3657 3662 3707 3738 3768 3777 3791 3810 3831 3849 3957 3977 3988 3993 4001 4013 4025 4045 4062 4074 4077 4111 4843 4846 4852 )) 
+-----------------------
+1k collection
+  LuceneIndex
+	Word "kansas" occurs in 118 documents:
+		1 - clueweb09-enwp03-10-9067.html (1) 
+		15 - clueweb09-en0000-06-11932.html (1) 
+		24 - clueweb09-en0000-17-16569.html (7) 
+		25 - clueweb09-en0000-18-1411.html (4) 
+		26 - clueweb09-en0000-18-1413.html (2) 
+		27 - clueweb09-en0000-18-1910.html (2) 
+		...and so on up to 108 more documents.
+  LucenePositionalIndex
+	Word "kansas" occurs in 118 documents:
+		1 - clueweb09-enwp03-10-9067.html (1 ( 2967 )) 
+		15 - clueweb09-en0000-06-11932.html (1 ( 803 )) 
+		24 - clueweb09-en0000-17-16569.html (7 ( 460 2331 2587 4040 4370 5113 6774 )) 
+		25 - clueweb09-en0000-18-1411.html (4 ( 853 863 879 882 )) 
+		26 - clueweb09-en0000-18-1413.html (2 ( 662 665 )) 
+		27 - clueweb09-en0000-18-1910.html (2 ( 358 361 )) 
+		...and so on up to 108 more documents.
+  PositionalIndex
+	Word "kansas" occurs in 118 documents:
+		1 - clueweb09-enwp03-10-9067.html (1 ( 2967 )) 
+		15 - clueweb09-en0000-06-11932.html (1 ( 803 )) 
+		24 - clueweb09-en0000-17-16569.html (7 ( 460 2331 2587 4040 4370 5113 6774 )) 
+		25 - clueweb09-en0000-18-1411.html (4 ( 853 863 879 882 )) 
+		26 - clueweb09-en0000-18-1413.html (2 ( 662 665 )) 
+		27 - clueweb09-en0000-18-1910.html (2 ( 358 361 )) 
+		...and so on up to 108 more documents.
+=======================
+Checking search...
+-----------------------
+Checking search results on toy collection
+  LuceneEngine + LuceneIndex: top 1 of 1 for query 'and to sleep'
+	1.5111976861953735	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/hamlet.txt
+-----------------------
+Checking search results on toy collection
+  ProximityEngine + LucenePositionalIndex: top 1 of 1 for query 'and to sleep'
+	1.0050125313283207	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/hamlet.txt
+-----------------------
+Checking search results on toy collection
+  LuceneEngine + LuceneIndex: top 2 of 2 for query 'a b c'
+	1.3449727296829224	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/example.txt
+	0.09488854557275772	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/hamlet.txt
+-----------------------
+Checking search results on toy collection
+  ProximityEngine + LucenePositionalIndex: top 1 of 1 for query 'a b c'
+	3.5	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/example.txt
+-----------------------
+Checking search results on toy collection
+  ProximityEngine + LucenePositionalIndex: top 0 of 0 for query '"a b c"'
+-----------------------
+Checking search results on toy collection
+  ProximityEngine + LucenePositionalIndex: top 1 of 1 for query 'b c a'
+	3.5	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/example.txt
+-----------------------
+Checking search results on toy collection
+  ProximityEngine + LucenePositionalIndex: top 1 of 1 for query '"b c a"'
+	2.0	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/example.txt
+-----------------------
+Checking search results on toy collection
+  ProximityEngine + PositionalIndex: top 1 of 1 for query 'b c a'
+	3.5	file:/C:/Users/Javier/IdeaProjects/bmi-p1/collections/toy/example.txt
+-----------------------
+Checking search results on urls collection
+  LuceneEngine + LuceneIndex: top 4 of 4 for query 'information probability'
+	1.399320125579834	https://en.wikipedia.org/wiki/Information_theory
+	1.2155494689941406	https://en.wikipedia.org/wiki/Entropy
+	0.43071502447128296	https://www.springer.com/journal/10791
+	0.42416542768478394	http://sigir.org/sigir2019/calls/long
+-----------------------
+Checking search results on urls collection
+  ProximityEngine + LucenePositionalIndex: top 2 of 2 for query 'information probability'
+	2.3171499479746025	https://en.wikipedia.org/wiki/Information_theory
+	0.06854072449748555	https://en.wikipedia.org/wiki/Entropy
+-----------------------
+Checking search results on 1k collection
+  LuceneEngine + LuceneIndex: top 5 of 469 for query 'obama family tree'
+	4.620633125305176	clueweb09-en0010-79-2218.html
+	4.546961307525635	clueweb09-en0001-02-21241.html
+	4.480912208557129	clueweb09-en0010-57-32937.html
+	4.392874240875244	clueweb09-enwp01-59-16163.html
+	4.392719268798828	clueweb09-enwp02-06-15081.html
+-----------------------
+Checking search results on 1k collection
+  DocBasedVSMEngine + LuceneIndex: top 5 of 469 for query 'obama family tree'
+	0.25087426811962976	clueweb09-en0010-79-2218.html
+	0.22888291788991302	clueweb09-en0001-02-21241.html
+	0.1840012993642736	clueweb09-en0001-02-21397.html
+	0.17968916234901472	clueweb09-en0003-21-23666.html
+	0.1717571978873227	clueweb09-en0010-57-32937.html
+-----------------------
+Checking search results on 1k collection
+  ProximityEngine + LucenePositionalIndex: top 5 of 56 for query 'obama family tree'
+	28.108292105564814	clueweb09-en0010-79-2218.html
+	7.795325263677409	clueweb09-enwp00-09-18461.html
+	7.795049011214232	clueweb09-enwp01-17-9993.html
+	7.795049011214232	clueweb09-enwp01-49-16274.html
+	7.795049011214232	clueweb09-enwp03-16-16773.html
+-----------------------
+Checking search results on 1k collection
+  ProximityEngine + LucenePositionalIndex: top 5 of 54 for query '"obama family tree"'
+	20.0	clueweb09-en0010-79-2218.html
+	6.0	clueweb09-en0010-57-32937.html
+	5.0	clueweb09-enwp03-07-2998.html
+	5.0	clueweb09-enwp03-13-2851.html
+	5.0	clueweb09-enwp03-16-16773.html
+-----------------------
+Checking search results on toy 1 collection
+  StaticEngine + PageRank: top 3 of 3 for query ''
+	0.3846153846153846	c
+	0.3589743589743589	a
+	0.2564102564102564	b
+-----------------------
+Checking search results on toy 2 collection
+  StaticEngine + PageRank: top 3 of 3 for query ''
+	0.368421052631579	b
+	0.3157894736842105	a
+	0.3157894736842105	c
+-----------------------
+Checking search results on 1k simulated links collection
+  StaticEngine + PageRank: top 5 of 999 for query ''
+	0.03333374862386512	clueweb09-en0000-06-11938.html
+	0.032822385415072895	clueweb09-en0000-01-22977.html
+	0.03264169111517319	clueweb09-en0000-06-11940.html
+	0.03170456979307945	clueweb09-en0000-06-11932.html
+	0.03159800596778678	clueweb09-en0000-01-27969.html
+-----------------------
+Checking search results on google collection
+  StaticEngine + PageRank: top 5 of 875713 for query ''
+	8.821153657792473E-4	163075
+	8.766401100668023E-4	597621
+	8.596414407329041E-4	537039
+	8.379732603437779E-4	41909
+	7.237800390759184E-4	384666
+  --> 1min 5s 150ms 

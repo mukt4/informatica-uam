@@ -1,0 +1,380 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Apache/1.3.37 (Unix) PHP/5.2.1 mod_auth_passthrough/1.8 mod_log_bytes/1.2 mod_bwlimited/1.4 FrontPage/5.0.2.2635.SR1.2 mod_ssl/2.8.28 OpenSSL/0.9.7a
+X-Powered-By: PHP/5.2.1
+Date: Sat, 17 Jan 2009 19:13:16 GMT
+Connection: close
+Content-Length: 40578
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="keywords" content="Idaho Cosmetology Colleges - Education Reference" />
+<META NAME=Description CONTENT="Idaho Cosmetology Colleges">
+<title>Idaho Cosmetology Colleges - Education Reference</title>
+<link href="/css/style.css" media="screen" rel="Stylesheet" type="text/css" />
+<script src="/js/mootools.js" type="text/javascript"></script>
+</head>
+<script language="javascript" type="text/javascript">
+<!--
+function IsNumeric(strString)
+   //  check for valid numeric strings
+   {
+   var strValidChars = "0123456789.-";
+   var strChar;
+   var blnResult = true;
+
+   if (strString.length == 0) return false;
+
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && blnResult == true; i++)
+      {
+      strChar = strString.charAt(i);
+      if (strValidChars.indexOf(strChar) == -1)
+         {
+         blnResult = false;
+         }
+      }
+   return blnResult;
+}
+
+function search(formName) {
+	if (IsNumeric(document.forms[formName].zipcode.value)==false) {
+		alert('The zipcode is not valid.');
+		document.forms[formName].zipcode.select();
+	} else if (IsNumeric(document.forms[formName].distance.value)==false) {
+		alert('The distance is not valid.');
+		document.forms[formName].distance.select();
+	} else {
+		document.forms[formName].action = 'http://ed-reference.us/colleges-within-'+document.forms[formName].distance.value+'-miles-of-'+document.forms[formName].zipcode.value;
+		document.forms[formName].submit();
+//		location=('http://ed-reference.us/colleges-within-'+document.forms[0].distance.value+'-miles-of-'+document.forms[0].zipcode.value);
+	}
+}
+
+// -->
+</script>
+<script type="text/javascript">
+ function CreateBookmarkLink() {
+
+ title = "www.ed-reference.us";
+  // Blogger - Replace with <$BlogItemTitle$>
+  // MovableType - Replace with <$MTEntryTitle$>
+
+ url = "http://www.ed-reference.us/10100/idaho/cosmetology/colleges";
+
+	if (window.sidebar) { // Mozilla Firefox Bookmark
+		window.sidebar.addPanel(title, url,"");
+	} else if( window.external ) { // IE Favorite
+		window.external.AddFavorite( url, title); }
+	else if(window.opera && window.print) { // Opera Hotlist
+		return true; }
+ }
+
+ function displayAddFav() {
+	 if (window.external) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Add to Favorites</a>');
+	 } else  if (window.sidebar) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Bookmark Page</a>');
+	 } else if (window.opera && window.print) {
+	   document.write('<a href ="javascript:CreateBookmarkLink()");">Add Bookmark</a>');
+	 }
+ }
+</script>
+<body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-338608-26");
+	pageTracker._trackPageview();
+}
+catch(err)
+{}
+</script>
+		<div id="top-container">
+			<div class="transparentheader" style="width: 100%; height: 99px;z-index:1;">
+				<a href="/">
+					<img width="100%" height="99" title="" alt="" style="border-width:0px;" src="http://ed-reference.us/images/headerBG_transparent.png"/>
+				</a>
+			</div>
+			<div id="logo" style="width: 394px; height: 75px; z-index:2;">
+				<a href="/">
+					<img src="http://ed-reference.us/images/logo.png" width="394px" height="75px" border="0px"/>
+				</a>
+			</div>
+			<div style="position:absolute; top:0; left:0; width:100%; height:99px; z-index:1;">
+				<div id="main-menu">
+					<ul>
+						<li><a href="/states/">Search By State</a></li> |
+						<li><a href="/degrees/">Search By Degree</a></li> |
+						<li><a href="/colleges/">Search By Name</a></li> |
+						<li><a href="/search-online-schools/">Search Online Schools</a></li>
+					</ul>
+				</div>
+				<div style="clear:right;" class="search searchTop">
+					<form method="POST" id="search1" onsubmit="search('search1');">
+						Search By Zip Code <input type="text" name="zipcode" maxlength="5" size="5" value=""> Within (miles) <input type="text" name="distance" maxlength="5" size="5" onkeypress="return handleKeyPress(event);" value=""><span class="button"><input class="go" type="submit" value="Go"></span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="wrap">
+		<div id="wrap-inner">
+			<div id="leftSideNav">
+<script>
+function submit_perPageFrm() {
+	var frm = document.forms['perPageFrm'];
+	frm.action='/10100/idaho/cosmetology/colleges/i'+frm.itemPerPage.options[frm.itemPerPage.selectedIndex].value+'/';
+	frm.submit();
+}
+function insertPagination(strText) {
+	var ele = document.getElementById("pagination");
+	ele.innerHTML = strText;
+}
+</script>
+			<div id="nav1List">			<div class="nav1">
+				<div class="nav1Title">Idaho Cities:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItemCity0" onmouseover="document.getElementById('listItemCity0').className='listOn';" onmouseout="document.getElementById('listItemCity0').className='';"><a href="/11000/idaho/boise/colleges">Boise</a></li>
+					<li id="listItemCity1" onmouseover="document.getElementById('listItemCity1').className='listOn';" onmouseout="document.getElementById('listItemCity1').className='';"><a href="/11000/idaho/caldwell/colleges">Caldwell</a></li>
+					<li id="listItemCity2" onmouseover="document.getElementById('listItemCity2').className='listOn';" onmouseout="document.getElementById('listItemCity2').className='';"><a href="/11000/idaho/chubbuck/colleges">Chubbuck</a></li>
+					<li id="listItemCity3" onmouseover="document.getElementById('listItemCity3').className='listOn';" onmouseout="document.getElementById('listItemCity3').className='';"><a href="/11000/idaho/coeur+d+alene/colleges">Coeur D Alene</a></li>
+					<li id="listItemCity4" onmouseover="document.getElementById('listItemCity4').className='listOn';" onmouseout="document.getElementById('listItemCity4').className='';"><a href="/11000/idaho/coeur+d'alene/colleges">Coeur D'alene</a></li>
+					<li id="listItemCity5" onmouseover="document.getElementById('listItemCity5').className='listOn';" onmouseout="document.getElementById('listItemCity5').className='';"><a href="/11000/idaho/idaho+falls/colleges">Idaho Falls</a></li>
+					<li id="listItemCity6" onmouseover="document.getElementById('listItemCity6').className='listOn';" onmouseout="document.getElementById('listItemCity6').className='';"><a href="/11000/idaho/lewiston/colleges">Lewiston</a></li>
+					<li id="listItemCity7" onmouseover="document.getElementById('listItemCity7').className='listOn';" onmouseout="document.getElementById('listItemCity7').className='';"><a href="/11000/idaho/meridian/colleges">Meridian</a></li>
+					<li id="listItemCity8" onmouseover="document.getElementById('listItemCity8').className='listOn';" onmouseout="document.getElementById('listItemCity8').className='';"><a href="/11000/idaho/meridien/colleges">Meridien</a></li>
+					<li id="listItemCity9" onmouseover="document.getElementById('listItemCity9').className='listOn';" onmouseout="document.getElementById('listItemCity9').className='';"><a href="/11000/idaho/moscow/colleges">Moscow</a></li>
+					<li id="listItemCity10" onmouseover="document.getElementById('listItemCity10').className='listOn';" onmouseout="document.getElementById('listItemCity10').className='';"><a href="/11000/idaho/nampa/colleges">Nampa</a></li>
+					<li id="listItemCity11" onmouseover="document.getElementById('listItemCity11').className='listOn';" onmouseout="document.getElementById('listItemCity11').className='';"><a href="/11000/idaho/pocatello/colleges">Pocatello</a></li>
+					<li id="listItemCity12" onmouseover="document.getElementById('listItemCity12').className='listOn';" onmouseout="document.getElementById('listItemCity12').className='';"><a href="/11000/idaho/rexburg/colleges">Rexburg</a></li>
+					<li id="listItemCity13" onmouseover="document.getElementById('listItemCity13').className='listOn';" onmouseout="document.getElementById('listItemCity13').className='';"><a href="/11000/idaho/twin+falls/colleges">Twin Falls</a></li>
+				</ul>
+				</div>
+			</div>
+</div>
+		</div>
+		<div class="content-container">
+			<div class="content">
+				<span class="breadcrumb"><a href="/10000/idaho/colleges">Idaho Colleges</a> > <a href="/10100/idaho/cosmetology/colleges">Cosmetology Colleges</a></span>
+				<div  id="sticky">
+					<!-- AddThis Bookmark Button BEGIN -->
+					<script type="text/javascript">
+					  addthis_url    = location.href;
+					  addthis_title  = document.title;
+					  addthis_pub    = 'baymarketing';
+					</script><script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12 " ></script>
+					<!-- AddThis Bookmark Button END -->
+				</div>
+				<div class="contentHeader">
+					<span class="pageTitle">Idaho Cosmetology Colleges</span>
+					<span class="numberPerPage">
+						<form id="perPageFrm" method="POST">
+						<select class="itemsPerPage" id="itemPerPage" onchange="submit_perPageFrm();">
+<option value="50" selected>50</option>
+<option value="100" >100</option>
+<option value="150" >150</option>
+	</select>
+ Per Page
+						</form>
+					</span>
+				</div>
+				<div class="clearall"></div>
+				<div id="pagination"></div>
+		<p>The Ed-Reference database currently includes 16 Idaho Cosmetology Colleges, Universities in Idaho with Cosmetology Degree Programs , and Idaho Schools for Cosmetology. The Ed-Reference database is continually updated and currently includes over 9000 schools. You can narrow your search by city or degree in the right hand column.</p>
+
+				<span class="title">Featured Cosmetology Schools, Colleges and Universities in Idaho</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9394&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/milan-institute/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/milan-institute/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/idaho/boise/cosmetology/milan+institute+-+boise-9394/">Milan Institute - Boise</a></span> - <a href="/11100/idaho/boise/cosmetology/colleges">Boise</a>, ID<br/>
+Cosmetology Programs at Milan Institute - Boise include: Esthetician, <a href="/11100/idaho/boise/cosmetology/milan+institute+-+boise-9394/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1709&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/regis-scot-lewis-schools/stpaul.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/regis-scot-lewis-schools/stpaul.htm');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/idaho/boise/cosmetology/scot+lewis+schools+-+paul+mitchell+partner+school-1709/">Scot Lewis Schools - Paul Mitchell Partner School</a></span> - <a href="/11100/idaho/boise/cosmetology/colleges">Boise</a>, ID<br/>
+Cosmetology Programs at Scot Lewis Schools - Paul Mitchell Partner School include: Cosmetology, Cosmetologist, Cosmetology and Related Personal Grooming Arts, <a href="/11100/idaho/boise/cosmetology/scot+lewis+schools+-+paul+mitchell+partner+school-1709/">more...</a>						</li>
+					</ul>
+				</div>
+				<span class="title">Online Options for Cosmetology</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9528&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/globe-minn-online/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/globe-minn-online/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/great+exposure+-+online-9528/">Great Exposure - Online</a></span><br/>
+Online Cosmetology programs at Great Exposure - Online includes: Cosmetology Business						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9558&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/kaplan/kaplan-university/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/kaplan/kaplan-university/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/kaplan+university+-+home+study-9558/">Kaplan University - Home Study</a></span><br/>
+Online Cosmetology programs at Kaplan University - Home Study includes: Cosmetology Business						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7025&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/globe-minn-online/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/globe-minn-online/');">Request Info</a>
+							</div>
+
+							<span class="itemTitle"><a href="/00000/online/minnesota+school+of+business+and+globe+college+-+online-7025/">Minnesota School of Business and Globe College - Online</a></span><br/>
+Online Cosmetology programs at Minnesota School of Business and Globe College - Online includes: Cosmetology Business						</li>
+					</ul>
+				</div>
+				<span class="title">Idaho</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=1709&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/regis-scot-lewis-schools/stpaul.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/regis-scot-lewis-schools/stpaul.htm');" onMouseOver="window.status='Request more information from Scot Lewis Schools - Paul Mitchell Partner School'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/idaho/boise/cosmetology/scot+lewis+schools+-+paul+mitchell+partner+school-1709/">Scot Lewis Schools - Paul Mitchell Partner School</a></span> - Boise, ID<br/>
+Cosmetology Programs at Scot Lewis Schools - Paul Mitchell Partner School include: Cosmetology, Cosmetologist, Cosmetology and Related Personal Grooming Arts, <a href="/11100/idaho/boise/cosmetology/scot+lewis+schools+-+paul+mitchell+partner+school-1709/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9394&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/milan-institute/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/milan-institute/');" onMouseOver="window.status='Request more information from Milan Institute - Boise'; return true" onMouseOut="window.status=''">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11100/idaho/boise/cosmetology/milan+institute+-+boise-9394/">Milan Institute - Boise</a></span> - Boise, ID<br/>
+Cosmetology Programs at Milan Institute - Boise include: Esthetician, <a href="/11100/idaho/boise/cosmetology/milan+institute+-+boise-9394/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/chubbuck/cosmetology/the+school+of+hairstyling+-+chubbuck-1711/">The School of Hairstyling - Chubbuck</a></span> - Chubbuck, ID<br/>
+Cosmetology Programs at The School of Hairstyling - Chubbuck include: Cosmetology, Cosmetologist, <a href="/11100/idaho/chubbuck/cosmetology/the+school+of+hairstyling+-+chubbuck-1711/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/coeur+d+alene/cosmetology/headmasters+school+of+hair+design+-+coeur+d+alene-1713/">Headmasters School of Hair Design - Coeur D Alene</a></span> - Coeur D Alene, ID<br/>
+Cosmetology Programs at Headmasters School of Hair Design - Coeur D Alene include: Cosmetology, Cosmetologist, Cosmetology and Related Personal Grooming Arts, <a href="/11100/idaho/coeur+d+alene/cosmetology/headmasters+school+of+hair+design+-+coeur+d+alene-1713/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/lewiston/cosmetology/headmasters+school+of+hair+design+-+lewiston-1715/">Headmasters School of Hair Design - Lewiston</a></span> - Lewiston, ID<br/>
+Cosmetology Programs at Headmasters School of Hair Design - Lewiston include: Cosmetology, Cosmetologist, <a href="/11100/idaho/lewiston/cosmetology/headmasters+school+of+hair+design+-+lewiston-1715/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/lewiston/cosmetology/mr+leons+school+of+hair+design+-+lewiston-1717/">Mr Leons School of Hair Design - Lewiston</a></span> - Lewiston, ID<br/>
+Cosmetology Programs at Mr Leons School of Hair Design - Lewiston include: Cosmetology, Cosmetologist, <a href="/11100/idaho/lewiston/cosmetology/mr+leons+school+of+hair+design+-+lewiston-1717/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/moscow/cosmetology/mr+leons+school+of+hair+design+-+moscow-1719/">Mr Leons School of Hair Design - Moscow</a></span> - Moscow, ID<br/>
+Cosmetology Programs at Mr Leons School of Hair Design - Moscow include: Cosmetology, Cosmetologist, <a href="/11100/idaho/moscow/cosmetology/mr+leons+school+of+hair+design+-+moscow-1719/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/nampa/cosmetology/razzle+dazzle+college+-+nampa-1723/">Razzle Dazzle College - Nampa</a></span> - Nampa, ID<br/>
+Cosmetology Programs at Razzle Dazzle College - Nampa include: Cosmetology, Cosmetologist, Nail Technician, Specialist and Manicurist, Cosmetology, Barber, Styling, and Nail Instructor, <a href="/11100/idaho/nampa/cosmetology/razzle+dazzle+college+-+nampa-1723/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/pocatello/cosmetology/idaho+state+university+-+pocatello-1724/">Idaho State University - Pocatello</a></span> - Pocatello, ID<br/>
+Cosmetology Programs at Idaho State University - Pocatello include: Cosmetology, Cosmetologist, <a href="/11100/idaho/pocatello/cosmetology/idaho+state+university+-+pocatello-1724/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/rexburg/cosmetology/career+beauty+college+-+rexburg-1726/">Career Beauty College - Rexburg</a></span> - Rexburg, ID<br/>
+Cosmetology Programs at Career Beauty College - Rexburg include: Cosmetology, Cosmetologist, <a href="/11100/idaho/rexburg/cosmetology/career+beauty+college+-+rexburg-1726/">more...</a>						</li>
+						<li>
+							<span class="itemTitle"><a href="/11100/idaho/twin+falls/cosmetology/mr+juans+college+of+hair+design+-+twin+falls-1728/">Mr Juans College of Hair Design - Twin Falls</a></span> - Twin Falls, ID<br/>
+Cosmetology Programs at Mr Juans College of Hair Design - Twin Falls include: Cosmetology, Cosmetologist, Cosmetology and Related Personal Grooming Arts, <a href="/11100/idaho/twin+falls/cosmetology/mr+juans+college+of+hair+design+-+twin+falls-1728/">more...</a>						</li>
+					</ul>
+				</div>
+<div class="pagination">Page 1 </div>			</div>
+			<script>insertPagination('<div class=\"pagination\">Page 1 </div>');</script>
+			<div id="rightSideNav">
+			<div class="nav1">
+				<div class="nav1Title">Specific Cosmetology Degree Programs:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItem001100" onmouseover="document.getElementById('listItem001100').className='listOn';" onmouseout="document.getElementById('listItem001100').className='';"><a href="/00110/cosmetology/aesthetician/colleges">Aesthetician Colleges</a></li>
+					<li id="listItem001101" onmouseover="document.getElementById('listItem001101').className='listOn';" onmouseout="document.getElementById('listItem001101').className='';"><a href="/00110/cosmetology/aesthetician,-esthetician-and-skin-care-specialist/colleges">Aesthetician, Esthetician And Skin Care Specialist Colleges</a></li>
+					<li id="listItem001102" onmouseover="document.getElementById('listItem001102').className='listOn';" onmouseout="document.getElementById('listItem001102').className='';"><a href="/00110/cosmetology/aesthetics/colleges">Aesthetics Colleges</a></li>
+					<li id="listItem001103" onmouseover="document.getElementById('listItem001103').className='listOn';" onmouseout="document.getElementById('listItem001103').className='';"><a href="/00110/cosmetology/aesthetics-skincare/colleges">Aesthetics Skincare Colleges</a></li>
+					<li id="listItem001104" onmouseover="document.getElementById('listItem001104').className='listOn';" onmouseout="document.getElementById('listItem001104').className='';"><a href="/00110/cosmetology/barber/colleges">Barber Colleges</a></li>
+					<li id="listItem001105" onmouseover="document.getElementById('listItem001105').className='listOn';" onmouseout="document.getElementById('listItem001105').className='';"><a href="/00110/cosmetology/barber-or-cosmetology-refresher/colleges">Barber Or Cosmetology Refresher Colleges</a></li>
+					<li id="listItem001106" onmouseover="document.getElementById('listItem001106').className='listOn';" onmouseout="document.getElementById('listItem001106').className='';"><a href="/00110/cosmetology/barber-styling/colleges">Barber Styling Colleges</a></li>
+					<li id="listItem001107" onmouseover="document.getElementById('listItem001107').className='listOn';" onmouseout="document.getElementById('listItem001107').className='';"><a href="/00110/cosmetology/barber-styling,cosmetology-program/colleges">Barber Styling,Cosmetology Program Colleges</a></li>
+					<li id="listItem001108" onmouseover="document.getElementById('listItem001108').className='listOn';" onmouseout="document.getElementById('listItem001108').className='';"><a href="/00110/cosmetology/barbering/colleges">Barbering Colleges</a></li>
+					<li id="listItem001109" onmouseover="document.getElementById('listItem001109').className='listOn';" onmouseout="document.getElementById('listItem001109').className='';"><a href="/00110/cosmetology/barbering,-barber/colleges">Barbering, Barber Colleges</a></li>
+					<li id="listItem0011010" onmouseover="document.getElementById('listItem0011010').className='listOn';" onmouseout="document.getElementById('listItem0011010').className='';"><a href="/00110/cosmetology/clinical-skin-care/colleges">Clinical Skin Care Colleges</a></li>
+					<li id="listItem0011011" onmouseover="document.getElementById('listItem0011011').className='listOn';" onmouseout="document.getElementById('listItem0011011').className='';"><a href="/00110/cosmetology/cosmetologist/colleges">Cosmetologist Colleges</a></li>
+					<li id="listItem0011012" onmouseover="document.getElementById('listItem0011012').className='listOn';" onmouseout="document.getElementById('listItem0011012').className='';"><a href="/00110/cosmetology/cosmetologist,operator/colleges">Cosmetologist,Operator Colleges</a></li>
+					<li id="listItem0011013" onmouseover="document.getElementById('listItem0011013').className='listOn';" onmouseout="document.getElementById('listItem0011013').className='';"><a href="/00110/cosmetology/cosmetology/colleges">Cosmetology Colleges</a></li>
+					<li id="listItem0011014" onmouseover="document.getElementById('listItem0011014').className='listOn';" onmouseout="document.getElementById('listItem0011014').className='';"><a href="/00110/cosmetology/cosmetology-(diploma)/colleges">Cosmetology (Diploma) Colleges</a></li>
+					<li id="listItem0011015" onmouseover="document.getElementById('listItem0011015').className='listOn';" onmouseout="document.getElementById('listItem0011015').className='';"><a href="/00110/cosmetology/cosmetology-and-related-personal-grooming-arts/colleges">Cosmetology And Related Personal Grooming Arts Colleges</a></li>
+					<li id="listItem0011016" onmouseover="document.getElementById('listItem0011016').className='listOn';" onmouseout="document.getElementById('listItem0011016').className='';"><a href="/00110/cosmetology/cosmetology-arts-and-sciences/colleges">Cosmetology Arts And Sciences Colleges</a></li>
+					<li id="listItem0011017" onmouseover="document.getElementById('listItem0011017').className='listOn';" onmouseout="document.getElementById('listItem0011017').className='';"><a href="/00110/cosmetology/cosmetology-business/colleges">Cosmetology Business Colleges</a></li>
+					<li id="listItem0011018" onmouseover="document.getElementById('listItem0011018').className='listOn';" onmouseout="document.getElementById('listItem0011018').className='';"><a href="/00110/cosmetology/cosmetology-diploma/colleges">Cosmetology Diploma Colleges</a></li>
+					<li id="listItem0011019" onmouseover="document.getElementById('listItem0011019').className='listOn';" onmouseout="document.getElementById('listItem0011019').className='';"><a href="/00110/cosmetology/cosmetology-education-and-salon-management/colleges">Cosmetology Education And Salon Management Colleges</a></li>
+					<li id="listItem0011020" onmouseover="document.getElementById('listItem0011020').className='listOn';" onmouseout="document.getElementById('listItem0011020').className='';"><a href="/00110/cosmetology/cosmetology-instructor/colleges">Cosmetology Instructor Colleges</a></li>
+					<li id="listItem0011021" onmouseover="document.getElementById('listItem0011021').className='listOn';" onmouseout="document.getElementById('listItem0011021').className='';"><a href="/00110/cosmetology/cosmetology-management/colleges">Cosmetology Management Colleges</a></li>
+					<li id="listItem0011022" onmouseover="document.getElementById('listItem0011022').className='listOn';" onmouseout="document.getElementById('listItem0011022').className='';"><a href="/00110/cosmetology/cosmetology-program/colleges">Cosmetology Program Colleges</a></li>
+					<li id="listItem0011023" onmouseover="document.getElementById('listItem0011023').className='listOn';" onmouseout="document.getElementById('listItem0011023').className='';"><a href="/00110/cosmetology/cosmetology-refresher/colleges">Cosmetology Refresher Colleges</a></li>
+					<li id="listItem0011024" onmouseover="document.getElementById('listItem0011024').className='listOn';" onmouseout="document.getElementById('listItem0011024').className='';"><a href="/00110/cosmetology/cosmetology-salon-management-(associate-of-applied-science)/colleges">Cosmetology Salon Management (Associate Of Applied Science) Colleges</a></li>
+					<li id="listItem0011025" onmouseover="document.getElementById('listItem0011025').className='listOn';" onmouseout="document.getElementById('listItem0011025').className='';"><a href="/00110/cosmetology/cosmetology-salon-management-applied-science/colleges">Cosmetology Salon Management Applied Science Colleges</a></li>
+					<li id="listItem0011026" onmouseover="document.getElementById('listItem0011026').className='listOn';" onmouseout="document.getElementById('listItem0011026').className='';"><a href="/00110/cosmetology/cosmetology-student-instructor/colleges">Cosmetology Student Instructor Colleges</a></li>
+					<li id="listItem0011027" onmouseover="document.getElementById('listItem0011027').className='listOn';" onmouseout="document.getElementById('listItem0011027').className='';"><a href="/00110/cosmetology/cosmetology-teacher-training/colleges">Cosmetology Teacher Training Colleges</a></li>
+					<li id="listItem0011028" onmouseover="document.getElementById('listItem0011028').className='listOn';" onmouseout="document.getElementById('listItem0011028').className='';"><a href="/00110/cosmetology/cosmetology,-barber,-styling,-and-nail-instructor/colleges">Cosmetology, Barber, Styling, And Nail Instructor Colleges</a></li>
+					<li id="listItem0011029" onmouseover="document.getElementById('listItem0011029').className='listOn';" onmouseout="document.getElementById('listItem0011029').className='';"><a href="/00110/cosmetology/cosmetology,-cosmetologist/colleges">Cosmetology, Cosmetologist Colleges</a></li>
+					<li id="listItem0011030" onmouseover="document.getElementById('listItem0011030').className='listOn';" onmouseout="document.getElementById('listItem0011030').className='';"><a href="/00110/cosmetology/cosmetology,operator/colleges">Cosmetology,Operator Colleges</a></li>
+					<li id="listItem0011031" onmouseover="document.getElementById('listItem0011031').className='listOn';" onmouseout="document.getElementById('listItem0011031').className='';"><a href="/00110/cosmetology/esthetician/colleges">Esthetician Colleges</a></li>
+					<li id="listItem0011032" onmouseover="document.getElementById('listItem0011032').className='listOn';" onmouseout="document.getElementById('listItem0011032').className='';"><a href="/00110/cosmetology/esthetics/colleges">Esthetics Colleges</a></li>
+					<li id="listItem0011033" onmouseover="document.getElementById('listItem0011033').className='listOn';" onmouseout="document.getElementById('listItem0011033').className='';"><a href="/00110/cosmetology/esthetics-(skin-care)/colleges">Esthetics (skin Care) Colleges</a></li>
+					<li id="listItem0011034" onmouseover="document.getElementById('listItem0011034').className='listOn';" onmouseout="document.getElementById('listItem0011034').className='';"><a href="/00110/cosmetology/esthetics-skin-care/colleges">Esthetics Skin Care Colleges</a></li>
+					<li id="listItem0011035" onmouseover="document.getElementById('listItem0011035').className='listOn';" onmouseout="document.getElementById('listItem0011035').className='';"><a href="/00110/cosmetology/esthetics-technology/colleges">Esthetics Technology Colleges</a></li>
+					<li id="listItem0011036" onmouseover="document.getElementById('listItem0011036').className='listOn';" onmouseout="document.getElementById('listItem0011036').className='';"><a href="/00110/cosmetology/facial-specialist/colleges">Facial Specialist Colleges</a></li>
+					<li id="listItem0011037" onmouseover="document.getElementById('listItem0011037').className='listOn';" onmouseout="document.getElementById('listItem0011037').className='';"><a href="/00110/cosmetology/facial-specialist-program/colleges">Facial Specialist Program Colleges</a></li>
+					<li id="listItem0011038" onmouseover="document.getElementById('listItem0011038').className='listOn';" onmouseout="document.getElementById('listItem0011038').className='';"><a href="/00110/cosmetology/facial-technology/colleges">Facial Technology Colleges</a></li>
+					<li id="listItem0011039" onmouseover="document.getElementById('listItem0011039').className='listOn';" onmouseout="document.getElementById('listItem0011039').className='';"><a href="/00110/cosmetology/facial-treatment-specialist,-facialist/colleges">Facial Treatment Specialist, Facialist Colleges</a></li>
+					<li id="listItem0011040" onmouseover="document.getElementById('listItem0011040').className='listOn';" onmouseout="document.getElementById('listItem0011040').className='';"><a href="/00110/cosmetology/facialist/colleges">Facialist Colleges</a></li>
+					<li id="listItem0011041" onmouseover="document.getElementById('listItem0011041').className='listOn';" onmouseout="document.getElementById('listItem0011041').className='';"><a href="/00110/cosmetology/fancial-services/colleges">Fancial Services Colleges</a></li>
+					<li id="listItem0011042" onmouseover="document.getElementById('listItem0011042').className='listOn';" onmouseout="document.getElementById('listItem0011042').className='';"><a href="/00110/cosmetology/full-facial-&-nail-spa-specialist/colleges">Full Facial & Nail Spa Specialist Colleges</a></li>
+					<li id="listItem0011043" onmouseover="document.getElementById('listItem0011043').className='listOn';" onmouseout="document.getElementById('listItem0011043').className='';"><a href="/00110/cosmetology/hair-design/colleges">Hair Design Colleges</a></li>
+					<li id="listItem0011044" onmouseover="document.getElementById('listItem0011044').className='listOn';" onmouseout="document.getElementById('listItem0011044').className='';"><a href="/00110/cosmetology/hair-styling,-stylist-and-hair-design/colleges">Hair Styling, Stylist And Hair Design Colleges</a></li>
+					<li id="listItem0011045" onmouseover="document.getElementById('listItem0011045').className='listOn';" onmouseout="document.getElementById('listItem0011045').className='';"><a href="/00110/cosmetology/hairdressing/colleges">Hairdressing Colleges</a></li>
+					<li id="listItem0011046" onmouseover="document.getElementById('listItem0011046').className='listOn';" onmouseout="document.getElementById('listItem0011046').className='';"><a href="/00110/cosmetology/make-up-artist,-specialist/colleges">Make-Up Artist, Specialist Colleges</a></li>
+					<li id="listItem0011047" onmouseover="document.getElementById('listItem0011047').className='listOn';" onmouseout="document.getElementById('listItem0011047').className='';"><a href="/00110/cosmetology/manicuring/colleges">Manicuring Colleges</a></li>
+					<li id="listItem0011048" onmouseover="document.getElementById('listItem0011048').className='listOn';" onmouseout="document.getElementById('listItem0011048').className='';"><a href="/00110/cosmetology/manicuring-&-sculptured-nails/colleges">Manicuring & Sculptured Nails Colleges</a></li>
+					<li id="listItem0011049" onmouseover="document.getElementById('listItem0011049').className='listOn';" onmouseout="document.getElementById('listItem0011049').className='';"><a href="/00110/cosmetology/manicurist/colleges">Manicurist Colleges</a></li>
+					<li id="listItem0011050" onmouseover="document.getElementById('listItem0011050').className='listOn';" onmouseout="document.getElementById('listItem0011050').className='';"><a href="/00110/cosmetology/nail-and-facial-specialist/colleges">Nail And Facial Specialist Colleges</a></li>
+					<li id="listItem0011051" onmouseover="document.getElementById('listItem0011051').className='listOn';" onmouseout="document.getElementById('listItem0011051').className='';"><a href="/00110/cosmetology/nail-technician/colleges">Nail Technician Colleges</a></li>
+					<li id="listItem0011052" onmouseover="document.getElementById('listItem0011052').className='listOn';" onmouseout="document.getElementById('listItem0011052').className='';"><a href="/00110/cosmetology/nail-technician,-specialist-and-manicurist/colleges">Nail Technician, Specialist And Manicurist Colleges</a></li>
+					<li id="listItem0011053" onmouseover="document.getElementById('listItem0011053').className='listOn';" onmouseout="document.getElementById('listItem0011053').className='';"><a href="/00110/cosmetology/nail-technology/colleges">Nail Technology Colleges</a></li>
+					<li id="listItem0011054" onmouseover="document.getElementById('listItem0011054').className='listOn';" onmouseout="document.getElementById('listItem0011054').className='';"><a href="/00110/cosmetology/nail-technology-program/colleges">Nail Technology Program Colleges</a></li>
+					<li id="listItem0011055" onmouseover="document.getElementById('listItem0011055').className='listOn';" onmouseout="document.getElementById('listItem0011055').className='';"><a href="/00110/cosmetology/nail-technology,manicurist/colleges">Nail Technology,Manicurist Colleges</a></li>
+					<li id="listItem0011056" onmouseover="document.getElementById('listItem0011056').className='listOn';" onmouseout="document.getElementById('listItem0011056').className='';"><a href="/00110/cosmetology/nail-technology/manicurist/colleges">Nail Technology/Manicurist Colleges</a></li>
+					<li id="listItem0011057" onmouseover="document.getElementById('listItem0011057').className='listOn';" onmouseout="document.getElementById('listItem0011057').className='';"><a href="/00110/cosmetology/operator,cosmetologist/colleges">Operator,Cosmetologist Colleges</a></li>
+					<li id="listItem0011058" onmouseover="document.getElementById('listItem0011058').className='listOn';" onmouseout="document.getElementById('listItem0011058').className='';"><a href="/00110/cosmetology/permanent-cosmetics,-makeup-and-tattooing/colleges">Permanent Cosmetics, Makeup And Tattooing Colleges</a></li>
+					<li id="listItem0011059" onmouseover="document.getElementById('listItem0011059').className='listOn';" onmouseout="document.getElementById('listItem0011059').className='';"><a href="/00110/cosmetology/permanent-make-up,dermalogy/colleges">Permanent Make-Up,Dermalogy Colleges</a></li>
+					<li id="listItem0011060" onmouseover="document.getElementById('listItem0011060').className='listOn';" onmouseout="document.getElementById('listItem0011060').className='';"><a href="/00110/cosmetology/professional-licensing---aromatherapy-and-spa-specialist/colleges">Professional Licensing - Aromatherapy And Spa Specialist Colleges</a></li>
+					<li id="listItem0011061" onmouseover="document.getElementById('listItem0011061').className='listOn';" onmouseout="document.getElementById('listItem0011061').className='';"><a href="/00110/cosmetology/professional-licensing,aromatherapy-and-spa-specialist/colleges">Professional Licensing,Aromatherapy And Spa Specialist Colleges</a></li>
+					<li id="listItem0011062" onmouseover="document.getElementById('listItem0011062').className='listOn';" onmouseout="document.getElementById('listItem0011062').className='';"><a href="/00110/cosmetology/salon,-beauty-salon-management,-manager/colleges">Salon, Beauty Salon Management, Manager Colleges</a></li>
+					<li id="listItem0011063" onmouseover="document.getElementById('listItem0011063').className='listOn';" onmouseout="document.getElementById('listItem0011063').className='';"><a href="/00110/cosmetology/skin-care/colleges">Skin Care Colleges</a></li>
+					<li id="listItem0011064" onmouseover="document.getElementById('listItem0011064').className='listOn';" onmouseout="document.getElementById('listItem0011064').className='';"><a href="/00110/cosmetology/skin-care-specialist/colleges">Skin Care Specialist Colleges</a></li>
+					<li id="listItem0011065" onmouseover="document.getElementById('listItem0011065').className='listOn';" onmouseout="document.getElementById('listItem0011065').className='';"><a href="/00110/cosmetology/skin-care-technology/colleges">Skin Care Technology Colleges</a></li>
+					<li id="listItem0011066" onmouseover="document.getElementById('listItem0011066').className='listOn';" onmouseout="document.getElementById('listItem0011066').className='';"><a href="/00110/cosmetology/spa-body-technician/colleges">Spa Body Technician Colleges</a></li>
+					<li id="listItem0011067" onmouseover="document.getElementById('listItem0011067').className='listOn';" onmouseout="document.getElementById('listItem0011067').className='';"><a href="/00110/cosmetology/spa-management/colleges">Spa Management Colleges</a></li>
+					<li id="listItem0011068" onmouseover="document.getElementById('listItem0011068').className='listOn';" onmouseout="document.getElementById('listItem0011068').className='';"><a href="/00110/cosmetology/spa-therapy/colleges">Spa Therapy Colleges</a></li>
+				</ul>
+				</div>
+			</div>
+			</div>
+ 		</div>
+	<div id="footer">
+	Copyright &copy 2009 <a href="/">Ed-Reference.us</a>. All Rights Reserved.
+	</div>
+		</div>
+		</div>
+<!-- Start of StatCounter Code -->
+<script type="text/javascript" language="javascript">
+var sc_project=2604016;
+var sc_invisible=0;
+var sc_partition=25;
+var sc_security="4b91cb87";
+var sc_remove_link=1;
+</script>
+
+<script type="text/javascript" language="javascript" src=" http://www.statcounter.com/counter/counter.js"></script><noscript><img  src=" http://c26.statcounter.com/counter.php?sc_project=2604016&java=0&security=4b91cb87&invisible=0" alt="blog counter" border="0"> </noscript>
+<!-- End of StatCounter Code -->
+</body>
+</html>
+
+
+

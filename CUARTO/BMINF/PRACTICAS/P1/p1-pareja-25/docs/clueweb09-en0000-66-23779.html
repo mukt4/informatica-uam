@@ -1,0 +1,547 @@
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Content-Encoding: gzip
+Liferay-Portal: Liferay Enterprise Portal 4.4.1 (Spurgeon / Build 4401 / February 7, 2008)
+Server: Apache-Coyote/1.1
+Date: Thu, 08 Jan 2009 02:35:37 GMT
+Connection: close
+Set-Cookie: COOKIE_SUPPORT=true; Expires=Fri, 08-Jan-2010 02:35:37 GMT; Path=/
+Content-Length: 38383
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html dir="ltr"><head><title>Getting Involved</title><meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+<link rel="Shortcut Icon" href="/UNLTHEME/images/liferay.ico" />
+<link href="/c/portal/css_cached?themeId=UNLTHEME_WAR_UNLTHEME&amp;colorSchemeId=01&amp;t=1229990424044" type="text/css" rel="stylesheet" />
+<style type="text/css">
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var themeDisplay = {
+getCompanyId: function() {
+return "1612";
+},
+getDoAsUserIdEncoded: function() {
+return "";
+},
+getPlid: function() {
+return "2034";
+},
+getGroupId: function() {
+return "1809";
+},
+getUserId: function() {
+return "1614";
+},
+getLayoutId: function() {
+return "110";
+},
+isPrivateLayout: function() {
+return "false";
+},
+getParentLayoutId: function() {
+return "102";
+},
+getLanguageId: function() {
+return "en_US";
+},
+isFreeformLayout: function() {
+return false;
+},
+isSignedIn: function() {
+return false;
+},
+isStateExclusive: function() {
+return false;
+},
+isStateMaximized: function() {
+return false;
+},
+isStatePopUp: function() {
+return false;
+},
+getPathContext: function() {
+return "";
+},
+getPathMain: function() {
+return "/c";
+},
+getPathThemeImages: function() {
+return "/UNLTHEME/images";
+},
+getPathThemeRoot: function() {
+return "/UNLTHEME/";
+},
+getURLHome: function() {
+return "http://casnr.unl.edu";
+},
+getSessionId: function() {
+return "62FF73A069CD830489E299EF3013DF83";
+}
+};
+var mainPath = themeDisplay.getPathMain();
+var propsUtil = {
+SESSION_ENABLE_PERSISTENT_COOKIES: function() {
+return true;
+}
+};
+//]]>
+</script>
+<script src="/html/js/everything_packed.js?bn=4401" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var loadingAnimation = new Image();
+loadingAnimation.src =  "/UNLTHEME/images/progress_bar/loading_animation.gif";
+function addPortletHTML(url, placeHolder, returnPortlet) {
+var portletBoundary;
+var addPortletReturn = function(html) {
+var container = placeHolder.parentNode;
+var addDiv = document.createElement("div");
+addDiv.style.display = "none";
+addDiv.innerHTML = html;
+var portletBound = jQuery(".portlet-boundary:first", addDiv).get(0);
+portletBound.parentNode.removeChild(portletBound);
+var portletId = portletBound.id;
+portletId = portletId.replace(/^p_p_id_/,"");
+portletId = portletId.replace(/_$/,"");
+portletBound.portletId = portletId;
+Liferay.Portlet.flagAjax(portletId);
+container.replaceChild(portletBound, placeHolder);
+Liferay.Util.evalScripts(addDiv);
+if (!jQuery.browser.firefox) {
+Liferay.Util.evalScripts(portletBound);
+}
+if (jQuery.browser.firefox) {
+setTimeout("Liferay.Portlet.process(\"" + portletId + "\")", 0);
+}
+else {
+Liferay.Portlet.process(portletId);
+}
+Liferay.Util.addInputType(portletBound.id);
+Liferay.Util.addInputFocus(portletBound.id);
+if (window.location.hash) {
+window.location.hash = "p_" + portletId;
+}
+portletBoundary = portletBound;
+return portletId;
+};
+var complete = function(xHR) {
+addPortletReturn(xHR.responseText);
+}
+if (!returnPortlet) {
+AjaxUtil.request(url, {
+onComplete: complete
+});
+}
+else {
+jQuery.ajax(
+{
+url: url,
+complete: function(xHR) {
+complete(xHR);
+},
+async: false
+}
+);
+return portletBoundary;
+}
+}
+function closePortlet(plid, portletId, doAsUserId, skipConfirm) {
+if (skipConfirm || confirm('\u0041\u0072\u0065\u0020\u0079\u006f\u0075\u0020\u0073\u0075\u0072\u0065\u0020\u0079\u006f\u0075\u0020\u0077\u0061\u006e\u0074\u0020\u0074\u006f\u0020\u0072\u0065\u006d\u006f\u0076\u0065\u0020\u0074\u0068\u0069\u0073\u0020\u0063\u006f\u006d\u0070\u006f\u006e\u0065\u006e\u0074\u003f')) {
+var curItem = document.getElementById("p_p_id_" + portletId + "_");
+var parent = curItem.parentNode;
+parent.removeChild(curItem);
+if (curItem = document.getElementById(portletId)) {
+parent = curItem.parentNode;
+parent.removeChild(curItem);
+}
+if (LayoutConfiguration) {
+LayoutConfiguration.initialized = false;
+}
+if (themeDisplay.layoutMaximized) {
+self.location = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&doAsUserId=" + doAsUserId + "&cmd=delete&referer=" + encodeURIComponent("/c/portal/layout?p_l_id=" + plid + "&doAsUserId=" + doAsUserId) + "&refresh=1";
+}
+else {
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&doAsUserId=" + doAsUserId + "&cmd=delete");
+}
+Liferay.Portlet.remove(portletId);
+Liferay.Publisher.register('closePortlet');
+Liferay.Publisher.deliver('closePortlet', {plid: plid, portletId: portletId});
+}
+else {
+self.focus();
+}
+}
+function getRefreshPortletList() {
+var refreshPortletList = { _EXT_NEWSARTICLES:true,_39:true,_99:true };
+return refreshPortletList;
+}
+function minimizePortlet(plid, portletId, restore, doAsUserId) {
+if (themeDisplay.layoutMaximized) {
+self.location = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_restore=" + restore + "&doAsUserId=" + doAsUserId + "&cmd=minimize&referer=" + encodeURIComponent("/c/portal/layout?p_l_id=" + plid + "&doAsUserId=" + doAsUserId) + "&refresh=1";
+}
+else {
+var portlet = jQuery('#p_p_id_' + portletId + '_');
+var portletContentContainer = portlet.find('.portlet-content-container');
+var buttonsEl = jQuery("#p_p_body_" + portletId + "_min_buttons");
+var html = buttonsEl.html();
+if (restore) {
+portletContentContainer.BlindDown('fast');
+html = html.replace(", true", ", false");
+html = html.replace("restore.png", "minimize.png");
+html = html.replace("Restore", "Minimize");
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_restore=" + restore + "&doAsUserId=" + doAsUserId + "&cmd=minimize");
+}
+else {
+portletContentContainer.BlindUp('fast');
+html = html.replace(", false", ", true");
+html = html.replace("minimize.png", "restore.png");
+html = html.replace("Minimize", "Restore");
+loadPage("/c/portal/update_layout", "p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_restore=" + restore + "&doAsUserId=" + doAsUserId + "&cmd=minimize");
+}
+buttonsEl.html(html);
+}
+}
+function addPortlet(plid, portletId, doAsUserId, returnPortlet) {
+var refreshPortletList = getRefreshPortletList();
+if (refreshPortletList["_" + portletId]) {
+self.location = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&doAsUserId=" + doAsUserId + "&cmd=add&referer=%2FCurrentStudents%2FGettingInvolved&refresh=1";
+}
+else {
+var loadingDiv = document.createElement("div");
+var container = document.getElementById("layout-column_column-1");
+if (container == null) {
+return;
+}
+loadingDiv.className = "loading-animation";
+var jContainer = jQuery(container);
+var firstPortlet = jContainer.find('.portlet-boundary:first');
+var hasStaticPortlet = (firstPortlet.length && firstPortlet[0].isStatic);
+if (!hasStaticPortlet) {
+jContainer.prepend(loadingDiv);
+}
+else {
+firstPortlet.after(loadingDiv);
+}
+var queryString = "/c/portal/update_layout?p_l_id=" + plid + "&p_p_id=" + portletId + "&p_p_col_id=column-1&p_p_col_pos=0&doAsUserId=" + doAsUserId + "&cmd=add&currentURL=%2FCurrentStudents%2FGettingInvolved";
+return addPortletHTML(queryString, loadingDiv, returnPortlet);
+}
+}
+function showLayoutTemplates() {
+var message = Liferay.Popup(
+{
+width: 700,
+modal: true,
+title: "\u004c\u0061\u0079\u006f\u0075\u0074"
+});
+url = "/c/layout_configuration/templates?p_l_id=2034&doAsUserId=&redirect=%2FCurrentStudents%2FGettingInvolved";
+AjaxUtil.update(url, message, {onComplete: function(){Liferay.Popup.center()}});
+}
+jQuery(document).ready(
+function() {
+Liferay.Util.addInputType();
+Liferay.Util.addInputFocus();
+}
+);
+Liferay.Portlet.ready(
+function(portletId, jQueryObj) {
+Liferay.Util.addInputType(portletId, jQueryObj);
+new Liferay.Menu(
+{
+button: '.lfr-actions',
+context: jQueryObj[0],
+trigger: '.lfr-trigger'
+}
+);
+}
+);
+Liferay.Portlet.list = {"56_INSTANCE_qXYJ":1,"56_INSTANCE_Y86b":1};
+jQuery(document).ready(
+function() {
+new Liferay.Menu(
+{
+trigger: '.lfr-trigger',
+button: '.lfr-actions'
+}
+);
+Liferay.Dock.init();
+Liferay.Notice.prototype.setClosing();
+}
+);
+//]]>
+</script>
+<link href="/UNLTHEME/css/everything_packed.css?companyId=1612&amp;languageId=en_US&amp;themeId=UNLTHEME_WAR_UNLTHEME&amp;colorSchemeId=01&amp;t=1229990424044" rel="stylesheet" type="text/css" /><script src="/UNLTHEME/javascript/javascript.js?t=1229990424044" type="text/javascript"></script><script type="text/javascript"></script><style type="text/css">#banner .logo {padding: 0.52em 0.6em 0.53em;}#banner .logo a {background: url(/image/company_logo?img_id=197&t=1229990426091) no-repeat;display: block;font-size: 0;height: 66px;text-indent: -9999em;width: 66px;}</style><link rel="stylesheet" type="text/css" media="screen" href="/ucomm/templatedependents/templatecss/layouts/main.css" /><link rel="stylesheet" type="text/css" media="print" href="/ucomm/templatedependents/templatecss/layouts/print.css"/><script type="text/javascript" src="/ucomm/templatedependents/templatesharedcode/scripts/all_compressed.js"></script><!--[if IE 6]>
+<link rel="stylesheet" type="text/css" media="screen" href="/ucomm/templatedependents/templatecss/layouts/ieonly.css" />
+<script language="javascript" src="/ucomm/templatedependents/templatesharedcode/scripts/sleight.js"></script>
+<![endif]-->
+<!--[if gte IE 7]>
+<link rel="stylesheet" type="text/css" media="screen" href="/ucomm/templatedependents/templatecss/layouts/ie7.css" />
+<![endif]--><!-- Membership and regular participation in the UNL Web Developers Network is required to use the UNL site template set. Visit the Web Developer Network site at www.unl.edu/webdevnet, click on 'Web Talk' and go to the discussion board through the link provided. Once at the bulletin board, click the 'Register' link at the top of the page and submit your registration. All UNL template code is the property of the UNL Web Developer Network. The code seen in a source code view is not, and may not be used as, a template. You may not use this code, a reverse-engineered version of this code, or its associated visual presentation in whole or in part to create a derivative work. The 'include' reference to this message may not be removed from any pages based on the UNL site template. Glossary items referenced herein are maintained on the Web Developer Network site at http://www.unl.edu/webdevnet/.--><meta name="author" content="University of Nebraska-Lincoln | Web Developer Network" />
+<link rel="shortcut icon" href="/ucomm/templatedependents/templatesharedcode/includes/metanfavico/favicon.ico" />
+</head><body id="fixed">
+<p class="skipnav"> <a class="skipnav" href="#maincontent">Skip Navigation</a> </p><script type="text/javascript"></script><div id="header">
+<div class="clear"> <a href="http://www.unl.edu/" title="UNL website"><img src="/ucomm/templatedependents/templatecss/images/logo.png" alt="UNL graphic identifier" id="logo" /></a>
+<ul>
+<li><a href="http://www.unl.edu/ucomm/visitor/" title="Visitor">Visitor</a></li>
+<li><a href="http://www.unl.edu/ucomm/prospective/" title="Prospective Student">Prospective Student</a></li>
+<li><a href="http://www.unl.edu/ucomm/current/" title="Current Student">Current Student</a></li>
+<li><a href="http://www.unl.edu/ucomm/facstaff/" title="Faculty &amp; Staff">Faculty &amp; Staff</a></li>
+<li><a href="http://www.unl.edu/ucomm/business/" title="Business, Industry &amp; Government">Business, Industry &amp; Government</a></li>
+</ul>
+<div id="unlsearch">
+<form id="SearchBarForm" onsubmit="return executeQuery( document.getElementById('SearchBarForm'), 'NewSearch', false )" action="http://www.google.com/u/UNL1?sa=Google+Search&amp;q=" method="get">
+<fieldset>
+<label for="whichDatabase">Search: </label>
+<input accesskey="f" id="q" alt="Search string" name="q" size="14" maxlength="256" type="text" />
+<select title="Choose which area to search" id="whichDatabase" name="whichDatabase">
+<option value="http://casnr.unl.edu/gresults?cx=008328911617872620746:slklumm8cou&cof=FORID:11&q=">CASNR</option>
+<option value="http://www.google.com/u/UNL1?sa=Google+Search&amp;q=">UNL Web</option>
+<option value="http://ucommxsrv1.unl.edu/peoplefinder/index.php?q=">UNL People</option>
+<option value="http://www.google.com/search?hl=en&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=">Worldwide</option>
+</select>
+<a href="http://www.google.com/u/UNL1?sa=Google+Search&amp;q=" class="go" accesskey="g" onclick="return executeQuery( document.forms.SearchBarForm, 'NewSearch', false )"><span>Go</span></a>
+</fieldset>
+</form>
+</div>
+<div id="quicklinks">
+<select title="UNL Quick Links" id="quicklinkdd" name="quicklinkdd"> 
+<option>UNL Quick Links</option>
+<optgroup label="UNL Selected Resources">
+<option value="http://www.unl.edu/ucomm/aboutunl/">About UNL</option>
+<option value="http://www.unl.edu/regrec/calendar/calendar_main.shtml">Academic Calendar</option>
+<option value="http://www.unl.edu/ucomm/admin/">Administrative Units</option>
+<option value="http://admissions.unl.edu/apply/">Apply for Admission</option>
+<option value="http://www.unl.edu/ucomm/depts/">Colleges and Departments</option>
+<option value="http://www.nufoundation.org/Shop/showDivision.sp?cat=67">Gifts to Your University</option>
+<option value="http://www.unl.edu/ucomm/news/">News</option>
+<option value="http://www.unl.edu/ucomm/chancllr/">Office of the Chancellor</option>
+<option value="http://stuafs.unl.edu/assoc.html">Parents Association</option>
+<option value="http://irp.unl.edu/ir/">UNL Fact Book</option>
+<option value="http://bf.unl.edu/NUPoliciesProceduresInfoLinks.shtml">UNL Policies</option>
+<option value="http://www.unl.edu/ucomm/unltoday/">UNL Today</option>
+</optgroup>
+<optgroup label="Visitor">
+<option value="javascript:makeRemoteQTVR()">Campus Tour</option>
+<option value="http://www.unl.edu/unlpub/tour/unlmaps/">Campus Maps</option>
+<option value="http://events.unl.edu/">UNL Events</option>
+<option value="http://www.unl.edu/ucomm/visitor/">more ...</option>
+</optgroup>
+<optgroup label="Prospective Student">
+<option value="http://admissions.unl.edu/">Undergraduate Admissions</option>
+<option value="http://www.unl.edu/gradstudies/">Graduate Studies</option>
+<option value="http://extended.unl.edu/">Extended Education</option>
+<option value="http://law.unl.edu/">College of Law</option>
+<option value="http://www.unl.edu/ucomm/prospective/">more ...</option>
+</optgroup>
+<optgroup label="Current Student">
+<option value="http://wam.unl.edu/">WAM!</option>
+<option value="http://my.unl.edu/">MyUNL</option>
+<option value="http://unlsched.unl.edu/nusched/index.jsp">Schedule of Classes</option>
+<option value="http://iris.unl.edu/">Libraries</option>
+<option value="http://www.unl.edu/involved/">Student Involvement</option>
+<option value="http://www.unl.edu/ucomm/current/">more ...</option>
+</optgroup>
+<optgroup label="Faculty &amp; Staff">
+<option value="http://ess.nebraska.edu/">ESS</option>
+<option value="http://hr.unl.edu/">Human Resources</option>
+<option value="http://ucommxsrv1.unl.edu/scarlet/">The Scarlet</option>
+<option value="http://www.unl.edu/asenate/welcome.htm">Academic Senate</option>
+<option value="http://notes.unl.edu/">Notes</option>
+<option value="http://www.unl.edu/ucomm/facstaff/">more ...</option>
+</optgroup>
+<optgroup label="Business Industry &amp; Government">
+<option value="http://www.unl.edu/research/">Office of Research</option>
+<option value="http://www.unl.edu/research/td/td.shtml">Technology Development</option>
+<option value="http://www.unl.edu/ucomm/business/rental.shtml">Rental Space at UNL</option>
+<option value="http://www.unl.edu/ucomm/business/">more ...</option>
+</optgroup>
+<optgroup label="Affiliates">
+<option value="http://www.huskers.com/">Huskers</option>
+<option value="http://www.huskeralum.com/">Alumni</option>
+<option value="http://www.liedcenter.org/">Lied Center</option>
+<option value="http://www.netnebraska.org/television/">NET</option>
+<option value="http://theross.org/">Ross Theatre</option>
+<option value="http://www.sheldonartgallery.org/">Sheldon Gallery</option>
+<option value="http://www-museum.unl.edu/">State Museum</option>
+<option value="http://unp.unl.edu/">UofN Press</option>
+<option value="http://www.quiltstudy.org/">Quilt Study</option>
+<option value="http://www.nufoundation.org/">NU Foundation</option>
+<option value="http://www.nebraska.edu/">NU System</option>
+</optgroup>
+</select>
+<label for="quicklinkdd"><a class="go" href="javascript:MM_jumpMenu('parent',document.getElementById('quicklinkdd'),1)" title="Select a Quick Link and click GO"><span>Go</span></a></label>
+</div>
+</div>
+</div>
+<div id="red-header"><div class="clear"><h1>University of Nebraska&ndash;Lincoln</h1><div id="breadcrumbs"> <ul><li class="first"><a href="http://unl.edu">UNL</a></li><li><a href="http://casnr.unl.edu/Home">CASNR</a></li><li>
+<a href="http://casnr.unl.edu/currentstudents" >Current Students</a> &raquo; <a href="http://casnr.unl.edu/CurrentStudents/GettingInvolved" >Getting Involved</a>
+</li></ul> </div></div></div><div id="shelf">
+<div id="toolcontainer">
+<div id="sitetools" style="display:none">
+<div id="calendar" class="tool">
+<h3>UNL Calendar</h3>
+<div id="calcontent" class="toolResultsMask">
+<div id="upArrowCal" class="scrollButton">
+<img alt="Up arrow" src="/ucomm/templatedependents/templatecss/images/upArrow.gif" />
+</div>  
+<div id="downArrowCal" class="scrollButton">
+<img alt="Down arrow" src="/ucomm/templatedependents/templatecss/images/downArrow.gif"/>
+</div>
+<div id="dragButtonCal" class="scrollButton" style="top: 18px">
+<img alt="Scrollbar indicator" src="/ucomm/templatedependents/templatecss/images/dragButton.gif"/>
+</div>
+<div id="trackBarCal" class="scrollButton">
+<img alt="Scrollbar" src="/ucomm/templatedependents/templatecss/images/scrollTrack.gif"/>
+</div>
+<div id="calresults" class="toolResults">
+<img alt="Loading data from events.unl.edu..." src="/ucomm/templatedependents/templatecss/images/loadingContent.gif"/>
+</div>
+</div>
+</div>
+<div id="peoplefinder" class="tool">
+<h3>UNL Peoplefinder</h3>
+<div id="pfcontent" class="toolcontent">
+<form action="http://peoplefinder.unl.edu/" method="get" onsubmit="queuePFRequest(document.getElementById('pq').value,'pfresults'); return false;">
+<div>
+<label for="pq">Search People:</label>
+<input type="text" id="pq" name="pq" onkeyup="queuePFRequest(this.value,'pfresults');" />
+<img src="/ucomm/templatedependents/templatecss/images/transpixel.gif" id="pfprogress" alt="progress" /> </div>
+</form>
+<div id="pfResultsMask" class="toolResultsMask">
+<div id="upArrowPF" class="scrollButton">
+<img alt="Up arrow" src="/ucomm/templatedependents/templatecss/images/upArrow.gif"/>
+</div>  
+<div id="downArrowPF" class="scrollButton">
+<img alt="Down arrow" src="/ucomm/templatedependents/templatecss/images/downArrow.gif"/>
+</div>
+<div id="dragButtonPF" class="scrollButton" style="top: 18px">
+<img alt="Scrollbar indicator" src="/ucomm/templatedependents/templatecss/images/dragButton.gif"/>
+</div>
+<div id="trackBarPF" class="scrollButton">
+<img alt="Scrollbar" src="/ucomm/templatedependents/templatecss/images/scrollTrack.gif"/>
+</div>	
+<div id="pfresults" class="toolResults"></div>
+</div> 
+</div>
+</div>
+<div id="unlweather" class="tool">
+<h3>Lincoln Weather</h3>
+<div id="weathercontent" class="toolResultsMask">
+<div id="upArrowWeather" class="scrollButton">
+<img alt="Up arrow" src="/ucomm/templatedependents/templatecss/images/upArrow.gif" />
+</div>  
+<div id="downArrowWeather" class="scrollButton">
+<img alt="Down arrow" src="/ucomm/templatedependents/templatecss/images/downArrow.gif"/>
+</div>
+<div id="dragButtonWeather" class="scrollButton" style="top: 18px">
+<img alt="Scrollbar indicator" src="/ucomm/templatedependents/templatecss/images/dragButton.gif"/>
+</div>
+<div id="trackBarWeather" class="scrollButton">
+<img alt="Scrollbar" src="/ucomm/templatedependents/templatecss/images/scrollTrack.gif"/>
+</div>
+<div id="weatherresults" class="toolResults">
+<img alt="Loading data from NOAA..." src="/ucomm/templatedependents/templatecss/images/loadingContent.gif"/>
+</div>
+</div>
+</div>
+<div id="webcam" class="tool">
+<a href="#" onclick="return tabExpand();" id="closeshelf" title="close shelf">Close shelf</a>
+<h3>UNL Webcams</h3>
+<ul id="tablist">
+<li class="current" onclick="camtab(this)"><a href="http://www.unl.edu/unlpub/cam/cam1.jpg" onclick="updateWebcam(this); return false;">City Union</a></li>
+<li onclick="camtab(this)"><a href="http://www.unl.edu/unlpub/cam/cam2.jpg" onclick="updateWebcam(this); return false;">Rotunda</a></li>
+<li onclick="camtab(this)"><a href="http://www.unl.edu/unlpub/cam/cam3.jpg" onclick="updateWebcam(this); return false;">East Union</a></li>
+</ul>
+<div id="camcontent" class="toolcontent">
+<img id="webcamuri" alt="UNL Webcams" src="/ucomm/templatedependents/templatecss/images/transpixel.gif" />
+</div>
+</div> <!-- close unlwebcam -->
+</div> <!-- close sitetools -->
+</div> <!-- close toolcontainer -->
+<div id="tabhandle">
+<ul id="shelf_button" onclick="return tabExpand();">
+<li><a href="http://events.unl.edu/" id="cal" title="Calendar" accesskey="1"><abbr title="Calendar">cal</abbr></a></li>
+<li><a href="http://peoplefinder.unl.edu/" id="finder" title="Peoplefinder"><abbr title="Peoplefinder">people</abbr></a></li>
+<li><a href="http://forecast.weather.gov/MapClick.php?CityName=Lincoln&amp;state=NE&amp;site=OAX" id="weather" title="Weather">weather</a></li>
+<li><a href="http://www.unl.edu/unlpub/cam/cam1.shtml" id="cam" title="Camera"><abbr title="Camera">cam</abbr></a></li>
+</ul>
+</div>
+<!-- close tabhandle -->
+</div>
+<!-- close shelf --><div id="container"><div class="clear"><style>
+</style>
+<div id="title"> 
+<ul>
+</ul>
+<div id="titlegraphic">
+<h1>College of Agricultural Sciences and Natural Resources (CASNR)</h1>
+<h2>Explore the Science of Life</h2>
+</div>
+</div>
+<div id="navigation"><h4 id="sec_nav">Navigation</h4><div id="navlinks"><div id="local_search">
+ <form method="get" id="localSearchForm" action="http://casnr.unl.edu/gresults"> 
+  <div id="localSearchQuery">
+   <label class="overlabel" for="localSearchQuery-field" style="text-indent: 0px;">Search CASNR</label>
+   <input type="text" value="" name="q" id="localSearchQuery-field"/>
+   <input type="hidden" value="008328911617872620746:slklumm8cou" name="cx"/>
+   <input type="hidden" value="FORID:11" name="cof"/>
+  </div>
+  <div id="localSearch">
+    <input type="image" name="localSearch-Button" id="localSearch-Button" src="/ucomm/templatedependents/templatecss/images/transpixel.gif" alt="Search"/>
+  </div>
+ </form>
+</div>
+<ul><li><a href="http://casnr.unl.edu/Home" >CASNR Home</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents" >Prospective Students</a><ul><li><a href="http://casnr.unl.edu/ProspectiveStudents/AcademicPrograms" >Academic Programs</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/VistingCampus" >Visiting Campus</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/InformationRequest" >Information Request</a></li><li><a href="http://casnr.unl.edu/parents2" >Parents</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/PayingforCollege" >Paying for College</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/Housing" >Housing</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/TransferCreditEvaluation" >Transfer Credit Evaluation</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/GettingInvolved" >Getting Involved</a></li></ul></li><li><a href="http://casnr.unl.edu/teacherscounselors" >Teachers/Counselors</a><ul><li><a href="http://casnr.unl.edu/teacherscounselors/preparingstudents" >Preparing Students for College</a></li><li><a href="http://casnr.unl.edu/TeachersCounselors/JobsInternshipsCareers" >Jobs/Internships/Careers</a></li><li><a href="http://casnr.unl.edu/TeachersCounselors/PayingforCollege" >Paying for College</a></li><li><a href="http://casnr.unl.edu/TeachersCounselors/InformationRequest" >Information Request</a></li><li><a href="http://casnr.unl.edu/TeachersCounselors/ClassroomResources" >Classroom Resources</a></li></ul></li><li><a href="http://casnr.unl.edu/currentstudents" >Current Students</a><ul><li><a href="http://casnr.unl.edu/classof2012" >Class of 2012</a></li><li><a href="http://casnr.unl.edu/parents" >Parents</a></li><li><a href="http://casnr.unl.edu/CurrentStudents/CASNRCares" >CASNR Cares</a></li><li><a href="http://casnr.unl.edu/CurrentStudents/GettingInvolved" >Getting Involved</a></li><li><a href="http://casnr.unl.edu/CurrentStudents/JobsInternshipsCareers" >Jobs/Internships/Careers</a></li><li><a href="http://casnr.unl.edu/CurrentStudents/StudyAbroad" >Study Abroad</a></li><li><a href="http://casnr.unl.edu/CurrentStudents/Scholarships" >Scholarships</a></li><li><a href="http://casnr.unl.edu/forms" >Forms</a></li><li><a href="https://wam.unl.edu/wam/login.jsp" target="new">WAM</a></li><li><a href="http://casnr.unl.edu/classacts" >Class Acts</a></li><li><a href="http://casnr.unl.edu/salutetograduates" >Salute to Graduates</a></li><li><a href="http://casnr.unl.edu/deanslist" >Dean's List</a></li></ul></li><li><a href="http://casnr.unl.edu/AcademicsandDepartments" >Academics and Departments</a><ul><li><a href="http://casnr.unl.edu/academicprograms" >Academic Programs</a></li><li><a href="http://casnr.unl.edu/AcademicsandDepartments/Departments" >Departments</a></li><li><a href="http://casnr.unl.edu/lifesciences" >Life Sciences</a></li><li><a href="http://casnr.unl.edu/linksforfacultyandstaff" >Faculty and Staff</a></li><li><a href="http://vetmed.unl.edu" >Professional Program in Veterinary Medicine</a></li></ul></li><li><a href="http://casnr.unl.edu/aboutus" >About Us</a><ul><li><a href="http://casnr.unl.edu/AboutUs/CASNRDeansOfficeContacts" >CASNR Dean's Office Contacts</a></li><li><a href="http://casnr.unl.edu/sitemap" >Site Map</a></li><li><a href="http://casnr.unl.edu/AboutUs/VistorsCenterCampusTours" >Visitors Center / Campus Tours</a></li><li><a href="http://casnr.unl.edu/AboutUs/FindingtheExperts" >Finding the Experts</a></li><li><a href="http://casnr.unl.edu/AnnualReports" >Annual Reports</a></li></ul></li><li><a href="http://casnr.unl.edu/AlumniFriendsDonorsExtension" >Alumni, Friends, Donors and Extension</a><ul><li><a href="http://casnr.unl.edu/alumnifriendsdonorsextension/casnralumniassociation" >CASNR Alumni Association</a></li><li><a href="http://casnr.unl.edu/AlumniFriendsDonorsExtension/NewsAwards" >News and Awards</a></li><li><a href="http://casnr.unl.edu/AlumniFriendsDonorsExtension/NebraskansforNebraska" >Nebraskans for Nebraska</a></li><li><a href="http://casnr.unl.edu/AlumniFriendsDonorsExtension/GiftGiving" >Gift Giving</a></li><li><a href="http://casnr.unl.edu/AlumniFriendsDonorsExtension/Members" >Members</a></li></ul></li></ul></div><div id="nav_end"></div><div id="leftcollinks"><h3>Related Links</h3><ul><li><a href="http://www.unl.edu" title="UNL">UNL</a></li><li><a href="http://ianr.unl.edu" title="IANR">IANR</a></li><li><a href="http://ard.unl.edu" title="ARD">ARD</a></li><li><a href="http://www.extension.unl.edu/" title="Extension">Extension</a></li><li><a href="http://www.unl.edu/careers/hhl/" title="Hire a Husker">Hire a Husker</a></li></ul></div></div><div id="main_right" class="mainwrapper"><div id="maincontent"> <div id="p_p_id_103_" class="portlet-boundary portlet-boundary_103_ null" >
+<a name="p_103"></a>
+</div>
+<script type="text/javascript">
+</script>
+<div class="2_row_2_column" id="content-wrapper"><table id="layout-grid"><tr><td class="lfr-column" colspan="2" id="column-1" valign="top"><div class="lfr-portlet-column" id="layout-column_column-1">
+<div id="p_p_id_56_INSTANCE_qXYJ_" class="portlet-boundary portlet-boundary_56_ null" >
+<a name="p_56_INSTANCE_qXYJ"></a>
+<div class="portlet-borderless-container" style="">
+<div>
+<span class="journal-content-article" id="1809_GETTINGINVOLVEDPHOTO_1.0">
+<p><img class="" height="242" alt="Photo of students observing a rock" width="700" src="/image/image_gallery?img_id=909" /></p>
+</span>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+document.getElementById("p_p_id_56_INSTANCE_qXYJ_").portletId = "56_INSTANCE_qXYJ";
+document.getElementById("p_p_id_56_INSTANCE_qXYJ_").columnPos = 0;
+document.getElementById("p_p_id_56_INSTANCE_qXYJ_").isStatic = "end";
+if (!Liferay.Portlet.isAjax("56_INSTANCE_qXYJ")) {
+Liferay.Portlet.process("56_INSTANCE_qXYJ");
+}
+</script>
+<div id="p_p_id_56_INSTANCE_Y86b_" class="portlet-boundary portlet-boundary_56_ null" >
+<a name="p_56_INSTANCE_Y86b"></a>
+<div class="portlet-borderless-container" style="">
+<div>
+<span class="journal-content-article" id="1809_STUDENTORGANIZATIONS_1.1">
+<h1>Getting Involved</h1><p>Students have a unique opportunity to expand professionally while participating in a variety of activities including:</p><ul><li><a href="http://casnr.unl.edu/ProspectiveStudents/GettingInvolved/JustinSmithMorrillScholars">Justin Smith Morrill Scholars</a></li><li><a href="/c/document_library/get_file?folderId=3530&amp;name=DLFE-194.pdf">Dean's Scholars in Experiential Leadership</a></li><li><a href="http://www.unl.edu/ucare">Undergraduate Creative Activities and Research Experiences (UCARE)</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/GettingInvolved/DiscoveryCorps">Discovery Corps</a></li><li><a href="http://casnr.unl.edu/ProspectiveStudents/GettingInvolved/ARD">Agricultural Research Divsion (ARD) Undergraduate Honors Student Research Program</a></li></ul><p>The University of Nebraska-Lincoln has&nbsp;more than&nbsp;400 clubs, while most academic units sponsor a professional organization for student to network and extend their classroom learning.</p><h2>CASNR Clubs and Organizations</h2><table style="width: 629px; height: 474px" cellspacing="1" cellpadding="1" width="629" border="0"><tbody><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/act">Agricultural Communicators of Tomorrow</a></font></td><td valign="top" width="50"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://casnr.unl.edu/ageconomicsagribusinessclub">Agricultural&nbsp;Economics/Agribusiness Club</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/ageducationclub">Agricultural Education Club</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://agronomy.unl.edu/agronomyclub/agronomy%20club%20website_files/page0001.htm">Agronomy Club</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://www.unl.edu/agn/">Alpha Gamma Nu</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://www.agrunl.org/">Alpha Gamma Rho</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://www.unl.edu/ags/">Alpha Gamma Sigma</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://involved.unl.edu/einvolvement/rsoinfo.php?id=212">Alpha Zeta</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://bse.unl.edu/asae/">American Society of Agricultural and Biological&nbsp;Engineers</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://asun.unl.edu/index.php?option=com_frontpage&amp;Itemid=1">ASUN Senators</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/biochemistryclub">Biochemistry Club</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://www.animalscience.unl.edu/undergraduate/involvement/blockandbridle.html">Block and Bridle</a></font></td></tr><tr><td valign="top"><p><font size="2">Burr/Fedde Association of Resident Members</font></p></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><p><font size="2">CASNR Advisory Board</font></p></td></tr><tr><td valign="top"><font size="2"><a href="http://www.unl.edu/casnrweek/">CASNR Week Program Council</a></font></td><td valign="top">&nbsp;</td><td valign="top"><font size="2">Collegiate 4-H</font></td></tr><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/companionanimalclub">Companion Animal Club</a></font></td><td><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://casnr.unl.edu/ecologynow">Ecology Now</a></font></td></tr><tr><td valign="top"><font size="2">Collegiate 4-H</font></td><td><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://casnr.unl.edu/companionanimalclub">Companion Animal Club</a></font></td></tr><tr><td valign="top"><p><font size="2">Environmental Resource Center/Ecology Club</font></p></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://casnr.unl.edu/equestrianteam">Equestrian Team</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://www.nebraskafarmhouse.com/default.asp">Farm House</a></font></td><td><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://www.unl.edu/foodscienceclub/Welcome.html">Food Science Club</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://www.unl.edu/forensicscienceclub/">Forensic Science Club</a></font></td><td><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://www.unl.edu/hortclub/">Horticulture Club</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/insectscienceclub">Insect Science Club</a></font></td><td><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://casnr.unl.edu/ProspectiveStudents/GettingInvolved/JustinSmithMorrillScholars">Justin Smith Morrill Scholars</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://housing.unl.edu/halls/love.shtml">Love Memorial Cooperative</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2">MANRRS</font></td></tr><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/mechanizedsystemsmanagementclub">Mechanized Systems Management Club</a></font></td><td valign="top"><font size="2">&nbsp;</font></td><td valign="top"><font size="2"><a href="http://www.agecon.unl.edu/Undergraduates/NAMA.html">National Agri-Marketing Association</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://agronomy.unl.edu/pialphaxi/aboutus.html">Pi Alpha Xi</a>-The National Honor Society for Horticulture</font></td><td valign="top"><font size="2">&nbsp;</font></td><td><font size="2"><a href="http://casnr.unl.edu/preveterinaryclub">Pre-Veterinary&nbsp;Club</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://pgm.unl.edu/theprogram/pgmstudentclub.html">Professional Golf Management Club</a></font></td><td valign="top">&nbsp;</td><td><font size="2">Professional Landcare Network (PLANET)</font></td></tr><tr><td valign="top"><font size="2">Range Management Club</font></td><td valign="top">&nbsp;</td><td><font size="2"><a href="http://casnr.unl.edu/rodeoclub">Rodeo Association</a></font></td></tr><tr><td valign="top"><font size="2">Sigma Alpha</font></td><td valign="top">&nbsp;</td><td><font size="2"><a href="http://swrc.unl.edu/Index.htm">Soil &amp; Water Resources Club</a></font></td></tr><tr><td valign="top"><font size="2">Tractor Restoration Club</font></td><td valign="top">&nbsp;</td><td><font size="2"><a href="http://casnr.unl.edu/ffaalumniclub">UNL FFA Alumni</a></font></td></tr><tr><td valign="top"><font size="2"><a href="http://casnr.unl.edu/wildlifeclub">Wildlife Club</a></font></td><td valign="top">&nbsp;</td><td>&nbsp;</td></tr></tbody></table><p>&nbsp;</p>
+</span>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+document.getElementById("p_p_id_56_INSTANCE_Y86b_").portletId = "56_INSTANCE_Y86b";
+document.getElementById("p_p_id_56_INSTANCE_Y86b_").columnPos = 1;
+document.getElementById("p_p_id_56_INSTANCE_Y86b_").isStatic = "end";
+if (!Liferay.Portlet.isAjax("56_INSTANCE_Y86b")) {
+Liferay.Portlet.process("56_INSTANCE_Y86b");
+}
+</script>
+</div></td></tr><tr id="column-center"><td class="lfr-column fifty" id="column-2" valign="top"><div class="lfr-portlet-column empty" id="layout-column_column-2"></div></td><td class="lfr-column fifty" id="column-3" valign="top"><div class="lfr-portlet-column empty" id="layout-column_column-3"></div></td></tr>			</table></div>
+</div></div></div></div><div id="footer"><div id="footer_floater"> <div id="copyright"> &copy; 2007 University of Nebraska-Lincoln | CASNR | 103 Ag Hall | 402-472-2201 | 800-742-8800 x2541  | <a href="mailto:lfrey2@unl.edu" title="Click here to direct your comments and questions">comments?</a> |<a href="http://ianrhome.unl.edu">IANR</a> |<a href="http://casnr.unl.edu">CASNR</a> |<a href="http://extension.unl.edu">Extension</a> |<a href="http://ard.unl.edu">ARD</a> <br/>UNL is an equal opportunity employer with a comprehensive plan for diversity.<span><a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> <a href="http://validator.unl.edu/check/referer">W3C</a> <a href="http://www1.unl.edu/feeds/">RSS</a> </span><a href="http://www.unl.edu/" title="UNL Home"><img src="/html/portlet/ext/footer/wordmark.png" alt="UNL's wordmark" id="wordmark" /></a></div></div></div><script type="text/javascript" >if(sIFR != null && sIFR.replaceElement != null){sIFR.replaceElement("#titlegraphic h1, #red-header h1", named({sFlashSrc: "http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/urwgrotesktligcon.swf", sColor: "#919191", sLinkColor: "#919191", sHoverColor: "#919191", sWmode: "transparent"}));    sIFR.replaceElement("#titlegraphic h2", named({sFlashSrc: "http://www.unl.edu/ucomm/templatedependents/templatesharedcode/scripts/urwgrotesktligcon.swf", sColor: "#2E261D", sLinkColor: "#2E261D", sHoverColor: "#2E261D", sWmode: "transparent"}));};</script><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5666683-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<form method="post" name="hrefFm"></form>
+</body></html>
+
+

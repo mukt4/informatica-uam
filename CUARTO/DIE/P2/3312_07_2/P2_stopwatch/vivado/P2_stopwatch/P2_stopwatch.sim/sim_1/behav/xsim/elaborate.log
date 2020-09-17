@@ -1,0 +1,8 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /home/f/.xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 59ff48261c434a96a842284ea4209e71 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot stopwatch_tb_behav xil_defaultlib.stopwatch_tb -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3331] file '/home/f/.xilinx/Vivado/2018.3/data/xsim/verilog/secureip/secureip.sdbx' is probably not a Verific binary database file
+WARNING: [VRFC 10-3009] 'display_ctrl' remains a black-box since it has no binding entity [/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch.vhd:247]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit stopwatch_tb in library work failed.

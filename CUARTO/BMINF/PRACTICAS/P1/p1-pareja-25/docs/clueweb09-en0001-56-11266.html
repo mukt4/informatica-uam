@@ -1,0 +1,775 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+X-Cache: MISS from spaces3.elgg.net
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+P3P: CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+Date: Sun, 11 Jan 2009 04:20:39 GMT
+Pragma: no-cache
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Connection: close
+Set-Cookie: ElggSessionTest=K6cPNuPab9; path=/
+Content-Length: 65528
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Searching joni mitchell</title>
+<link href="http://ex.plode.us/_templates/css/Default_Template" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <script type="text/javascript" src="http://ex.plode.us/mod/explodesearch/serp.js"></script>
+
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAGCJ39a6_Xpn9RdX4_XU8-BQ3hKhsPkGzvkpbWZSSi_xV-F23gBTOv10XwktPsC85Pn9F3pVpr0zslQ"></script>
+
+        <script type="text/javascript">
+
+            google.load("feeds", "1");
+
+            function getlatestcontent(divname, rssurl) {
+
+                var container = document.getElementById(divname);
+
+                container.innerHTML = "<p>Loading ...</p>";
+
+                var feed = new google.feeds.Feed(rssurl);
+
+                feed.load(function(result) {
+
+                  if (!result.error) {
+
+                    container.innerHTML = "";
+
+                    for (var i = 0; i < result.feed.entries.length; i++) {
+
+                      var entry = result.feed.entries[i];
+
+                      var div = document.createElement("div");
+
+                      var title = entry.title;
+
+                      if (title == "") {
+
+                          title = "Post";
+
+                      }
+
+                      div.innerHTML = "<p><a href=\""+ entry.link +"\">" + title+ "</a></p>";
+
+                      // (document.createTextNode("<a href=\"#\">" + entry.title + "</a>"));
+
+                      container.innerHTML = container.innerHTML + div.innerHTML;
+
+                    }
+
+                  } else {
+
+                      container.innerHTML = "<p>Error: we couldn't grab the feed.</p>";
+
+                  }
+
+                });
+
+            }
+
+        </script>
+<link rel="openid.server" href="http://ex.plode.us/mod/openid_server/server.php" />
+<style type="text/css">
+/* 
+	USER TOOLBAR: IN DEFAULT ELGG, THIS SITS
+	AT THE VERY TOP OF THE PAGE.
+*/
+
+#elggtoolbar {
+	margin:0 0 4px 0;
+	padding:0 4px 4px 0;
+}
+/*
+
+#elggtoolbar-logged-out {
+    margin:0;
+    padding:0;
+   float:right;
+}
+
+#elggtoolbar-logged-out ul li {
+    list-style:none;
+    display:inline;
+}
+
+#elggtoolbar-logged-out li a {
+    text-decoration:none;
+    margin:0;
+}*/
+
+/* 
+	USER NAVIGATION: THIS STYLES THE USERS MAIN NAV IN THE TOOLBAR,
+	IN DEFAULT ELGG IT SITS OVER ON THE LEFT HAND SIDE
+*/
+
+#navigation {
+	/*background:#555 url(/mod/template/templates/Default_Template/images/top_tab_large.gif) no-repeat;*/
+   margin:0;
+   padding:0;
+   /*width:550px;*/
+   height:25px;
+   /*font-size:13px;*/
+   color:#1B5790;
+}
+
+#navigation li {
+	margin: 0; 
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+
+#navigation a {
+	margin: 0;
+	text-decoration: none;
+	color#1B5790;
+	padding:0 4px 0 4px;
+}
+
+#navigation a:hover {
+	text-decoration:underline;
+}
+
+#navigation a.selected {
+	text-decoration:underline;
+}
+
+#navigation-loggedout {
+   /* background:#555 url(/mod/template/templates/Default_Template/images/top_tab.gif) no-repeat; */
+   margin:0;
+   padding:0;
+  /* width:313px;*/
+   height:25px;
+   /* font-size:14px; */
+  /* color:#fff;*/
+}
+
+#navigation-loggedout ul {
+   padding:0 5px 0 0;
+   margin:0;
+}
+
+#navigation-loggedout li {
+	margin: 0; 
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+
+#navigation-loggedout a {
+	margin: 0;
+	text-decoration: none;
+	color:#1B5790;
+	padding:0 4px 0 4px;
+}
+
+#navigation-loggedout a:hover {
+	text-decoration:underline;
+}
+
+#navigation a.selected {
+	text-decoration:underline;
+}
+
+
+#elggtoolbar form {
+	margin: 4px 0 0 4px;
+	/*width: 700px;*/
+	float: left;
+}
+
+#elggtoolbar #user-icon img {
+    margin:2px 2px 2px 4px;
+    border:1px solid #7E94AC;
+    padding:1px;
+}
+
+#elggtoolbar #login-table {
+    color:#fff;
+    border:none;
+}
+
+#elggtoolbar #login-table td {
+    border:none;
+}
+
+#elggtoolbar #openid-option {
+     text-align:right;
+}
+
+#elggtoolbar #openid-option a {
+     color:#E1F039;
+     text-align:right;
+     margin:3px 5px 0 0;
+}
+
+#elggtoolbar #openid-option a:hover {
+    text-decoration:underline;
+}
+
+div#container {
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:0;
+}
+
+#elggtoolbar span {
+   font-size:12px;
+}
+
+</style>
+</head>
+<body>
+<center>
+<div id="wrapper">
+<div id="header"><!-- start header div -->
+<table width="930">
+<tr>
+<td>
+<div id="logo">
+      	<a href="http://ex.plode.us/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/blue/logo_blue.gif" alt="Explode" border="0" /></a>
+   </div>
+</td>
+<td align="right">
+    <table width="500" id="elggtoolbar-logged-out" border="0" height="25" cellpadding="0" cellspacing="0">
+<tr>
+<td align="right">
+<div id="navigation-loggedout">
+<ul><!-- open div navigation -->
+        <li><a href="/login.php">Login</a> | </li>
+        <li><a href="/register.php">Create an account</a> | </li>
+        <li><a href="/about.php">About</a></li>
+     </ul><!-- close div navigation -->
+</div>
+</td>
+</tr>
+</table>
+
+    <div id="main-search"><!-- start main-search div -->
+	<form name="search" action="/mod/explodesearch/redir.php" method="get">
+		<table cellpadding="3" cellspacing="3">
+		<tr>
+		<td valign="top">
+		    Search for
+		</td>
+		<td valign="top" align="left">
+			<input type="radio" value="people" name="searchtype">Name or<br />
+			<input type="radio" value="interests" name="searchtype">Interests
+		</td>
+		<td valign="top">
+			<input type="text" id="searchfield" name="query" value="joni mitchell" />
+		</td>
+		<td valign="top">
+			<input type="submit" id="search-button" name="submit" value="" />
+		</td>
+		</tr>
+		</table>
+		<small><a href="/mod/explodesearch/a-serp.php" style="float:right;margin-top:4px;">Advanced search...</a></small>
+	</form>
+    </div><!-- end main-search div -->
+</td>
+</tr>
+</table>
+</div><!-- end of header div -->
+<div id="content-holder"><!-- open content-holder div -->
+	<div id="contentholder-inner"><!-- open contentholder-inner div -->
+<table cellspacing="5">
+<tr>
+<td valign="top">
+		<div id="splitpane-content"><!-- open splitpane-content div -->
+			
+			<div class="serpNoResults"><p>Results 1 to 15 for <b>joni mitchell</b> (view as <b>list</b> | <a href="http://ex.plode.us/search/joni+mitchell/0/tiles/">tiles</a>):</p></div>
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://stonerfetish.livejournal.com/"><b> pAge </b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://stonerfetish.livejournal.com/"> pAge </a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/music">music</a>, <a href="http://ex.plode.us/search/reading">reading</a>, <a href="http://ex.plode.us/search/vodka">vodka</a>, <a href="http://ex.plode.us/search/sleeping">sleeping</a>, <a href="http://ex.plode.us/search/piercings">piercings</a>, <a href="http://ex.plode.us/search/simon+and+garfunkel">simon and garfunkel</a>, <a href="http://ex.plode.us/search/tattoos">tattoos</a>, <a href="http://ex.plode.us/search/joni+mitchell">joni mitchell</a>, <a href="http://ex.plode.us/search/elton+john">elton john</a>, <a href="http://ex.plode.us/search/black+sabbath">black sabbath</a>, <a href="http://ex.plode.us/search/iggy+pop">iggy pop</a>, <a href="http://ex.plode.us/search/cream">cream</a>, <a href="http://ex.plode.us/search/almost+famous">almost famous</a>, <a href="http://ex.plode.us/search/groupies">groupies</a>, <a href="http://ex.plode.us/search/dazed+and+confused">dazed and confused</a>, <a href="http://ex.plode.us/search/not+being+alone">not being alone</a>, <a href="http://ex.plode.us/search/garage+bands">garage bands</a>, <a href="http://ex.plode.us/search/the+guess+who">the guess who</a>, <a href="http://ex.plode.us/search/band-aids">band-aids</a>, <a href="http://ex.plode.us/search/hitchhikers">hitchhikers</a></p>
+
+                                <p class="serpLocation"></p>
+
+                                <!-- <p class="serpURL"><a href="http://stonerfetish.livejournal.com/">http://stonerfetish.livejournal.com/</a></p> -->
+
+                                <div class="serpLatestContent"><div id="serpRSS1790673"></div></div>
+
+                                
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top" width="140">
+
+                            <div class="serpAction">
+
+                                    
+                <div id="view-friends"><a href="http://ex.plode.us/friends/1790673/">View friends</a></div>
+
+                <div id="view-friends-of"><a href="http://ex.plode.us/friendsof/1790673">View friends of</a></div>
+
+                <div id="find-similar"><a href="http://ex.plode.us/similar/1790673/">Similar users</a></div>
+
+                <div id="post-comment"><a href="http://ex.plode.us/comments/1790673/">Comment wall</a></div>
+
+                <div id="get-latest-content"><a href="javascript:getlatestcontent('serpRSS1790673', 'http://stonerfetish.livejournal.com/data/rss/');">Latest content</a></div>
+
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <div class="result-wrapper-bottom">
+
+                </div>
+
+            </div> 
+
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://stonebender.livejournal.com/"><b>Guy, now with cognitive thought processes!</b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://stonebender.livejournal.com/">Guy, now with cognitive thought processes!</a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/fiction">fiction</a>, <a href="http://ex.plode.us/search/music">music</a>, <a href="http://ex.plode.us/search/sex">sex</a>, <a href="http://ex.plode.us/search/women">women</a>, <a href="http://ex.plode.us/search/books">books</a>, <a href="http://ex.plode.us/search/dogs">dogs</a>, <a href="http://ex.plode.us/search/reading">reading</a>, <a href="http://ex.plode.us/search/writing">writing</a>, <a href="http://ex.plode.us/search/comics">comics</a>, <a href="http://ex.plode.us/search/hugging">hugging</a>, <a href="http://ex.plode.us/search/movies">movies</a>, <a href="http://ex.plode.us/search/polyamory">polyamory</a>, <a href="http://ex.plode.us/search/feminism">feminism</a>, <a href="http://ex.plode.us/search/politics">politics</a>, <a href="http://ex.plode.us/search/television">television</a>, <a href="http://ex.plode.us/search/green+day">green day</a>, <a href="http://ex.plode.us/search/piercings">piercings</a>, <a href="http://ex.plode.us/search/dominance">dominance</a>, <a href="http://ex.plode.us/search/submission">submission</a>, <a href="http://ex.plode.us/search/conversation">conversation</a><span id="hidetags1061024">, <a href="http://ex.plode.us/search/cuddling">cuddling</a>, <a href="http://ex.plode.us/search/theater">theater</a>, <a href="http://ex.plode.us/search/sci-fi">sci-fi</a>, <a href="http://ex.plode.us/search/computer+games">computer games</a>, <a href="http://ex.plode.us/search/flirting">flirting</a>, <a href="http://ex.plode.us/search/buffy+the+vampire+slayer">buffy the vampire slayer</a>, <a href="http://ex.plode.us/search/kissing">kissing</a>, <a href="http://ex.plode.us/search/france">france</a>, <a href="http://ex.plode.us/search/musicals">musicals</a>, <a href="http://ex.plode.us/search/snuggling">snuggling</a>, <a href="http://ex.plode.us/search/tattoos">tattoos</a>, <a href="http://ex.plode.us/search/space">space</a>, <a href="http://ex.plode.us/search/ani+difranco">ani difranco</a>, <a href="http://ex.plode.us/search/rpgs">rpgs</a>, <a href="http://ex.plode.us/search/ecology">ecology</a>, <a href="http://ex.plode.us/search/red+dwarf">red dwarf</a>, <a href="http://ex.plode.us/search/roleplaying">roleplaying</a>, <a href="http://ex.plode.us/search/science+fiction">science fiction</a>, <a href="http://ex.plode.us/search/celtic+music">celtic music</a>, <a href="http://ex.plode.us/search/folk+music">folk music</a>, <a href="http://ex.plode.us/search/foreign+films">foreign films</a>, <a href="http://ex.plode.us/search/hedonism">hedonism</a>, <a href="http://ex.plode.us/search/ireland">ireland</a>, <a href="http://ex.plode.us/search/rock+music">rock music</a>, <a href="http://ex.plode.us/search/activism">activism</a>, <a href="http://ex.plode.us/search/social+justice">social justice</a>, <a href="http://ex.plode.us/search/rocky+horror">rocky horror</a>, <a href="http://ex.plode.us/search/the+princess+bride">the princess bride</a>, <a href="http://ex.plode.us/search/denmark">denmark</a>, <a href="http://ex.plode.us/search/joni+mitchell">joni mitchell</a>, <a href="http://ex.plode.us/search/tracy+chapman">tracy chapman</a>, <a href="http://ex.plode.us/search/samuel+beckett">samuel beckett</a>, <a href="http://ex.plode.us/search/robert+heinlein">robert heinlein</a>, <a href="http://ex.plode.us/search/honesty">honesty</a>, <a href="http://ex.plode.us/search/role-playing+games">role-playing games</a>, <a href="http://ex.plode.us/search/west+wing">west wing</a>, <a href="http://ex.plode.us/search/crushes">crushes</a>, <a href="http://ex.plode.us/search/making+out">making out</a>, <a href="http://ex.plode.us/search/green+party">green party</a>, <a href="http://ex.plode.us/search/massages">massages</a>, <a href="http://ex.plode.us/search/civil+rights">civil rights</a>, <a href="http://ex.plode.us/search/licking">licking</a>, <a href="http://ex.plode.us/search/touching">touching</a>, <a href="http://ex.plode.us/search/sondheim">sondheim</a>, <a href="http://ex.plode.us/search/fandom">fandom</a>, <a href="http://ex.plode.us/search/discussion">discussion</a>, <a href="http://ex.plode.us/search/amsterdam">amsterdam</a>, <a href="http://ex.plode.us/search/green+politics">green politics</a>, <a href="http://ex.plode.us/search/long+hair">long hair</a>, <a href="http://ex.plode.us/search/indigo+girls">indigo girls</a>, <a href="http://ex.plode.us/search/canines">canines</a>, <a href="http://ex.plode.us/search/absinthe">absinthe</a>, <a href="http://ex.plode.us/search/compassion">compassion</a>, <a href="http://ex.plode.us/search/pacifism">pacifism</a>, <a href="http://ex.plode.us/search/neal+stephenson">neal stephenson</a>, <a href="http://ex.plode.us/search/the+west+wing">the west wing</a>, <a href="http://ex.plode.us/search/winnie-the-pooh">winnie-the-pooh</a>, <a href="http://ex.plode.us/search/amateur+porn">amateur porn</a>, <a href="http://ex.plode.us/search/poly">poly</a>, <a href="http://ex.plode.us/search/intellect">intellect</a>, <a href="http://ex.plode.us/search/civil+disobedience">civil disobedience</a>, <a href="http://ex.plode.us/search/progressive+politics">progressive politics</a>, <a href="http://ex.plode.us/search/sex+positive">sex positive</a>, <a href="http://ex.plode.us/search/irish+music">irish music</a>, <a href="http://ex.plode.us/search/free+speech">free speech</a>, <a href="http://ex.plode.us/search/science-fiction">science-fiction</a>, <a href="http://ex.plode.us/search/community+activism">community activism</a>, <a href="http://ex.plode.us/search/self-awareness">self-awareness</a>, <a href="http://ex.plode.us/search/liberal+politics">liberal politics</a>, <a href="http://ex.plode.us/search/nudism">nudism</a>, <a href="http://ex.plode.us/search/enterprise">enterprise</a>, <a href="http://ex.plode.us/search/mary+chapin+carpenter">mary chapin carpenter</a>, <a href="http://ex.plode.us/search/spider+robinson">spider robinson</a>, <a href="http://ex.plode.us/search/shawn+colvin">shawn colvin</a>, <a href="http://ex.plode.us/search/richard+shindell">richard shindell</a>, <a href="http://ex.plode.us/search/self-discovery">self-discovery</a>, <a href="http://ex.plode.us/search/deaf">deaf</a>, <a href="http://ex.plode.us/search/melissa+etheridge">melissa etheridge</a>, <a href="http://ex.plode.us/search/bodyart">bodyart</a>, <a href="http://ex.plode.us/search/non-monogamy">non-monogamy</a>, <a href="http://ex.plode.us/search/meditating">meditating</a>, <a href="http://ex.plode.us/search/writing+down+the+bones">writing down the bones</a>, <a href="http://ex.plode.us/search/fiction+writing">fiction writing</a>, <a href="http://ex.plode.us/search/disability+rights">disability rights</a>, <a href="http://ex.plode.us/search/northern+california">northern california</a>, <a href="http://ex.plode.us/search/fanzines">fanzines</a>, <a href="http://ex.plode.us/search/xxxenophile">xxxenophile</a>, <a href="http://ex.plode.us/search/long-distance+relationships">long-distance relationships</a>, <a href="http://ex.plode.us/search/play+parties">play parties</a>, <a href="http://ex.plode.us/search/newsgroups">newsgroups</a>, <a href="http://ex.plode.us/search/science+fiction+fandom">science fiction fandom</a>, <a href="http://ex.plode.us/search/nanci+griffith">nanci griffith</a>, <a href="http://ex.plode.us/search/rickie+lee+jones">rickie lee jones</a>, <a href="http://ex.plode.us/search/left-wing+politics">left-wing politics</a>, <a href="http://ex.plode.us/search/independent+bookstores">independent bookstores</a>, <a href="http://ex.plode.us/search/live+theatre">live theatre</a>, <a href="http://ex.plode.us/search/sf+fandom">sf fandom</a>, <a href="http://ex.plode.us/search/sf+bay+area">sf bay area</a>, <a href="http://ex.plode.us/search/united+perverts">united perverts</a>, <a href="http://ex.plode.us/search/alt.polyamory">alt.polyamory</a>, <a href="http://ex.plode.us/search/accessibility">accessibility</a>, <a href="http://ex.plode.us/search/nre">nre</a>, <a href="http://ex.plode.us/search/independent+living">independent living</a>, <a href="http://ex.plode.us/search/small+beer+press">small beer press</a>, <a href="http://ex.plode.us/search/tiptree+award">tiptree award</a>, <a href="http://ex.plode.us/search/john+gorka">john gorka</a>, <a href="http://ex.plode.us/search/the+sierra+club">the sierra club</a>, <a href="http://ex.plode.us/search/alt.poly">alt.poly</a>, <a href="http://ex.plode.us/search/alternative+news">alternative news</a>, <a href="http://ex.plode.us/search/improvisational+theater">improvisational theater</a>, <a href="http://ex.plode.us/search/Timbuk+3">Timbuk 3</a>, <a href="http://ex.plode.us/search/bordello">bordello</a>, <a href="http://ex.plode.us/search/hayao+miyazaki%27s+films">hayao miyazaki's films</a>, <a href="http://ex.plode.us/search/human+space+exploration">human space exploration</a>, <a href="http://ex.plode.us/search/new+relationship+energy">new relationship energy</a>, <a href="http://ex.plode.us/search/wheelchair+accessible+travel">wheelchair accessible travel</a></span></p>
+
+                                <p class="serpLocation"></p>
+
+                                <!-- <p class="serpURL"><a href="http://stonebender.livejournal.com/">http://stonebender.livejournal.com/</a></p> -->
+
+                                <div class="serpLatestContent"><div id="serpRSS1061024"></div></div>
+
+                                
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top" width="140">
+
+                            <div class="serpAction">
+
+                                    
+                <div id="view-friends"><a href="http://ex.plode.us/friends/1061024/">View friends</a></div>
+
+                <div id="view-friends-of"><a href="http://ex.plode.us/friendsof/1061024">View friends of</a></div>
+
+                <div id="find-similar"><a href="http://ex.plode.us/similar/1061024/">Similar users</a></div>
+
+                <div id="post-comment"><a href="http://ex.plode.us/comments/1061024/">Comment wall</a></div>
+
+                <div id="see-all-tags"><a href="javascript:toggleVisibility('hidetags1061024');">See all 136 tags</a></div>
+
+                <div id="get-latest-content"><a href="javascript:getlatestcontent('serpRSS1061024', 'http://stonebender.livejournal.com/data/rss/');">Latest content</a></div>
+
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <div class="result-wrapper-bottom">
+
+                </div>
+
+            </div> 
+
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://stillvictorious.livejournal.com/"><b>Cat (aka Lila aka Porkchop aka Toyota aka Fridge)</b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://stillvictorious.livejournal.com/">Cat (aka Lila aka Porkchop aka Toyota aka Fridge)</a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/singing">singing</a>, <a href="http://ex.plode.us/search/music">music</a>, <a href="http://ex.plode.us/search/books">books</a>, <a href="http://ex.plode.us/search/drawing">drawing</a>, <a href="http://ex.plode.us/search/history">history</a>, <a href="http://ex.plode.us/search/piano">piano</a>, <a href="http://ex.plode.us/search/psychology">psychology</a>, <a href="http://ex.plode.us/search/russians">russians</a>, <a href="http://ex.plode.us/search/shakespeare">shakespeare</a>, <a href="http://ex.plode.us/search/writing">writing</a>, <a href="http://ex.plode.us/search/architecture">architecture</a>, <a href="http://ex.plode.us/search/dancing">dancing</a>, <a href="http://ex.plode.us/search/literature">literature</a>, <a href="http://ex.plode.us/search/michaelangelo">michaelangelo</a>, <a href="http://ex.plode.us/search/peace">peace</a>, <a href="http://ex.plode.us/search/science">science</a>, <a href="http://ex.plode.us/search/acting">acting</a>, <a href="http://ex.plode.us/search/people">people</a>, <a href="http://ex.plode.us/search/comedy+central">comedy central</a>, <a href="http://ex.plode.us/search/politics">politics</a><span id="hidetags1807389">, <a href="http://ex.plode.us/search/art">art</a>, <a href="http://ex.plode.us/search/hugs">hugs</a>, <a href="http://ex.plode.us/search/stars">stars</a>, <a href="http://ex.plode.us/search/cheese">cheese</a>, <a href="http://ex.plode.us/search/the+clash">the clash</a>, <a href="http://ex.plode.us/search/chocolates">chocolates</a>, <a href="http://ex.plode.us/search/cuddling">cuddling</a>, <a href="http://ex.plode.us/search/theatre">theatre</a>, <a href="http://ex.plode.us/search/yoga">yoga</a>, <a href="http://ex.plode.us/search/fantasy">fantasy</a>, <a href="http://ex.plode.us/search/hiking">hiking</a>, <a href="http://ex.plode.us/search/south+park">south park</a>, <a href="http://ex.plode.us/search/waiting">waiting</a>, <a href="http://ex.plode.us/search/david+bowie">david bowie</a>, <a href="http://ex.plode.us/search/poetry">poetry</a>, <a href="http://ex.plode.us/search/religion">religion</a>, <a href="http://ex.plode.us/search/biology">biology</a>, <a href="http://ex.plode.us/search/bob+dylan">bob dylan</a>, <a href="http://ex.plode.us/search/ancient+egypt">ancient egypt</a>, <a href="http://ex.plode.us/search/greece">greece</a>, <a href="http://ex.plode.us/search/life">life</a>, <a href="http://ex.plode.us/search/broadway">broadway</a>, <a href="http://ex.plode.us/search/musicals">musicals</a>, <a href="http://ex.plode.us/search/snuggling">snuggling</a>, <a href="http://ex.plode.us/search/jeff+buckley">jeff buckley</a>, <a href="http://ex.plode.us/search/mozart">mozart</a>, <a href="http://ex.plode.us/search/the+smiths">the smiths</a>, <a href="http://ex.plode.us/search/dinosaurs">dinosaurs</a>, <a href="http://ex.plode.us/search/rock+n+roll">rock n roll</a>, <a href="http://ex.plode.us/search/zippers">zippers</a>, <a href="http://ex.plode.us/search/ninjas">ninjas</a>, <a href="http://ex.plode.us/search/philosophy">philosophy</a>, <a href="http://ex.plode.us/search/sociology">sociology</a>, <a href="http://ex.plode.us/search/italian">italian</a>, <a href="http://ex.plode.us/search/italy">italy</a>, <a href="http://ex.plode.us/search/drama">drama</a>, <a href="http://ex.plode.us/search/opera">opera</a>, <a href="http://ex.plode.us/search/forensics">forensics</a>, <a href="http://ex.plode.us/search/lewis+black">lewis black</a>, <a href="http://ex.plode.us/search/fairy+tales">fairy tales</a>, <a href="http://ex.plode.us/search/theology">theology</a>, <a href="http://ex.plode.us/search/joni+mitchell">joni mitchell</a>, <a href="http://ex.plode.us/search/rome">rome</a>, <a href="http://ex.plode.us/search/frisbee">frisbee</a>, <a href="http://ex.plode.us/search/latin">latin</a>, <a href="http://ex.plode.us/search/medicine">medicine</a>, <a href="http://ex.plode.us/search/america">america</a>, <a href="http://ex.plode.us/search/simpsons">simpsons</a>, <a href="http://ex.plode.us/search/homer">homer</a>, <a href="http://ex.plode.us/search/notebooks">notebooks</a>, <a href="http://ex.plode.us/search/ethics">ethics</a>, <a href="http://ex.plode.us/search/glam+rock">glam rock</a>, <a href="http://ex.plode.us/search/iggy+pop">iggy pop</a>, <a href="http://ex.plode.us/search/illusion">illusion</a>, <a href="http://ex.plode.us/search/reno">reno</a>, <a href="http://ex.plode.us/search/reality">reality</a>, <a href="http://ex.plode.us/search/80s+music">80s music</a>, <a href="http://ex.plode.us/search/dante">dante</a>, <a href="http://ex.plode.us/search/reincarnation">reincarnation</a>, <a href="http://ex.plode.us/search/soda">soda</a>, <a href="http://ex.plode.us/search/language">language</a>, <a href="http://ex.plode.us/search/novels">novels</a>, <a href="http://ex.plode.us/search/hebrew">hebrew</a>, <a href="http://ex.plode.us/search/spooning">spooning</a>, <a href="http://ex.plode.us/search/finding+myself">finding myself</a>, <a href="http://ex.plode.us/search/making+things">making things</a>, <a href="http://ex.plode.us/search/running+in+the+rain">running in the rain</a>, <a href="http://ex.plode.us/search/zoology">zoology</a>, <a href="http://ex.plode.us/search/loitering">loitering</a>, <a href="http://ex.plode.us/search/being+awesome">being awesome</a>, <a href="http://ex.plode.us/search/confetti">confetti</a>, <a href="http://ex.plode.us/search/burning+things">burning things</a>, <a href="http://ex.plode.us/search/jumping+in+puddles">jumping in puddles</a>, <a href="http://ex.plode.us/search/the+blues+brothers">the blues brothers</a>, <a href="http://ex.plode.us/search/inventing">inventing</a>, <a href="http://ex.plode.us/search/contemplation">contemplation</a>, <a href="http://ex.plode.us/search/falling">falling</a>, <a href="http://ex.plode.us/search/morality">morality</a>, <a href="http://ex.plode.us/search/aminals">aminals</a>, <a href="http://ex.plode.us/search/raskolnikov">raskolnikov</a>, <a href="http://ex.plode.us/search/crime+and+punishment">crime and punishment</a>, <a href="http://ex.plode.us/search/hating+math">hating math</a>, <a href="http://ex.plode.us/search/clumsiness">clumsiness</a>, <a href="http://ex.plode.us/search/paper+mache">paper mache</a>, <a href="http://ex.plode.us/search/freaking+out">freaking out</a>, <a href="http://ex.plode.us/search/bottomless+pits">bottomless pits</a>, <a href="http://ex.plode.us/search/mad+hot+sex">mad hot sex</a>, <a href="http://ex.plode.us/search/food+of+all+kinds">food of all kinds</a>, <a href="http://ex.plode.us/search/philandering">philandering</a>, <a href="http://ex.plode.us/search/finding+alcohol">finding alcohol</a>, <a href="http://ex.plode.us/search/hiding+in+clothing+racks">hiding in clothing racks</a>, <a href="http://ex.plode.us/search/love+%28the+good+kind%29">love (the good kind)</a>, <a href="http://ex.plode.us/search/my+origins">my origins</a>, <a href="http://ex.plode.us/search/reflecting+on+beauty">reflecting on beauty</a>, <a href="http://ex.plode.us/search/spike-filled+pits">spike-filled pits</a></span></p>
+
+                                <p class="serpLocation"></p>
+
+                                <!-- <p class="serpURL"><a href="http://stillvictorious.livejournal.com/">http://stillvictorious.livejournal.com/</a></p> -->
+
+                                <div class="serpLatestContent"><div id="serpRSS1807389"></div></div>
+
+                                
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top" width="140">
+
+                            <div class="serpAction">
+
+                                    
+                <div id="view-friends"><a href="http://ex.plode.us/friends/1807389/">View friends</a></div>
+
+                <div id="view-friends-of"><a href="http://ex.plode.us/friendsof/1807389">View friends of</a></div>
+
+                <div id="find-similar"><a href="http://ex.plode.us/similar/1807389/">Similar users</a></div>
+
+                <div id="post-comment"><a href="http://ex.plode.us/comments/1807389/">Comment wall</a></div>
+
+                <div id="see-all-tags"><a href="javascript:toggleVisibility('hidetags1807389');">See all 115 tags</a></div>
+
+                <div id="get-latest-content"><a href="javascript:getlatestcontent('serpRSS1807389', 'http://stillvictorious.livejournal.com/data/rss/');">Latest content</a></div>
+
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <div class="result-wrapper-bottom">
+
+                </div>
+
+            </div> 
+
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://stevenharper.livejournal.com/"><b>Steven Harper</b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://stevenharper.livejournal.com/">Steven Harper</a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/csi">csi</a>, <a href="http://ex.plode.us/search/football">football</a>, <a href="http://ex.plode.us/search/guitars">guitars</a>, <a href="http://ex.plode.us/search/wwe">wwe</a>, <a href="http://ex.plode.us/search/fountains+of+wayne">fountains of wayne</a>, <a href="http://ex.plode.us/search/staind">staind</a>, <a href="http://ex.plode.us/search/system+of+a+down">system of a down</a>, <a href="http://ex.plode.us/search/vh1">vh1</a>, <a href="http://ex.plode.us/search/nelly">nelly</a>, <a href="http://ex.plode.us/search/david+bowie">david bowie</a>, <a href="http://ex.plode.us/search/bob+dylan">bob dylan</a>, <a href="http://ex.plode.us/search/rolling+stones">rolling stones</a>, <a href="http://ex.plode.us/search/billy+joel">billy joel</a>, <a href="http://ex.plode.us/search/ludacris">ludacris</a>, <a href="http://ex.plode.us/search/stevie+wonder">stevie wonder</a>, <a href="http://ex.plode.us/search/physics">physics</a>, <a href="http://ex.plode.us/search/whipped+cream">whipped cream</a>, <a href="http://ex.plode.us/search/law+%26+order">law & order</a>, <a href="http://ex.plode.us/search/the+simpsons">the simpsons</a>, <a href="http://ex.plode.us/search/the+who">the who</a><span id="hidetags1305942">, <a href="http://ex.plode.us/search/tom+petty">tom petty</a>, <a href="http://ex.plode.us/search/ecology">ecology</a>, <a href="http://ex.plode.us/search/five+for+fighting">five for fighting</a>, <a href="http://ex.plode.us/search/batman">batman</a>, <a href="http://ex.plode.us/search/iron+chef">iron chef</a>, <a href="http://ex.plode.us/search/space+ghost">space ghost</a>, <a href="http://ex.plode.us/search/classic+rock">classic rock</a>, <a href="http://ex.plode.us/search/survivor">survivor</a>, <a href="http://ex.plode.us/search/folk+music">folk music</a>, <a href="http://ex.plode.us/search/50+cent">50 cent</a>, <a href="http://ex.plode.us/search/snoop+dogg">snoop dogg</a>, <a href="http://ex.plode.us/search/mitch+hedberg">mitch hedberg</a>, <a href="http://ex.plode.us/search/jewel">jewel</a>, <a href="http://ex.plode.us/search/joni+mitchell">joni mitchell</a>, <a href="http://ex.plode.us/search/sting">sting</a>, <a href="http://ex.plode.us/search/johnny+cash">johnny cash</a>, <a href="http://ex.plode.us/search/frank+sinatra">frank sinatra</a>, <a href="http://ex.plode.us/search/the+o.c.">the o.c.</a>, <a href="http://ex.plode.us/search/slurpees">slurpees</a>, <a href="http://ex.plode.us/search/as+the+world+turns">as the world turns</a>, <a href="http://ex.plode.us/search/david+letterman">david letterman</a>, <a href="http://ex.plode.us/search/morgan+freeman">morgan freeman</a>, <a href="http://ex.plode.us/search/paul+shaffer">paul shaffer</a>, <a href="http://ex.plode.us/search/neil+diamond">neil diamond</a>, <a href="http://ex.plode.us/search/espn">espn</a>, <a href="http://ex.plode.us/search/eric+clapton">eric clapton</a>, <a href="http://ex.plode.us/search/24">24</a>, <a href="http://ex.plode.us/search/outkast">outkast</a>, <a href="http://ex.plode.us/search/jay-z">jay-z</a>, <a href="http://ex.plode.us/search/busta+rhymes">busta rhymes</a>, <a href="http://ex.plode.us/search/warren+zevon">warren zevon</a>, <a href="http://ex.plode.us/search/elton+john">elton john</a>, <a href="http://ex.plode.us/search/astronomy">astronomy</a>, <a href="http://ex.plode.us/search/bob+seger">bob seger</a>, <a href="http://ex.plode.us/search/er">er</a>, <a href="http://ex.plode.us/search/neil+young">neil young</a>, <a href="http://ex.plode.us/search/the+roots">the roots</a>, <a href="http://ex.plode.us/search/don+mclean">don mclean</a>, <a href="http://ex.plode.us/search/fleetwood+mac">fleetwood mac</a>, <a href="http://ex.plode.us/search/john+denver">john denver</a>, <a href="http://ex.plode.us/search/moody+blues">moody blues</a>, <a href="http://ex.plode.us/search/saturday+night+live">saturday night live</a>, <a href="http://ex.plode.us/search/the+band">the band</a>, <a href="http://ex.plode.us/search/yes">yes</a>, <a href="http://ex.plode.us/search/jackson+browne">jackson browne</a>, <a href="http://ex.plode.us/search/elvis+costello">elvis costello</a>, <a href="http://ex.plode.us/search/paul+simon">paul simon</a>, <a href="http://ex.plode.us/search/soap+operas">soap operas</a>, <a href="http://ex.plode.us/search/joan+baez">joan baez</a>, <a href="http://ex.plode.us/search/leonard+cohen">leonard cohen</a>, <a href="http://ex.plode.us/search/styx">styx</a>, <a href="http://ex.plode.us/search/steely+dan">steely dan</a>, <a href="http://ex.plode.us/search/elvis+presley">elvis presley</a>, <a href="http://ex.plode.us/search/cat+stevens">cat stevens</a>, <a href="http://ex.plode.us/search/csi%3A+ny">csi: ny</a>, <a href="http://ex.plode.us/search/law+%26+order%3A+svu">law & order: svu</a>, <a href="http://ex.plode.us/search/jeopardy%21">jeopardy!</a>, <a href="http://ex.plode.us/search/eagles">eagles</a>, <a href="http://ex.plode.us/search/shakira">shakira</a>, <a href="http://ex.plode.us/search/missy+elliott">missy elliott</a>, <a href="http://ex.plode.us/search/geography">geography</a>, <a href="http://ex.plode.us/search/glen+campbell">glen campbell</a>, <a href="http://ex.plode.us/search/beach+boys">beach boys</a>, <a href="http://ex.plode.us/search/without+a+trace">without a trace</a>, <a href="http://ex.plode.us/search/csi%3A+miami">csi: miami</a>, <a href="http://ex.plode.us/search/chris+rock">chris rock</a>, <a href="http://ex.plode.us/search/the+rock">the rock</a>, <a href="http://ex.plode.us/search/boston+legal">boston legal</a>, <a href="http://ex.plode.us/search/arlo+guthrie">arlo guthrie</a>, <a href="http://ex.plode.us/search/simon+%26+garfunkel">simon & garfunkel</a>, <a href="http://ex.plode.us/search/smackdown">smackdown</a>, <a href="http://ex.plode.us/search/electric+light+orchestra">electric light orchestra</a>, <a href="http://ex.plode.us/search/boston+pops">boston pops</a>, <a href="http://ex.plode.us/search/james+taylor">james taylor</a>, <a href="http://ex.plode.us/search/bad+company">bad company</a>, <a href="http://ex.plode.us/search/harry+chapin">harry chapin</a>, <a href="http://ex.plode.us/search/bette+midler">bette midler</a>, <a href="http://ex.plode.us/search/clipse">clipse</a>, <a href="http://ex.plode.us/search/nappy+roots">nappy roots</a>, <a href="http://ex.plode.us/search/meat+loaf">meat loaf</a>, <a href="http://ex.plode.us/search/monkees">monkees</a>, <a href="http://ex.plode.us/search/alex+trebek">alex trebek</a>, <a href="http://ex.plode.us/search/mr.+rogers">mr. rogers</a>, <a href="http://ex.plode.us/search/earth+wind+%26+fire">earth wind & fire</a>, <a href="http://ex.plode.us/search/environmental+science">environmental science</a>, <a href="http://ex.plode.us/search/nikka+costa">nikka costa</a>, <a href="http://ex.plode.us/search/brian+wilson">brian wilson</a>, <a href="http://ex.plode.us/search/guiding+light">guiding light</a>, <a href="http://ex.plode.us/search/melissa+etheridge">melissa etheridge</a>, <a href="http://ex.plode.us/search/law+%26+order%3A+ci">law & order: ci</a>, <a href="http://ex.plode.us/search/bernie+mac">bernie mac</a>, <a href="http://ex.plode.us/search/meteorology">meteorology</a>, <a href="http://ex.plode.us/search/air+supply">air supply</a>, <a href="http://ex.plode.us/search/jimmy+buffett">jimmy buffett</a>, <a href="http://ex.plode.us/search/three+dog+night">three dog night</a>, <a href="http://ex.plode.us/search/wheel+of+fortune">wheel of fortune</a>, <a href="http://ex.plode.us/search/craig+ferguson">craig ferguson</a>, <a href="http://ex.plode.us/search/dallas+cowboys">dallas cowboys</a>, <a href="http://ex.plode.us/search/crosby+stills+%26+nash">crosby stills & nash</a>, <a href="http://ex.plode.us/search/dan+rather">dan rather</a>, <a href="http://ex.plode.us/search/oceanography">oceanography</a>, <a href="http://ex.plode.us/search/ol%27+dirty+bastard">ol' dirty bastard</a>, <a href="http://ex.plode.us/search/bee+gees">bee gees</a>, <a href="http://ex.plode.us/search/ben+stein">ben stein</a>, <a href="http://ex.plode.us/search/gordon+lightfoot">gordon lightfoot</a>, <a href="http://ex.plode.us/search/andy+griffith">andy griffith</a>, <a href="http://ex.plode.us/search/billy+bob+thornton">billy bob thornton</a>, <a href="http://ex.plode.us/search/toxicology">toxicology</a>, <a href="http://ex.plode.us/search/tv+guide">tv guide</a>, <a href="http://ex.plode.us/search/master+p">master p</a>, <a href="http://ex.plode.us/search/dan+fogelberg">dan fogelberg</a>, <a href="http://ex.plode.us/search/peter+frampton">peter frampton</a>, <a href="http://ex.plode.us/search/boz+scaggs">boz scaggs</a>, <a href="http://ex.plode.us/search/biophysics">biophysics</a>, <a href="http://ex.plode.us/search/jim+white">jim white</a>, <a href="http://ex.plode.us/search/solomon+burke">solomon burke</a>, <a href="http://ex.plode.us/search/blind+boys+of+alabama">blind boys of alabama</a>, <a href="http://ex.plode.us/search/buckwheat+zydeco">buckwheat zydeco</a></span></p>
+
+                                <p class="serpLocation"></p>
+
+                                <!-- <p class="serpURL"><a href="http://stevenharper.livejournal.com/">http://stevenharper.livejournal.com/</a></p> -->
+
+                                <div class="serpLatestContent"><div id="serpRSS1305942"></div></div>
+
+                                
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top" width="140">
+
+                            <div class="serpAction">
+
+                                    
+                <div id="view-friends"><a href="http://ex.plode.us/friends/1305942/">View friends</a></div>
+
+                <div id="view-friends-of"><a href="http://ex.plode.us/friendsof/1305942">View friends of</a></div>
+
+                <div id="find-similar"><a href="http://ex.plode.us/similar/1305942/">Similar users</a></div>
+
+                <div id="post-comment"><a href="http://ex.plode.us/comments/1305942/">Comment wall</a></div>
+
+                <div id="see-all-tags"><a href="javascript:toggleVisibility('hidetags1305942');">See all 138 tags</a></div>
+
+                <div id="get-latest-content"><a href="javascript:getlatestcontent('serpRSS1305942', 'http://stevenharper.livejournal.com/data/rss/');">Latest content</a></div>
+
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <div class="result-wrapper-bottom">
+
+                </div>
+
+            </div> 
+
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://stephkitty.livejournal.com/"><b>the star in this disaster movie</b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://stephkitty.livejournal.com/">the star in this disaster movie</a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/vegetarianism">vegetarianism</a>, <a href="http://ex.plode.us/search/coffee">coffee</a>, <a href="http://ex.plode.us/search/tori+amos">tori amos</a>, <a href="http://ex.plode.us/search/nirvana">nirvana</a>, <a href="http://ex.plode.us/search/kurt+cobain">kurt cobain</a>, <a href="http://ex.plode.us/search/our+lady+peace">our lady peace</a>, <a href="http://ex.plode.us/search/internet">internet</a>, <a href="http://ex.plode.us/search/boots">boots</a>, <a href="http://ex.plode.us/search/buffy+the+vampire+slayer">buffy the vampire slayer</a>, <a href="http://ex.plode.us/search/garden+state">garden state</a>, <a href="http://ex.plode.us/search/slash">slash</a>, <a href="http://ex.plode.us/search/water">water</a>, <a href="http://ex.plode.us/search/the+cure">the cure</a>, <a href="http://ex.plode.us/search/sleep">sleep</a>, <a href="http://ex.plode.us/search/songwriting">songwriting</a>, <a href="http://ex.plode.us/search/steve+buscemi">steve buscemi</a>, <a href="http://ex.plode.us/search/princess+mononoke">princess mononoke</a>, <a href="http://ex.plode.us/search/vanessa+carlton">vanessa carlton</a>, <a href="http://ex.plode.us/search/jeff+buckley">jeff buckley</a>, <a href="http://ex.plode.us/search/nintendo">nintendo</a><span id="hidetags1665789">, <a href="http://ex.plode.us/search/summer">summer</a>, <a href="http://ex.plode.us/search/pretty+boys">pretty boys</a>, <a href="http://ex.plode.us/search/goo+goo+dolls">goo goo dolls</a>, <a href="http://ex.plode.us/search/dark+angel">dark angel</a>, <a href="http://ex.plode.us/search/canada">canada</a>, <a href="http://ex.plode.us/search/indian+food">indian food</a>, <a href="http://ex.plode.us/search/jane%27s+addiction">jane's addiction</a>, <a href="http://ex.plode.us/search/livejournal">livejournal</a>, <a href="http://ex.plode.us/search/teenage+mutant+ninja+turtles">teenage mutant ninja turtles</a>, <a href="http://ex.plode.us/search/animal+rights">animal rights</a>, <a href="http://ex.plode.us/search/joni+mitchell">joni mitchell</a>, <a href="http://ex.plode.us/search/honesty">honesty</a>, <a href="http://ex.plode.us/search/night">night</a>, <a href="http://ex.plode.us/search/queer+as+folk">queer as folk</a>, <a href="http://ex.plode.us/search/empire+records">empire records</a>, <a href="http://ex.plode.us/search/alias">alias</a>, <a href="http://ex.plode.us/search/britney+spears">britney spears</a>, <a href="http://ex.plode.us/search/autumn">autumn</a>, <a href="http://ex.plode.us/search/socks">socks</a>, <a href="http://ex.plode.us/search/justin+timberlake">justin timberlake</a>, <a href="http://ex.plode.us/search/fanfic">fanfic</a>, <a href="http://ex.plode.us/search/sunrise">sunrise</a>, <a href="http://ex.plode.us/search/rob+zombie">rob zombie</a>, <a href="http://ex.plode.us/search/loud+music">loud music</a>, <a href="http://ex.plode.us/search/hole">hole</a>, <a href="http://ex.plode.us/search/solitude">solitude</a>, <a href="http://ex.plode.us/search/stabbing+westward">stabbing westward</a>, <a href="http://ex.plode.us/search/sunset">sunset</a>, <a href="http://ex.plode.us/search/jimmy+wayne">jimmy wayne</a>, <a href="http://ex.plode.us/search/def+leppard">def leppard</a>, <a href="http://ex.plode.us/search/dar+williams">dar williams</a>, <a href="http://ex.plode.us/search/jessica+alba">jessica alba</a>, <a href="http://ex.plode.us/search/jennifer+garner">jennifer garner</a>, <a href="http://ex.plode.us/search/boys+with+guitars">boys with guitars</a>, <a href="http://ex.plode.us/search/third+eye+blind">third eye blind</a>, <a href="http://ex.plode.us/search/green+eyeliner">green eyeliner</a>, <a href="http://ex.plode.us/search/explodingdog.com">explodingdog.com</a>, <a href="http://ex.plode.us/search/weekends">weekends</a>, <a href="http://ex.plode.us/search/joydrop">joydrop</a>, <a href="http://ex.plode.us/search/long+distance+phone+calls">long distance phone calls</a>, <a href="http://ex.plode.us/search/kasey+chambers">kasey chambers</a>, <a href="http://ex.plode.us/search/david+usher">david usher</a>, <a href="http://ex.plode.us/search/finger+eleven">finger eleven</a>, <a href="http://ex.plode.us/search/matthew+good+band">matthew good band</a>, <a href="http://ex.plode.us/search/freedom+of+speech">freedom of speech</a>, <a href="http://ex.plode.us/search/raine+maida">raine maida</a>, <a href="http://ex.plode.us/search/boys+with+long+hair">boys with long hair</a>, <a href="http://ex.plode.us/search/backstreet+boys">backstreet boys</a>, <a href="http://ex.plode.us/search/kevin+richardson">kevin richardson</a>, <a href="http://ex.plode.us/search/being+alone">being alone</a>, <a href="http://ex.plode.us/search/dave+navarro">dave navarro</a>, <a href="http://ex.plode.us/search/equal+rights">equal rights</a>, <a href="http://ex.plode.us/search/integrity">integrity</a>, <a href="http://ex.plode.us/search/singer-songwriters">singer-songwriters</a>, <a href="http://ex.plode.us/search/ella">ella</a>, <a href="http://ex.plode.us/search/jc+chasez">jc chasez</a>, <a href="http://ex.plode.us/search/lance+bass">lance bass</a>, <a href="http://ex.plode.us/search/his+and+her+circumstances">his and her circumstances</a>, <a href="http://ex.plode.us/search/moist">moist</a>, <a href="http://ex.plode.us/search/willa+ford">willa ford</a>, <a href="http://ex.plode.us/search/anonymity">anonymity</a>, <a href="http://ex.plode.us/search/john+rzeznik">john rzeznik</a>, <a href="http://ex.plode.us/search/anyone+but+bush">anyone but bush</a>, <a href="http://ex.plode.us/search/lennon+murphy">lennon murphy</a>, <a href="http://ex.plode.us/search/oleander">oleander</a>, <a href="http://ex.plode.us/search/anti-aol">anti-aol</a>, <a href="http://ex.plode.us/search/music+that+doesn%27t+suck">music that doesn't suck</a>, <a href="http://ex.plode.us/search/disappearing">disappearing</a>, <a href="http://ex.plode.us/search/chantal+kreviazuk">chantal kreviazuk</a>, <a href="http://ex.plode.us/search/moon+on+a+stick">moon on a stick</a>, <a href="http://ex.plode.us/search/rain+at+night">rain at night</a>, <a href="http://ex.plode.us/search/notepad">notepad</a>, <a href="http://ex.plode.us/search/not+sharing+this+interest">not sharing this interest</a>, <a href="http://ex.plode.us/search/tabitha%27s+secret">tabitha's secret</a>, <a href="http://ex.plode.us/search/on+the+line">on the line</a>, <a href="http://ex.plode.us/search/kevin%2Faj">kevin/aj</a>, <a href="http://ex.plode.us/search/eddi+reader">eddi reader</a>, <a href="http://ex.plode.us/search/coffee+coffee+coffee">coffee coffee coffee</a>, <a href="http://ex.plode.us/search/dieselsweeties.com">dieselsweeties.com</a>, <a href="http://ex.plode.us/search/cat+town">cat town</a>, <a href="http://ex.plode.us/search/century+hotel">century hotel</a>, <a href="http://ex.plode.us/search/discount+shopping">discount shopping</a>, <a href="http://ex.plode.us/search/gladys+rzeznik%27s+tupperware">gladys rzeznik's tupperware</a>, <a href="http://ex.plode.us/search/yamaha+guitars">yamaha guitars</a>, <a href="http://ex.plode.us/search/cran-raspberry+juice">cran-raspberry juice</a>, <a href="http://ex.plode.us/search/making+grilled+cheese+sandwiches">making grilled cheese sandwiches</a>, <a href="http://ex.plode.us/search/coffee+coffee">coffee coffee</a>, <a href="http://ex.plode.us/search/stephanie+says">stephanie says</a>, <a href="http://ex.plode.us/search/%2Ahughughug%2A">*hughughug*</a>, <a href="http://ex.plode.us/search/angels+call+an+ambulance">angels call an ambulance</a>, <a href="http://ex.plode.us/search/billyperson">billyperson</a>, <a href="http://ex.plode.us/search/brain+sugary">brain sugary</a>, <a href="http://ex.plode.us/search/brie+only+brie">brie only brie</a>, <a href="http://ex.plode.us/search/chantal+is+mine">chantal is mine</a>, <a href="http://ex.plode.us/search/chantal%27s+eyes">chantal's eyes</a>, <a href="http://ex.plode.us/search/chantal%27s+hands">chantal's hands</a>, <a href="http://ex.plode.us/search/chantal%27s+husband+%3B%29">chantal's husband ;)</a>, <a href="http://ex.plode.us/search/coffee+coffee+coffee+coffee">coffee coffee coffee coffee</a>, <a href="http://ex.plode.us/search/dave+genn">dave genn</a>, <a href="http://ex.plode.us/search/did+i+mention+chantal%3F">did i mention chantal?</a>, <a href="http://ex.plode.us/search/ella%27s+oafish+little+sister">ella's oafish little sister</a>, <a href="http://ex.plode.us/search/everything+about+chantal">everything about chantal</a>, <a href="http://ex.plode.us/search/exploding+coke">exploding coke</a>, <a href="http://ex.plode.us/search/girlsingers+who+don%27t+suck">girlsingers who don't suck</a>, <a href="http://ex.plode.us/search/having+horrible+icons">having horrible icons</a>, <a href="http://ex.plode.us/search/john+rzeznik%27s+red+shirts">john rzeznik's red shirts</a>, <a href="http://ex.plode.us/search/john%27s+backstreet+boys+nightmare">john's backstreet boys nightmare</a>, <a href="http://ex.plode.us/search/john%2Fkevin+slash">john/kevin slash</a>, <a href="http://ex.plode.us/search/lace-up+pants">lace-up pants</a>, <a href="http://ex.plode.us/search/liz+phair%27s+older+music">liz phair's older music</a>, <a href="http://ex.plode.us/search/macking+on+straight+girls">macking on straight girls</a>, <a href="http://ex.plode.us/search/mmm+chantal">mmm chantal</a>, <a href="http://ex.plode.us/search/not+college+ew+die">not college ew die</a>, <a href="http://ex.plode.us/search/nsync+kinda">nsync kinda</a>, <a href="http://ex.plode.us/search/old+school+ggd+videos">old school ggd videos</a>, <a href="http://ex.plode.us/search/orgasmike+starfuckers">orgasmike starfuckers</a>, <a href="http://ex.plode.us/search/rockin+the+caps">rockin the caps</a>, <a href="http://ex.plode.us/search/talented+girls+with+guitars">talented girls with guitars</a>, <a href="http://ex.plode.us/search/tehrzezandkev">tehrzezandkev</a>, <a href="http://ex.plode.us/search/thanksgiving+foods">thanksgiving foods</a>, <a href="http://ex.plode.us/search/the+bradley+method+cult">the bradley method cult</a>, <a href="http://ex.plode.us/search/using+chantal+as+interests">using chantal as interests</a>, <a href="http://ex.plode.us/search/what+no+i+mean">what no i mean</a>, <a href="http://ex.plode.us/search/wish+i+was+chantal">wish i was chantal</a>, <a href="http://ex.plode.us/search/xanderbooznik">xanderbooznik</a></span></p>
+
+                                <p class="serpLocation"></p>
+
+                                <!-- <p class="serpURL"><a href="http://stephkitty.livejournal.com/">http://stephkitty.livejournal.com/</a></p> -->
+
+                                <div class="serpLatestContent"><div id="serpRSS1665789"></div></div>
+
+                                
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top" width="140">
+
+                            <div class="serpAction">
+
+                                    
+                <div id="view-friends"><a href="http://ex.plode.us/friends/1665789/">View friends</a></div>
+
+                <div id="view-friends-of"><a href="http://ex.plode.us/friendsof/1665789">View friends of</a></div>
+
+                <div id="find-similar"><a href="http://ex.plode.us/similar/1665789/">Similar users</a></div>
+
+                <div id="post-comment"><a href="http://ex.plode.us/comments/1665789/">Comment wall</a></div>
+
+                <div id="see-all-tags"><a href="javascript:toggleVisibility('hidetags1665789');">See all 145 tags</a></div>
+
+                <div id="get-latest-content"><a href="javascript:getlatestcontent('serpRSS1665789', 'http://stephkitty.livejournal.com/data/rss/');">Latest content</a></div>
+
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <div class="result-wrapper-bottom">
+
+                </div>
+
+            </div> 
+
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://steal-this-lj.livejournal.com/"><b>Charlie Haskell</b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://steal-this-lj.livejournal.com/">Charlie Haskell</a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/hashish">hashish</a>, <a href="http://ex.plode.us/search/peace">peace</a>, <a href="http://ex.plode.us/search/hair">hair</a>, <a href="http://ex.plode.us/search/yoga">yoga</a>, <a href="http://ex.plode.us/search/zen">zen</a>, <a href="http://ex.plode.us/search/bob+dylan">bob dylan</a>, <a href="http://ex.plode.us/search/simon+and+garfunkel">simon and garfunkel</a>, <a href="http://ex.plode.us/search/anarchy">anarchy</a>, <a href="http://ex.plode.us/search/socialism">socialism</a>, <a href="http://ex.plode.us/search/freedom">freedom</a>, <a href="http://ex.plode.us/search/revolution">revolution</a>, <a href="http://ex.plode.us/search/joni+mitchell">joni mitchell</a>, <a href="http://ex.plode.us/search/civil+rights">civil rights</a>, <a href="http://ex.plode.us/search/1960s">1960s</a>, <a href="http://ex.plode.us/search/neil+young">neil young</a>, <a href="http://ex.plode.us/search/grass">grass</a>, <a href="http://ex.plode.us/search/cream">cream</a>, <a href="http://ex.plode.us/search/cat+stevens">cat stevens</a>, <a href="http://ex.plode.us/search/understanding">understanding</a>, <a href="http://ex.plode.us/search/organic+food">organic food</a><span id="hidetags1169558">, <a href="http://ex.plode.us/search/karma">karma</a>, <a href="http://ex.plode.us/search/blue+jeans">blue jeans</a>, <a href="http://ex.plode.us/search/acid">acid</a>, <a href="http://ex.plode.us/search/the+zombies">the zombies</a>, <a href="http://ex.plode.us/search/abbie+hoffman">abbie hoffman</a>, <a href="http://ex.plode.us/search/rapping">rapping</a>, <a href="http://ex.plode.us/search/social+change">social change</a>, <a href="http://ex.plode.us/search/mother+nature">mother nature</a>, <a href="http://ex.plode.us/search/unions">unions</a>, <a href="http://ex.plode.us/search/hitchhiking">hitchhiking</a>, <a href="http://ex.plode.us/search/keeping+it+real">keeping it real</a>, <a href="http://ex.plode.us/search/black+panthers">black panthers</a>, <a href="http://ex.plode.us/search/be+here+now">be here now</a>, <a href="http://ex.plode.us/search/anti-establishment">anti-establishment</a>, <a href="http://ex.plode.us/search/social+awareness">social awareness</a>, <a href="http://ex.plode.us/search/transcendental+meditation">transcendental meditation</a>, <a href="http://ex.plode.us/search/the+mothers+of+invention">the mothers of invention</a>, <a href="http://ex.plode.us/search/paying+attention">paying attention</a>, <a href="http://ex.plode.us/search/1971">1971</a>, <a href="http://ex.plode.us/search/chicago+seven">chicago seven</a>, <a href="http://ex.plode.us/search/ending+the+war">ending the war</a>, <a href="http://ex.plode.us/search/baby+boomers">baby boomers</a>, <a href="http://ex.plode.us/search/facing+fear">facing fear</a>, <a href="http://ex.plode.us/search/american+cities">american cities</a>, <a href="http://ex.plode.us/search/Free+Your+Mind">Free Your Mind</a>, <a href="http://ex.plode.us/search/draft+dodging">draft dodging</a>, <a href="http://ex.plode.us/search/not+selling+out">not selling out</a>, <a href="http://ex.plode.us/search/woodstock+nation">woodstock nation</a>, <a href="http://ex.plode.us/search/finding+our+way+back">finding our way back</a>, <a href="http://ex.plode.us/search/follow+the+children">follow the children</a>, <a href="http://ex.plode.us/search/fuck+nixon">fuck nixon</a>, <a href="http://ex.plode.us/search/getting+down+to+it">getting down to it</a>, <a href="http://ex.plode.us/search/goodbye+fascism">goodbye fascism</a>, <a href="http://ex.plode.us/search/hungry+freaks+daddy">hungry freaks daddy</a>, <a href="http://ex.plode.us/search/i%27ve+got+life">i've got life</a>, <a href="http://ex.plode.us/search/keep+on+truckin%27">keep on truckin'</a>, <a href="http://ex.plode.us/search/not+buying+in">not buying in</a>, <a href="http://ex.plode.us/search/remember+kent+state">remember kent state</a>, <a href="http://ex.plode.us/search/summer+of+%2767">summer of '67</a>, <a href="http://ex.plode.us/search/the+counterculture">the counterculture</a>, <a href="http://ex.plode.us/search/the+spinning+wheel">the spinning wheel</a>, <a href="http://ex.plode.us/search/underground+rags">underground rags</a></span></p>
+
+                                <p class="serpLocation"></p>
+
+                                <!-- <p class="serpURL"><a href="http://steal-this-lj.livejournal.com/">http://steal-this-lj.livejournal.com/</a></p> -->
+
+                                <div class="serpLatestContent"><div id="serpRSS1169558"></div></div>
+
+                                
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top" width="140">
+
+                            <div class="serpAction">
+
+                                    
+                <div id="view-friends"><a href="http://ex.plode.us/friends/1169558/">View friends</a></div>
+
+                <div id="view-friends-of"><a href="http://ex.plode.us/friendsof/1169558">View friends of</a></div>
+
+                <div id="find-similar"><a href="http://ex.plode.us/similar/1169558/">Similar users</a></div>
+
+                <div id="post-comment"><a href="http://ex.plode.us/comments/1169558/">Comment wall</a></div>
+
+                <div id="see-all-tags"><a href="javascript:toggleVisibility('hidetags1169558');">See all 62 tags</a></div>
+
+                <div id="get-latest-content"><a href="javascript:getlatestcontent('serpRSS1169558', 'http://steal-this-lj.livejournal.com/data/rss/');">Latest content</a></div>
+
+
+                                </div>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+                <div class="result-wrapper-bottom">
+
+                </div>
+
+            </div> 
+
+            <div class="serpResult">
+
+                <div class="result-wrapper-top">
+
+                </div>
+
+                <table width="660">
+
+                    <tr>
+
+                        <td valign="top" width="110">
+
+                            <div class="serpIcon">
+
+                                <div class="serpIcon-avatar"><a href="http://staynow.livejournal.com/"><b>staynow</b><br />(no icon)</a></div>
+
+                                <table><tr><td><p style="font-size:11px;">Via:</p></td><td><a href="http://livejournal.com/"><img src="http://ex.plode.us/mod/template/templates/Default_Template/images/mini_icons/icon_livejournal.gif" border="0" /></a></td></tr></table>
+
+                            </div>
+
+                        </td>
+
+                        <td valign="top">
+
+                            <div class="serpDetails">
+
+                                <h3><a href="http://staynow.livejournal.com/">staynow</a></h3>
+
+                                <div class="serpAnnotation"></div>
+
+                                <p class="serpInterests"><a href="http://ex.plode.us/search/singing">singing</a>, <a href="http://ex.plode.us/search/music">music</a>, <a href="http://ex.plode.us/search/chocolate">chocolate</a>, <a href="http://ex.plode.us/search/europe">europe</a>, <a href="http://ex.plode.us/search/photography">photography</a>, <a href="http://ex.plode.us/search/piano">piano</a>, <a href="http://ex.plode.us/search/reading">reading</a>, <a href="http://ex.plode.us/search/shakespeare">shakespeare</a>, <a href="http://ex.plode.us/search/snow">snow</a>, <a href="http://ex.plode.us/search/writing">writing</a>, <a href="http://ex.plode.us/search/christmas"
+

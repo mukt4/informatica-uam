@@ -1,0 +1,243 @@
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Content-Type: text/html
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/6.0
+Last-Modified: Fri, 11 Jul 2008 19:35:26 GMT
+ETag: "5e64cc448de3c81:aad"
+Date: Sat, 10 Jan 2009 02:31:39 GMT
+Connection: close
+Content-Length: 11751
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<title>Salus Healthcare :: Entrusted with Your Healthcare</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+		<script type="text/javascript" src="js/functions.js"></script>
+		<csactions>
+			<csaction name="BD9558A40" class="Set Image URL" type="onevent" val0="address" val1="images/address-on.gif" urlparams="2"></csaction>
+			<csaction name="BD9558B51" class="Set Image URL" type="onevent" val0="address" val1="images/address-off.gif" urlparams="2"></csaction>
+		</csactions>
+		<csscriptdict>
+			<script type="text/javascript"><!--
+CSStopExecution=false;
+function CSAction(array) {return CSAction2(CSAct, array);}
+function CSAction2(fct, array) { 
+	var result;
+	for (var i=0;i<array.length;i++) {
+		if(CSStopExecution) return false; 
+		var aa = fct[array[i]];
+		if (aa == null) return false;
+		var ta = new Array;
+		for(var j=1;j<aa.length;j++) {
+			if((aa[j]!=null)&&(typeof(aa[j])=="object")&&(aa[j].length==2)){
+				if(aa[j][0]=="VAR"){ta[j]=CSStateArray[aa[j][1]];}
+				else{if(aa[j][0]=="ACT"){ta[j]=CSAction(new Array(new String(aa[j][1])));}
+				else ta[j]=aa[j];}
+			} else ta[j]=aa[j];
+		}			
+		result=aa[0](ta);
+	}
+	return result;
+}
+CSAct = new Object;
+CSAg = window.navigator.userAgent; CSBVers = parseInt(CSAg.charAt(CSAg.indexOf("/")+1),10);
+CSIsW3CDOM = ((document.getElementById) && !(IsIE()&&CSBVers<6)) ? true : false;
+function IsIE() { return CSAg.indexOf("MSIE") > 0;}
+function CSIEStyl(s) { return document.all.tags("div")[s].style; }
+function CSNSStyl(s) { if (CSIsW3CDOM) return document.getElementById(s).style; else return CSFindElement(s,0);  }
+CSIImg=false;
+function CSInitImgID() {if (!CSIImg && document.images) { for (var i=0; i<document.images.length; i++) { if (!document.images[i].id) document.images[i].id=document.images[i].name; } CSIImg = true;}}
+function CSFindElement(n,ly) { if (CSBVers<4) return document[n];
+	if (CSIsW3CDOM) {CSInitImgID();return(document.getElementById(n));}
+	var curDoc = ly?ly.document:document; var elem = curDoc[n];
+	if (!elem) {for (var i=0;i<curDoc.layers.length;i++) {elem=CSFindElement(n,curDoc.layers[i]); if (elem) return elem; }}
+	return elem;
+}
+function CSGetImage(n) {if(document.images) {return ((!IsIE()&&CSBVers<5)?CSFindElement(n,0):document.images[n]);} else {return null;}}
+CSDInit=false;
+function CSIDOM() { if (CSDInit)return; CSDInit=true; if(document.getElementsByTagName) {var n = document.getElementsByTagName('DIV'); for (var i=0;i<n.length;i++) {CSICSS2Prop(n[i].id);}}}
+function CSICSS2Prop(id) { var n = document.getElementsByTagName('STYLE');for (var i=0;i<n.length;i++) { var cn = n[i].childNodes; for (var j=0;j<cn.length;j++) { CSSetCSS2Props(CSFetchStyle(cn[j].data, id),id); }}}
+function CSFetchStyle(sc, id) {
+	var s=sc; while(s.indexOf("#")!=-1) { s=s.substring(s.indexOf("#")+1,sc.length); if (s.substring(0,s.indexOf("{")).toUpperCase().indexOf(id.toUpperCase())!=-1) return(s.substring(s.indexOf("{")+1,s.indexOf("}")));}
+	return "";
+}
+function CSGetStyleAttrValue (si, id) {
+	var s=si.toUpperCase();
+	var myID=id.toUpperCase()+":";
+	var id1=s.indexOf(myID);
+	if (id1==-1) return "";
+	s=s.substring(id1+myID.length+1,si.length);
+	var id2=s.indexOf(";");
+	return ((id2==-1)?s:s.substring(0,id2));
+}
+function CSSetCSS2Props(si, id) {
+	var el=document.getElementById(id);
+	if (el==null) return;
+	var style=document.getElementById(id).style;
+	if (style) {
+		if (style.left=="") style.left=CSGetStyleAttrValue(si,"left");
+		if (style.top=="") style.top=CSGetStyleAttrValue(si,"top");
+		if (style.width=="") style.width=CSGetStyleAttrValue(si,"width");
+		if (style.height=="") style.height=CSGetStyleAttrValue(si,"height");
+		if (style.visibility=="") style.visibility=CSGetStyleAttrValue(si,"visibility");
+		if (style.zIndex=="") style.zIndex=CSGetStyleAttrValue(si,"z-index");
+	}
+}
+function CSSetImageURL(action) {
+	var img=CSGetImage(action[1]);
+	if (img) img.src=action[2];
+}
+
+// --></script>
+		</csscriptdict>
+		<csactiondict>
+			<script type="text/javascript"><!--
+CSAct[/*CMP*/ 'BD9558A40'] = new Array(CSSetImageURL,/*CMP*/ 'address',/*URL*/ 'images/address-on.gif');
+CSAct[/*CMP*/ 'BD9558B51'] = new Array(CSSetImageURL,/*CMP*/ 'address',/*URL*/ 'images/address-off.gif');
+
+// --></script>
+		</csactiondict>
+	</head>
+
+	<body bgcolor="#999966" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+		<table width="800" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF">
+			<tr>
+				<td valign="top"><img src="images/header.jpg" alt="" height="138" width="800" border="0"></td>
+			</tr>
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="175" valign="top" bgcolor="#D8DAD1">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td valign="top" width="15"><img src="images/spacer.gif" alt="" height="20" width="15" border="0"></td>
+										<td valign="top"></td>
+									</tr>
+									<tr>
+										<td valign="top" width="15"></td>
+										<td valign="top">&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="index.html">HOME</a></span><br>
+											&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="services.html">SERVICES</a></span><br>
+											<span class="gnav"><a href="services.html">Independence</a></span><br>
+											<span class="gnav"><a href="personaldignity.html">Personal Dignity</a></span><br>
+											<span class="gnav"><a href="qualityoflife.html">Higher Quality of Life</a></span><br>
+											&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="whysalus.html">WHY SALUS</a></span><br>
+											<span class="gnav"><a href="available.html">Available</a></span><br>
+											<span class="gnav"><a href="customized.html">Customized</a></span><br>
+											<span class="gnav"><a href="professional.html">Professional</a></span><br>
+											&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="name.html">ABOUT US</a></span><br>
+											<span class="gnav"><a href="name.html">What's In A Name</a></span><br>
+											<span class="gnav"><a href="vision.html">Vision</a></span><br>
+											<span class="gnav"><a href="contactus.html">Contact Us</a></span><br>
+											&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="info.html">FAQ / INFO</a></span><br>
+											<span class="gnav"><a href="faq.html">FAQ</a></span><br>
+											<span class="gnav"><a href="4eq.html">Four Essential Questions</a></span><br>
+											<span class="gnav"><a href="testimonials.html">Testimonials</a></span><br>
+											&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="getorganized.html">WELLNESS TIPS</a></span><br>
+											<span class="gnav"><a href="getorganized.html">Getting Organized</a></span><br>
+											<span class="gnav"><a href="relationships.html">Relationships</a></span><br>
+											<span class="gnav"><a href="overwhelmed.html">Overwhelmed?</a></span><br>
+                                            <span class="gnav"><a href="skincare.html">Skin Care</a></span><br>
+                                            <span class="gnav"><a href="wellnesstips.html">Wellness Tips</a></span><br>
+                                            <span class="gnav"><a href="hearthealth.html">Heart Health</a></span><br>
+                                            <span class="gnav"><a href="arthritis.html">Arthritis Tips</a></span><br>
+                                            <span class="gnav"><a href="fallinjuries.html">Fall Injuries</a></span><br>
+											&nbsp;&nbsp;&nbsp;<span class="gnavb"><a href="requestinfo.html">REQUEST INFO</a></span><br>
+											<br>
+											<br></td>
+									</tr>
+								</table>
+							</td>
+							<td valign="top">
+								<table width="100%" border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td width="20"><img src="images/spacer.gif" alt="" height="15" width="5" border="0"></td>
+										<td width="405"></td>
+										<td width="10"></td>
+										<td width="190"></td>
+									</tr>
+									<tr>
+										<td width="20"></td>
+										<td valign="top" width="405"><br>
+											<span class="title">WELLNESS TIPS</span>
+											<p><b>Salus Monthly Wellness Tips: Getting Organized</b><br>
+												 <br>
+												1. Be actively involved in your life and community <br>
+												 <br>
+												2. Clear out the clutter in your environment, get organized <br>
+												 <br>
+												3. Take time to play &#151; do things you love <br>
+												 <br>
+												4. Learn something new <br>
+												 <br>
+												5. Adopt a pet or baby sit a pet <br>
+												 <br>
+												6. Move your body more &#151; walk when you can <br>
+												 <br>
+												7. Volunteer to help someone less fortunate <br>
+												 <br>
+												8. Challenge your negative beliefs &#151; focus on what is positive <br>
+												 <br>
+												9. Keep a gratitude journal <br>
+												 <br>
+												10. Don&rsquo;t forget to laugh, especially at yourself<br>
+												<br>
+												(With all of the above, attitude is a choice, make it positive. Ask for help as you need.)<br>
+												<br>
+												<br><font size="-2">
+												Written for Salus Homecare by Beverly Staley, Certified Life Coach, TheLifeCoachingCafe.com</font></p>
+											<p></p>
+										</td>
+										<td width="10"></td>
+										<td align="left" valign="top" width="190"><img src="images/address-off.gif" alt="" name="address" height="128" width="174" usemap="#address-offbd95587c" border="0"><map name="address-offbd95587c"><area onMouseOver="CSAction(new Array(/*CMP*/'BD9558A40'));return true;" onMouseOut="CSAction(new Array(/*CMP*/'BD9558B51'));" shape="rect" coords="0,112,145,125" href="mailto:info@salushealthcare.com" alt="" csout="BD9558B51" csover="BD9558A40"></map><br>
+											<br>
+											<br>
+											<img src="images/throughtheireyes.gif" alt="" height="26" width="184" border="0" vspace="5"><br>
+											<SCRIPT LANGUAGE="Javascript"><!--
+
+											function image() {
+											};
+											
+											image = new image();
+											number = 0;
+											
+											// imageArray
+											image[number++] = "<img src='images/1.gif' border='0'>"
+											image[number++] = "<img src='images/2.gif' border='0'>"
+											image[number++] = "<img src='images/3.gif' border='0'>"
+											image[number++] = "<img src='images/4.gif' border='0'>"
+											image[number++] = "<img src='images/5.gif' border='0'>"
+											image[number++] = "<img src='images/6.gif' border='0'>"
+											image[number++] = "<img src='images/7.gif' border='0'>"
+											// keep adding items here...
+											
+											increment = Math.floor(Math.random() * number);
+											
+											document.write(image[increment]);
+											
+											//--></SCRIPT>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td width="175" valign="top" bgcolor="#D8DAD1"></td>
+							<td valign="top"><span class="utilities">&nbsp;&nbsp;<a href="sitemap.html">SITE MAP</a> - <a href="pp_tc.html">PRIVACY POLICY</a> - 	DESIGN BY <a href="http://www.1cd.com" target="_blank">ONE COMPANY DESIGN</a><a href="http://www.theblendergroup.com" target="_blank"><br>
+										<br>
+									</a></span></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<p></p>
+	</body>
+
+</html>
+

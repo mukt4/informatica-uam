@@ -1,0 +1,793 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/6.0
+Cache-control: private
+Date: Fri, 09 Jan 2009 02:13:38 GMT
+Connection: close
+Set-Cookie: ASPSESSIONIDAQSQDRCC=KCNDNFFDGPAJGIAKOCLNGHEL; path=/
+Content-Length: 64687
+
+	
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--  
+***********************************************************************
+* Start - /_includes/_INC_meta.asp  
+***********************************************************************
+ -->
+<head>
+
+<!-- Start - Meta tags -->
+ 
+	<title>French Lick Springs Resort History</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<META name="keywords" content="French, Lick, Springs, Resort, History,">
+	<META name="description" content="French Lick Springs Resort & Casino rests on some 2,600 acres in the breathtaking Hoosier National Forest, on a site filled with rich history.">
+	
+	
+
+	
+<META name="verify-v1" content="FyLoNObtLUohPGlPGjVhmgvUcOTG3lwpCs9Dr3Fo7yw=" /> 
+
+</head>
+
+<!-- 
+***********************************************************************
+* End - /_includes/_INC_meta.asp  
+***********************************************************************
+--><!--
+********************************************************************
+start INC_top.asp
+********************************************************************
+-->
+<link href="/_css/main.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="/_javascript/Scripts.js"></script>
+<link href="/_css/styles.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+<!--
+.css_thank_you_msg {color: #FF0000}
+.css_Email_is_on_our_system {color: #FF0000}
+.css_System_Msg {color: #FF0000}
+-->
+</style>
+
+<!-- 
+***********************************************************************
+* Start - _INC_Java_Sripts.asp  
+***********************************************************************
+-->
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_NewWindow()
+* Syntax
+********************************************************************
+*/
+
+function NewWindow(mypage, myname, w, h, scroll) {
+var winl = (screen.width - w) / 2;
+var wint = (screen.height - h) / 2;
+winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+win = window.open(mypage, myname, winprops)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+//-->
+</script>
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_BM_validateForm()
+* Syntax
+********************************************************************
+*/
+function BM_validateForm_Sign_up_filling_out_forms()
+{
+	var errors 		= '';
+	var esu_Email	= document.Sign_up_filling_out_forms.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+function BM_validateForm_Sign_up_filling_out_forms_redirections()
+{
+	var errors 		= '';
+	var esu_Email	= document.Sign_up_filling_out_forms_redirections.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+function BM_validateForm_Login_eGift()
+{
+	var errors 		= '';
+	var esu_Email	= document.Login_eGift.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+function BM_validateForm_Sign_up()
+{
+	var errors 		= '';
+	var esu_Email	= document.Sign_up.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+//-->
+</script>
+
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_DreamWeaver()
+* Syntax
+//call by /_share/Calender/Calender_3.asp
+********************************************************************
+*/
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  
+  for (i=0; i<(args.length-2); i+=3) 
+  { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.title_des; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } 
+  if (errors) alert('The following error(s) occurred:\n'+errors); 
+  document.MM_returnValue = (errors == '');
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+//-->
+</script>
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_showCalendar()
+* Syntax
+//call by /_share/Calender/Calender_3.asp
+********************************************************************
+*/
+function showCalendar(updateType)
+{
+  window.populateSelect = "true";
+
+  var form = document.BarRequest;
+
+  if (updateType == "arrive")
+  {
+    window.month = form.IN_DATE_MM;
+    window.day   = form.IN_DATE_DD;
+    window.year  = form.IN_DATE_YY;
+  }
+  else if (updateType == "depart")
+  {
+    window.month = form.OUT_DATE_MM;
+    window.day   = form.OUT_DATE_DD;
+    window.year  = form.OUT_DATE_YY;
+  }
+
+  var file = '/_share/Calender/Calender_03.asp';
+
+  window.open(file, 'barCalendar', 'WIDTH=250,HEIGHT=250');
+}
+//-->
+</script>
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+* Start - open window used by..
+*	openPage()
+Syntax
+oNewWindow = window.open( [sURL] [, sName] [, sFeatures] [, bReplace])
+http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/methods/open_0.asp
+********************************************************************
+*/
+function openPage(Page,Email)
+{
+	var Page				// 
+	var clientWidth 	= 400
+	var clientHeight 	= 200	
+	// document.body.clientWidth , document.body.clientHeight
+	if (Page=="Send_Password")
+	{
+	var pageWindow;
+	var url = "/eCommerce/Register/Forgot_your_Password.asp?esu_Email="+Email+"";
+	var sFeatures = "width="+clientWidth+",height="+clientHeight+"fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
+	pageWindow = window.open(url,"",sFeatures);
+	pageWindow.focus();
+	}
+}
+//-->
+</script>
+
+<SCRIPT TYPE="text/javascript" LANGAUGE="JavaScript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_Reservations()
+Syntax
+********************************************************************
+*/
+function y2k(number)    { return (number < 1000) ? number + 1900 : number; }
+
+var today = new Date();
+var day   = today.getDate();
+var month = today.getMonth();
+var year  = y2k(today.getYear());
+
+function padout(number) { return (number < 10) ? '0' + number : number; }
+
+function restart_a() {
+    document.reservation.arrivaldate.value = '' + padout(month - 0 + 1) + '/' + padout(day) + '/' + year;
+	document.reservation.doa_mm.value = padout(month);
+	document.reservation.doa_dd.value = padout(day);
+    mywindow.close();
+}
+function restart_d() {
+    document.reservation.departuredate.value = '' + padout(month - 0 + 1) + '/' + padout(day) + '/' + year;
+	document.reservation.dod_mm.value = padout(month);
+	document.reservation.dod_dd.value = padout(day);
+    mywindow.close();
+}
+
+function newWindow_Calender_01() {
+    mywindow=open('/_share/Calender/Calender_01.asp','myname','resizable=no,width=350,height=250');
+    mywindow.location.href = '/_share/Calender/Calender_01.asp';
+    if (mywindow.opener == null) mywindow.opener = self;
+}
+function newWindow_Calender_02() {
+    mywindow=open('/_share/Calender/Calender_02.asp','myname','resizable=no,width=350,height=250');
+    mywindow.location.href = '/_share/Calender/Calender_02.asp';
+    if (mywindow.opener == null) mywindow.opener = self;
+}
+//-->
+</SCRIPT>
+
+<script language="JavaScript" type="text/JavaScript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+* Start - open window used by..
+*	openCalendar_global()
+Syntax
+********************************************************************
+*/
+function openCalendar_global(FormElement,FormName)
+{
+	var calendarwindow;
+	url = "/_share/_javascript/Calender.asp?formname="+ FormName +"&formelement=" + FormElement;
+	fut = "toolbar=no,LEFT=700,TOP=400,WIDTH=170,HEIGHT=140,status=no,scrollbars=no,resize=no,menubar=no"
+	calendarwindow = window.open(url,"thewindow",fut);
+	calendarwindow.focus();
+}
+//-->
+</script>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? " https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js'type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1622993-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+
+<!-- 
+***********************************************************************
+* End - _INC_Java_Sripts.asp  
+***********************************************************************
+-->
+
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="/_javascript/AC_RunActiveContent.js" language="javascript"></script>
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=422,height=155,scrollbars=no');
+return false;
+}
+//-->
+<!--
+function popup2(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=600,height=300,resizable=yes');
+return false;
+}
+//-->
+</SCRIPT>
+
+
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 onLoad="MM_preloadImages('/_images/b_sub_restorationR.jpg','/_images/sub_accR.jpg','/_images/sub_golfR.jpg','/_images/sub_spaR.jpg','/_images/sub_gamingR.jpg','/_images/sub_weddingsR.jpg','/_images/sub_diningR.jpg','/_images/sub_recreationR.jpg','/_images/sub_contactR.jpg','/_images/sub_aboutR.jpg','/_images/sub_employmentR.jpg','/_images/sub_west_badenR.jpg','/_images/sub_conferenceR.jpg','/_images/sub_responsibleR.jpg')">
+
+
+	
+<div align="center">
+  <table width="90%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top">
+          <td width="174"><a href="/default.asp"><IMG SRC="/_images/sub_logo_new1.jpg" ALT="French Lick Springs Resort &amp; Casino - logo" WIDTH=174 HEIGHT=99 border="0"></a></td>
+          <td background="/_images/headr_stretch.jpg">&nbsp;</td>
+          <td width="325"><IMG SRC="../_images/history_title.jpg" WIDTH=325 HEIGHT=99 ALT="French Lick Springs Resort &amp; Casino - restoration"></td>
+          <td width="246" align="right" valign="bottom" background="../_images/history_right_title.jpg">&nbsp;</td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="175" valign="top" background="/_images/sub_address.jpg">
+	
+<table width="175" border="0" cellspacing="0" cellpadding="0">
+<tr>
+				<td width="175" valign="top"><a onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event1'; s.prop1='Reservation Nav - History'; s.eVar1='Reservation Nav - History'; s.tl(this,'o','Reservation Nav - History');" href="/reservations/reservations.asp" target="_blank" onMouseOver="MM_swapImage('Image15','','/_images/b_sub_bookonlineR.jpg',0)" onMouseOut="MM_swapImgRestore()"><img src="/_images/b_sub_bookonline.jpg" name="Image15" width="175" border="0"></a></td>
+  </tr>
+  			<tr>
+			
+				<td><a href="/accommodations/packages.asp"><img src="/_images/b_sub_packages.jpg" name="packages" border="0" id="packages" onMouseOver="MM_swapImage('packages','','/_images/b_sub_packagesR.jpg',0)" onMouseOut="MM_swapImgRestore()" /></a></td>
+  			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="../accommodations/french_lick.asp" onMouseOver="MM_swapImage('sub_restoration1','','/_images/b_sub_frenchR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/b_sub_french.jpg" alt="French Lick Springs Resort &amp; Casino " name="sub_restoration1" width=175 border="0" id="sub_restoration1"></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="../accommodations/west_baden.asp" onMouseOver="MM_swapImage('sub_acc1','','/_images/sub_westbadenR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_westbaden.jpg" alt="French Lick Springs Resort &amp; Casino " name="sub_acc1" width=175 border="0" id="sub_acc1"></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/gaming/gaming.asp" onMouseOver="MM_swapImage('sub_gaming1','','/_images/sub_gamingR.jpg',1)" onMouseOut="MM_swapImgRestore()"><IMG SRC="/_images/sub_gaming.jpg" ALT="French Lick Springs Resort &amp; Casino - gaming" name="sub_gaming1" WIDTH=175 border="0" id="sub_gaming1"></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/special_events/default.asp"><img src="/_images/sub_special.jpg" name="special" width="175" border="0" id="special" onMouseOver="MM_swapImage('special','','/_images/sub_specialR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			
+			</tr>
+			            <tr>
+			
+				<td valign="top"><a href="../entertainment/entertainment.asp" onMouseOver="MM_swapImage('entertainment','','/_images/sub_calendarR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_calendar.jpg" name="entertainment" width="175" border="0"></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/golf/golf.asp" onMouseOver="MM_swapImage('sub_gof1','','/_images/sub_golfR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_golf.jpg" alt="French Lick Springs Resort &amp; Casino - golf" name="sub_gof1" width=175 border="0" id="sub_gof1" /></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/spa/spa.asp" onMouseOver="MM_swapImage('sub_spa1','','/_images/sub_spaR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_spa.jpg" alt="French Lick Springs Resort &amp; Casino - spa" name="sub_spa1" width=175 border="0" id="sub_spa1" /></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/conferences/conferences.asp" onMouseOver="MM_swapImage('sub_con1','','/_images/sub_conferencesR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_conferences.jpg" alt="French Lick Springs Resort &amp; Casino - conferences" name="sub_con1" width=175 border="0" id="sub_con1" /></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/dining/dining.asp" onMouseOver="MM_swapImage('sub_dine1','','/_images/sub_diningR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_dining.jpg" alt="French Lick Springs Resort &amp; Casino - dining" name="sub_dine1" width=175 border="0" id="sub_dine1" /></a></td>
+			
+			</tr>
+			<tr>
+			
+				<td valign="top"><a href="/retail/retail.asp" onMouseOver="MM_swapImage('sub_retail1','','/_images/sub_retailR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_retail.jpg" alt="French Lick Springs Resort &amp; Casino - retail" name="sub_retail1" width=175 border="0" id="sub_retail1" /></a><a href="/employment/employment.asp" onMouseOver="MM_swapImage('sub_employment','','/_images/sub_employmentR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/weddings/weddings.asp" onMouseOver="MM_swapImage('sub_wed1','','/_images/sub_weddingsR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_weddings.jpg" alt="French Lick Springs Resort &amp; Casino - weddings" name="sub_wed1" width=175 border="0" id="sub_wed1" /></a><a href="/contact_us/contact_us.asp" onMouseOver="MM_swapImage('sub_contact','','/_images/sub_contactR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/activities/activities.asp" onMouseOver="MM_swapImage('sub_recreation1','','/_images/sub_recreationR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="/_images/sub_recreation.jpg" alt="French Lick Springs Resort &amp; Casino - Activities" name="sub_recreation1" width=175 border="0" id="sub_recreation1" /></a></td>
+			
+			</tr>
+			 <tr>
+			
+				<td valign="top"><a href="/bus_tours/bus_tours.asp" onmouseover="tours.src='/_images/sub_bus_toursR.jpg'" onmouseout="tours.src='/_images/sub_bus_tours.jpg'"><img src="/_images/sub_bus_tours.jpg" alt="French Lick Springs Resort &amp; Casino - Bus tours" name="tours" width=175 height="19" border="0" id="tours" /></a></td>
+			
+			</tr>
+			<tr>
+			
+				<td><a href="/contact_us/directions.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('location_btn','','/_images/sub_locationR.jpg',0)"><img src="/_images/sub_location.jpg" name="location_btn" width="175" border="0"></a></td>
+			
+			</tr>
+            <tr>
+			
+            	<td valign="top"><a href="/about_us/about_us.asp"><img src="/_images/sub_aboutR.jpg" alt="French Lick Springs Resort &amp; Casino - about us" name="sub_about" width=175 border="0" id="sub_about" /></a><a href="/employment/employment.asp"></a></td>
+            
+			</tr>
+            <tr>
+              <td width="175" valign="top" background="_images/sub_address.jpg">                <div align="center">
+                <table width="100%"  border="0" cellpadding="6" cellspacing="3" class="h_text">
+                        <tr>
+                          <td valign="top" style="padding-left:10px;"><div align="center">
+                            <p align="left">Phone: &nbsp;&nbsp;&nbsp;812-936-9300<br>
+                              Fax: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;812-936-2100<br>
+                            8670 West State Road 56<br>
+                            French Lick, Indiana 47432</p>
+                            <p><span style="font-size: 12px;
+	font-weight: bold;"><font color="#FFFFFF">1-888-936-9360</font></span>
+                            </p>
+                          </div></td></tr></table></div></td></tr></table>
+</td>
+          <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                <tr valign="top">
+                  <td width="587" align="left"><img src="/_images/_design/header_img/aboutus_img.jpg" width="587" height="111" align="middle" />
+                    </td>
+                  <td width="100%" background="/_images/_design/header_img/aboutus_small_img.jpg">&nbsp;</td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td valign="top" background="/_images/_design/SubPage_BG.jpg"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                <tr valign="top">
+                  <td width="100%" background="/_images/sub_nav_Bar.jpg">&nbsp;</td>
+				  <td width="95" align="right" background="/_images/sub_nav_Bar.jpg"><a href="../restoration/press_room.asp" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('press_release_btn','','/_images/sub_b_press_release_R.jpg',1)"><img src="/_images/sub_b_press_release.jpg" name="press_release_btn" width="95" height="23" border="0" id="press_release_btn" /></a></td>
+                  <td width="91"><a href="/contact_us/contact_us.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('contact_btn','','/_images/sub_b_contact_R.jpg',1)"><img src="/_images/sub_b_contact.jpg" name="contact_btn" width="91" height="23" border="0"></a></td>
+                  <td width="62"><a href="http://www.weather.com/weather/local/47432?lswe=47432&lwsa=WeatherLocalUndeclared&from=whatwhere" target="_blank" onMouseOver="MM_swapImage('b_weather','','../_images/sub_b_weather_R.jpg',1)" onMouseOut="MM_swapImgRestore()"><IMG SRC="/_images/sub_b_weather.jpg" ALT="" name="b_weather" WIDTH=62 HEIGHT=23 border="0" id="b_weather"></a></td>
+                </tr>
+              </table>
+                <table width="100%"  border="0" cellpadding="6" cellspacing="5" class="bodyText">
+                  <tr>
+                    <td valign="top">
+					
+		<!-- 
+		Start - Site_Content() 	
+		Version			: javascript:window.location='/_common/2004/HTML_Editor/SE_Edit_v1.6.asp?Action=ac_edit_page&SC_ID=1283&authentication=1&SC_Script_name=/about_us/history2.asp';
+		se_ParentDomain	: French Lick Springs Resort
+		se_SiteContent	: 1283
+		Author			: jcardena@cendyn.com
+		-->
+
+	<P><STRONG><A name=top></A></STRONG>Please click on the&nbsp;logos below to read the history on our two wonderful newly renovated historic hotels; French Lick Springs Hotel and West Baden Springs Hotel.</P>
+<TABLE cellSpacing=3 cellPadding=3 width="48%" align=center border=0>
+<TBODY>
+<TR>
+<TD>
+<DIV align=center><IMG height=22 src="http://frenchlick.com/_images/_design/titles/frenchlick_title.gif" width=265><BR><A href="#FrenchLick"><IMG height=216 src="http://frenchlick.com/_images/_design/FL_Logo.jpg" width=329 border=0></A><BR>
+</DIV></TD>
+<TD vAlign=top><DIV align=center><IMG height=22 src="http://frenchlick.com/_images/_design/titles/westbaden_title.gif" width=265><BR><A href="#WestBaden"><IMG height=216 src="http://frenchlick.com/_images/_design/WB_Logo.jpg" width=329 border=0></A></DIV></TD></TR></TBODY></TABLE>
+<P><STRONG><A name=FrenchLick></A>French Lick Springs Hotel's History:</STRONG></P>
+<P>Welcome to the historic French Lick Springs Hotel. Nestled in the Hoosier National Forest this valley has long been an attraction because of the many mineral water springs found here. The free-flowing mineral water left a residue of salt on the rocks surrounding the springs that attracted the animals, such as deer and buffalo, to lick the salt off the rocks, making this one of the many "Licks" in what is now southern Indiana. Most historians agree that there were probably French fur traders and French missionaries in this area during the time we were part of "New France". However, when the British and German settlers started coming into this part of the country in the very early 1800's no other settlers were to be found. By 1812, there was so much tension between the settlers and the Native Americans that the governor of the Indiana Territory ordered blockhouses to be built in several locations as forts for the settlers to stay in when necessary, especially at night. One such fort was built here at French Lick in 1812. When Indiana became a state, this area was thought to be a probable source of salt and was reserved for that purpose. When it became apparent that the quantity of salt was insufficient for manufacturing, the land was put up for public auction. In 1833, Dr. William Bowles a physician from Paoli, bought 15,000 acres of land, which he began to develop and by 1845, he had built the first "French Lick Springs Hotel". This was a wood frame building of "peculiar architecture" that drew people from as far as one hundred miles away to partake in the "miracle waters." Some even carried the mineral water home in jugs and canvas containers. </P>
+<P>The French Lick Hotel thrived under various owners, with two more buildings being added in 1888. One building was called the Clifton and had additional rooms for guests while the other building was called the Pavilion, which was used for billiards, dancing, and had a casino on the second floor. In 1897, the original building, now called the Windsor, burned. The owners had very good insurance and rebuilt immediately. Tom Taggart, the mayor of Indianapolis, along with a small group of seven investors, formed the French Lick Hotel Company and bought the property in 1901. </P>
+<P>It was under Tom Taggart's imaginative rule that the French Lick Springs Hotel rocketed to international prominence. First, he enlarged the east wing, now known as the Spa Wing, using the famous, yellow, "French Lick Brick", scagliola (faux marble) and the Italian mosaic floors you now see. He also had the Monon Railroad lay a special spur and run daily trains between Chicago and the front entrance of the hotel. In 1907, he hired Tom Bendelow to design the resort's first championship golf course, formerly known as "The Valley Course" and, in 1917, had Donald Ross design and build what has been known as "The Hill Course". He modernized and expanded the baths and built a new bottling house to bottle "Pluto Water" in HISTORY OF concentrated form for national distribution. With an expansive and luxurious spa and, after Mr. Taggart had been named Democratic National Chairman, the elite of politics and society suddenly "discovered" French Lick Springs. It was at this hotel that, in 1917, the world famous chef, Louis Perrin, first served tomato juice. Mr. Taggart evicted the operator of the casino that was on the property shortly after purchasing the hotel and always disclaimed any connection with the plush gambling casinos throughout the valley. However, extensive illegal gambling existed throughout the French Lick area until the last casino was closed in 1949.</P>
+<P>Mr. Taggart, who served briefly as a U.S. Senator by appointment, described himself as a family man first, a hotel man second and a political lobbyist third. He grew in stature until he was acknowledged as the power behind Democratic politics in the United States. <BR>Simultaneously, French Lick Springs Hotel developed a reputation as the unofficial headquarters of the Democratic Party.<BR>It was here in this hotel that, in 1931, Franklin D. Roosevelt rounded up support at a Democratic Governor's Conference for the party's presidential nomination.<BR>The Taggart's were parents of five daughters and one son, Thomas D. Taggart, who carried on after his father's death in 1929.</P>
+<P>Today, French Lick Springs Hotel rests on some 2,600 acres in the breathtaking Hoosier National Forest and is part of the $382 million restoration and expansion that has created French Lick Resort. </P>
+<P><BR>
+  In addition to the French Lick Springs Hotel, the resort includes the luxurious, 246 room, West Baden Springs Hotel, opening in Summer 2007, which has been closed as a hotel since 1932 along with the new French Lick Casino. </P>
+<P><A href="#top">Back to Top </A></P>
+<P>&nbsp;</P>
+<P><STRONG><A name=WestBaden></A>West Baden Springs Hotel's History: </STRONG></P>
+<P><STRONG>Early resort developments</STRONG> <BR>The intriguing history of Southern Indiana's West Baden Springs Hotel extends to 1778 when George Rogers Clark is said to have discovered the area's mineral springs and salt licks.&nbsp; The supposed curative powers of such springs combined with the idyllic landscape of Southern Indiana have been a draw throughout the years to people searching for relief from the stresses of the workaday world.</P>
+<P>The region's reputation as a mineral springs resort area began with the building of the first French Lick Springs Hotel in 1832. Another hotel followed in the nearby town of Mile Lick--later renamed West Baden--in 1855. By the late nineteenth century, seven rail lines brought guests from all over the U.S. to the Springs Valley to relax and take the cure.</P>
+<P><STRONG>Creation of "The Eighth Wonder of the World"</STRONG><STRONG> </STRONG><BR>In 1888, Lee W. Sinclair acquired controlling interest in the West Baden hotel and within a few years was its sole owner. He transformed it into a sophisticated resort, adding an opera house, a casino, a two-deck pony and bicycle track and a full-size baseball field. All the guests escaped harm when a fire destroyed the entire hotel building in less than two hours in June 1901.</P>
+<P>Sinclair used this tragedy as his opportunity to build the hotel of his dreams--a circular building, topped by the world's largest dome, built as much as possible of non-flammable materials and decorated like the grandest spas of Europe. A 35-year-old unknown architect, Harrison Albright of West Virginia, accepted Sinclair's challenge--considered impossible by most in the architectural community--to complete the grandiose building within a year.</P>
+<P>In September 1902, the wondrous new hotel was open for business. If the advertisements and press about the new hotel could be believed, the West Baden Springs Hotel truly deserved its reputation as the Eighth Wonder of the World. Ads claimed the resort's mineral baths and drinking waters could cure everything from sterility to senility. The hotel offered something for everyone-including golf on two courses, horseback riding, billiards, bowling, baseball, swimming, hiking on scenic trails, bicycling, movies and nightly theater. A stock brokerage firm joined a bank, barbershop and other personal services offered in the hotel.</P>
+<P>Birds flew from palm to palm in the 200-foot-diameter atrium, and an enormous fireplace burned 14-foot logs to add to the ambience on cool evenings. It was a perennial vacation spot for the great and near-great during the first three decades of the twentieth century; guests included "Diamond Jim" Brady and Al Capone, John L. Sullivan and entire professional baseball teams who held spring training at the resort, Mayor "Big Bill" Thompson of Chicago and New York Governor and presidential candidate Alfred E. Smith. </P>
+<P>After Sinclair died in 1916 his daughter and her husband took over the hotel's operation and completed a massive renovation effort begun in 1913. Overextended by the renovation, Lillian Sinclair in 1923 sold the hotel to Ed Ballard for one million dollars. The ebullient Ballard, who began his career with the hotel as a bowling alley worker, made his fortune by operating a flourishing--if illegal--gambling business in the area. </P>
+<P>Ballard, who also owned several nationally recognized touring circuses, was a beloved figure in the Springs Valley. When the rise of the automobile and the burgeoning resorts in Florida began drawing business away from the West Baden Springs Hotel, he made up the loss by aggressively promoting the hotel to conventioneers and trade exhibitions. </P>
+<P><STRONG>Great Depression ushers in college era</STRONG><STRONG> </STRONG><BR>When the stock market crashed in 1929 many guests witnessed the event in the brokerage firm's offices in the hotel. The hotel emptied of guests almost overnight. Even Ballard's most valiant efforts could not keep the hotel afloat.&nbsp; He closed the hotel in June 1932 and in 1934 he sold it to the Jesuits for one dollar. </P>
+<P>To transform the hotel for use as a seminary, the Jesuits removed many of its elegant appointments and eventually dismantled the building's four Moorish towers rather than invest in their repair. Known as West Baden College, the seminary operated until June 1964 when declining enrollment led the Jesuits to close the facility. In 1966, the Jesuits sold West Baden to a Michigan couple who donated it to Northwood Institute, a private college, which operated on the property until 1983. </P>
+<P><STRONG>Post-college years bring vacancy and deterioration</STRONG><STRONG> </STRONG><BR>While the colleges did not maintain the West Baden property in the same lavish style it exhibited during the hotel era, the landmark was relatively well cared for until 1985 when Northwood sold it to Marlin Properties, a real estate development firm based in Los Angeles, CA. Marlin declared bankruptcy before redeveloping the hotel. The property was tangled in years of litigation before a Los Angeles federal bankruptcy court judge resolved an issue of contested ownership.</P>
+<P>Meanwhile, the elements had taken their toll on the neglected hotel. Although the property was listed as a National Historic Landmark in 1987, it was closed to the public in 1989 for safety reasons. In January 1991, a buildup of ice and water on the roof and in drainpipes caused the collapse of a portion of the exterior wall. The collapse affected less than 10% of the exterior masonry ring that surrounds the dome, and the dome itself remained structurally sound.</P>
+<P>Historic Landmarks Foundation of Indiana led in building a coalition with two goals: stabilize the hotel to preserve its redevelopment potential, and help attract a new owner capable of restoring the property for a new use.<STRONG> </STRONG>In 1992, Historic Landmarks Foundation spent $140,000 to stabilize the hotel, matching a $70,000 contribution from an anonymous donor. The work included patching the roof, constructing scupper openings in parapets, installing tie rods, and shoring up fourth through sixth floors on either side of the collapse. </P>
+<P>Other work included creating marketing materials to assist the bankruptcy court in attracting a responsible buyer, and financial support to create zoning and a redevelopment commission for the town of West Baden Springs.</P>
+<P>In May 1994, the Los Angeles bankruptcy court receiver sold the hotel to Minnesota Investment Partners [MIP] for $500,000. Grand Casinos, Inc., an investor in the purchase, optioned the hotel from MIP. During the 1995 legislative session, Grand Casinos unsuccessfully lobbied to amend an Indiana law to allow riverboat gambling on a body of water they proposed to build on the property.&nbsp; While Grand Casinos' lobbying effort failed--the legislation passed in the House and was defeated in the Senate--many legislators expressed support for the landmark and its restoration.<BR><BR><STRONG>Partial restoration designed to attract buyer </STRONG><BR>After its legislative defeat, Grand Casinos decided not to pursue development of the West Baden Springs Hotel. MIP listed the hotel for sale for $800,000. During its period of ownership, MIP invested in the lobbying effort as well as a Phase I environmental study and architectural and site planning, but the firm undertook no stabilization or renovation work. </P>
+<P>Worried that the nationally significant landmark could not withstand another winter without investment in the building, HLFI West Baden, Inc., a subsidiary of Historic Landmarks Foundation, bought the West Baden property for $250,000 in July 1996. An anonymous donor contributed the purchase price. </P>
+<P>A corporate benefactor, Cook Group Incorporated of Bloomington (IN), immediately began stabilization and partial restoration to make the property more attractive for redevelopment. Initially committed to spending $12-14 million on the property, Bill and Gayle Cook and their companies eventually tallied $30 million on the Phase I restoration (1996- early 1999), and an additional $5 million in maintenance (1999-2004). The exteriors of the hotel and all outbuildings were restored, along with the garden. On the interior, the 100'x200' domed atrium, lobby and flanking rooms, and dining room were returned to their original elegance</P>
+<P>After meeting with no success in its campaign to sell the half-restored West Baden Springs Hotel, Historic Landmarks joined a lobbying effort to bring casino gaming to Orange County in order to save the NHL hotel and the nearby French Lick Springs Hotel, a landmark of the same era. Historic Landmarks, Cook Group, and Boykin Lodging (owner of French Lick Springs) joined with a group of citizen lobbyists who came to be know as "The Orange Shirts" for their t-shirts bearing the slogan "Save French Lick and West Baden Springs." </P>
+<P>The multi-year lobbying effort succeeded when the Indiana legislature approved a casino in the 2003 session and a county-wide referendum passed with ease that fall. The legislation created a joint preservation commission of the towns of French Lick and West Baden Springs to oversee the historic hotels and casino district. A competitive process in 2004 resulted in the selection of Trump Hotels &amp; Casinos as the operator of the new casino. However, the Trump firm's subsequent bankruptcy reorganization diminished its ability to meet the Indiana Gaming Commission's (IGC) requirements. In March 2005, the IGC reopened the bidding process for the French Lick-West Baden Springs casino. </P>
+<P>To ensure preservation of the two landmark hotels, Bill, Gayle and their son Carl Cook partnered with Lauth Property Group, forming an entity called Blue Sky, LLC in a bid for the casino license. A Cook company bought the French Lick Springs Hotel from Boykin in spring 2005. A year later, Historic Landmarks Foundation sold the West Baden Springs Hotel to a Cook company for a nominal sum in recognition of the vast investment the Cooks had made in its restoration. The Cook-Lauth joint venture pledged to restore both hotels and build the casino and accompanying parking garage.</P>
+<P>The Indiana Gaming Commission selected Blue Sky as the casino operator in summer 2005. The French Lick Resort will "put heads in beds" on a year-round basis, thereby creating economic viability for the two historic hotels. The French Lick Springs Hotel closed just after Thanksgiving 2005 and was completely restored before opening with the new casino on November 3, 2006. </P>
+<P>Restoration resumed at the West Baden Springs Hotel in the summer of 2006. Reopened as a hotel in May 2007 for the first time since 1932, the hotel offers 246 rooms/suites, reduced from the original 508 small guestrooms (created in a time before queen-sized beds and television, when visitors spent little time in their rooms).&nbsp; The hotel's natatorium, long missing from the landscape is being faithfully reconstructed, based on historic photographs of the structure.</P>
+<P>To ensure long-term protection for the West Baden Springs Hotel, Historic Landmarks Foundation of Indiana holds a perpetual preservation easement on the property. The easement requires Historic Landmarks Foundation's approval of exterior changes to the hotel and its grounds and ensures that the site will be maintained no matter who may own it in the future.</P>
+<P><A href="#top">Back to Top </A></P>
+<P></P>
+		<!-- 
+		End - Site_Content() 	
+		-->
+
+					
+					<!--<p><strong><a name="top"></a></strong>Please click on the&nbsp;logos below to read the history on our two   wonderful newly renovated historic hotels;   French Lick Springs Hotel and West Baden Springs Hotel.</p>
+                      <table width="48%" border="0" align="center" cellpadding="3" cellspacing="3">
+                      <tr>
+                        <td><div align="center"><img src="/_images/_design/titles/frenchlick_title.gif" width="265" height="22" /><br />
+                                <a href="#FrenchLick"><img src="/_images/_design/FL_Logo.jpg" width="329" height="216" border="0" /></a><br />
+                                <span class="bodyText">Now Accepting Reservations!&nbsp; Please call&nbsp;(866) 379-2202 for rates and   information.</span></div></td>
+                        <td valign="top"><div align="center"><img src="/_images/_design/titles/westbaden_title.gif" width="265" height="22" /><br />
+                            <a href="#WestBaden"><img src="/_images/_design/WB_Logo.jpg" width="329" height="216" border="0" /></a></div></td>
+                      </tr>
+                    </table>
+                      <p><strong><a name="FrenchLick"></a>French Lick Springs Hotel's History:</strong></p>
+                      <p>Welcome to the historic French Lick Springs Hotel. Nestled  in the Hoosier National Forest this valley has long  been an attraction because of the many mineral water springs found here. The  freeflowing mineral water left a residue of salt on the rocks surrounding the  springs that attracted the animals, such as deer and buffalo, to lick the salt off  the rocks, making this one of the many &ldquo;Licks&rdquo; in what is now southern Indiana. Most historians  agree that there were probably French fur traders and French missionaries in  this area during the time we were part of &ldquo;New France&rdquo;.  However, when the British and German settlers started coming into this part of the  country in the very early 1800&rsquo;s no other settlers were to be found. By 1812,  there was so much tension between the settlers and the Native Americans that  the governor of the Indiana   Territory ordered blockhouses  to be built in several locations as forts for the settlers to stay in when necessary,  especially at night. One such fort was built here at French Lick in 1812. When Indiana became a state, this  area was thought to be a probable source of salt and was reserved for that  purpose. When it became apparent that the quantity of salt was insufficient for  manufacturing, the land was put up for public auction. In 1833, Dr. William<br />
+                        Bowles a physician from Paoli, bought 15,000 acres of land, which  he began to develop and by 1845, he had built the first &ldquo;French Lick Springs  Hotel&rdquo;. This was a wood frame building of &ldquo;peculiar architecture&rdquo; that drew people  from as far as one hundred miles away to partake in the &ldquo;miracle waters.&rdquo; Some even  carried the mineral water home in jugs and canvas containers. </p>
+                      <p> The French Lick  Hotel thrived under various owners, with two more buildings being added in  1888. One building was called the Clifton  and had additional rooms for guests while the other building was called the  Pavilion, which was used for billiards, dancing, and had a casino on the second  floor. In 1897, the original building, now called the Windsor, burned. The owners had very good  insurance and rebuilt immediately. Tom Taggart, the mayor of Indianapolis, along with a small group of  seven investors, formed the French Lick Hotel Company and bought the property  in 1901. </p>
+                      <p> It was under Tom Taggart&rsquo;s imaginative rule that the French Lick  Springs Hotel rocketed to international prominence. First, he enlarged the east  wing, now known as the Spa Wing, using the famous, yellow, &ldquo;French Lick Brick&rdquo;,  scagliola (faux marble) and the Italian mosaic floors you now see. He also had  the Monon Railroad lay a special spur and run daily trains between Chicago and the front  entrance of the hotel. In 1907, he hired Tom Bendelow to design the resort&rsquo;s  first championship golf course, formerly known as &ldquo;The Valley Course&rdquo; and, in  1917, had Donald Ross design and build what has been known as &ldquo;The Hill  Course&rdquo;. He modernized and expanded the baths and built a new bottling house to  bottle &ldquo;Pluto Water&rdquo; in HISTORY OF concentrated form for national distribution.  With an expansive and luxurious spa and, after Mr. Taggart had been named Democratic  National Chairman, the elite of politics and society suddenly &ldquo;discovered&rdquo;  French Lick Springs. It was at this hotel that, in 1917, the world famous chef,  Louis Perrin, first served tomato juice. Mr. Taggart evicted the operator of  the casino that was on the property shortly after purchasing the hotel and  always disclaimed any connection with the plush gambling casinos throughout the  valley. However, extensive illegal gambling existed throughout the French Lick  area until the last casino was closed in 1949.</p>
+                      <p> Mr. Taggart, who served briefly as a U.S. Senator by appointment,  described himself as a family man first, a hotel man second and a political lobbyist  third. He grew in stature until he was acknowledged as the power behind  Democratic politics in the United    States. <br />
+                        Simultaneously, French Lick Springs  Hotel developed a reputation as the unofficial headquarters of the Democratic Party.<br />
+                        It was here in this hotel that, in 1931, Franklin D. Roosevelt rounded up  support at a Democratic Governor&rsquo;s Conference for the party&rsquo;s presidential  nomination.<br />
+                        The Taggart&rsquo;s were parents of five daughters and one son, Thomas D.  Taggart, who carried on after his father&rsquo;s death in 1929.</p>
+                      <p> Today, French Lick Springs Hotel rests on some 2,600 acres  in the breathtaking Hoosier   National Forest and is  part of the $382 million restoration and expansion that has created French Lick  Resort Casino. </p>
+                      <p><br />
+                        In addition to the French Lick Springs Hotel, the resort includes  the luxurious, 246 room, West Baden Springs Hotel, opening in Summer 2007, which  has been closed as a hotel since 1932 along with the new French Lick Casino. </p>
+                      <p><A href="http://www.adobe.com/products/acrobat/readstep2.html" target=_blank><IMG height=16 src="../_images/_buttons/_adobe.gif" width=16 align=absmiddle border=0> </A><A href="/_files/_pdf/_Timeline_12_06.pdf" target=_blank class="bodyText"> French Lick Historical Time Line</A></p>
+                      <p><a href="#top">Back to Top </a></p>
+                      <p>&nbsp;</p>
+                      <p><strong><a name="WestBaden"></a>West Baden Springs Hotel's History: </strong></p>
+                      <p><strong>Early resort developments</strong> <br />
+                        The intriguing history of Southern Indiana&rsquo;s West  Baden Springs Hotel extends to 1778 when George Rogers Clark is said to have  discovered the area&rsquo;s mineral springs and salt licks.&nbsp; The supposed curative powers of such springs  combined with the idyllic landscape of Southern Indiana have been a draw  throughout the years to people searching for relief from the stresses of the  workaday world.</p>
+                      <p>The region&rsquo;s reputation as a mineral springs resort  area began with the building of the first French Lick Springs Hotel in 1832.  Another hotel followed in the nearby town of Mile Lick--later renamed West  Baden--in 1855. By the late nineteenth century, seven rail lines brought guests  from all over the U.S. to the Springs Valley to relax and take the cure.</p>
+                      <p><strong>Creation of &ldquo;The Eighth Wonder of the World&rdquo;</strong><strong> </strong><br />
+                        In 1888, Lee W. Sinclair acquired controlling  interest in the West Baden hotel and within a few years was its sole owner. He  transformed it into a sophisticated resort, adding an opera house, a casino, a  two-deck pony and bicycle track and a full-size baseball field. All the guests  escaped harm when a fire destroyed the entire hotel building in less than two  hours in June 1901.</p>
+                      <p>Sinclair used this tragedy as his opportunity to  build the hotel of his dreams--a circular building, topped by the world&rsquo;s  largest dome, built as much as possible of non-flammable materials and  decorated like the grandest spas of Europe. A 35-year-old unknown architect,  Harrison Albright of West Virginia, accepted Sinclair&rsquo;s challenge--considered  impossible by most in the architectural community--to complete the grandiose  building within a year.</p>
+                      <p>In September 1902, the wondrous new hotel was open  for business. If the advertisements and press about the new hotel could be  believed, the West Baden Springs Hotel truly deserved its reputation as the  Eighth Wonder of the World. Ads claimed the resort&rsquo;s mineral baths and drinking  waters could cure everything from sterility to senility. The hotel offered  something for everyone&mdash;including golf on two courses, horseback riding,  billiards, bowling, baseball, swimming, hiking on scenic trails, bicycling,  movies and nightly theater. A stock brokerage firm joined a bank, barbershop  and other personal services offered in the hotel.</p>
+                      <p>Birds flew from palm to palm in the  200-foot-diameter atrium, and an enormous fireplace burned 14-foot logs to add  to the ambience on cool evenings. It was a perennial vacation spot for the  great and near-great during the first three decades of the twentieth century;  guests included &ldquo;Diamond Jim&rdquo; Brady and Al Capone, John L. Sullivan and entire  professional baseball teams who held spring training at the resort, Mayor &ldquo;Big  Bill&rdquo; Thompson of Chicago and New York Governor and presidential candidate  Alfred E. Smith. </p>
+                      <p>After Sinclair died in 1916 his daughter and her  husband took over the hotel&rsquo;s operation and completed a massive renovation  effort begun in 1913. Overextended by the renovation, Lillian Sinclair in 1923  sold the hotel to Ed Ballard for one million dollars. The ebullient Ballard,  who began his career with the hotel as a bowling alley worker, made his fortune  by operating a flourishing--if illegal--gambling business in the area. </p>
+                      <p>Ballard, who also owned several nationally  recognized touring circuses, was a beloved figure in the Springs Valley. When  the rise of the automobile and the burgeoning resorts in Florida began drawing  business away from the West Baden Springs Hotel, he made up the loss by  aggressively promoting the hotel to conventioneers and trade exhibitions. </p>
+                      <p><strong>Great Depression ushers in college era</strong><strong> </strong><br />
+                        When the stock market crashed in 1929 many guests  witnessed the event in the brokerage firm&rsquo;s offices in the hotel. The hotel  emptied of guests almost overnight. Even Ballard&rsquo;s most valiant efforts could  not keep the hotel afloat.&nbsp; He closed the  hotel in June 1932 and in 1934 he sold it to the Jesuits for one dollar. </p>
+                      <p>To transform the hotel for use as a seminary, the  Jesuits removed many of its elegant appointments and eventually dismantled the  building&rsquo;s four Moorish towers rather than invest in their repair. Known as  West Baden College, the seminary operated until June 1964 when declining  enrollment led the Jesuits to close the facility. In 1966, the Jesuits sold West  Baden to a Michigan couple who donated it to Northwood Institute, a private  college, which operated on the property until 1983. </p>
+                      <p><strong>Post-college years bring vacancy and deterioration</strong><strong> </strong><br />
+                        While the colleges did not maintain the West Baden  property in the same lavish style it exhibited during the hotel era, the  landmark was relatively well cared for until 1985 when Northwood sold it to  Marlin Properties, a real estate development firm based in Los Angeles, CA.  Marlin declared bankruptcy before redeveloping the hotel. The property was  tangled in years of litigation before a Los Angeles federal bankruptcy court  judge resolved an issue of contested ownership.</p>
+                      <p>Meanwhile, the elements had taken their toll on the  neglected hotel. Although the property was listed as a National Historic  Landmark in 1987, it was closed to the public in 1989 for safety reasons. In  January 1991, a buildup of ice and water on the roof and in drainpipes caused  the collapse of a portion of the exterior wall. The collapse affected less than  10% of the exterior masonry ring that surrounds the dome, and the dome itself  remained structurally sound.</p>
+                      <p>Historic Landmarks Foundation of Indiana led in  building a coalition with two goals: stabilize the hotel to preserve its  redevelopment potential, and help attract a new owner capable of restoring the  property for a new use.<strong> </strong>In 1992,  Historic Landmarks Foundation spent $140,000 to stabilize the hotel, matching a  $70,000 contribution from an anonymous donor. The work included patching the  roof, constructing scupper openings in parapets, installing tie rods, and  shoring up fourth through sixth floors on either side of the collapse. </p>
+                      <p>Other work included creating marketing materials to  assist the bankruptcy court in attracting a responsible buyer, and financial  support to create zoning and a redevelopment commission for the town of West  Baden Springs.</p>
+                      <p>In May 1994, the Los Angeles bankruptcy court  receiver sold the hotel to Minnesota Investment Partners [MIP] for $500,000.  Grand Casinos, Inc., an investor in the purchase, optioned the hotel from MIP.  During the 1995 legislative session, Grand Casinos unsuccessfully lobbied to  amend an Indiana law to allow riverboat gambling on a body of water they  proposed to build on the property.&nbsp; While  Grand Casinos&rsquo; lobbying effort failed--the legislation passed in the House and  was defeated in the Senate--many legislators expressed support for the landmark  and its restoration.<br />
+                          <br />
+                          <strong>Partial restoration designed to attract buyer </strong> <br />
+                        After its legislative defeat, Grand Casinos decided  not to pursue development of the West Baden Springs Hotel. MIP listed the hotel  for sale for $800,000. During its period of ownership, MIP invested in the  lobbying effort as well as a Phase I environmental study and architectural and  site planning, but the firm undertook no stabilization or renovation work. </p>
+                      <p>Worried that the nationally significant landmark  could not withstand another winter without investment in the building, HLFI  West Baden, Inc., a subsidiary of Historic Landmarks Foundation, bought the  West Baden property for $250,000 in July 1996. An anonymous donor contributed  the purchase price. </p>
+                      <p>A corporate benefactor, Cook Group Incorporated of  Bloomington (IN), immediately began stabilization and partial restoration to  make the property more attractive for redevelopment. Initially committed to  spending $12-14 million on the property, Bill and Gayle Cook and their  companies eventually tallied $30 million on the Phase I restoration (1996-  early 1999), and an additional $5 million in maintenance (1999-2004). The  exteriors of the hotel and all outbuildings were restored, along with the  garden. On the interior, the 100&rsquo;x200&rsquo; domed atrium, lobby and flanking rooms,  and dining room were returned to their original elegance</p>
+                      <p>After meeting with no success in its campaign to  sell the half-restored West Baden Springs Hotel, Historic Landmarks joined a  lobbying effort to bring casino gaming to Orange County in order to save the  NHL hotel and the nearby French Lick Springs Hotel, a landmark of the same era.  Historic Landmarks, Cook Group, and Boykin Lodging (owner of French Lick  Springs) joined with a group of citizen lobbyists who came to be know as &ldquo;The  Orange Shirts&rdquo; for their t-shirts bearing the slogan &ldquo;Save French Lick and West  Baden Springs.&rdquo; </p>
+                      <p>The multi-year lobbying effort succeeded when the  Indiana legislature approved a casino in the 2003 session and a county-wide  referendum passed with ease that fall. The legislation created a joint  preservation commission of the towns of French Lick and West Baden Springs to  oversee the historic hotels and casino district. A competitive process in 2004  resulted in the selection of Trump Hotels &amp; Casinos as the operator of the  new casino. However, the Trump firm&rsquo;s subsequent bankruptcy reorganization  diminished its ability to meet the Indiana Gaming Commission&rsquo;s (IGC)  requirements. In March 2005, the IGC reopened the bidding process for the  French Lick-West Baden Springs casino. </p>
+                      <p>To ensure preservation of the two landmark hotels,  Bill, Gayle and their son Carl Cook partnered with Lauth Property Group,  forming an entity called Blue Sky, LLC in a bid for the casino license. A Cook  company bought the French Lick Springs Hotel from Boykin in spring 2005. A year  later, Historic Landmarks Foundation sold the West Baden Springs Hotel to a  Cook company for a nominal sum in recognition of the vast investment the Cooks  had made in its restoration. The Cook-Lauth joint venture pledged to restore  both hotels and build the casino and accompanying parking garage.</p>
+                      <p>The Indiana Gaming Commission selected Blue Sky as  the casino operator in summer 2005. The French Lick Resort Casino will &ldquo;put  heads in beds&rdquo; on a year-round basis, thereby creating economic viability for  the two historic hotels. The French Lick Springs Hotel closed just after  Thanksgiving 2005 and was completely restored before opening with the new  casino on November 3, 2006. </p>
+                      <p>Restoration resumed at the West Baden Springs Hotel  in the summer of 2006. When it opens as a hotel in May 2007 for the first time  since 1932, the hotel will hold approximately 240 rooms/suites, reduced from  the original 508 small guestrooms (created in a time before queen-sized beds  and television, when visitors spent little time in their rooms).&nbsp; The hotel&rsquo;s natatorium, long missing from the  landscape is being faithfully reconstructed, based on historic photographs of  the structure.</p>
+                      <p>To ensure long-term protection for the West Baden  Springs Hotel, Historic Landmarks Foundation of Indiana holds a perpetual  preservation easement on the property. The easement requires Historic Landmarks  Foundation&rsquo;s approval of exterior changes to the hotel and its grounds and  ensures that the site will be maintained no matter who may own it in the  future.</p>
+                      <p><a href="#top">Back to Top </a> </p>
+                      <p></p>--></td>
+                  </tr>
+              </table></td></tr>
+            <tr>
+              <td valign="top" background="/_images/_design/SubPage_BG.jpg"></td>
+            </tr>
+          </table>            </td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr valign="top">
+          <td width="45"><IMG SRC="/_images/green_line_Left.jpg" WIDTH=45 HEIGHT=8 ALT=""></td>
+          <td><IMG SRC="/_images/green_line_Bg.jpg" WIDTH=100% HEIGHT=8 ALT=""></td>
+          </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td valign="top"><div align="center">
+      
+        <style type="text/css">
+<!--
+.style1 {color: #000000}
+.style2 {color: #0000CC}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+-->
+</style>
+<table width="100%"  border="0" cellpadding="3" cellspacing="2" class="site">
+          <tr>
+            <td width="50%" align="right" valign="top"><div align="center">
+              
+            </div></td>
+            <td width="50%" align="right" valign="middle"><a href="http://profiles.hospitalityonline.com/223421/jobs.html" target="_blank">Employment</a> ~<a href="/restoration/press_room.asp">Press Room</a> ~ <a href="/privacy/privacy.asp"><strong></strong></a><a href="/privacy/privacy.asp"></a><a href="/privacy/privacy.asp">Privacy</a> ~ <a href="/site_map/site_map.asp">Site Map</a> </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><a href="http://www.cendyn.com" target="_blank">Copyright &copy;2008 French Lick Resort</td>
+          </tr>
+        </table>
+
+</div></td>
+    </tr>
+  </table>
+</div>
+<script language="JavaScript" src="../s_code.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6122822-1");
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+

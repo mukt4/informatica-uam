@@ -1,0 +1,13 @@
+// Peque�as ayudas para ganar tiempo en detalles de menor importancia.
+
+// Obtener de forma eficiente el vocabulario (la lista de todos los t�rminos) de un �ndice de Lucene:
+
+List<String> termList = new ArrayList<String>();
+TermsEnum terms = MultiTerms.getTerms(index,"content").iterator();
+while (terms.next() != null)
+   termList.add(terms.term().utf8ToString());
+
+// La colecci�n de URLs puede dar errores si el servidor de alguna de las URLs est� ca�do. Si esto ocurre,
+// eliminar moment�neamente las URLs que sen problemas y seguir trabajando.
+   
+// En test-output.txt, la versi�n de IDF utilizada es log(|D|+1)/(|Dt|+0.5), y se usan logaritmos en base 2.

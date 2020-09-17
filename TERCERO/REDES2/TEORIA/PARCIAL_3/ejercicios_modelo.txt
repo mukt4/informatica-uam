@@ -1,0 +1,46 @@
+Ejercicio tabla de paquetes:
+	RETRASO FIJO
+
+	1. Mirar los numeros para ver paquetes perdidos.
+	2. Se calculan retardos restando TR-TS
+	3. Para calcular q, sumamos retardo + retraso fijo
+	4. Para calcular planificacion de reproduccion p, sumamos TS + q
+	5. Para crear tabla vamos subando las diferencias entre TS al resultado anterior
+
+	Basta con calcular TR + retraso fijo - TS. Este valor se lo sumamos a tods los TS para calcular planificacion.
+	
+	Respuestas:
+		- Hay silencio cuando pasan mas de 20ms entre TS
+		- No se puede reproducir paquete cuando TR es mayor que la panlificacion, p.
+		- Para calcular el retraso fijo que hay que buscar el paquete que no se haya reproducido por mas tiempo, calcular 		    la diferencia y sumarla al retraso fijo de antes.
+		- Menos de 100ms de retraso reproduccion excelente
+		  Menos de 150ms reproduccion buena
+		  Menos de 400ms reproduccion aceptable
+		  Mas de 400ms reproduccion inaceptable
+	
+	
+	RETRASO ADAPTATIVO
+		- Cuando empieza segmento nuevo se calcula retardo.
+		- El retardo se calcula aplicando las formulas
+		- TR = ri
+		- TS = ti
+
+
+Ejercicio politicas de paquetes
+	Hay que tener en cuenta el instante de recpecion y cuando se van sirviendo
+
+	FIFO
+		- Segun van llegando se van sirviendo			
+
+	ROUND ROBIN
+		- Sirve paquetes con clase alternativa
+
+	COLAS DE PRIORIDAD
+		- Sirve el paquete con mas prioridad
+
+	WFQ	
+		- Sirve paquetes con mayor prioridad y usando round robin
+
+	Para calcular los retrasos se resta el instante de emsision menos el instante de recpecion
+	Para calcular el retraso medio se calcula el retraso medio de cada tipo, y se hace la media ponderada
+

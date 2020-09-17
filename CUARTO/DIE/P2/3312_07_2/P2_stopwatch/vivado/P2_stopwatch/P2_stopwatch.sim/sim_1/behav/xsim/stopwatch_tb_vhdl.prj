@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../rtl/stopwatch_pkg.vhd" \
+"../../../../../../rtl/counter.vhd" \
+"../../../../../../rtl/debounce.vhd" \
+"../../../../../../rtl/freq_divider.vhd" \
+"../../../../../../rtl/rst_adapt.vhd" \
+"../../../../../../rtl/stopwatch.vhd" \
+"../../../../../../rtl/stopwatch_fsm.vhd" \
+"../../../../../../sim/stopwatch_tb.vhd" \
+
+# Do not sort compile order
+nosort

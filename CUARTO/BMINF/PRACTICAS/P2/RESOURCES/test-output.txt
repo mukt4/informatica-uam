@@ -1,0 +1,236 @@
+No index in here
+-----------------------
+Checking index correction on URL collection
+  LuceneForwardIndex
+	Word "information" occurs in 4 documents: 0 (35) 1 (202) 3 (12) 4 (1) 
+  LuceneIndex
+	Word "information" occurs in 4 documents: 0 (35) 1 (202) 3 (12) 4 (1) 
+  SerializedRAMIndex
+	Word "information" occurs in 4 documents: 0 (35) 1 (203) 3 (12) 4 (1) 
+  DiskIndex
+	Word "information" occurs in 4 documents: 0 (35) 1 (203) 3 (12) 4 (1) 
+-----------------------
+Testing index performance on 1k document collection
+  Build time...
+	LuceneForwardIndex:	5s 543ms 
+	LuceneIndex:	3s 793ms 
+	RAMIndex:	9s 365ms 
+	DiskIndex:	25s 946ms 
+  Load time...
+	LuceneForwardIndex:	19ms 
+	LuceneIndex:	19ms 
+	RAMIndex:	9s 947ms 
+	DiskIndex:	208ms 
+  Disk space...
+	LuceneForwardIndex:	4998K
+	LuceneIndex:	2017K
+	RAMIndex:	13960K
+	DiskIndex:	9249K
+-----------------------
+Testing index performance on 10k document collection
+  Build time...
+	LuceneForwardIndex:	32s 644ms 
+	LuceneIndex:	28s 189ms 
+	RAMIndex:	1min 1s 461ms 
+	DiskIndex:	3min 26s 463ms 
+  Load time...
+	LuceneForwardIndex:	28ms 
+	LuceneIndex:	41ms 
+	RAMIndex:	1min 6s 259ms 
+	DiskIndex:	448ms 
+  Disk space...
+	LuceneForwardIndex:	35786K
+	LuceneIndex:	12659K
+	RAMIndex:	93053K
+	DiskIndex:	62482K
+-----------------------
+Testing index performance on 100k document collection
+  Build time...
+	LuceneForwardIndex:	6min 38s 33ms 
+	LuceneIndex:	5min 48s 503ms 
+	RAMIndex:	10min 6s 70ms 
+	DiskIndex:	36min 28s 430ms 
+  Load time...
+	LuceneForwardIndex:	211ms 
+	LuceneIndex:	122ms 
+	RAMIndex:	10min 4s 976ms 
+	DiskIndex:	2s 966ms 
+  Disk space...
+	LuceneForwardIndex:	368879K
+	LuceneIndex:	121554K
+	RAMIndex:	941472K
+	DiskIndex:	633378K
+-----------------------
+Checking engine results on URL collection
+  LuceneEngine + LuceneIndex: top 4 of 4 for query "information probability"
+	1.403149127960205	https://en.wikipedia.org/wiki/Information_theory
+	1.2408404350280762	https://en.wikipedia.org/wiki/Entropy
+	0.42464131116867065	http://sigir.org/sigir2019/calls/long
+	0.3206300437450409	https://www.reddit.com
+  SlowVSMCosineEngine + LuceneForwardIndex: top 4 of 4 for query "information probability"
+	0.09042379757621428	https://en.wikipedia.org/wiki/Information_theory
+	0.04820614913899817	http://sigir.org/sigir2019/calls/long
+	0.047373619760976884	https://en.wikipedia.org/wiki/Entropy
+	0.014133380775054761	https://www.reddit.com
+  TermBasedVSMCosineEngine + LuceneIndex: top 4 of 4 for query "information probability"
+	0.09035692043009949	https://en.wikipedia.org/wiki/Information_theory
+	0.04802297752826867	http://sigir.org/sigir2019/calls/long
+	0.04735030716533621	https://en.wikipedia.org/wiki/Entropy
+	0.014175420709473946	https://www.reddit.com
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 4 of 4 for query "information probability"
+	0.09439341207928272	https://en.wikipedia.org/wiki/Information_theory
+	0.050927461049935716	https://en.wikipedia.org/wiki/Entropy
+	0.049321739040328993	http://sigir.org/sigir2019/calls/long
+	0.014965464684155522	https://www.reddit.com
+  TermBasedVSMCosineEngine + DiskIndex: top 4 of 4 for query "information probability"
+	0.09433386709289164	https://en.wikipedia.org/wiki/Information_theory
+	0.05088800709961376	https://en.wikipedia.org/wiki/Entropy
+	0.049127586084147135	http://sigir.org/sigir2019/calls/long
+	0.015030423170949613	https://www.reddit.com
+  DocBasedVSMCosineEngine + LuceneIndex: top 4 of 4 for query "information probability"
+	0.09035692043009949	https://en.wikipedia.org/wiki/Information_theory
+	0.04802297752826867	http://sigir.org/sigir2019/calls/long
+	0.04735030716533621	https://en.wikipedia.org/wiki/Entropy
+	0.014175420709473946	https://www.reddit.com
+  DocBasedVSMCosineEngine + SerializedRAMIndex: top 4 of 4 for query "information probability"
+	0.09439341207928272	https://en.wikipedia.org/wiki/Information_theory
+	0.050927461049935716	https://en.wikipedia.org/wiki/Entropy
+	0.049321739040328993	http://sigir.org/sigir2019/calls/long
+	0.014965464684155522	https://www.reddit.com
+  DocBasedVSMCosineEngine + DiskIndex: top 4 of 4 for query "information probability"
+	0.09433386709289164	https://en.wikipedia.org/wiki/Information_theory
+	0.05088800709961376	https://en.wikipedia.org/wiki/Entropy
+	0.049127586084147135	http://sigir.org/sigir2019/calls/long
+	0.015030423170949613	https://www.reddit.com
+-----------------------
+Testing engine performance on 1k document collection
+  LuceneEngine + LuceneIndex: top 5 of 469 for query "obama family tree"
+	4.620633125305176	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	4.546961307525635	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	4.480912208557129	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-57-32937.html
+	4.392874240875244	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-enwp01-59-16163.html
+	4.392719268798828	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-enwp02-06-15081.html
+  --> 11ms 
+  SlowVSMCosineEngine + LuceneForwardIndex: top 5 of 469 for query "obama family tree"
+	0.2844815542426866	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	0.26811410835190663	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	0.22217107488156024	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2441.html
+	0.22176734218452632	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2755.html
+	0.22150920277442854	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2912.html
+  --> 269ms 
+  TermBasedVSMCosineEngine + LuceneIndex: top 5 of 469 for query "obama family tree"
+	0.2844815542426866	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	0.26811410835190663	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	0.22217107488156024	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2441.html
+	0.22176734218452632	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2755.html
+	0.22150920277442854	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2912.html
+  --> 3ms 
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 5 of 470 for query "obama family tree"
+	0.3090751988869554	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	0.27917629146954	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	0.23092591487842867	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21397.html
+	0.22953041247878797	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0003-21-23666.html
+	0.22486878015019207	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2768.html
+  --> 1ms 
+  TermBasedVSMCosineEngine + DiskIndex: top 5 of 470 for query "obama family tree"
+	0.3090751988869554	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	0.27917629146954	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	0.23092591487842867	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21397.html
+	0.22953041247878797	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0003-21-23666.html
+	0.22486878015019207	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2768.html
+  --> 74ms 
+  DocBasedVSMCosineEngine + DiskIndex: top 5 of 470 for query "obama family tree"
+	0.3090751988869554	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	0.27917629146954	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	0.23092591487842867	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0001-02-21397.html
+	0.22953041247878797	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0003-21-23666.html
+	0.22486878015019207	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs1k.zip\clueweb09-en0009-30-2768.html
+  --> 29ms 
+-----------------------
+Testing engine performance on 10k document collection
+  LuceneEngine + LuceneIndex: top 5 of 1808 for query "air travel information"
+	3.2214577198028564	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0006-02-32959.html
+	3.2040460109710693	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0001-94-20373.html
+	3.192282199859619	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0006-02-32957.html
+	3.1891098022460938	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0009-48-10665.html
+	3.1850595474243164	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0008-57-27844.html
+  --> 32ms 
+  SlowVSMCosineEngine + LuceneForwardIndex: top 5 of 7054 for query "air travel information"
+	0.37588764605676905	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-06-04760.html
+	0.3211834866659541	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0007-59-22958.html
+	0.30669326782672124	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15288.html
+	0.29992253691871756	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-14-05156.html
+	0.2986404401726358	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0002-43-02204.html
+  --> 1s 240ms 
+  TermBasedVSMCosineEngine + LuceneIndex: top 5 of 7054 for query "air travel information"
+	0.37588764605676905	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-06-04760.html
+	0.3211834866659541	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0007-59-22958.html
+	0.30669326782672124	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15288.html
+	0.29992253691871756	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-14-05156.html
+	0.2986404401726358	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0002-43-02204.html
+  --> 178ms 
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 5 of 7060 for query "air travel information"
+	0.40554709385930426	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-06-04760.html
+	0.3517198459619799	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0007-59-22958.html
+	0.3299824119786524	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15272.html
+	0.32665858556145516	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15288.html
+	0.3258413488558644	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-14-05156.html
+  --> 5ms 
+  TermBasedVSMCosineEngine + DiskIndex: top 5 of 7060 for query "air travel information"
+	0.40554709385930426	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-06-04760.html
+	0.3517198459619799	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0007-59-22958.html
+	0.3299824119786524	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15272.html
+	0.32665858556145516	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15288.html
+	0.3258413488558644	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-14-05156.html
+  --> 1s 340ms 
+  DocBasedVSMCosineEngine + DiskIndex: top 5 of 7060 for query "air travel information"
+	0.40554709385930426	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-06-04760.html
+	0.3517198459619799	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0007-59-22958.html
+	0.3299824119786524	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15272.html
+	0.32665858556145516	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0005-92-15288.html
+	0.3258413488558644	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs10k.zip\clueweb09-en0000-14-05156.html
+  --> 1s 464ms 
+-----------------------
+Testing engine performance on 100k document collection
+  LuceneEngine + LuceneIndex: top 5 of 2386 for query "living in india"
+	4.342435359954834	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0003-69-28041.html
+	4.3151655197143555	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0006-65-34164.html
+	4.296776294708252	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0006-31-34464.html
+	4.286777019500732	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0007-10-10738.html
+	4.283979892730713	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0001-86-16575.html
+  --> 183ms 
+  SlowVSMCosineEngine + LuceneForwardIndex: top 5 of 89163 for query "living in india"
+	0.5069823618874837	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-64-13798.html
+	0.48112126708957914	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-23906.html
+	0.3797025207607965	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0010-13-35416.html
+	0.37041152525362003	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-24495.html
+	0.3576951229503216	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0008-10-03645.html
+  --> 9s 679ms 
+  TermBasedVSMCosineEngine + LuceneIndex: top 5 of 89163 for query "living in india"
+	0.5069823618874837	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-64-13798.html
+	0.48112126708957914	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-23906.html
+	0.3797025207607965	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0010-13-35416.html
+	0.37041152525362003	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-24495.html
+	0.3576951229503216	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0008-10-03645.html
+  --> 2s 859ms 
+  TermBasedVSMCosineEngine + SerializedRAMIndex: top 5 of 89242 for query "living in india"
+	0.5197700725629169	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-64-13798.html
+	0.5036537963469235	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-23906.html
+	0.4557872256686888	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-20-11397.html
+	0.4178830274185679	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0010-13-35416.html
+	0.41003121747567145	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-24495.html
+  --> 58ms 
+  TermBasedVSMCosineEngine + DiskIndex: top 5 of 89242 for query "living in india"
+	0.5197700725629169	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-64-13798.html
+	0.5036537963469235	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-23906.html
+	0.4557872256686888	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-20-11397.html
+	0.4178830274185679	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0010-13-35416.html
+	0.41003121747567145	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-24495.html
+  --> 1min 1s 639ms 
+  DocBasedVSMCosineEngine + DiskIndex: top 5 of 89242 for query "living in india"
+	0.5197700725629169	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-64-13798.html
+	0.5036537963469235	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-23906.html
+	0.4557872256686888	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-20-11397.html
+	0.4178830274185679	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0010-13-35416.html
+	0.41003121747567145	C:\Users\Javier\IdeaProjects\bmi-p1\collections\docs100k.zip\clueweb09-en0009-56-24495.html
+  --> 29s 191ms 

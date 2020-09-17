@@ -1,0 +1,6 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Note: Simulation START
+Time: 0 ps  Iteration: 0  Process: /chksum_tb/check_results  File: /home/alumnos/e359327/DIE/P3/P3b_checksum/sim/chksum_tb.vhd
+Note: Simulation END (check possible errors above)
+Time: 657500 ps  Iteration: 0  Process: /chksum_tb/check_results  File: /home/alumnos/e359327/DIE/P3/P3b_checksum/sim/chksum_tb.vhd

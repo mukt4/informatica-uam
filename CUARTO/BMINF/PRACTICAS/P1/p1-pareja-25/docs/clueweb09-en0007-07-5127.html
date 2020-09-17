@@ -1,0 +1,612 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Apache/1.3.37 (Unix) PHP/5.2.1 mod_auth_passthrough/1.8 mod_log_bytes/1.2 mod_bwlimited/1.4 FrontPage/5.0.2.2635.SR1.2 mod_ssl/2.8.28 OpenSSL/0.9.7a
+X-Powered-By: PHP/5.2.1
+Date: Thu, 08 Jan 2009 05:49:43 GMT
+Connection: close
+Content-Length: 68301
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="keywords" content="Kentucky Colleges - Education Reference" />
+<META NAME=Description CONTENT="Kentucky Colleges">
+<title>Kentucky Colleges - Education Reference</title>
+<link href="/css/style.css" media="screen" rel="Stylesheet" type="text/css" />
+<script src="/js/mootools.js" type="text/javascript"></script>
+</head>
+<script language="javascript" type="text/javascript">
+<!--
+function IsNumeric(strString)
+   //  check for valid numeric strings
+   {
+   var strValidChars = "0123456789.-";
+   var strChar;
+   var blnResult = true;
+
+   if (strString.length == 0) return false;
+
+   //  test strString consists of valid characters listed above
+   for (i = 0; i < strString.length && blnResult == true; i++)
+      {
+      strChar = strString.charAt(i);
+      if (strValidChars.indexOf(strChar) == -1)
+         {
+         blnResult = false;
+         }
+      }
+   return blnResult;
+}
+
+function search(formName) {
+	if (IsNumeric(document.forms[formName].zipcode.value)==false) {
+		alert('The zipcode is not valid.');
+		document.forms[formName].zipcode.select();
+	} else if (IsNumeric(document.forms[formName].distance.value)==false) {
+		alert('The distance is not valid.');
+		document.forms[formName].distance.select();
+	} else {
+		document.forms[formName].action = 'http://ed-reference.us/colleges-within-'+document.forms[formName].distance.value+'-miles-of-'+document.forms[formName].zipcode.value;
+		document.forms[formName].submit();
+//		location=('http://ed-reference.us/colleges-within-'+document.forms[0].distance.value+'-miles-of-'+document.forms[0].zipcode.value);
+	}
+}
+
+// -->
+</script>
+<script type="text/javascript">
+ function CreateBookmarkLink() {
+
+ title = "www.ed-reference.us";
+  // Blogger - Replace with <$BlogItemTitle$>
+  // MovableType - Replace with <$MTEntryTitle$>
+
+ url = "http://www.ed-reference.us/10000/kentucky/colleges/";
+
+	if (window.sidebar) { // Mozilla Firefox Bookmark
+		window.sidebar.addPanel(title, url,"");
+	} else if( window.external ) { // IE Favorite
+		window.external.AddFavorite( url, title); }
+	else if(window.opera && window.print) { // Opera Hotlist
+		return true; }
+ }
+
+ function displayAddFav() {
+	 if (window.external) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Add to Favorites</a>');
+	 } else  if (window.sidebar) {
+	  document.write('<a href ="javascript:CreateBookmarkLink()");">Bookmark Page</a>');
+	 } else if (window.opera && window.print) {
+	   document.write('<a href ="javascript:CreateBookmarkLink()");">Add Bookmark</a>');
+	 }
+ }
+</script>
+<body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+	var pageTracker = _gat._getTracker("UA-338608-26");
+	pageTracker._trackPageview();
+}
+catch(err)
+{}
+</script>
+		<div id="top-container">
+			<div class="transparentheader" style="width: 100%; height: 99px;z-index:1;">
+				<a href="/">
+					<img width="100%" height="99" title="" alt="" style="border-width:0px;" src="http://ed-reference.us/images/headerBG_transparent.png"/>
+				</a>
+			</div>
+			<div id="logo" style="width: 394px; height: 75px; z-index:2;">
+				<a href="/">
+					<img src="http://ed-reference.us/images/logo.png" width="394px" height="75px" border="0px"/>
+				</a>
+			</div>
+			<div style="position:absolute; top:0; left:0; width:100%; height:99px; z-index:1;">
+				<div id="main-menu">
+					<ul>
+						<li><a href="/states/">Search By State</a></li> |
+						<li><a href="/degrees/">Search By Degree</a></li> |
+						<li><a href="/colleges/">Search By Name</a></li> |
+						<li><a href="/search-online-schools/">Search Online Schools</a></li>
+					</ul>
+				</div>
+				<div style="clear:right;" class="search searchTop">
+					<form method="POST" id="search1" onsubmit="search('search1');">
+						Search By Zip Code <input type="text" name="zipcode" maxlength="5" size="5" value=""> Within (miles) <input type="text" name="distance" maxlength="5" size="5" onkeypress="return handleKeyPress(event);" value=""><span class="button"><input class="go" type="submit" value="Go"></span>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="wrap">
+		<div id="wrap-inner">
+			<div id="leftSideNav">
+<script>
+function submit_perPageFrm() {
+	var frm = document.forms['perPageFrm'];
+	frm.action='/10000/kentucky/colleges/i'+frm.itemPerPage.options[frm.itemPerPage.selectedIndex].value+'/';
+	frm.submit();
+}
+function insertPagination(strText) {
+	var ele = document.getElementById("pagination");
+	ele.innerHTML = strText;
+}
+</script>
+			<div id="nav1List">			<div class="nav1">
+				<div class="nav1Title">Kentucky Colleges By City:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItemCity0" onmouseover="document.getElementById('listItemCity0').className='listOn';" onmouseout="document.getElementById('listItemCity0').className='';"><a href="/11000/kentucky/ashland/colleges">Ashland</a></li>
+					<li id="listItemCity1" onmouseover="document.getElementById('listItemCity1').className='listOn';" onmouseout="document.getElementById('listItemCity1').className='';"><a href="/11000/kentucky/barbourville/colleges">Barbourville</a></li>
+					<li id="listItemCity2" onmouseover="document.getElementById('listItemCity2').className='listOn';" onmouseout="document.getElementById('listItemCity2').className='';"><a href="/11000/kentucky/berea/colleges">Berea</a></li>
+					<li id="listItemCity3" onmouseover="document.getElementById('listItemCity3').className='listOn';" onmouseout="document.getElementById('listItemCity3').className='';"><a href="/11000/kentucky/bowling+green/colleges">Bowling Green</a></li>
+					<li id="listItemCity4" onmouseover="document.getElementById('listItemCity4').className='listOn';" onmouseout="document.getElementById('listItemCity4').className='';"><a href="/11000/kentucky/campbellsville/colleges">Campbellsville</a></li>
+					<li id="listItemCity5" onmouseover="document.getElementById('listItemCity5').className='listOn';" onmouseout="document.getElementById('listItemCity5').className='';"><a href="/11000/kentucky/columbia/colleges">Columbia</a></li>
+					<li id="listItemCity6" onmouseover="document.getElementById('listItemCity6').className='listOn';" onmouseout="document.getElementById('listItemCity6').className='';"><a href="/11000/kentucky/covington/colleges">Covington</a></li>
+					<li id="listItemCity7" onmouseover="document.getElementById('listItemCity7').className='listOn';" onmouseout="document.getElementById('listItemCity7').className='';"><a href="/11000/kentucky/crestview+hills/colleges">Crestview Hills</a></li>
+					<li id="listItemCity8" onmouseover="document.getElementById('listItemCity8').className='listOn';" onmouseout="document.getElementById('listItemCity8').className='';"><a href="/11000/kentucky/cumberland/colleges">Cumberland</a></li>
+					<li id="listItemCity9" onmouseover="document.getElementById('listItemCity9').className='listOn';" onmouseout="document.getElementById('listItemCity9').className='';"><a href="/11000/kentucky/danville/colleges">Danville</a></li>
+					<li id="listItemCity10" onmouseover="document.getElementById('listItemCity10').className='listOn';" onmouseout="document.getElementById('listItemCity10').className='';"><a href="/11000/kentucky/elizabethtown/colleges">Elizabethtown</a></li>
+					<li id="listItemCity11" onmouseover="document.getElementById('listItemCity11').className='listOn';" onmouseout="document.getElementById('listItemCity11').className='';"><a href="/11000/kentucky/florence/colleges">Florence</a></li>
+					<li id="listItemCity12" onmouseover="document.getElementById('listItemCity12').className='listOn';" onmouseout="document.getElementById('listItemCity12').className='';"><a href="/11000/kentucky/fort+knox/colleges">Fort Knox</a></li>
+					<li id="listItemCity13" onmouseover="document.getElementById('listItemCity13').className='listOn';" onmouseout="document.getElementById('listItemCity13').className='';"><a href="/11000/kentucky/frankfort/colleges">Frankfort</a></li>
+					<li id="listItemCity14" onmouseover="document.getElementById('listItemCity14').className='listOn';" onmouseout="document.getElementById('listItemCity14').className='';"><a href="/11000/kentucky/ft+mitchell/colleges">Ft Mitchell</a></li>
+					<li id="listItemCity15" onmouseover="document.getElementById('listItemCity15').className='listOn';" onmouseout="document.getElementById('listItemCity15').className='';"><a href="/11000/kentucky/ft.+knox/colleges">Ft. Knox</a></li>
+					<li id="listItemCity16" onmouseover="document.getElementById('listItemCity16').className='listOn';" onmouseout="document.getElementById('listItemCity16').className='';"><a href="/11000/kentucky/georgetown/colleges">Georgetown</a></li>
+					<li id="listItemCity17" onmouseover="document.getElementById('listItemCity17').className='listOn';" onmouseout="document.getElementById('listItemCity17').className='';"><a href="/11000/kentucky/glasgow/colleges">Glasgow</a></li>
+					<li id="listItemCity18" onmouseover="document.getElementById('listItemCity18').className='listOn';" onmouseout="document.getElementById('listItemCity18').className='';"><a href="/11000/kentucky/grayson/colleges">Grayson</a></li>
+					<li id="listItemCity19" onmouseover="document.getElementById('listItemCity19').className='listOn';" onmouseout="document.getElementById('listItemCity19').className='';"><a href="/11000/kentucky/harlan/colleges">Harlan</a></li>
+					<li id="listItemCity20" onmouseover="document.getElementById('listItemCity20').className='listOn';" onmouseout="document.getElementById('listItemCity20').className='';"><a href="/11000/kentucky/hazard/colleges">Hazard</a></li>
+					<li id="listItemCity21" onmouseover="document.getElementById('listItemCity21').className='listOn';" onmouseout="document.getElementById('listItemCity21').className='';"><a href="/11000/kentucky/henderson/colleges">Henderson</a></li>
+					<li id="listItemCity22" onmouseover="document.getElementById('listItemCity22').className='listOn';" onmouseout="document.getElementById('listItemCity22').className='';"><a href="/11000/kentucky/highland+heights/colleges">Highland Heights</a></li>
+					<li id="listItemCity23" onmouseover="document.getElementById('listItemCity23').className='listOn';" onmouseout="document.getElementById('listItemCity23').className='';"><a href="/11000/kentucky/hopkinsville/colleges">Hopkinsville</a></li>
+					<li id="listItemCity24" onmouseover="document.getElementById('listItemCity24').className='listOn';" onmouseout="document.getElementById('listItemCity24').className='';"><a href="/11000/kentucky/hyden/colleges">Hyden</a></li>
+					<li id="listItemCity25" onmouseover="document.getElementById('listItemCity25').className='listOn';" onmouseout="document.getElementById('listItemCity25').className='';"><a href="/11000/kentucky/lancaster/colleges">Lancaster</a></li>
+					<li id="listItemCity26" onmouseover="document.getElementById('listItemCity26').className='listOn';" onmouseout="document.getElementById('listItemCity26').className='';"><a href="/11000/kentucky/lexington/colleges">Lexington</a></li>
+					<li id="listItemCity27" onmouseover="document.getElementById('listItemCity27').className='listOn';" onmouseout="document.getElementById('listItemCity27').className='';"><a href="/11000/kentucky/london/colleges">London</a></li>
+					<li id="listItemCity28" onmouseover="document.getElementById('listItemCity28').className='listOn';" onmouseout="document.getElementById('listItemCity28').className='';"><a href="/11000/kentucky/louisville/colleges">Louisville</a></li>
+					<li id="listItemCity29" onmouseover="document.getElementById('listItemCity29').className='listOn';" onmouseout="document.getElementById('listItemCity29').className='';"><a href="/11000/kentucky/madisonville/colleges">Madisonville</a></li>
+					<li id="listItemCity30" onmouseover="document.getElementById('listItemCity30').className='listOn';" onmouseout="document.getElementById('listItemCity30').className='';"><a href="/11000/kentucky/manchester/colleges">Manchester</a></li>
+					<li id="listItemCity31" onmouseover="document.getElementById('listItemCity31').className='listOn';" onmouseout="document.getElementById('listItemCity31').className='';"><a href="/11000/kentucky/mayfield/colleges">Mayfield</a></li>
+					<li id="listItemCity32" onmouseover="document.getElementById('listItemCity32').className='listOn';" onmouseout="document.getElementById('listItemCity32').className='';"><a href="/11000/kentucky/maysville/colleges">Maysville</a></li>
+					<li id="listItemCity33" onmouseover="document.getElementById('listItemCity33').className='listOn';" onmouseout="document.getElementById('listItemCity33').className='';"><a href="/11000/kentucky/middlesboro/colleges">Middlesboro</a></li>
+					<li id="listItemCity34" onmouseover="document.getElementById('listItemCity34').className='listOn';" onmouseout="document.getElementById('listItemCity34').className='';"><a href="/11000/kentucky/midway/colleges">Midway</a></li>
+					<li id="listItemCity35" onmouseover="document.getElementById('listItemCity35').className='listOn';" onmouseout="document.getElementById('listItemCity35').className='';"><a href="/11000/kentucky/morehead/colleges">Morehead</a></li>
+					<li id="listItemCity36" onmouseover="document.getElementById('listItemCity36').className='listOn';" onmouseout="document.getElementById('listItemCity36').className='';"><a href="/11000/kentucky/mt+sterling/colleges">Mt Sterling</a></li>
+					<li id="listItemCity37" onmouseover="document.getElementById('listItemCity37').className='listOn';" onmouseout="document.getElementById('listItemCity37').className='';"><a href="/11000/kentucky/murray/colleges">Murray</a></li>
+					<li id="listItemCity38" onmouseover="document.getElementById('listItemCity38').className='listOn';" onmouseout="document.getElementById('listItemCity38').className='';"><a href="/11000/kentucky/newport/colleges">Newport</a></li>
+					<li id="listItemCity39" onmouseover="document.getElementById('listItemCity39').className='listOn';" onmouseout="document.getElementById('listItemCity39').className='';"><a href="/11000/kentucky/nicholasville/colleges">Nicholasville</a></li>
+					<li id="listItemCity40" onmouseover="document.getElementById('listItemCity40').className='listOn';" onmouseout="document.getElementById('listItemCity40').className='';"><a href="/11000/kentucky/northern+kentucky/colleges">Northern Kentucky</a></li>
+					<li id="listItemCity41" onmouseover="document.getElementById('listItemCity41').className='listOn';" onmouseout="document.getElementById('listItemCity41').className='';"><a href="/11000/kentucky/owensboro/colleges">Owensboro</a></li>
+					<li id="listItemCity42" onmouseover="document.getElementById('listItemCity42').className='listOn';" onmouseout="document.getElementById('listItemCity42').className='';"><a href="/11000/kentucky/paducah/colleges">Paducah</a></li>
+					<li id="listItemCity43" onmouseover="document.getElementById('listItemCity43').className='listOn';" onmouseout="document.getElementById('listItemCity43').className='';"><a href="/11000/kentucky/paintsville/colleges">Paintsville</a></li>
+					<li id="listItemCity44" onmouseover="document.getElementById('listItemCity44').className='listOn';" onmouseout="document.getElementById('listItemCity44').className='';"><a href="/11000/kentucky/pikeville/colleges">Pikeville</a></li>
+					<li id="listItemCity45" onmouseover="document.getElementById('listItemCity45').className='listOn';" onmouseout="document.getElementById('listItemCity45').className='';"><a href="/11000/kentucky/pineville/colleges">Pineville</a></li>
+					<li id="listItemCity46" onmouseover="document.getElementById('listItemCity46').className='listOn';" onmouseout="document.getElementById('listItemCity46').className='';"><a href="/11000/kentucky/pippa+passes/colleges">Pippa Passes</a></li>
+					<li id="listItemCity47" onmouseover="document.getElementById('listItemCity47').className='listOn';" onmouseout="document.getElementById('listItemCity47').className='';"><a href="/11000/kentucky/prestonsburg/colleges">Prestonsburg</a></li>
+					<li id="listItemCity48" onmouseover="document.getElementById('listItemCity48').className='listOn';" onmouseout="document.getElementById('listItemCity48').className='';"><a href="/11000/kentucky/radcliff/colleges">Radcliff</a></li>
+					<li id="listItemCity49" onmouseover="document.getElementById('listItemCity49').className='listOn';" onmouseout="document.getElementById('listItemCity49').className='';"><a href="/11000/kentucky/richmond/colleges">Richmond</a></li>
+					<li id="listItemCity50" onmouseover="document.getElementById('listItemCity50').className='listOn';" onmouseout="document.getElementById('listItemCity50').className='';"><a href="/11000/kentucky/russell/colleges">Russell</a></li>
+					<li id="listItemCity51" onmouseover="document.getElementById('listItemCity51').className='listOn';" onmouseout="document.getElementById('listItemCity51').className='';"><a href="/11000/kentucky/shelby/colleges">Shelby</a></li>
+					<li id="listItemCity52" onmouseover="document.getElementById('listItemCity52').className='listOn';" onmouseout="document.getElementById('listItemCity52').className='';"><a href="/11000/kentucky/somerset/colleges">Somerset</a></li>
+					<li id="listItemCity53" onmouseover="document.getElementById('listItemCity53').className='listOn';" onmouseout="document.getElementById('listItemCity53').className='';"><a href="/11000/kentucky/south+williamson/colleges">South Williamson</a></li>
+					<li id="listItemCity54" onmouseover="document.getElementById('listItemCity54').className='listOn';" onmouseout="document.getElementById('listItemCity54').className='';"><a href="/11000/kentucky/st+catharine/colleges">St Catharine</a></li>
+					<li id="listItemCity55" onmouseover="document.getElementById('listItemCity55').className='listOn';" onmouseout="document.getElementById('listItemCity55').className='';"><a href="/11000/kentucky/vancleve/colleges">Vancleve</a></li>
+					<li id="listItemCity56" onmouseover="document.getElementById('listItemCity56').className='listOn';" onmouseout="document.getElementById('listItemCity56').className='';"><a href="/11000/kentucky/versailles/colleges">Versailles</a></li>
+					<li id="listItemCity57" onmouseover="document.getElementById('listItemCity57').className='listOn';" onmouseout="document.getElementById('listItemCity57').className='';"><a href="/11000/kentucky/whitesburg/colleges">Whitesburg</a></li>
+					<li id="listItemCity58" onmouseover="document.getElementById('listItemCity58').className='listOn';" onmouseout="document.getElementById('listItemCity58').className='';"><a href="/11000/kentucky/williamsburg/colleges">Williamsburg</a></li>
+					<li id="listItemCity59" onmouseover="document.getElementById('listItemCity59').className='listOn';" onmouseout="document.getElementById('listItemCity59').className='';"><a href="/11000/kentucky/wilmore/colleges">Wilmore</a></li>
+					<li id="listItemCity60" onmouseover="document.getElementById('listItemCity60').className='listOn';" onmouseout="document.getElementById('listItemCity60').className='';"><a href="/11000/kentucky/winchester/colleges">Winchester</a></li>
+				</ul>
+				</div>
+			</div>
+</div>
+		</div>
+		<div class="content-container">
+			<div class="content">
+				<span class="breadcrumb"><a href="/10000/kentucky/colleges">Kentucky Colleges</a></span>
+				<div  id="sticky">
+					<!-- AddThis Bookmark Button BEGIN -->
+					<script type="text/javascript">
+					  addthis_url    = location.href;
+					  addthis_title  = document.title;
+					  addthis_pub    = 'baymarketing';
+					</script><script type="text/javascript" src="http://s7.addthis.com/js/addthis_widget.php?v=12 " ></script>
+					<!-- AddThis Bookmark Button END -->
+				</div>
+				<div class="contentHeader">
+					<span class="pageTitle">Kentucky Colleges</span>
+					<span class="numberPerPage">
+						<form id="perPageFrm" method="POST">
+						<select class="itemsPerPage" id="itemPerPage" onchange="submit_perPageFrm();">
+<option value="50" selected>50</option>
+<option value="100" >100</option>
+<option value="150" >150</option>
+	</select>
+ Per Page
+						</form>
+					</span>
+				</div>
+				<div class="clearall"></div>
+				<div id="pagination"></div>
+				<p class="intro">The U.S. School Database currently includes 131 colleges and universities located Kentucky. To inquire from any of the KY schools below, simply follow each school's  link to request accurate information directly from each school. Good luck on your search for schools and colleges that meet your needs in Kentucky or even outside of Kentucky or <a href="/search-online-schools/">online</a>, we hope you find everything you need to know about universities in Kentucky. Also remember to search for Kentucky schools near you by entering your zip code and distance to school.</p>
+				<span class="title">Featured Schools, Colleges and Universities in Kentucky</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2344&page=http://college.us.com/Aff/?partner=1064&source=2212" onClick="javascript: pageTracker._trackPageview('/outgoing/http://college.us.com/Aff/?partner=1064&source=2212');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/southwestern+college+florence-2344/">Southwestern College Florence</a></span> - <a href="/11000/kentucky/florence/colleges">Florence</a>, KY<br/>
+Programs at Southwestern College Florence include: Administrative Assistant and Secretarial Science, Business Administration and Management, Accounting, Computer Science, Health and Medical Administrative Services, Medical, Clinical Assistant, Medical Administrative, Executive Assistant and Medical Secretary, Information Science, Studies, Accounting and Related Services, Blood Bank Technology Specialist, <a href="/11000/kentucky/florence/southwestern+college+florence-2344/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7243&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6816" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6816');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/national+college+-+lexington-7243/">National College - Lexington</a></span> - <a href="/11000/kentucky/lexington/colleges">Lexington</a>, KY<br/>
+Programs at National College - Lexington include: Administrative Office Professional, Administrative Office Specialist, Business Administration, Business Administration,Accounting, Business Administration,Management, Computer Applications Technology, Computerized Office Applications, Medical Assisting, Medical Billing and Coding, Medical Office Specialist, <a href="/11000/kentucky/lexington/national+college+-+lexington-7243/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7728&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?cjbid=15918&aid=973&task=CLICK" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?cjbid=15918&aid=973&task=CLICK');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/fort+knox/university+of+louisville+at+fort+knox+center+-+fort+knox-7728/">University of Louisville at Fort Knox Center - Fort Knox</a></span> - <a href="/11000/kentucky/fort+knox/colleges">Fort Knox</a>, KY<br/>
+Programs at University of Louisville at Fort Knox Center - Fort Knox include: Certified Wireless Network Administrator CWNA, Cisco Certified Network Associate CCNA, Cisco Certified Network Professional CCNP, Cisco Certified Security Professional CCSP, Cisco Certified Voice Professional CCVP, CIW Associate CIWA, CompTIA A+, CompTIA iNet+, CompTIA Linux+, CompTIA Network+, <a href="/11000/kentucky/fort+knox/university+of+louisville+at+fort+knox+center+-+fort+knox-7728/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7996&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/ata/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/ata/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/ata+career+education+-+louisville-7996/">ATA Career Education - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at ATA Career Education - Louisville include: Dental Assisting, Medical Office Assistant, Network Professional, Professional Medical Coding, <a href="/11000/kentucky/louisville/ata+career+education+-+louisville-7996/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2383&page=http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=349&csrc=ed-reference" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=349&csrc=ed-reference');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/spencerian+college+-+louisville-2383/">Spencerian College - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at Spencerian College - Louisville include: Licensed Practical, Vocational Nurse Training, Accounting Technology, Technician and Bookkeeping, Surgical Technology, Technologist, Business, Management, Marketing & Related Support Services, Clinical, Medical Laboratory Science and Allied Professions, Clinical, Medical Laboratory Technician, Medical Radiologic Technology, Radiation Therapist, Medical Transcription, Transcriptionist, Medical, Clinical Assistant, Health Information, Medical Records Technology, Technician, <a href="/11000/kentucky/louisville/spencerian+college+-+louisville-2383/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2375&page=http://aftrk.com/c/c?b=40408&h=21047&sh=318670&bt=1x1" onClick="javascript: pageTracker._trackPageview('/outgoing/http://aftrk.com/c/c?b=40408&h=21047&sh=318670&bt=1x1');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/itt+technical+institute+-+louisville-2375/">ITT Technical Institute - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at ITT Technical Institute - Louisville include: Animation, Interactive Tech, Video Graphics and Special Effects, CAD, CADD Drafting and, or Design Technology, Technician, Computer Software Technology, Technician, Computer Systems Networking and Telecommunications, Computer and Information Systems Security, Electrical, Electronic, Communications Engr Technology, Technician, Information Technology, <a href="/11000/kentucky/louisville/itt+technical+institute+-+louisville-2375/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2365&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=15964" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=15964');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/spencerian+college+-+lexington-2365/">Spencerian College - Lexington</a></span> - <a href="/11000/kentucky/lexington/colleges">Lexington</a>, KY<br/>
+Programs at Spencerian College - Lexington include: Drafting and Design Technology, Technician, Computer Graphics, Computer Engineering Technology, Technician, Electrical, Electronic Engineering Technologies, Technicians, Architectural Drafting and Architectural CAD, CADD, Civil Drafting and Civil Engineering CAD, CADD, Computer Installation and Repair Technology, Technician, Mechanical Drafting and Mechanical Drafting CAD, CADD, Architectural & Civil Project Design & Development CADD, Architectural & Mechanical Project Design & Development CADD, <a href="/11000/kentucky/lexington/spencerian+college+-+lexington-2365/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2364&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6816" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6816');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/national+college+of+business+and+technology+-+lexington-2364/">National College of Business and Technology - Lexington</a></span> - <a href="/11000/kentucky/lexington/colleges">Lexington</a>, KY<br/>
+Programs at National College of Business and Technology - Lexington include: Administrative Assistant and Secretarial Science, Business Administration and Management, Accounting, Radio and Television Broadcasting Technology, Technician, Medical Insurance Specialist, Medical Biller, Medical Office Assistant, Specialist, Medical Transcription, Transcriptionist, Medical, Clinical Assistant, Computer Technology, Computer Systems Technology, Health Information, Medical Records Technology, Technician, <a href="/11000/kentucky/lexington/national+college+of+business+and+technology+-+lexington-2364/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7758&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/dorsey-schools/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/dorsey-schools/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/dorsey+schools+-+wayne+-+westland-7758/">Dorsey Schools - Wayne - Westland</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at Dorsey Schools - Wayne - Westland include: Computer Applications Specialist, Medical Assistant, Medical Assisting Specialist, Medical Billing, Medical Billing Specialist, Medical Transcriptionist, Patient Care Technician, <a href="/11000/kentucky/louisville/dorsey+schools+-+wayne+-+westland-7758/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7246&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6825" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6825');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/richmond/national+college+-+richmond-7246/">National College - Richmond</a></span> - <a href="/11000/kentucky/richmond/colleges">Richmond</a>, KY<br/>
+Programs at National College - Richmond include: Administrative Office Professional, Administrative Office Specialist, Business Administration, Business Administration,Accounting, Business Administration,Management, Computer Applications Technology, Computerized Office Applications, Medical Assisting, Medical Billing and Coding, Medical Office Specialist, <a href="/11000/kentucky/richmond/national+college+-+richmond-7246/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2370&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/daymar+college+-+louisville-2370/">Daymar College - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at Daymar College - Louisville include: Court Reporting, Court Reporter, Legal Assistant, Paralegal, Health Information, Medical Records Technology, Technician, Computer Installation and Repair Technology, Technician, Business, Office Automation, Technology, Data Entry, <a href="/11000/kentucky/louisville/daymar+college+-+louisville-2370/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2342&page=http://www.beckfieldcollege.net/?event=l.lp&CID=86&SID=713&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.beckfieldcollege.net/?event=l.lp&CID=86&SID=713&csrc=');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/beckfield+college+-+florence-2342/">Beckfield College - Florence</a></span> - <a href="/11000/kentucky/florence/colleges">Florence</a>, KY<br/>
+Programs at Beckfield College - Florence include: Legal Assistant, Paralegal, Computer Systems Networking and Telecommunications, Medical Office Assistant, Specialist, Office Management and Supervision, Computer, Info Tech Services Administration & Management, Computer Installation and Repair Technology, Technician, Health Information Technology, Medical Assisting, Business Administration, Hospitality Management, <a href="/11000/kentucky/florence/beckfield+college+-+florence-2342/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8974&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/indiana-wesleyan/louisville.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/indiana-wesleyan/louisville.htm');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/indiana+wesleyan+university+-+louisville-8974/">Indiana Wesleyan University - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at Indiana Wesleyan University - Louisville include: <a href="/11000/kentucky/louisville/indiana+wesleyan+university+-+louisville-8974/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7245&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6824" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6824');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/pikeville/national+college+-+pikeville-7245/">National College - Pikeville</a></span> - <a href="/11000/kentucky/pikeville/colleges">Pikeville</a>, KY<br/>
+Programs at National College - Pikeville include: Administrative Office Professional, Administrative Office Specialist, Business Administration, Business Administration,Accounting, Business Administration,Management, Computer Applications Technology, Computerized Office Applications, Medical Assisting, Medical Billing and Coding, Medical Office Specialist, <a href="/11000/kentucky/pikeville/national+college+-+pikeville-7245/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7244&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6819" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6819');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/national+college+-+louisville-7244/">National College - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at National College - Louisville include: Administrative Office Professional, Administrative Office Specialist, Accounting, Management, Business Administration, Business Administration,Accounting, Business Administration,Management, Computer Applications Technology, Computerized Office Applications, Health Information Technology, <a href="/11000/kentucky/louisville/national+college+-+louisville-7244/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2380&page=http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=269&csrc=" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/?event=l.lp&CID=86&SID=269&csrc=');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/louisville+technical+institute+-+louisville-2380/">Louisville Technical Institute - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at Louisville Technical Institute - Louisville include: Drafting and Design Technology, Technician, Commercial and Advertising Art, Interior Design, Robotics Technology, Technician, Marine Maintenance, Fitter and Ship Repair Technology, Technician, Computer Engineering Technology, Technician, Architectural Drafting and Architectural CAD, CADD, Computer and Information Sciences and Support Services, Mechanical Drafting and Mechanical Drafting CAD, CADD, <a href="/11000/kentucky/louisville/louisville+technical+institute+-+louisville-2380/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9211&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=5801" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=5801');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/university+of+louisville+(it+certification)+-+louisville-9211/">University of Louisville (IT Certification) - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at University of Louisville (IT Certification) - Louisville include: <a href="/11000/kentucky/louisville/university+of+louisville+(it+certification)+-+louisville-9211/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2357&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/brown-mackie-college/hopkinsville.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/brown-mackie-college/hopkinsville.htm');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/hopkinsville/brown+mackie+college+-+hopkinsville-2357/">Brown Mackie College - Hopkinsville</a></span> - <a href="/11000/kentucky/hopkinsville/colleges">Hopkinsville</a>, KY<br/>
+Programs at Brown Mackie College - Hopkinsville include: Business Administration and Management, Accounting, Management Information Systems, Legal Assistant, Paralegal, Criminal Justice, Law Enforcement Administration, Electrical, Electronics Equipment Installation and Repair, Medical, Clinical Assistant, Diploma in Paralegal Assistant, Associate of Applied Business in Paralegal, Associate of Applied Science in Medical Office Management, <a href="/11000/kentucky/hopkinsville/brown+mackie+college+-+hopkinsville-2357/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2409&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/owensboro/daymar+college+-+owensboro-2409/">Daymar College - Owensboro</a></span> - <a href="/11000/kentucky/owensboro/colleges">Owensboro</a>, KY<br/>
+Programs at Daymar College - Owensboro include: Legal Assistant, Paralegal, Computer Systems Networking and Telecommunications, Computer Programming, Programmer, Medical Office Assistant, Specialist, Office Management and Supervision, Business, Office Automation, Technology, Data Entry, Billing and Coding Specialist, Business Administration Technology, Pharmacy Technology, Accounting Technology, <a href="/11000/kentucky/owensboro/daymar+college+-+owensboro-2409/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=7242&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6814" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6814');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/national+college+-+florence-7242/">National College - Florence</a></span> - <a href="/11000/kentucky/florence/colleges">Florence</a>, KY<br/>
+Programs at National College - Florence include: Administrative Office Professional, Administrative Office Specialist, Business Administration, Business Administration,Accounting, Business Administration,Management, Computer Applications Technology, Computerized Office Applications, Medical Assisting, Medical Billing and Coding, Medical Office Specialist, <a href="/11000/kentucky/florence/national+college+-+florence-7242/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9209&page=http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=379&csrc=ed-reference" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=379&csrc=ed-reference');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/ft.+knox/university+of+louisville+-+ft.+knox-9209/">University of Louisville - Ft. Knox</a></span> - <a href="/11000/kentucky/ft.+knox/colleges">Ft. Knox</a>, KY<br/>
+Programs at University of Louisville - Ft. Knox include: <a href="/11000/kentucky/ft.+knox/university+of+louisville+-+ft.+knox-9209/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2414&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=7158" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=7158');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/paducah/paducah+technical+college+-+paducah-2414/">Paducah Technical College - Paducah</a></span> - <a href="/11000/kentucky/paducah/colleges">Paducah</a>, KY<br/>
+Programs at Paducah Technical College - Paducah include: General Office Occupations and Clerical Services, Electrical, Electronic, Communications Engr Technology, Technician, <a href="/11000/kentucky/paducah/paducah+technical+college+-+paducah-2414/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=9210&page=http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=379&csrc=ed-reference" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=379&csrc=ed-reference');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/shelby/university+of+louisville+-+shelby-9210/">University of Louisville - Shelby</a></span> - <a href="/11000/kentucky/shelby/colleges">Shelby</a>, KY<br/>
+Programs at University of Louisville - Shelby include: <a href="/11000/kentucky/shelby/university+of+louisville+-+shelby-9210/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8846&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/newport/daymar+college+-+newport-8846/">Daymar College - Newport</a></span> - <a href="/11000/kentucky/newport/colleges">Newport</a>, KY<br/>
+Programs at Daymar College - Newport include: <a href="/11000/kentucky/newport/daymar+college+-+newport-8846/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8394&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/brown-mackie-college/louisville.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/brown-mackie-college/louisville.htm');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/brown+mackie+college+-+louisville-8394/">Brown Mackie College - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at Brown Mackie College - Louisville include: Associate of Applied Science in Veterinary Technology, Associate of Applied Science in Surgical Technology, Associate of Applied Science in Pharmacy Technology, Diploma in Paralegal Assistant, Associate of Applied Business in Paralegal, Associate of Applied Science in Medical Assisting, Diploma in Medical Assistant, Associate of Applied Science in Health Care Administration, Associate of Applied Business in Graphic Design, Associate of Applied Science in Gerontology, <a href="/11000/kentucky/louisville/brown+mackie+college+-+louisville-8394/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2335&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/thomas-more/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/thomas-more/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/crestview+hills/thomas+more+college+-+crestview+hills-2335/">Thomas More College - Crestview Hills</a></span> - <a href="/11000/kentucky/crestview+hills/colleges">Crestview Hills</a>, KY<br/>
+Programs at Thomas More College - Crestview Hills include: Business, Commerce, Computer and Information Sciences, Liberal Arts and Sciences, Liberal Studies, Nursing, Registered Nurse RN, ASN,N, MSN, Accounting, Biology, Biological Sciences, Chemistry, Elementary Education and Teaching, English Language and Literature, History, <a href="/11000/kentucky/crestview+hills/thomas+more+college+-+crestview+hills-2335/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2381&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=61323" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=61323');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/rets+institute+of+technology+louisville-2381/">RETS Institute of Technology Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at RETS Institute of Technology Louisville include: Accounting Technology, Technician and Bookkeeping, Electrical, Electronics and Communications Engineering, Legal Assistant, Paralegal, Computer Systems Networking and Telecommunications, Corrections and Criminal Justice, Computer Programming, Programmer, Medical Assisting Services, System, Networking, and LAN, WAN Management, Manager, Computer Software and Media Applications, Mechanical Drafting and Mechanical Drafting CAD, CADD, <a href="/11000/kentucky/louisville/rets+institute+of+technology+louisville-2381/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8779&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=116385" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=116385');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/college+for+technical+education+-+lexington-8779/">College for Technical Education - Lexington</a></span> - <a href="/11000/kentucky/lexington/colleges">Lexington</a>, KY<br/>
+Programs at College for Technical Education - Lexington include: <a href="/11000/kentucky/lexington/college+for+technical+education+-+lexington-8779/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8902&page=http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=825&csrc=ed-reference" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegeanduniversity.net/index.cfm?event=l.lp&cid=86&sid=825&csrc=ed-reference');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/richmond/eastern+kentucky+university+-+richmond-8902/">Eastern Kentucky University - Richmond</a></span> - <a href="/11000/kentucky/richmond/colleges">Richmond</a>, KY<br/>
+Programs at Eastern Kentucky University - Richmond include: <a href="/11000/kentucky/richmond/eastern+kentucky+university+-+richmond-8902/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=6973&page=http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6811" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.search4clicks.com/affiliatewiz/affiliatewiz.asp?task=Click&aid=973&cjbid=6811');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/danville/national+college+-+danville-6973/">National College - Danville</a></span> - <a href="/11000/kentucky/danville/colleges">Danville</a>, KY<br/>
+Programs at National College - Danville include: Accounting, Administrative Office Professional, Administrative Office Specialist, Business Administration, Business Administration,Accounting, Business Administration,Management, Computer Applications Technology, Computerized Office Applications, Medical Assisting, Medical Billing and Coding, <a href="/11000/kentucky/danville/national+college+-+danville-6973/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8424&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/brown-mackie-college/northern-kentucky.htm" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/brown-mackie-college/northern-kentucky.htm');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/northern+kentucky/brown+mackie+college+-+northern+kentucky-8424/">Brown Mackie College - Northern Kentucky</a></span> - <a href="/11000/kentucky/northern+kentucky/colleges">Northern Kentucky</a>, KY<br/>
+Programs at Brown Mackie College - Northern Kentucky include: Associate of Applied Science in Surgical Technology, Diploma in Practical Nursing, Associate of Applied Science in Pharmacy Technology, Associate of Applied Business in Paralegal, Associate of Applied Science in Medical Assisting, Diploma in Medical Assistant, Associate of Applied Business in Health Care Administration, Associate of Applied Business in Criminal Justice, Associate of Applied Business in Computer Software Technology, Diploma in Computer Software Applications, <a href="/11000/kentucky/northern+kentucky/brown+mackie+college+-+northern+kentucky-8424/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=2392&page=http://college.us.com/Aff/?source=1014&partner=1064&key=ed-reference.us" onClick="javascript: pageTracker._trackPageview('/outgoing/http://college.us.com/Aff/?source=1014&partner=1064&key=ed-reference.us');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/louisville/university+of+phoenix+-+louisville-2392/">University of Phoenix - Louisville</a></span> - <a href="/11000/kentucky/louisville/colleges">Louisville</a>, KY<br/>
+Programs at University of Phoenix - Louisville include: Business Administration and Management, <a href="/11000/kentucky/louisville/university+of+phoenix+-+louisville-2392/">more...</a>						</li>
+						<li>
+							<div class="btn">
+								<a class="featbtn" href="/gotopage.php?edrefid=8847&page=http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/" onClick="javascript: pageTracker._trackPageview('/outgoing/http://www.collegesurfing.com/clickcount.php?id=12100200&goto=http://www.collegesurfing.com/blank/daymar-college/');">Request Info</a>
+							</div>
+							<span class="itemTitle"><a href="/11000/kentucky/paducah/daymar+college+-+paducah-8847/">Daymar College - Paducah</a></span> - <a href="/11000/kentucky/paducah/colleges">Paducah</a>, KY<br/>
+Programs at Daymar College - Paducah include: <a href="/11000/kentucky/paducah/daymar+college+-+paducah-8847/">more...</a>						</li>
+					</ul>
+				</div>
+				<span class="title">Kentucky</span>
+				<div class="schoolList">
+					<ul>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/ashland/ashland+technical+college+-+ashland-2325/">Ashland Technical College - Ashland</a></span> - Ashland, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/ashland/ashland+school+of+beauty+culture+-+ashland-2324/">Ashland School of Beauty Culture - Ashland</a></span> - Ashland, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/ashland/ashland+community+and+technical+college+-+ashland-2323/">Ashland Community And Technical College - Ashland</a></span> - Ashland, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/barbourville/union+college+-+barbourville-2326/">Union College - Barbourville</a></span> - Barbourville, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/berea/berea+college+-+berea-2327/">Berea College - Berea</a></span> - Berea, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/bowling+green/ducret+school+of+arts+-+bowling+green-3750/">Ducret School of Arts - Bowling Green</a></span> - Bowling Green, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/bowling+green/western+kentucky+university+-+bowling+green-2331/">Western Kentucky University - Bowling Green</a></span> - Bowling Green, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/bowling+green/pj's+college+of+cosmetology+bowling+green-2330/">PJ's College of Cosmetology Bowling Green</a></span> - Bowling Green, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/bowling+green/bowling+green+technical+college+-+bowling+green-2328/">Bowling Green Technical College - Bowling Green</a></span> - Bowling Green, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/campbellsville/campbellsville+university+-+campbellsville-2332/">Campbellsville University - Campbellsville</a></span> - Campbellsville, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/columbia/lindsey+wilson+college+-+columbia-2333/">Lindsey Wilson College - Columbia</a></span> - Columbia, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/covington/gateway+community+and+technical+college+-+covington-2334/">Gateway Community And Technical College - Covington</a></span> - Covington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/crestview+hills/thomas+more+college+-+crestview+hills-2335/">Thomas More College - Crestview Hills</a></span> - Crestview Hills, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/cumberland/southeast+kentucky+community+and+technical+college+-+cumberland-2336/">Southeast Kentucky Community And Technical College - Cumberland</a></span> - Cumberland, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/danville/national+college+-+danville-6973/">National College - Danville</a></span> - Danville, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/danville/centre+college+-+danville-2337/">Centre College - Danville</a></span> - Danville, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/elizabethtown/trend+setters+academy+of+beauty+culture+-+elizabethtown-2341/">Trend Setters Academy of Beauty Culture - Elizabethtown</a></span> - Elizabethtown, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/elizabethtown/elizabethtown+technical+college+-+elizabethtown-2340/">Elizabethtown Technical College - Elizabethtown</a></span> - Elizabethtown, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/elizabethtown/elizabethtown+community+college+-+elizabethtown-2339/">Elizabethtown Community College - Elizabethtown</a></span> - Elizabethtown, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/elizabethtown/e-town+beauty+school-2338/">E-town Beauty School</a></span> - Elizabethtown, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/national+college+-+florence-7242/">National College - Florence</a></span> - Florence, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/the+hair+design+school+florence-2345/">The Hair Design School Florence</a></span> - Florence, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/southwestern+college+florence-2344/">Southwestern College Florence</a></span> - Florence, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/interactive+college+of+technology+florence-2343/">Interactive College of Technology Florence</a></span> - Florence, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/florence/beckfield+college+-+florence-2342/">Beckfield College - Florence</a></span> - Florence, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/fort+knox/university+of+louisville+at+fort+knox+center+-+fort+knox-7728/">University of Louisville at Fort Knox Center - Fort Knox</a></span> - Fort Knox, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/frankfort/kentucky+state+university+-+frankfort-2347/">Kentucky State University - Frankfort</a></span> - Frankfort, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/frankfort/j+m+academy+of+cosmetology+inc+-+frankfort-2346/">J M Academy of Cosmetology Inc - Frankfort</a></span> - Frankfort, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/ft+mitchell/southern+ohio+college+-+ft+mitchell-2348/">Southern Ohio College - Ft Mitchell</a></span> - Ft Mitchell, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/ft.+knox/university+of+louisville+-+ft.+knox-9209/">University of Louisville - Ft. Knox</a></span> - Ft. Knox, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/georgetown/georgetown+college+-+georgetown-2349/">Georgetown College - Georgetown</a></span> - Georgetown, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/glasgow/pj's+college+of+cosmetology+glasgow-2350/">PJ's College of Cosmetology Glasgow</a></span> - Glasgow, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/grayson/kentucky+christian+college+-+grayson-2351/">Kentucky Christian College - Grayson</a></span> - Grayson, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/harlan/jenny+lea+academy+of+cosmetology+-+harlan-2352/">Jenny Lea Academy of Cosmetology - Harlan</a></span> - Harlan, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/hazard/hazard+community+and+technical+college+-+hazard-2353/">Hazard Community And Technical College - Hazard</a></span> - Hazard, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/henderson/pat+wilsons+beauty+college+-+henderson-2355/">Pat Wilsons Beauty College - Henderson</a></span> - Henderson, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/henderson/henderson+community+college+-+henderson-2354/">Henderson Community College - Henderson</a></span> - Henderson, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/highland+heights/northern+kentucky+university+-+highland+heights-2356/">Northern Kentucky University - Highland Heights</a></span> - Highland Heights, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/hopkinsville/hopkinsville+community+college+-+hopkinsville-2358/">Hopkinsville Community College - Hopkinsville</a></span> - Hopkinsville, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/hopkinsville/brown+mackie+college+-+hopkinsville-2357/">Brown Mackie College - Hopkinsville</a></span> - Hopkinsville, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/hyden/frontier+school+of+midwifery+and+family+nursing+-+hyden-2359/">Frontier School of Midwifery And Family Nursing - Hyden</a></span> - Hyden, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lancaster/eastern+kentucky+university+-+lancaster-7508/">Eastern Kentucky University - Lancaster</a></span> - Lancaster, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/national+college+-+lexington-7243/">National College - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/university+of+kentucky+-+lexington-2367/">University of Kentucky - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/transylvania+university+-+lexington-2366/">Transylvania University - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/spencerian+college+-+lexington-2365/">Spencerian College - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/national+college+of+business+and+technology+-+lexington-2364/">National College of Business and Technology - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/lexington+theological+seminary+-+lexington-2363/">Lexington Theological Seminary - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/lexington+community+college+-+lexington-2362/">Lexington Community College - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+						<li>
+							<span class="itemTitle"><a href="/11000/kentucky/lexington/kaufman+beauty+school+-+lexington-2361/">Kaufman Beauty School - Lexington</a></span> - Lexington, KY<br/>
+						</li>
+					</ul>
+				</div>
+<div class="pagination">Page 1 <a href="/10000/kentucky/colleges/i50/p2/">2</a> <a href="/10000/kentucky/colleges/i50/p3/">3</a> </div>			</div>
+			<script>insertPagination('<div class=\"pagination\">Page 1 <a href=\"/10000/kentucky/colleges/i50/p2/\">2</a> <a href=\"/10000/kentucky/colleges/i50/p3/\">3</a> </div>');</script>
+			<div id="rightSideNav">
+			<div class="nav1">
+				<div class="nav1Title">Kentucky Colleges By Degree Program:</div>
+				<div class="nav1List">
+				<ul>
+					<li id="listItem101000" onmouseover="document.getElementById('listItem101000').className='listOn';" onmouseout="document.getElementById('listItem101000').className='';"><a href="/10100/kentucky/administrative/colleges">Kentucky Administrative Colleges</a></li>
+					<li id="listItem101001" onmouseover="document.getElementById('listItem101001').className='listOn';" onmouseout="document.getElementById('listItem101001').className='';"><a href="/10100/kentucky/agricultural/colleges">Kentucky Agricultural Colleges</a></li>
+					<li id="listItem101002" onmouseover="document.getElementById('listItem101002').className='listOn';" onmouseout="document.getElementById('listItem101002').className='';"><a href="/10100/kentucky/animal+care/colleges">Kentucky Animal Care Colleges</a></li>
+					<li id="listItem101003" onmouseover="document.getElementById('listItem101003').className='listOn';" onmouseout="document.getElementById('listItem101003').className='';"><a href="/10100/kentucky/architecture/colleges">Kentucky Architecture Colleges</a></li>
+					<li id="listItem101004" onmouseover="document.getElementById('listItem101004').className='listOn';" onmouseout="document.getElementById('listItem101004').className='';"><a href="/10100/kentucky/art/colleges">Kentucky Art Colleges</a></li>
+					<li id="listItem101005" onmouseover="document.getElementById('listItem101005').className='listOn';" onmouseout="document.getElementById('listItem101005').className='';"><a href="/10100/kentucky/aviation/colleges">Kentucky Aviation Colleges</a></li>
+					<li id="listItem101006" onmouseover="document.getElementById('listItem101006').className='listOn';" onmouseout="document.getElementById('listItem101006').className='';"><a href="/10100/kentucky/biology/colleges">Kentucky Biology Colleges</a></li>
+					<li id="listItem101007" onmouseover="document.getElementById('listItem101007').className='listOn';" onmouseout="document.getElementById('listItem101007').className='';"><a href="/10100/kentucky/business/colleges">Kentucky Business Colleges</a></li>
+					<li id="listItem101008" onmouseover="document.getElementById('listItem101008').className='listOn';" onmouseout="document.getElementById('listItem101008').className='';"><a href="/10100/kentucky/childca
+

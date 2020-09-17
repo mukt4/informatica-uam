@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+    <div class = "informacion-peliculas">
+        {% if peliculas %}
+            {% for pelicula in peliculas %}
+                <div class = "galeria">
+                    <a target="_top" href= "info/{{ pelicula.movietitle }}">
+                        <img class = "pelicula-index" src = 'static/peliculas/{{ pelicula.imagen }}'  alt = {{ pelicula.movietitle }} width="600" height="400">
+                    </a>
+                    <div class="desc">{{ pelicula.movietitle }}</div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %} 

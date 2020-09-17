@@ -1,0 +1,50 @@
+Autores: Tomas Higuera Viso y Manuel Chamorro Martinez de Aragon
+
+Ficheros entregados: practica2.c, practica2.h, makefile y leeme.txt 
+
+Normativa de entrega cumplida en su totalidad: Realizado: Varias relecturas del enunciado.
+
+Analisis de paquetes: Realizado.
+	- Cabecera de nivel 2: Realizado. Hemos obtenido todos los campos requeridos de la cabecera de nivel 2(ip), ademas, contemplamos como se solicita en el enunciado que si se trata de un protocolo distinto al ipv4 se deja de realizar el analisis de las cabeceras del paquete. 
+
+		- Direccion ip origen y destino: Realizado. Para realizar el analisis de la cabecera de nivel 2 primero obtenemos la direccion ip origen y una vez impresa desplazamos el puntero del paquete 6 bytes hacia delante, despues analizamos la direccion ip destino y realizamos el ultimo desplazamiento. 
+		
+		- Tipo ethernet: Realizado. Por ultimo analizamos el campo tipo ethernet del paquete y comprobomaos si es de tipo ipv4, para realizar esta comprobacion es necesario que transformemos los 2 bytes leeidos de formato little endian a big endian con la funcion ntohs(network to host) para despues compararlo con el hexadecimal 0x0800 que se corresponde con el tipo de ethernet ipv4.
+
+	- Cabecera de nivel 3: Realizado. Una vez comprobado que el paquete es de tipo ipv4 continuamos con el analisis de las cabeceras. Para realizar los respectivos analisis de la cabecera vamos moviendo el puntero de fila en fila, analizando cada una de ellas de manera individual.
+
+		- Version y longitud de la cabecera: Realizado. Primero obtenemos la version, para esto, copiamos los 8 primeros bits de la cabecera en una variable auxiliar, como la parte de la version se encuentra en los primeros 4 bits es necesario que hagamos un desplazamiento a la derecha de estos primeros 8 bits de la cabecera de nivel 3. A continuacion pasamos a analizar la longitud del paquete que tambien se encuentra en los primeros 8 bits de la cabecera de nivel 3. Para obtener el valor de la longitud simplemente nos deshacemos de los primeros 4 bits, para ello realizamos una and entre los primeros 8 bits del paquete con 0x0F, de esta manera pondremos a 0 los primeros 4 bits. Una vez realizada esta operacion multiplicamos el resultado por 4, ya que el tamanio que aparece en la cabecera es el numero de palabras de la cabecera de nivel 3 y nosotros queremos el numero de bytes de la misma.
+
+		- Longitud del paquete: Realizado. Una vez analizada la version y longitud de la cabecera pasamos a la siguiente columna de la cabecera para analizar la longitud total del paquete. Para desplazarnos una columna en la cabecera obtenemos el puntero del paquete 2 bytes hacia delante. La longitud se encuentra en los 8 bits siguientes al puntero, asi que los guardamos en una variable auxiliar y los transformamos de formato little endian a big endian con la funcion ntohs.
+		
+		- Desplazamiento y posicion: Realizado. Una vez leida la longitud del paquete despplazamos el puntero del paquete una fila mas de la cabecera para pasar a la siguiente. Las flags y el desplazamiento no se encuentran al comienzo de esta fila asi que tenemos que apuntar a los siguientes 16 bits del paquete. Nos guardamos estso bits en una variable y pasamos a analizar los flags. Esta parte es opcional pero la realizamos como un control infroamtivo para saber si el paquete esta sin acabar, asi como ya han sido recibidos todos los fragmentos del mismo. Para analizar las flags que se encuentran en los primeros 3 bits realizamos un desplazamiento a la derecha y comprobamos si la flag de fragmento esta a 0(ultimo fragmento) o a 1(que el paquete aun no esta enviado por completo). Depues de comprobar de manera informatica el valor de las flags obtenemos el valor del desplazamiento transformando los 16 bits que habiamos guardado de little endian a big endian con la funcion ntohs y realizando una operacion and con ox1FFF, para poner a ceros los 3 primeros bits de las flags y tener exclusivamente los bits de desplazamiento.
+
+		- Tiempo de vida y protocolo: Realizado. Para analizar esta fila seguimos el protocolo que hemos estado siguiendo con anteriorrida y desplazamos el puntero del paquete 4 bytes hacia delante. Primero analizamos el tiempo de vida que esta en los primeros 8 bits. Al ser solo 8 bits no es necesario que realicemos la transformacion de little endian a big endain. Lo mismo ocurre con el protocolo, el cual se encuentra en los 8 bits siguientes. Despues de analizar el protocolo lo guardamos en una variable auxiliar para en un futuro poder comprobar cual era el protocolo del paquete y no tener que volver hacia arriba en el puntero del paquete.
+
+		- Direccion ip origen y destino: Realizado. Nos desplazamos 4 bytes hacia delante para ver la direccion ip origen la cual imprimimos al igual que hicimos anteriormente con la direccion de ethernet origen y destino. Una vez analizada la direccion ip origen nos movemos una fila adelante para realizar el mismo analisis con la direccion ip destino. En este analisis de las direcciones ip origen y destino tambien comprobamos las caracteristicas de filtrado del programa pero este so explicara mas adelante.
+
+		- Comprobacion para analizar cabecera nivel 4(tcp o udp): Comprobamos si el paquete es fragmentado, y si lo es, si nos encontramos con la primera parte del paquete(la cual contiene la cabecera de nivel 4) y podemos continuar analizando o por el contrario es necesario terminar de analizar las cabeceras, ya que nos encontramos con un fragmento de paquete que solo tiene cabeceras de nivel 2 y 3. Si debemos seguir analizando las cabececera de nivel 4 comprobamos una flag que habiamos seteado a la hora de analizar la longituud de la cabecera de nivel 3 y con la que sabemos si esta cabecera tiene campo opciones y es necesario que desplacemos el puntero del paquete una fila mas hacia delante para llegar a la cabecera de nivel 4. Antes de ponernos a analizar la cabecera de nivel 4 comprobamos si el paquete es de tipo tcp o upd(con la variable auxiliar que habiamos setado con anterioridad) y si no es ninguno de estos tipos acabamos el analisis de cabecera.
+
+	- Cabecera de nivel 4: Realizado. Una vez terminado el analisis de la cabecera de nivel 3 procedemos a analizar la cabecera de nivel 4, para esto hemos creado dos funciones mas que se encargan de analizar la cabecera en funcion del protocolo.
+
+		- Cabecera de nivel 4 tipo UDP: Realizado. Para analizar esta cabecera seguiremos la misma metodologia que en las cabeceras anteriores(analizaremos cada 2 bytes)
+
+			- Puerto origen y destino: Realizado. Primero analizamos el puerto origen que se encuentra en los primeros 16 bits. Obtenmos estos bits y los transformamos de formato little endian a big endian. Una vez analizado el puerto origen analizamos el puerto destino desplzando el puntero 2 bytes hacia delante y realizando la misma transformacion que con el puerto origen. Al igual que en las direcciones ip origen y destino tambien realizamos las comprobaciones del filtrado por puerto en esta parte de analisis para no tener que retroceder en el paquete, esto lo explicaremos mas adelante.
+
+			- Longitud: Realizado. Al ser un paquete de tipo UDP analizamos la longitud de la cabecera de nivel 4 del mismo. Para esto desplazamos el puntero del paquete 2 bytes hacia adelante(se encontraba apuntando al puerto destino) transfromamos los 16 biits siguientes de formato little endian a big endian para obtener el valor correcto de la longitud.
+
+		- Cabecera de nivel 4 tipo TCP: Realizado. Seguiremos el mismo procedimiento que en el analisi de la cabecera de nivel 4 de paquete UDP.
+
+			- Puerto de origen y destino: Realizado. Reealizamos el mismo analisis que en el puerto origen y destino del la cabecera de tipo UDP realizando las comprobaciones necesarias de caracteristicas de filtrado.
+
+			- Flag SYN y flag FIN: Realizado. Al ser una cabaecera de nivel 4 de tipo TCP analizamos los valores de las flags. Para ello desplazamos el puntero del paquete que apuntaba a los puertos origen y destino 2 filas hacia delante(4 bytes) y nos guardamos los 16 bits siguientes. Como la informacion que queremos se encuentra en los 2 ultimos bits realizamos una puerta and con 0x0003. Para obtener la flag SYN hacemos un desplazamiento de 1 bit a la derecha de la informacion obtenida. Para obtener la flag FIN realizamos operamos la informacion de las flags con el utimo bit para quedarnos con el ultimo bit.
+
+Analisis de paquetes en vivo: Realizado. Para realizar el analisis de paquetes en vivo utilizamos la funcion pcap_open_live para abrir una interfaz por la que analizaremos paquetes que entren con a ayuda de la funcion pcap_loop y nuestra funcion encargada de analizar paquetes.
+
+Analisis de paquetes offline: Realizado. Para realizar este analisis seguiremos el mismo procedimiento que con el analisis en vivo con la unica diferencia de que utilizaremos la funcion pcap_open_offline(que analiza una traza de paquetes) en lugar de la funcion pcap_open_live.
+
+Filtrado de paquetes: Realizado. Para aplicar los filtros sin tener que realizar un reanalisis de las cabeceras del paquete, guardamos los tipos del filtrado en una serie de variables globales para que en el momento en el que obtenemos la informacion que queremos comprobar del paquete podamos contrastarla con los filtros aplicados para saber asi si es necesario que se siga realizando el analisis de cabeceras del paquete.
+
+Fichero leeme.txt: Realizado.
+
+Aclaraciones. A pesar de no haber sido solicitado hemos decido mostrar mas informacion sobre el fragmentado de los pquetes. Esta informacion extra es la flag del paquete que nos dice si el fragmento de paquete que estamos analizando es el ultimo fragmento del paquete o por el contrario quedan mas fragmentos por analizar. Esta informacion no afecta al fucionamiento por lo que puede ser borrada si es necesario. Estas lineas de codigo se encuentran en las lineas 284-289 del fichero practica2.c y pueden ser comentadas sin que afecten al fucionamiento del programa.

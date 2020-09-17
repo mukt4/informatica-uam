@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% if session['carrito'] %}
+	{% if session['carrito']|length != 0 %}
+		{% if session['user'] %}
+			{% if session['precio'] %}
+				{% block body_block %}
+					<div class = "resumen-compra">
+						<label class = "resumen-label">
+							Resumen de compra
+						</label>
+
+						<div class = "contenido-compra">
+							<table>
+							<tr>
+								<th>Nombre de pelicula</th>
+								<th>Precio pelicula</th>
+								<th>Cantidad</th>
+							</tr>
+							{% for info in session['carrito'] %}
+								{% for pelicula in peliculas %}
+									{% if pelicula.titulo == info['nombre'] %}
+										<tr>
+											<td>{{ pelicula.titulo }}</td>
+											<td>{{ pelicula.precio }}$</td>
+											<td>{{ info['cantidad'] }}
+										</tr>
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+							</table>
+						</div>
+
+						<div class = "confirmacion-pedido">
+							<label class = "confirmacion-label">
+								Precio total: {{ session['precio'] }}$
+							</label>
+							<form name = "boton-confirmar" method = "GET" action="/confirmacion/push">
+								<input class = "boton-confirmacion" type="submit" value="Confirmar">
+							</form>
+						</div>
+					</div>
+				{% endblock %}
+			{% endif %}
+		{% endif %}
+	{% endif %}
+{% endif %}

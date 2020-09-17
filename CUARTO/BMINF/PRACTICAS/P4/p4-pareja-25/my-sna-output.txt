@@ -1,0 +1,122 @@
+==================================================
+Testing small1.csv network - 12 users and 16 contact relationships
+User 6 has 4 contacts
+-------------------------
+es.uam.eps.bmi.sna.metric.user.UserClusteringCoefficient@3f99bd52
+  1	1.0
+  2	1.0
+  3	1.0
+  7	1.0
+  9	1.0
+  ...
+  6	0.3333333333333333
+--> 19ms
+-------------------------
+es.uam.eps.bmi.sna.metric.edge.Embeddedness@4f023edb
+  (2, 3)	1.0
+  (3, 2)	1.0
+  (7, 9)	1.0
+  (9, 7)	1.0
+  (11, 12)	1.0
+  ...
+  (6, 4)	0.16666666666666666
+--> 6ms
+-------------------------
+es.uam.eps.bmi.sna.metric.network.ClusteringCoefficient@28ba21f3 = 0.5172413793103449 (0ms)
+es.uam.eps.bmi.sna.metric.network.AvgUserMetric@694f9431 = 0.6666666666666666 (1ms)
+es.uam.eps.bmi.sna.metric.network.Assortativity@f2a0b8e = -0.24271844660194175 (0ms)
+==================================================
+Testing small2.csv network - 9 users and 16 contact relationships
+User 3 has 8 contacts
+-------------------------
+es.uam.eps.bmi.sna.metric.user.UserClusteringCoefficient@593634ad
+  1	0.6666666666666666
+  2	0.6666666666666666
+  4	0.6666666666666666
+  5	0.6666666666666666
+  6	0.6666666666666666
+  ...
+  3	0.2857142857142857
+--> 1ms
+-------------------------
+es.uam.eps.bmi.sna.metric.edge.Embeddedness@20fa23c1
+  (1, 4)	0.5
+  (1, 8)	0.5
+  (2, 5)	0.5
+  (2, 9)	0.5
+  (4, 1)	0.5
+  ...
+  (3, 5)	0.2857142857142857
+--> 3ms
+-------------------------
+es.uam.eps.bmi.sna.metric.network.ClusteringCoefficient@383534aa = 0.46153846153846156 (0ms)
+es.uam.eps.bmi.sna.metric.network.AvgUserMetric@6bc168e5 = 0.6243386243386243 (0ms)
+es.uam.eps.bmi.sna.metric.network.Assortativity@7b3300e5 = -0.3333333333333333 (0ms)
+==================================================
+Testing small3.csv network - 4 users and 5 contact relationships
+User a has 3 contacts
+-------------------------
+es.uam.eps.bmi.sna.metric.user.UserClusteringCoefficient@2e5c649
+  b	1.0
+  d	1.0
+  a	0.6666666666666666
+  c	0.6666666666666666
+  ...
+  a	0.6666666666666666
+--> 0ms
+-------------------------
+es.uam.eps.bmi.sna.metric.edge.Embeddedness@136432db
+  (a, c)	1.0
+  (b, d)	1.0
+  (c, a)	1.0
+  (d, b)	1.0
+  (a, b)	0.5
+  ...
+  (a, b)	0.5
+--> 1ms
+-------------------------
+es.uam.eps.bmi.sna.metric.network.ClusteringCoefficient@2f410acf = 0.75 (0ms)
+es.uam.eps.bmi.sna.metric.network.AvgUserMetric@47089e5f = 0.8333333333333333 (0ms)
+es.uam.eps.bmi.sna.metric.network.Assortativity@4141d797 = -0.6666666666666666 (0ms)
+==================================================
+Testing facebook_combined.txt network - 4039 users and 88234 contact relationships
+User 9 has 57 contacts
+-------------------------
+es.uam.eps.bmi.sna.metric.user.UserClusteringCoefficient@68f7aae2
+  32	1.0
+  33	1.0
+  35	1.0
+  42	1.0
+  44	1.0
+  ...
+  9	0.39724310776942356
+--> 1s 601ms
+-------------------------
+es.uam.eps.bmi.sna.metric.edge.Embeddedness@4f47d241
+  (4, 181)	1.0
+  (4, 275)	1.0
+  (6, 147)	1.0
+  (8, 91)	1.0
+  (8, 259)	1.0
+  ...
+  (9, 3)	0.22033898305084745
+--> 4min 50s 285ms
+-------------------------
+es.uam.eps.bmi.sna.metric.network.ClusteringCoefficient@b6f1d6b = 0.5191742775433075 (1s 228ms)
+es.uam.eps.bmi.sna.metric.network.AvgUserMetric@50580c2e = NaN (1s 188ms)
+es.uam.eps.bmi.sna.metric.network.Assortativity@1006304b = 0.06357722918564918 (27ms)
+==================================================
+Testing twitter.csv network - 10029 users and 462399 contact relationships
+User el_pais has 1899 contacts
+-------------------------
+es.uam.eps.bmi.sna.metric.user.UserClusteringCoefficient@256c5482
+  AlanaMurrin	1.0
+  AsFerreiro	1.0
+  AsTheyBurn	1.0
+  BJRatedR	1.0
+  BuryYourDead	1.0
+  ...
+  el_pais	0.04107979852964596
+--> 27s 144ms
+-------------------------
+es.uam.eps.bmi.sna.metric.edge.Embeddedness@561b9101

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+	<div class="sidebar pure-u-1-5">
+		{% if result == True %}
+			<h1>
+				{{ workflow.name }}
+			</h1>
+
+			<a href="/workflow_list/{{ workflow.category.slug }}/">
+				{% for category in workflow.category.all %}
+					{% if forloop.last %}
+						<a href="/workflow_list/{{ category.slug }}/">{{ category.name }}
+						</a>
+					{% else %}
+						<a href="/workflow_list/{{ category.slug }}/">{{ category.name }}
+						</a>
+					{% endif %}
+				{% endfor %}
+			</a>
+
+			<a>
+				KeyWords: {{ worflow.keywords }}
+			</a>
+
+			<a>
+				Description: {{ workflow.description }}
+			</a>
+
+			<div>
+				<scipion-workflow
+					src="{% url "find:workflow_download_json" workflow.id workflow.slug %}" heigth = "400px" width="95%">
+				</scipion-workflow>
+			</div>
+
+			<form id="descarga" action="/workflow_download/{{ workflow.id }}/{{ workflow.slug }}/" method="POST">
+				<script>
+				    function submitForm(action)
+				    {
+				        document.getElementById('descarga').action = action;
+				        document.getElementById('descarga').submit();
+				    }
+				</script>
+				{% csrf_token %}
+				<div class="g-recaptcha" data-sitekey="6Lcc2qcUAAAAADPYjn0z--pFSiQxoMa6V-7E7Y8l"></div>
+				<input type="submit" name="byName" value="Download" onclick="submitForm('/workflow_download/{{ workflow.id }}/{{ workflow.slug }}/')">
+				<input type="submit" name="byName" value="Delete" onclick="submitForm('/workflow_delete/{{ workflow.id }}/{{ workflow.slug }}/')">
+			</form>
+		{% else %}
+			<a id="mensaje-error">
+				Mensaje de error-> {{ error }}
+			</a>
+		{% endif %}
+	</div>
+{% endblock %}
+
+

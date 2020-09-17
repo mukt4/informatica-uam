@@ -1,0 +1,6 @@
+=======================
+Building indices...
+-----------------------
+Toy collection
+-----------------------
+URLs collection

@@ -1,0 +1,15 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'counter'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/debounce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'debounce'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/freq_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'freq_divider'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/rst_adapt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'rst_adapt'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'stopwatch'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/rtl/stopwatch_fsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'stopwatch_fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/f/work/tomi23r/die/3312_07_2/P2_stopwatch/sim/stopwatch_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'stopwatch_tb'

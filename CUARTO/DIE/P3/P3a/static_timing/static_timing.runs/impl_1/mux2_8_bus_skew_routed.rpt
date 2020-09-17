@@ -1,0 +1,15 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Nov 19 09:28:37 2019
+| Host         : 11-13-11-13 running 64-bit Ubuntu 18.04.2 LTS
+| Command      : report_bus_skew -warn_on_violation -file mux2_8_bus_skew_routed.rpt -pb mux2_8_bus_skew_routed.pb -rpx mux2_8_bus_skew_routed.rpx
+| Design       : mux2_8
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+    <div class = "informacion-pelicula">
+        <div class = "imagen-y-texto">
+            <img src = {{ pelicula.poster }} alt = {{ pelicula.titulo }}>
+			<div class = "text-pelicula">
+				<p><b>Titulo: </b>{{ pelicula.titulo }}</p><b>A&ntilde;o: </b>{{ pelicula.anno }}<p><b>Sinopsis: </b>{{ pelicula.sinopsis }}</p><p><b>Criticas: </b>{{ pelicula.criticas }}</p>
+			</div>
+		</div>
+        
+        <div class = "valoracion-boton-y-precio">
+            <img src = "../static/aplicacion/valoracion.png" alt = "valoracion">
+            <form name="pelicula-elegida" action = "{{ pelicula.titulo }}/aniadir-carrito">
+                <input type = "submit" value = "A&ntilde;adir al carrito">
+            </form>
+            <label>{{ pelicula.precio }}$</label>
+        </div>
+    </div>
+{% endblock %}

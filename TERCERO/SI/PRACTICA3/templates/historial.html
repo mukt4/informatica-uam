@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block script_block %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function show_hide_row(row)
+        {
+         $("."+row).toggle();
+        }
+    </script>
+{% endblock %}
+
+{% block body_block %}
+    <div class = "informacion-historial">
+        <p id = "historial-title">Historial de compra<p>
+        <table id = "tabla-historial">
+            <tr>
+                <th>Id compra</th>
+                <th>Fecha de compra</th> 
+                <th>Precio</th>
+            </tr>
+            {% for element in historial %}
+                <tr id = "show_hide_row" onclick="show_hide_row('hidden_row{{element.id}}');">
+                    <td>{{ element.id }}</td>
+                    <td>{{ element.fecha }}</td>
+                    <td>{{ element.precio }}</td>
+                    {% for pelicula in element.peliculas %}
+                        <tr class="hidden_row{{element.id}}">
+                                <td colspan=1>Pelicula: {{ pelicula.nombre }}</td>
+                                <td colspan=1>Cantidad: {{ pelicula.cantidad }}
+                        </tr>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

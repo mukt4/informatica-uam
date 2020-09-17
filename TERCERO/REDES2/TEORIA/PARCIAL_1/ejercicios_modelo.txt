@@ -1,0 +1,27 @@
+Ejercicio red P2P Chord:
+	Primero creas la red con los nodos y los identificadores
+	Las tablas de fingers se crean con Nodo + 2 elevado a i
+	Para buscar te pones en el nodo que consulta en su tabla de fingers y va preguntando al resto de nodos
+
+Ejercicio de tiempos:
+	Cliente servidor:
+		Tiempo de distribucion: dcs = max( NF / us, F / min(di)) 
+			N: Es el numero de copias (servidores a los que distrbuye)
+			D: Es el tamano del fichero
+			di: Ancho de banda de bajada de i (servidores a los que distribuye)
+			us: Ancho de banda de subida en el servidor que tiene la copia para distribuir
+	Red P2P:
+		Tiempo de distribucion: dp2p = max( F / us, F / min(di), NF / us + sumatorio(ui)
+			N: Es el numero de nodos
+			F: Es el tamano del fichero
+			us: Ancho de banda de subida en el servidor que tiene la copia para distribuir
+			di: Ancho de banda de bajada en i
+			ui: Ancho de banda de subida en i
+Ejercicio DNS:
+	Tipos de consulta:
+		Recursiva: El servidor de nombres hace todas las consultas
+		Iterativa: El cliente se encarga de hacer las subconsultas
+		Inversa: Buscan que dominio se corresponde a IP
+	HTPP:
+		1.0: Conexiones no persistentes
+		1.1: Conexiones persistentes

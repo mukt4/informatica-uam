@@ -1,0 +1,16 @@
+Practica 3 Andres Calvente Rodriguez y Tomas Higuera Viso
+
+Archivos entregados:
+        autlen_P3
+    ├── Makefile
+    ├── afnd.c
+    ├── afnd.h
+    ├── alfabeto.c
+    ├── alfabeto.h
+    ├── estado.c
+    ├── estado.h
+    ├── leeme.txt
+    ├── main.c
+    ├── palabra.c
+    ├── palabra.h
+    └── pr_er_enunciado.c

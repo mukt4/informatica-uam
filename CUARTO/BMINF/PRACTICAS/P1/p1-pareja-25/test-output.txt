@@ -1,0 +1,110 @@
+=================================================================
+
+Testing indices and search on src/es/uam/eps/bmi/search/ranking
+
+  Most frequent terms:
+	de	9
+	public	7
+	comp	5
+	int	5
+	abstract	4
+
+  A few term frequencies for docID = 0 - C:\Users\Javier\Desktop\bmi\src\es\uam\eps\bmi\search\ranking\SearchRanking.java: ha (1) impartido (1) implementado (1) información (1) informática (1) 
+
+  Frequency of word "size" in document 0 - C:\Users\Javier\Desktop\bmi\src\es\uam\eps\bmi\search\ranking\SearchRanking.java: 1
+
+  Total frequency of word "size" in the collection: 1 occurrences over 1 documents
+
+------------------------------
+
+Checking search results
+  LuceneEngine: top 5 for query 'public abstract'
+	0.6961200833320618	file:/C:/Users/Javier/Desktop/bmi/src/es/uam/eps/bmi/search/ranking/SearchRankingDoc.java
+	0.11103043705224991	file:/C:/Users/Javier/Desktop/bmi/src/es/uam/eps/bmi/search/ranking/SearchRanking.java
+
+  VSMDotProductEngine: top 5 for query 'public abstract'
+	3.8737813826612846	file:/C:/Users/Javier/Desktop/bmi/src/es/uam/eps/bmi/search/ranking/SearchRankingDoc.java
+	0.5260688116675878	file:/C:/Users/Javier/Desktop/bmi/src/es/uam/eps/bmi/search/ranking/SearchRanking.java
+
+  VSMCosineEngine: top 5 for query 'public abstract'
+	0.4688982329981268	file:/C:/Users/Javier/Desktop/bmi/src/es/uam/eps/bmi/search/ranking/SearchRankingDoc.java
+	0.059146229606040136	file:/C:/Users/Javier/Desktop/bmi/src/es/uam/eps/bmi/search/ranking/SearchRanking.java
+
+=================================================================
+
+Testing indices and search on collections/docs1k.zip
+
+  Most frequent terms:
+	family	175800
+	tree	46731
+	history	45770
+	genealogy	45549
+	surname	44968
+
+  A few term frequencies for docID = 0 - C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp03-07-2998.html: jake (1) jaketapper (1) james (2) jan (1) jane (2) 
+
+  Frequency of word "seat" in document 0 - C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp03-07-2998.html: 0
+
+  Total frequency of word "seat" in the collection: 1428 occurrences over 119 documents
+
+------------------------------
+
+Checking search results
+  LuceneEngine: top 5 for query 'obama family tree'
+	4.620633602142334	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	4.546962738037109	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	4.4809136390686035	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0010-57-32937.html
+	4.392877101898193	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp01-59-16163.html
+	4.392722129821777	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp02-06-15081.html
+
+  VSMDotProductEngine: top 5 for query 'obama family tree'
+	48.98541272045198	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp01-59-16163.html
+	48.96085592717142	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp02-06-15081.html
+	48.95357798246568	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp00-00-9498.html
+	48.95357798246568	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp00-04-9625.html
+	48.95357798246568	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-enwp00-13-12487.html
+
+  VSMCosineEngine: top 5 for query 'obama family tree'
+	0.2844816588701648	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0010-79-2218.html
+	0.26811814721820326	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0001-02-21241.html
+	0.22217107488156024	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0009-30-2441.html
+	0.22176734218452632	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0009-30-2755.html
+	0.22150920277442854	C:\Users\Javier\Desktop\bmi\collections\docs1k.zip\clueweb09-en0009-30-2912.html
+
+=================================================================
+
+Testing indices and search on collections/urls.txt
+
+  Most frequent terms:
+	the	1268
+	of	950
+	a	580
+	and	501
+	entropy	489
+
+  A few term frequencies for docID = 0 - https://en.wikipedia.org/wiki/Entropy: hubert (1) hulontalo (1) humana (1) hydrophobicity (1) hypotheses (2) 
+
+  Frequency of word "wikipedia" in document 0 - https://en.wikipedia.org/wiki/Entropy: 10
+
+  Total frequency of word "wikipedia" in the collection: 20 occurrences over 2 documents
+
+------------------------------
+
+Checking search results
+  LuceneEngine: top 5 for query 'information probability'
+	1.651326060295105	https://en.wikipedia.org/wiki/Information_theory
+	1.468663215637207	https://en.wikipedia.org/wiki/Entropy
+	0.6659314632415771	http://sigir.org/sigir2019/calls/long
+
+  VSMDotProductEngine: top 5 for query 'information probability'
+	16.76779767017709	https://en.wikipedia.org/wiki/Information_theory
+	12.939909317085728	https://en.wikipedia.org/wiki/Entropy
+	4.584962500721155	http://sigir.org/sigir2019/calls/long
+
+  VSMCosineEngine: top 5 for query 'information probability'
+	0.1108107172821011	https://en.wikipedia.org/wiki/Information_theory
+	0.07505833335840444	http://sigir.org/sigir2019/calls/long
+	0.057002061504980356	https://en.wikipedia.org/wiki/Entropy
+
+
+Process finished with exit code 0

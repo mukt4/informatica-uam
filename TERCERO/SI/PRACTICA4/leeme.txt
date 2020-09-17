@@ -1,0 +1,27 @@
+Practica realizada por Tomas Higuera Viso y Manuel Chamorro Martinez de Aragon
+
+Archivos entregados:
+
+1312_Chamorro_Higuera
+├── APP
+│   ├── app
+│   │   ├── database.py
+│   │   ├── database.pyc
+│   │   ├── __init__.py
+│   │   ├── __init__.pyc
+│   │   ├── __main__.py
+│   │   ├── routes.py
+│   │   ├── routes.pyc
+│   │   └── templates
+│   │       ├── borraCliente.html
+│   │       ├── listaClientesMes.html
+│   │       ├── xLoginInjection.html
+│   │       └── xSearchInjection.html
+│   └── start.wsgi
+├── leeme.txt
+├── MEMORIA
+│   └── MemoriaP4.odt
+└── QUERYS_SCRIPTS
+    ├── clientesDistintos.sql
+    ├── countStatus.sql
+    └── updPromo.sql

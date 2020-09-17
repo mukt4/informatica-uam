@@ -1,0 +1,72 @@
+Ejercicio sacar valores:
+	Precision = Aciertos/Numero de resultados
+	Recall = Aciertos/Numero de relevantes
+	R-precision = Numero de aciertos en relevantes/Numero de relevantes
+	MRR = 1/Numero de resultados hasta acierto
+	MAP = Medias de los aciertos/Numero de relevantes
+
+	DCG = Sumatorio de los aciertos(Grado de relevancia/log(posicion + 1))
+	IDCG = Igual que DCG pero con aciertos ordenados
+	nDCG = DCG/IDGC
+	
+	DCG@2 = Igual que DCG pero limitando posiciones
+	IDCG@2 = Igual que IDCG pero limitando posiciones
+	nDCG@2 = DGC@2/IDCG@2
+
+
+Ejercicio tf-idf:
+        ranking = 1/(modulo de tf-idf)*sumatorio(tf-idf * qt)
+        tf-idf = log(numero de veces en el documento)+log(total de documentos/numero de documentos en los que aparece el termino)
+	qt = 1 + log(numero de veces del termino en la consulta)-> Si aparece en la consulta 1 y sino 0
+	*** Si el termino no esta en la consulta o en el documento vale 0.
+
+Desarrollo de heaps:
+	1. Rellenas por termino.
+	2. Vas desarrollando y creando min-heap por id de documento
+	3. Calculas score en cada cambio
+		4. En los de ranking es igual pero haciendo max-heap
+
+
+Ejercicios proximidad:
+	1. Sacas intervalo en el que se encuentren los terminos de la consulta.
+	2. Score = Sumatorio(1/Numero de terminos del intervalo que no estan en la consulta)
+
+
+Ejercicio modelo booleano:
+	1. Por vectores de terminos:
+		- Sacas booleanos de los terminos
+		- Aplicas formula que te da los documentos
+	2. Por funcion de ranking
+		- Sacas los booleanos de los documentos
+		- Rellenas con lo que puedes la formula y sacas documentos
+
+
+
+
+
+
+
+AUXILIAR
+
+Extraccion de terminos:
+	1. Tokenizacion
+	2. Normalizacion
+	3. Stop words
+	4. Stemming
+	5. Grupos nominales
+	6. Tolerancia a erratas
+
+Postings = [Id documento, frecuencia, Numero de palabras hasta ocurrencia, bytes, numero de bloques...]
+Diccionario en RAM y postings en disco con punteros
+Tambien puede ser diccionario intercaldo en el que termino se almacena antes de posting.
+Direccionamiento por bloques reduce espacio dividiendo documentos en bloques
+Diccionario hash mas rapido
+Construccion de indice RAM, la mas rapida pero mas costosa en RAM
+Construccion de indice discoo, hacer k-merge?
+
+Actualizacion incremental:
+	Fusion de indices(postings):
+		1. Concatenas si terminos diferentes.
+		2. Concatenas en orden de DocId si hay terrminos iguales
+	En actualizacion incremental hay lista de terminos de descarte que se eliminan tras hacer fusion
+

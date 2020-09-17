@@ -1,0 +1,909 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+X-Powered-By: ASP.NET
+Server: Microsoft-IIS/6.0
+Cache-control: private
+Date: Mon, 12 Jan 2009 15:05:48 GMT
+Connection: close
+Set-Cookie: ASPSESSIONIDAQTRDRCC=NINMJOOAKOPDKHIBHOLFDNIG; path=/
+Content-Length: 54107
+
+	
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!--  
+***********************************************************************
+* Start - /_includes/_INC_meta.asp  
+***********************************************************************
+ -->
+<head>
+
+<!-- Start - Meta tags -->
+ 
+
+	
+<META name="verify-v1" content="FyLoNObtLUohPGlPGjVhmgvUcOTG3lwpCs9Dr3Fo7yw=" />
+<style type="text/css">
+<!--
+.style10 {
+	font-size: large;
+	color: #660000;
+}
+-->
+</style>
+</head>
+
+<!-- 
+***********************************************************************
+* End - /_includes/_INC_meta.asp  
+***********************************************************************
+--><!--
+********************************************************************
+start INC_top.asp
+********************************************************************
+-->
+<link href="/_css/main.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="/_javascript/Scripts.js"></script>
+<link href="/_css/styles.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+<!--
+.css_thank_you_msg {color: #FF0000}
+.css_Email_is_on_our_system {color: #FF0000}
+.css_System_Msg {color: #FF0000}
+.style4 {font-size: x-small}
+.style6 {font-weight: bold; font-size: small;}
+.style7 {
+	color: #660000;
+	font-weight: bold;
+}
+.style9 {font-size: small}
+-->
+</style>
+
+<!-- 
+***********************************************************************
+* Start - _INC_Java_Sripts.asp  
+***********************************************************************
+-->
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_NewWindow()
+* Syntax
+********************************************************************
+*/
+
+function NewWindow(mypage, myname, w, h, scroll) {
+var winl = (screen.width - w) / 2;
+var wint = (screen.height - h) / 2;
+winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+win = window.open(mypage, myname, winprops)
+if (parseInt(navigator.appVersion) >= 4) { win.window.focus(); }
+}
+//-->
+</script>
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_BM_validateForm()
+* Syntax
+********************************************************************
+*/
+function BM_validateForm_Sign_up_filling_out_forms()
+{
+	var errors 		= '';
+	var esu_Email	= document.Sign_up_filling_out_forms.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+function BM_validateForm_Sign_up_filling_out_forms_redirections()
+{
+	var errors 		= '';
+	var esu_Email	= document.Sign_up_filling_out_forms_redirections.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+function BM_validateForm_Login_eGift()
+{
+	var errors 		= '';
+	var esu_Email	= document.Login_eGift.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+function BM_validateForm_Sign_up()
+{
+	var errors 		= '';
+	var esu_Email	= document.Sign_up.esu_Email;
+	var ioee		= esu_Email.value.indexOf('@');
+
+	if ( ioee < 1 || ioee == (esu_Email.length-1) ) 
+		{
+		errors+='must contain an e-mail address.\n';	
+		alert(errors);
+		esu_Email.focus();
+		return (false);
+		}
+	if (esu_Email.value=="")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}
+	if (esu_Email.value==" enter your email ")
+	{
+		alert("Please enter your email address.")
+		esu_Email.focus();
+		return (false);
+	}						
+  	document.BM_returnValue = (errors == '');	
+	return (true);
+
+}
+//-->
+</script>
+
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_DreamWeaver()
+* Syntax
+//call by /_share/Calender/Calender_3.asp
+********************************************************************
+*/
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  
+  for (i=0; i<(args.length-2); i+=3) 
+  { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.title_des; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } 
+  if (errors) alert('The following error(s) occurred:\n'+errors); 
+  document.MM_returnValue = (errors == '');
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+//-->
+</script>
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_showCalendar()
+* Syntax
+//call by /_share/Calender/Calender_3.asp
+********************************************************************
+*/
+function showCalendar(updateType)
+{
+  window.populateSelect = "true";
+
+  var form = document.BarRequest;
+
+  if (updateType == "arrive")
+  {
+    window.month = form.IN_DATE_MM;
+    window.day   = form.IN_DATE_DD;
+    window.year  = form.IN_DATE_YY;
+  }
+  else if (updateType == "depart")
+  {
+    window.month = form.OUT_DATE_MM;
+    window.day   = form.OUT_DATE_DD;
+    window.year  = form.OUT_DATE_YY;
+  }
+
+  var file = '/_share/Calender/Calender_03.asp';
+
+  window.open(file, 'barCalendar', 'WIDTH=250,HEIGHT=250');
+}
+//-->
+</script>
+
+<script language="javascript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+* Start - open window used by..
+*	openPage()
+Syntax
+oNewWindow = window.open( [sURL] [, sName] [, sFeatures] [, bReplace])
+http://msdn.microsoft.com/library/default.asp?url=/workshop/author/dhtml/reference/methods/open_0.asp
+********************************************************************
+*/
+function openPage(Page,Email)
+{
+	var Page				// 
+	var clientWidth 	= 400
+	var clientHeight 	= 200	
+	// document.body.clientWidth , document.body.clientHeight
+	if (Page=="Send_Password")
+	{
+	var pageWindow;
+	var url = "/eCommerce/Register/Forgot_your_Password.asp?esu_Email="+Email+"";
+	var sFeatures = "width="+clientWidth+",height="+clientHeight+"fullscreen=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no"
+	pageWindow = window.open(url,"",sFeatures);
+	pageWindow.focus();
+	}
+}
+//-->
+</script>
+
+<SCRIPT TYPE="text/javascript" LANGAUGE="JavaScript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+*
+*	Java_Scripts_js_Reservations()
+Syntax
+********************************************************************
+*/
+function y2k(number)    { return (number < 1000) ? number + 1900 : number; }
+
+var today = new Date();
+var day   = today.getDate();
+var month = today.getMonth();
+var year  = y2k(today.getYear());
+
+function padout(number) { return (number < 10) ? '0' + number : number; }
+
+function restart_a() {
+    document.reservation.arrivaldate.value = '' + padout(month - 0 + 1) + '/' + padout(day) + '/' + year;
+	document.reservation.doa_mm.value = padout(month);
+	document.reservation.doa_dd.value = padout(day);
+    mywindow.close();
+}
+function restart_d() {
+    document.reservation.departuredate.value = '' + padout(month - 0 + 1) + '/' + padout(day) + '/' + year;
+	document.reservation.dod_mm.value = padout(month);
+	document.reservation.dod_dd.value = padout(day);
+    mywindow.close();
+}
+
+function newWindow_Calender_01() {
+    mywindow=open('/_share/Calender/Calender_01.asp','myname','resizable=no,width=350,height=250');
+    mywindow.location.href = '/_share/Calender/Calender_01.asp';
+    if (mywindow.opener == null) mywindow.opener = self;
+}
+function newWindow_Calender_02() {
+    mywindow=open('/_share/Calender/Calender_02.asp','myname','resizable=no,width=350,height=250');
+    mywindow.location.href = '/_share/Calender/Calender_02.asp';
+    if (mywindow.opener == null) mywindow.opener = self;
+}
+//-->
+</SCRIPT>
+
+<script language="JavaScript" type="text/JavaScript">
+<!-- Start
+/*
+********************************************************************
+* Modified 		: June 2005
+* Copyright		: Copyright (C) 2005 http://www.cendyn.com 
+* Author		: jcardena@cendyn.com
+* Start - open window used by..
+*	openCalendar_global()
+Syntax
+********************************************************************
+*/
+function openCalendar_global(FormElement,FormName)
+{
+	var calendarwindow;
+	url = "/_share/_javascript/Calender.asp?formname="+ FormName +"&formelement=" + FormElement;
+	fut = "toolbar=no,LEFT=700,TOP=400,WIDTH=170,HEIGHT=140,status=no,scrollbars=no,resize=no,menubar=no"
+	calendarwindow = window.open(url,"thewindow",fut);
+	calendarwindow.focus();
+}
+//-->
+</script>
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? " https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost +
+"google-analytics.com/ga.js'type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-1622993-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+
+<!-- 
+***********************************************************************
+* End - _INC_Java_Sripts.asp  
+***********************************************************************
+-->
+
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="/_javascript/AC_RunActiveContent.js" language="javascript"></script>
+<SCRIPT TYPE="text/javascript">
+<!--
+function popup(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=422,height=155,scrollbars=no');
+return false;
+}
+//-->
+<!--
+function popup2(mylink, windowname)
+{
+if (! window.focus)return true;
+var href;
+if (typeof(mylink) == 'string')
+   href=mylink;
+else
+   href=mylink.href;
+window.open(href, windowname, 'width=600,height=300,resizable=yes');
+return false;
+}
+//-->
+</SCRIPT>
+
+
+<BODY LEFTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0 onLoad="MM_preloadImages('/_images/b_sub_restorationR.jpg','/_images/sub_accR.jpg','/_images/sub_golfR.jpg','/_images/sub_spaR.jpg','/_images/sub_gamingR.jpg','/_images/sub_weddingsR.jpg','/_images/sub_diningR.jpg','/_images/sub_recreationR.jpg','/_images/sub_contactR.jpg','/_images/sub_aboutR.jpg','/_images/sub_employmentR.jpg','/_images/sub_west_badenR.jpg','/_images/sub_conferenceR.jpg','/_images/sub_responsibleR.jpg','../_images/sub_b_extraordinary_experiences_r.jpg')">
+
+
+
+
+
+<!-- 
+***********************************************************************
+* Start - Content
+***********************************************************************
+-->		
+<div align="center">
+  <table width="90%"  border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr valign="top">
+            <td width="174"><a href="/default.asp"><IMG SRC="../_images/sub_logo_new1.jpg" ALT="French Lick Springs Resort &amp; Casino - logo" WIDTH=174 HEIGHT=99 border="0"></a></td>
+            <td background="../_images/headr_stretch.jpg">&nbsp;</td>
+            <td width="325"><img src="../_images/packages_title.jpg" width=325 height=99 alt="French Lick Springs Resort &amp; Casino - restoration" /></td>
+          <td width="246" align="right" valign="bottom" background="../_images/accommodations_right_title.jpg">&nbsp;</td>
+          </tr>
+      </table></td></tr>
+    <tr>
+      <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="175" valign="top" background="../_images/sub_address.jpg">
+	
+<table width="175" border="0" cellspacing="0" cellpadding="0">
+<tr>
+				<td width="175" valign="top"><a onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event1'; s.prop1='Reservation Nav  - Frenchlick Entertainment Packages'; s.eVar1='Reservation Nav  - Frenchlick Entertainment Packages'; s.tl(this,'o','Reservation Nav  - Frenchlick Entertainment Packages');" href="/reservations/reservations.asp" target="_blank" onMouseOver="MM_swapImage('Image15','','/_images/b_sub_bookonlineR.jpg',0)" onMouseOut="MM_swapImgRestore()"><img src="../_images/b_sub_bookonline.jpg" name="Image15" width="175" border="0"></a></td>
+  </tr>
+  			<tr>
+			
+				<td><a href="/accommodations/packages.asp"><img src="../_images/b_sub_packagesR.jpg" name="packages" border="0" id="packages" /></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="../accommodations/french_lick.asp" onMouseOver="MM_swapImage('sub_restoration1','','/_images/b_sub_frenchR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/b_sub_french.jpg" alt="French Lick Springs Resort &amp; Casino " name="sub_restoration1" width=175 border="0" id="sub_restoration1"></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="../accommodations/west_baden.asp" onMouseOver="MM_swapImage('sub_acc1','','/_images/sub_westbadenR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_westbaden.jpg" alt="French Lick Springs Resort &amp; Casino " name="sub_acc1" width=175 border="0" id="sub_acc1"></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/gaming/gaming.asp" onMouseOver="MM_swapImage('sub_gaming1','','/_images/sub_gamingR.jpg',1)" onMouseOut="MM_swapImgRestore()"><IMG SRC="../_images/sub_gaming.jpg" ALT="French Lick Springs Resort &amp; Casino - gaming" name="sub_gaming1" WIDTH=175 border="0" id="sub_gaming1"></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/special_events/default.asp"><img src="../_images/sub_special.jpg" name="special" width="175" border="0" id="special" onMouseOver="MM_swapImage('special','','/_images/sub_specialR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			</tr>
+			            <tr>
+			
+				<td valign="top"><a href="../entertainment/entertainment.asp" onMouseOver="MM_swapImage('entertainment','','/_images/sub_calendarR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_calendar.jpg" name="entertainment" width="175" border="0"></a></td>
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/golf/golf.asp" onMouseOver="MM_swapImage('sub_gof1','','/_images/sub_golfR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_golf.jpg" alt="French Lick Springs Resort &amp; Casino - golf" name="sub_gof1" width=175 border="0" id="sub_gof1" /></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/spa/spa.asp" onMouseOver="MM_swapImage('sub_spa1','','/_images/sub_spaR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_spa.jpg" alt="French Lick Springs Resort &amp; Casino - spa" name="sub_spa1" width=175 border="0" id="sub_spa1" /></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/conferences/conferences.asp" onMouseOver="MM_swapImage('sub_con1','','/_images/sub_conferencesR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_conferences.jpg" alt="French Lick Springs Resort &amp; Casino - conferences" name="sub_con1" width=175 border="0" id="sub_con1" /></a></td>
+			</tr>
+            <tr>
+			
+				<td width="175" valign="top"><a href="/dining/dining.asp" onMouseOver="MM_swapImage('sub_dine1','','/_images/sub_diningR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_dining.jpg" alt="French Lick Springs Resort &amp; Casino - dining" name="sub_dine1" width=175 border="0" id="sub_dine1" /></a></td>
+			</tr>
+			<tr>
+			
+				<td valign="top"><a href="/retail/retail.asp" onMouseOver="MM_swapImage('sub_retail1','','/_images/sub_retailR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_retail.jpg" alt="French Lick Springs Resort &amp; Casino - retail" name="sub_retail1" width=175 border="0" id="sub_retail1" /></a><a href="/employment/employment.asp" onMouseOver="MM_swapImage('sub_employment','','/_images/sub_employmentR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/weddings/weddings.asp" onMouseOver="MM_swapImage('sub_wed1','','/_images/sub_weddingsR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_weddings.jpg" alt="French Lick Springs Resort &amp; Casino - weddings" name="sub_wed1" width=175 border="0" id="sub_wed1" /></a><a href="/contact_us/contact_us.asp" onMouseOver="MM_swapImage('sub_contact','','/_images/sub_contactR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/activities/activities.asp" onMouseOver="MM_swapImage('sub_recreation1','','/_images/sub_recreationR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_recreation.jpg" alt="French Lick Springs Resort &amp; Casino - Activities" name="sub_recreation1" width=175 border="0" id="sub_recreation1" /></a></td>
+			</tr>
+			 
+			<tr>
+			
+				<td><a href="/contact_us/directions.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('location_btn','','/_images/sub_locationR.jpg',0)"><img src="../_images/sub_location.jpg" name="location_btn" width="175" border="0"></a></td>
+			</tr>
+            <tr>
+			
+				<td valign="top"><a href="/about_us/about_us.asp" onMouseOver="MM_swapImage('sub_about1','','/_images/sub_aboutR.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_about.jpg" alt="French Lick Springs Resort &amp; Casino - about us" name="sub_about1" width=175 border="0" id="sub_about1" /></a><a href="/employment/employment.asp" onMouseOver="MM_swapImage('sub_employment','','/_images/sub_employmentR.jpg',1)" onMouseOut="MM_swapImgRestore()"></a></td>
+			</tr>
+            <tr>
+              <td width="175" valign="top" background="_images/sub_address.jpg">                <div align="center">
+                <table width="100%"  border="0" cellpadding="6" cellspacing="3" class="h_text">
+                        <tr>
+                          <td valign="top" style="padding-left:10px;"><div align="center">
+                            <p align="left">Phone: &nbsp;&nbsp;&nbsp;812-936-9300<br>
+                              Fax: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;812-936-2100<br>
+                            8670 West State Road 56<br>
+                            French Lick, Indiana 47432</p>
+                            <p><span style="font-size: 12px;
+	font-weight: bold;"><font color="#FFFFFF">1-888-936-9360</font></span>                            </p>
+                          </div></td></tr></table></div></td></tr></table>
+</td>
+          <td valign="top"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td valign="top" colspan="2"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                <tr valign="top">
+                  <td width="587" align="left"><img src="../_images/_design/header_img/entertainment.jpg" width="587" height="111" align="middle">                    </td>
+                  <td width="100%" background="../_images/_design/header_img/entertainment_sm.jpg">&nbsp;</td>
+                </tr>
+                <tr valign="top">
+                  <td colspan="2" align="left"><table width="100%"  border="0" cellspacing="0" cellpadding="0">
+                    <tr align="right" valign="top">
+                      <td height="23" width="580" background="../_images/sub_nav_Bar.jpg"></td>
+                      <td width="288" background="../_images/sub_nav_Bar.jpg"><a href="../_files/_pdf/2008/extraordinary_experiences_brochure.pdf" target="_blank" onmouseover="MM_swapImage('Image31','','../_images/sub_b_extraordinary_experiences_r.jpg',1)" onmouseout="MM_swapImgRestore()"><img src="../_images/sub_b_extraordinary_experiences.jpg" name="Image31" width="288" height="23" border="0" id="Image31" /></a></td>
+                       <td background="../_images/sub_nav_Bar.jpg" width="95"><a href="/contact_us/contact_us.asp" onMouseOver="MM_swapImage('contact2_btn','','/_images/sub_b_contact2_acc_on.jpg',1)" onMouseOut="MM_swapImgRestore()"><img src="../_images/sub_b_contact_acc_off.jpg" name="contact2_btn" border="0" id="contact2_btn"></a></td>
+					    <td background="../_images/sub_nav_Bar.jpg" width="12">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td valign="top" background="../_images/_design/SubPage_BG.jpg" colspan="2"><table width="100%"  border="0" cellpadding="6" cellspacing="5" class="bodyText">
+                <tr>
+                  <td align="left" valign="top"></td>
+                </tr>
+              </table></td>
+            </tr>
+			<tr>
+				<td background="../_images/_design/SubPage_BG.jpg"><div align="center"><img src="../_images/frenchlicklogo.gif" width="213" height="129" align="middle" /><br />
+				    <br />
+				  </div>
+				  <table border="0" align="center" cellpadding="0" cellspacing="5">
+	<tr>
+		
+		<td><a href="/accommodations/frenchlick_packages_adventure.asp"><img src="../_images/_buttons/btn_adventure.gif" name="btn_adventure" border="0" id="btn_adventure" onMouseOver="MM_swapImage('btn_adventure','','/_images/_buttons/btn_adventure_R.gif',0)" onMouseOut="MM_swapImgRestore()" /></a></td>
+		
+		<td><a href="/accommodations/frenchlick_packages_relaxation.asp"><img src="../_images/_buttons/btn_relaxation.gif" name="btn_relaxation" border="0" id="btn_relaxation" onMouseOver="MM_swapImage('btn_relaxation','','/_images/_buttons/btn_relaxation_R.gif',0)" onMouseOut="MM_swapImgRestore()" /></a></td>
+		
+		<td><img src="../_images/_buttons/btn_entertainment_R.gif" border="0" /></td>
+		
+		<td><a href="/accommodations/frenchlick_packages_romance.asp"><img src="../_images/_buttons/btn_romance.gif" name="btn_romance" border="0" id="btn_romance" onMouseOver="MM_swapImage('btn_romance','','/_images/_buttons/btn_romance_R.gif',0)" onMouseOut="MM_swapImgRestore()" /></a></td>
+		
+	</tr>
+</table>
+				<br /></td>
+				<td bgcolor="#f1ecd6"></td>
+			</tr>
+            <tr>
+              <td height="288" width="684" valign="top" background="../_images/_design/SubPage_BG.jpg">
+			  <!-- Start Content -->
+			  
+		<!-- 
+		Start - Site_Content() 	
+		Version			: javascript:window.location='/_common/2004/HTML_Editor/SE_Edit_v1.6.asp?Action=ac_edit_page&SC_ID=1605&authentication=1&SC_Script_name=/accommodations/frenchlick_packages_entertainment.asp';
+		se_ParentDomain	: French Lick Springs Resort
+		se_SiteContent	: 1605
+		Author			: jcardena@cendyn.com
+		-->
+
+	<TABLE width="100%" align=left valign="top">
+<TBODY>
+<TBODY>
+<TR>
+  <TD vAlign=top align=left width="63%">    <!--<TABLE cellSpacing=0 cellPadding=20 width="100%" border=0>
+<TBODY>
+<TR>
+<TD>
+<P align=left><FONT color=#660000 size=4 arial,="Arial," helvetica,="Helvetica," bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif"><STRONG>4th of July Package</STRONG></FONT><BR><BR><FONT 12px; font-family:="FONT-FAMILY:" arial="Arial">It an all American celebration with the French Lick Resort Fireworks Extravaganza. This dazzling display can be viewed in the front area of the casino giving you the est seats in the housefor this event. Package includes a three night stay, breakfast in the Grand Colonnade each morning and a barbeque in the French Lick Gardens. On Saturday kids will enjoy a Hoosier Safari and the Kids Party Fest. Adults will get to experience the Sunday Night Movie.
+
+</FONT></FONT><FONT 12px; font-family:="FONT-FAMILY:" arial="Arial"><BR></FONT><FONT 12px; font-family:="font-family:" arial="arial"><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;july4;?/ "><BR>
+<IMG src="http://frenchlick.com/_images/booknow.gif" border=0></A></FONT></P></TD></TR></TBODY></TABLE>-->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../_images/_design/entertainment/divider.jpg" alt="" width="100%" height="1" /></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="20">
+      <tr>
+        <td><p><strong><font color="#660000" size="4">New Year's Eve 2009 Package</font></strong><br />
+        </p>
+          <p>Join us for a sensational  New Year&rsquo;s Eve celebration at French Lick Springs Hotel.<br />
+          </p>
+          <p><span class="style7">NYE Package Features:</span><br />
+            <br />
+          <span class="style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overnight Hotel Accommodations<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Year's Eve Party in the Windsor Ballroom from 10pm - 2pm<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Decadent Dessert Buffet<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dancing to Live Music by Souled Out Band<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Champagne Toast and Ball Drop at Midnight<br />
+          </span><strong><br />
+          Package Price -  $349*</strong><font 12px; font-family:="FONT-FAMILY:" arial="Arial"><br />
+          </font></p>
+          <p class="style9">Special $129** room rate option on December 30th</p>
+          <p><font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;pfnye;?/"><img src="../_images/booknow.gif" alt="" border="0" /></a></font></p>
+          <p class="style4">*Based  on double occupancy and availability. Valid December 31, 2008 at French  Lick Springs Hotel. Maximum of four persons per room per  night.  Includes resort fees,  taxes and gratuity. Credit Card required at time of booking. Limit one discount per package offer and cannot be  combined with other coupons, discounts or offers. Reservations required for Hotel services and  must be arranged with our Reservations Representatives by calling  1-888-936-9360 prior to your resort visit. Additional restrictions may apply.<br />
+**Valid December 30, 2008 at French Lick Springs Hotel.&nbsp; Excludes resort fees and taxes.&nbsp; New Year&rsquo;s Eve Package must be booked to  receive this rate.&nbsp; Subject to  availability.&nbsp; Additional restrictions  may apply.</p>
+          </td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../_images/_design/entertainment/divider.jpg" alt="" width="100%" height="1" /></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="20">
+      <tr>
+        <td><font color="#660000" size="4" arial,="Arial," helvetica,="Helvetica," bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif"><strong>Carriage Ride Package</strong></font><br />
+            <br />
+            <p>Excitement for the entire  family&hellip;..includes an overnight stay for two adults and two kids at The French  Lick Springs Hotel, a $100 dining credit, and a Family Carriage Ride to view  all of our holiday lights and decor.&nbsp; If weather prohibits the carriage ride, two  games of bowling and one large pizza will be provided.</p>
+          <p> Package Price -  $342*<font 12px; font-family:="FONT-FAMILY:" arial="Arial"><br />
+              </font><font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;pff;?/"><br />
+              </a><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;thanx;?/"><img src="../_images/booknow.gif" alt="" border="0" /></a></font></p>
+          <p class="style4">*Based on double occupancy and availability.  Two children up to 12yrs of age are free. Maximum  of four persons per room per night. Credit Card required at time of booking. Valid November 27, 2008 thru December 30, 2008 at French  Lick Springs Hotel.  Includes resort fees,  taxes and gratuity. Limit  one discount per package offer and cannot be combined with other coupons,  discounts or offers. Reservations required for  Hotel services and must be arranged with our Reservations Representatives by  calling 1-888-936-9360 prior to your resort visit.</p></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../_images/_design/entertainment/divider.jpg" alt="" width="100%" height="1" /></td>
+      </tr>
+    </table>
+<table width="100%" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+        <td><font color="#660000" size="4" arial,="Arial," helvetica,="Helvetica," bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif"><strong>Jerry Lewis Package</strong></font><br />
+            <br />
+            <p>This package includes  one overnight stay at French Lick Springs Hotel and two tickets to the Jerry Lewis Show.</p>
+            <p> Package Price -  $309*<font 12px; font-family:="FONT-FAMILY:" arial="Arial"><br />
+              </font><font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;lewis;?/"><br />
+              <img src="../_images/booknow.gif" alt="" border="0" /></a></font></p>
+          <p class="style4">*Based on double occupancy and availability. Maximum  of four persons per room per night. Credit Card required at time of booking.  Price does not include resort fees and taxes. Limit  one discount per package offer and cannot be combined with other coupons,  discounts or offers. Reservations required for  Hotel services and must be arranged with our Reservations Representatives by  calling 1-888-936-9360 prior to your resort visit.</p></td>
+      </tr>
+    </table>
+    <TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+  <TD><img src="../_images/_design/entertainment/divider.jpg" width="100%" height="1" /></TD>
+  </TR></TBODY></TABLE>
+    <table width="100%" border="0" cellspacing="0" cellpadding="20">
+      <tr>
+        <td><font color="#660000" size="4" arial,="Arial," helvetica,="Helvetica," bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif"><strong>Lee Ann Womack Package</strong></font><br />
+          <br />
+          <p><strong>Package A:</strong><br />
+            This package includes  one overnight stay at French Lick Springs Hotel and two tickets to the Lee Ann Womack Concert.</p>
+          <p><strong>Package B:</strong><br />
+            This package includes two overnight stays at French Lick Springs Hotel, two tickets to the Lee Ann Womack Concert and two tickets  to the  Country Cookin' Fair  held in the Clifton Ballroom from 11am - 4pm. Join us from 3pm - 4pm, for the judging of &quot;The World's Best Sausage, Biscuits and Gravy Competition.</p>
+          <table width="100%" border="0">
+            <tr>
+              <td width="40%"><strong>Package A:</strong><br />
+                One Night Package<br />
+                $369*<font 12px; font-family:="FONT-FAMILY:" arial="Arial"><br />
+                  </font><font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;plaw;?/"><br />
+                  </a></font></td>
+              <td width="60%"><strong>Package B:</strong><br />
+                Two Night Package and  Country Cookin' Fair<br />
+                $559*<font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;plaw2;?/"><br />
+                </a></font></td>
+            </tr>
+            <tr>
+              <td><font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;plaw;?/"><img src="../_images/booknow.gif" alt="" border="0" /></a></font></td>
+              <td><font 12px; font-family:="font-family:" arial="arial"><a onclick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;plaw2;?/"><img src="../_images/booknow.gif" alt="" border="0" /></a></font></td>
+            </tr>
+          </table>
+          <p class="style4">*Based on double occupancy and availability. Maximum  of four persons per room per night. Credit Card required at time of booking.  Price does not include resort fees and taxes. Limit  one discount per package offer and cannot be combined with other coupons,  discounts or offers. Reservations required for  Hotel, Concert and Counrty Fair services and must be arranged with our Reservations Representatives by  calling 1-888-936-9360 prior to your resort visit.</p></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="../_images/_design/entertainment/divider.jpg" alt="" width="100%" height="1" /></td>
+        </tr>
+    </table>    <!--<TABLE cellSpacing=0 cellPadding=20 width="100%" border=0>
+<TBODY>
+<TR>
+<TD>
+<DIV><FONT color=#660000 size=4 arial,="Arial," helvetica,="Helvetica," bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif"><STRONG>World Class Driving Package<BR></STRONG></FONT><A href="http://worldclassdriving.com/"><IMG height=100 src="http://img169.imageshack.us/img169/4036/wcdlogomn0.gif" width=100 align=right border=0></A><BR>Take to the road behind the wheel of five of the worlds very best supercars in one unforgettable, completely unique day of exhilarating driving. Experience the peak performance and unrivaled luxury only a supercarcan deliver by driving five of the world's most coveted, rarest new exotics before many are widely available to own.<BR>Package includes one overnight stay, breakfast for two at The Grand Colonnade Buffet, Dinner for two at 1875: The Steakhouse and $50 in free slot play for each guest. <FONT 12px; font-family:="FONT-FAMILY:" arial="Arial">*</FONT><BR>For more information, click on the World Class Driving logo to go to their webpage. </DIV>
+<DIV><FONT size=1>Double Occupancy only</FONT></DIV>
+<P><FONT 12px; font-family:="font-family:" arial="arial"><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='World Class Driving Package'; s.eVar1='World Class Driving Package'; s.tl(this,'o','World Class Driving Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;fvday;?/"></A></FONT><FONT 12px; font-family:="font-family:" arial="arial"><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='World Class Driving Package'; s.eVar1='World Class Driving Package'; s.tl(this,'o','World Class Driving Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;wcdfl;?/"><IMG src="http://frenchlick.com/_images/booknow.gif" border=0></A></FONT></P></TD></TR></TBODY></TABLE>--></TD>
+</TR></TBODY></TABLE>
+		<!-- 
+		End - Site_Content() 	
+		-->
+
+			  
+			  <!-- <TABLE width="100%" align=left valign="top">
+<TBODY>
+<TR>
+<TD><IMG height=1 src="http://frenchlick.com/_images/_design/entertainment/entertainment_divider.jpg" width="100%" vspace=5></TD></TR>
+<TBODY>
+<TR>
+<TD vAlign=top align=left width="63%"><TABLE cellSpacing=0 cellPadding=20 width="100%" border=0>
+<TBODY>
+<TR>
+<TD>
+<P align=left><FONT color=#660000 size=4 bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif" arial,="Arial," helvetica,="Helvetica,"><STRONG>Family Fun Package</STRONG></FONT><FONT color=#660000 size=2><STRONG> &nbsp;&nbsp;$249 - $419</STRONG></FONT><BR><BR><FONT 12px; font-family:="FONT-FAMILY:" arial="Arial">Take the kids out for a fun-filled weekend! This package includes an overnight stay for two adults and two children at French Lick Springs Hotel, breakfast at Grand Colonnade Buffet for two adults and two children, and one large pizza and two games of bowling at Pluto Alley in the French Lick Springs Hotel.*</FONT><FONT 12px; font-family:="FONT-FAMILY:" arial="Arial"> </FONT></P><FONT 12px; font-family:="FONT-FAMILY:" arial="Arial">
+<TABLE style="FONT-FAMILY: " width=469 border=0 color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" 12px arial,="Arial," helvetica,="Helvetica," #200c05; verdana,="Verdana,">
+<TBODY>
+<TR>
+<TD vAlign=top align=left width=164>
+<P><STRONG>September - May<BR></STRONG>Sunday-Thursday: <FONT font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" arial="Arial" 13px;>$249<BR>Friday-Saturday: <FONT font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" arial="Arial" 13px;>$369</FONT></FONT></P>
+<P><STRONG>June - August<BR></STRONG>Sunday-Thursday: <FONT font-style:="font-style:" italic;="italic;" font-family:="font-family:" arial="arial" 13px;>$259<BR>Friday-Saturday: <FONT font-style:="font-style:" italic;="italic;" font-family:="font-family:" arial="arial" 13px;>$419</FONT></FONT></P></TD>
+<TD vAlign=top align=left width=295>&nbsp;</TD></TR></TBODY></TABLE><BR></FONT><FONT 12px; font-family:="font-family:" arial="arial"><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Family Fun Package'; s.eVar1='Family Fun Package'; s.tl(this,'o','Family Fun Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;family-fun;?/"><IMG src="/_images/booknow.gif" border=0></A></FONT></TD></TR></TBODY></TABLE>
+<TABLE width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 src="http://frenchlick.com/_images/_design/entertainment/entertainment_divider.jpg" width="100%" vspace=5></TD></TR></TBODY></TABLE>
+<FONT style="FONT-FAMILY: " Arial, Helvetica, color: font-size: sans-serif; #200c05 12px;>
+<TABLE style="FONT-FAMILY: " cellSpacing=0 cellPadding=20 width="100%" border=0 Arial, Helvetica, color: font-size: sans-serif; Verdana, 12px #200C05;>
+<TBODY>
+<TR>
+<TD><FONT color=#660000 size=4 Arial, Helvetica, bold; italic; sans-serif FONT-STYLE: FONT-FAMILY:><STRONG>Donald Ross 2008 Golf Package</STRONG> &nbsp;&nbsp;<FONT color=#660000 size=2><STRONG>$310 - $540</STRONG></FONT></FONT><BR><BR><FONT 12px; FONT-FAMILY: Arial>Golf buddies, pack your clubs! This package includes an overnight stay at French Lick Springs Hotel, 18-holes of golf at the 1917-designed Donald Ross Course at French Lick, and breakfast at Grand Colonnade Buffet all for two people!*<BR><BR>
+<TABLE style="FONT-FAMILY: " width=378 Arial, Helvetica, color: font-size: sans-serif; Verdana, 12px #200C05;>
+<TBODY>
+<TR>
+<TD vAlign=top align=left width=164><STRONG>June - August only<BR></STRONG>Sunday-Thursday: $<FONT font-style:="font-style:" italic;="italic;" font-family:="font-family:" arial="arial" 13px;>310<BR>Friday-Saturday: $<FONT font-style:="font-style:" italic;="italic;" font-family:="font-family:" arial="arial" 13px;>540</FONT></FONT></TD>
+<TD vAlign=top align=left width=202><IMG src="/_images/golfme0.jpg" border=1></TD></TR></TBODY></TABLE><BR></FONT><FONT 12px; font-family:="font-family:" arial="arial"><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Donald Ross 2008 Golf Package'; s.eVar1='Donald Ross 2008 Golf Package'; s.tl(this,'o','Donald Ross 2008 Golf Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;donaldross;?/"><IMG src="/_images/booknow.gif" border=0></A></FONT></TD></TR></TBODY></TABLE></FONT>
+<TABLE width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 src="http://frenchlick.com/_images/_design/entertainment/entertainment_divider.jpg" width="100%" vspace=5></TD></TR></TBODY></TABLE><FONT style="FONT-FAMILY: " color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" #200c05 12px; arial,="Arial," helvetica,="Helvetica,">
+<TABLE style="FONT-FAMILY: " cellSpacing=0 cellPadding=20 width="100%" border=0 color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" 12px #200C05; arial,="Arial," helvetica,="Helvetica," verdana,="Verdana,">
+<TBODY>
+<TR>
+<TD><FONT color=#660000 size=4 bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif" arial,="Arial," helvetica,="Helvetica,"><STRONG>Tom Bendelow Nine &amp; Dine Golf Package</STRONG> &nbsp;&nbsp;<FONT color=#660000 size=2><STRONG>$259 - $369</STRONG></FONT></FONT><BR><BR><FONT 12px; font-family:="FONT-FAMILY:" arial="Arial">Nine holes per person per night with cart, breakfast at The Grand Colonnade Buffet and if you're wanting more, add on an additional $20 and play an extra nine - all for two people!*<BR><BR>
+<TABLE style="FONT-FAMILY: " width=378 color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" 12px #200C05; arial,="Arial," helvetica,="Helvetica," verdana,="Verdana,">
+<TBODY>
+<TR>
+<TD vAlign=top align=left width=164><STRONG>June - August only<BR></STRONG>Sunday-Thursday: $<FONT font-style:="font-style:" italic;="italic;" font-family:="font-family:" arial="arial" 13px;>259<BR>Friday-Saturday: $<FONT font-style:="font-style:" italic;="italic;" font-family:="font-family:" arial="arial" 13px;>369</FONT></FONT></TD>
+<TD vAlign=top align=left width=202><IMG src="/_images/bendelowuo8.jpg" border=1></TD></TR></TBODY></TABLE><BR></FONT><FONT 12px; font-family:="font-family:" arial="arial"><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Tom Bendelow Nine and Dine Golf Package'; s.eVar1='Tom Bendelow Nine and Dine Golf Package'; s.tl(this,'o','Tom Bendelow Nine and Dine Golf Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;pbend;?/"><IMG src="/_images/booknow.gif" border=0></A></FONT></TD></TR></TBODY></TABLE></FONT>
+<TABLE width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 src="http://frenchlick.com/_images/_design/entertainment/entertainment_divider.jpg" width="100%" vspace=5></TD></TR></TBODY></TABLE>
+<TABLE style="FONT-FAMILY: " cellSpacing=0 cellPadding=20 width="100%" border=0 color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" 12px #200C05; arial,="Arial," helvetica,="Helvetica," verdana,="Verdana,">
+<TBODY>
+<TR>
+<TD><FONT style="FONT-FAMILY: " color=#660000 size=4 color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" #200c05="#200c05" 12px;="12px;" bold;="bold;" font-style:="FONT-STYLE:" italic;="italic;" font-family:="FONT-FAMILY:" sans-serif="sans-serif" arial,="Arial," helvetica,="Helvetica,"><STRONG>Tune-Up Golf Package</STRONG> &nbsp;&nbsp;<FONT size=2><STRONG>$119 - $149</STRONG></FONT></FONT><FONT style="FONT-FAMILY: " color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" #200c05="#200c05" 12px;="12px;" arial,="Arial," helvetica,="Helvetica,"><BR><BR><FONT font-family:="FONT-FAMILY:" arial="Arial">Nine holes per person per night with cart, breakfast at The Grand Colonnade Buffet, bucket of balls and swing analysis to see if you're still on par*<BR><FONT size=2>Double Occupancy only / price per person</FONT><BR><BR></FONT></FONT>
+<TABLE style="FONT-FAMILY: " width=638 color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" 12px #200C05; arial,="Arial," helvetica,="Helvetica," verdana,="Verdana,">
+<TBODY>
+<TR>
+<TD vAlign=top align=left width=164><FONT style="FONT-FAMILY: " color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" #200c05="#200c05" 12px;="12px;" font-family:="FONT-FAMILY:" arial,="Arial," helvetica,="Helvetica," arial="Arial"><STRONG>February - April only <BR></STRONG>Weekday: $<FONT font-style:="font-style:" italic;="italic;" 13px;>119<BR>Weekend: $<FONT font-style:="font-style:" italic;="italic;" 13px;>149</FONT></FONT></FONT></TD>
+<TD vAlign=top align=left width=462>
+<TABLE cellSpacing=0 cellPadding=0 width="31%" border=0>
+<TBODY>
+<TR>
+<TD width="17%"><IMG src="/_images/tuneupdrivegv4.jpg" border=1></TD>
+<TD width="83%"><IMG src="/_images/tuneupshopvc9.jpg" border=1></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><FONT style="FONT-FAMILY: " color:="color:" font-size:="font-size:" sans-serif;="sans-serif;" #200c05="#200c05" 12px;="12px;" font-family:="FONT-FAMILY:" arial,="Arial," helvetica,="Helvetica," arial="Arial"><BR><A onClick="var s=s_gi('thayfrenchlick'); s.linkTrackVars='prop1,eVar1,events'; s.events='event2'; s.prop1='Tune-Up Golf Package'; s.eVar1='Tune-Up Golf Package'; s.tl(this,'o','Tune-Up Golf Package');" href="https://reservations.frenchlick.com/cgi-bin/LANSAWEB?procfun+rn+resnet+r15+funcparms+UP(A2550):;tuneup;?/"><IMG src="/_images/booknow.gif" border=0></A></FONT></TD></TR></TBODY></TABLE>
+<TABLE width="100%" border=0>
+<TBODY>
+<TR>
+<TD><IMG height=1 src="http://frenchlick.com/_images/_design/entertainment/entertainment_divider.jpg" width="100%" vspace=5></TD></TR></TBODY></TABLE>
+<P><FONT Arial, Helvetica, sans-serif FONT-FAMILY: 11px;>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Rates based on double occupancy, unless otherwise noted, and subject to change. <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rates do not include taxes or resort fees. Reservations required and subject to space availability</FONT> </P></TD></TR></TBODY></TABLE> -->
+			  
+			  <!-- End Content -->
+			  
+			  
+			<br /></td>
+              <td valign="top" bgcolor="#f1ecd6" align="left">
+				</td>
+              </tr></table></td>
+            </tr>
+          </table>            
+        <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+          <tr valign="top">
+            <td width="45"><img src="../_images/green_line_Left.jpg" width="100%" height="8" alt="" /></td>
+            <td><img src="../_images/green_line_Bg.jpg" width="100%" height="8" alt="" /></td>
+          </tr>
+        </table>
+        </td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td valign="top">&nbsp;</td>
+  </tr>
+    <tr>
+      <td valign="top"><div align="center">
+<!--  
+***********************************************************************
+* End - Content
+***********************************************************************
+ -->	
+      
+        <style type="text/css">
+<!--
+.style1 {color: #000000}
+.style2 {color: #0000CC}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+-->
+</style>
+<table width="100%"  border="0" cellpadding="3" cellspacing="2" class="site">
+          <tr>
+            <td width="50%" align="right" valign="top"><div align="center">
+              
+            </div></td>
+            <td width="50%" align="right" valign="middle"><a href="http://profiles.hospitalityonline.com/223421/jobs.html" target="_blank">Employment</a> ~<a href="/restoration/press_room.asp">Press Room</a> ~ <a href="/privacy/privacy.asp"><strong></strong></a><a href="/privacy/privacy.asp"></a><a href="/privacy/privacy.asp">Privacy</a> ~ <a href="/site_map/site_map.asp">Site Map</a> </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">Copyright &copy;2008 French Lick Resort</td>
+          </tr>
+        </table>
+
+</div></td>
+    </tr>
+  </table>
+</div>
+<script language="JavaScript" src="../s_code.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6122822-1");
+pageTracker._trackPageview();
+</script>
+
+</BODY>
+</HTML>
+

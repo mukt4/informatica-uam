@@ -1,0 +1,42 @@
+﻿--EJERCICIO 1, BASE DE DATOS TIPO FOLLOWS
+
+--Creacion de tablas
+
+create table usuario(
+nick varchar(200),
+nombre varchar(200),
+email varchar(200),
+constraint pk_usuario primary key (nick)
+);
+
+create table follow(
+nick1 varchar(200),
+nick2 varchar(200),
+constraint fk_venta foreign key (nick1) references usuario(nick),
+constraint fk_venta2 foreign key (nick2) references usuario(nick)
+);
+
+--Insercion de datos
+
+INSERT INTO usuario(nick) values ('Luis'), ('Nicola');
+INSERT INTO usuario(nick) values ('Juan'), ('Pedro'), ('Alba'), ('Maria'), ('Nuria');
+INSERT INTO follow(nick1,nick2) values ('Nuria', 'Luis'), ('Maria', 'Luis'), ('Juan', 'Luis'), ('Luis', 'Nicola'), ('Alba', 'Nicola'), ('Nicola', 'Juan'), ('Nuria', 'Juan'), ('Pedro', 'Juan'), ('Pedro', 'Alba'), ('Maria', 'Alba'), ('Juan', 'Maria'), ('Nuria','Maria');
+
+--Consultas
+SELECT nick1 from follow where follow.nick2='Luis' INTERSECT select nick1 from usuario,follow where follow.nick2='Maria';
+SELECT DISTINCT f1.nick1 from follow as f1, follow as f2 where f2.nick2='Nicola' and f1.nick2=f2.nick1;
+
+--EJERCICIO 2, BASE DE DATOS AEROPUERTO
+
+--Creacion de tablas
+
+create table aeropuerto(
+codigo char(3),
+ciudad varchar(300),
+constraint pk_aeropuerto primary key (codigo)
+);
+
+
+--HELP
+--constraint pk_usuario primary key (id_usuario)
+--constraint fk_venta foreign key (id_usuario) references usuario(id_usuario)

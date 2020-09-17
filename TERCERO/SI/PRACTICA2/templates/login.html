@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang = "es">
+    <head>
+        <title>Spotifylm</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="shortcut icon" href="../static/aplicacion/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="../static/javascript/loginvalidator.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <a target = "_top" href = "/">
+                <img class = "icono" src="../static/aplicacion/icono.png" alt ="icono">
+            </a>
+        </header>
+        
+        <div class = "info-container">
+                <div class = "info-login">
+                    <form name = "login-form" onsubmit = "return validateForm()" method = "POST">
+                        <p><b>Nombre de Usuario</b></p>
+                        <input type="text" name = "nombre-usuario" class = "nombre-usuario">
+                        <p><b>Contrase&ntilde;a</b></p>
+                        <p><input type="password" name = "contrasenia" class = "contrasenia"></p>
+                        <input type = "submit" class = "log-in-1" value = "Log in">
+                    </form>
+                    <button class = "register-1" onclick="location.href='/register'">Register</button>
+                </div>
+
+                {% if error %}
+                    <a class = "error">
+                        {{ error }}
+                    </a>
+                {% endif %}
+        </div>
+            
+        <footer>
+            <b>Copyright © 2018 Tomas Higuera Viso y Manuel Chamorro Martinez de Aragon</b>
+        </footer>
+    </body>
+</html> 
+
+
+

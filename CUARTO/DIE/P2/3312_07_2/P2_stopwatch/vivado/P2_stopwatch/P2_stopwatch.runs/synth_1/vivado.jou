@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 12 09:18:03 2019
+# Process ID: 3317
+# Current directory: /home/alumnos/e338239/die/3312_07_2/P2_stopwatch/vivado/P2_stopwatch/P2_stopwatch.runs/synth_1
+# Command line: vivado -log stopwatch.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stopwatch.tcl
+# Log file: /home/alumnos/e338239/die/3312_07_2/P2_stopwatch/vivado/P2_stopwatch/P2_stopwatch.runs/synth_1/stopwatch.vds
+# Journal file: /home/alumnos/e338239/die/3312_07_2/P2_stopwatch/vivado/P2_stopwatch/P2_stopwatch.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source stopwatch.tcl -notrace

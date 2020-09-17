@@ -1,0 +1,445 @@
+/*Contenedor principal que contiene toda la pagina*/
+body{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+/*Contenedor que contiene el header de la pagina*/
+header{
+    height: 18%;
+    background-color: #2196f3;
+    border-bottom-style: solid;
+}
+
+/*Contenedor que contiene tanto el menu como la parte de informacion de la pagina*/
+.info-container{
+    height: 74%;
+    border-bottom-style: solid;
+}
+
+.info-container2{
+    height: 74%;
+    display: flex;
+    flex-direction: column;
+    border-bottom-style: solid;
+}
+
+/*Contenedor dentro de info-container que contiene el menu lateral de la pagina*/
+.filtros{
+    width: 20%;
+    height: 100%;
+    float: left;
+    background-color: #a4dcf6;
+    border-right-style : solid;
+    text-align: left;
+    font-size: 40px;
+}
+
+/*Contenedor dentro de info-container qe contiene la informacion de las peliculas de la pagina*/
+.informacion-peliculas{
+    float: left;
+    height: 100%;
+    width: 79%;
+    overflow: auto;
+}
+
+/*Contenedor que contiene el pie de pagina*/
+footer{
+    background-color: #2196f3;
+    text-align: center;
+    height: 6%;
+    border-bottom-style: solid;
+    width: 100%;
+}
+
+/*Descriptor del estilo del icono que representa nuestra aplicacion*/
+.icono{
+    display: block;
+    max-width: 8%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    position: relative;
+    left: 4%;
+    float: left;
+}
+
+/******************CONTENIDO HEADER******************/
+.search{
+    display: block;
+    position: relative;
+    left:17%;
+    top:40%;
+    float: left;
+}
+
+.submit{
+    display: block;
+    float: right;
+    position: relative;
+    top: 40%;
+    right:57%;
+}
+
+.log-in{
+    display: block;
+    position: relative;
+    float: right;
+    top: 30%;
+    right: 2%;
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.register{
+    display: block;
+    position: relative;
+    float: right;
+    top: 30%;
+    right: 6%;
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.carrito{
+    display: block;
+    position: relative;
+    float: right;
+    top: 25%;
+    right: 6%;
+    max-width: 5%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
+}
+
+.usuario{
+    display: block;
+    position: relative;
+    float: right;
+    top: 25%;
+    right: 1%;
+    width: 100%;
+    max-height: 70%;
+    height: auto;
+}
+
+/*Desplegable al acercar el raton a la imagen que representa el perfil de usuario*/
+
+.dropdown-usuario {
+    position: relative;
+    display: block;
+    float: right;
+    top:25%;
+    right:1%;
+    width:5%;
+}
+
+.dropdown-content-usuario {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    top:100%;
+    right:1%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content-usuario a {
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dropdown-usuario:hover .dropdown-content-usuario {
+    display: block;
+}
+
+/****************************************************/
+
+/*******************CONTENIDO MENU*******************/
+
+/*Boton desplegable genero*/
+.dropbtn-genero {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-genero {
+    position: relative;
+    display: inline-block;
+    left:3%;
+}
+
+.dropdown-content-genero {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content-genero a {
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dropdown-content-genero a:hover {
+    background-color: white
+}
+
+.dropdown-genero:hover .dropdown-content-genero {
+    display: block;
+}
+
+.dropdown-genero:hover .dropbtn-genero {
+    background-color: white;
+}
+
+/*Boton desplegable valoracion*/
+
+.dropbtn-valoracion {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-valoracion {
+    position: relative;
+    top: 5%;
+    left: 3%;
+}
+
+.dropdown-content-valoracion {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content-valoracion a {
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.dropdown-content-valoracion a:hover {
+    background-color: white
+}
+
+.dropdown-valoracion:hover .dropdown-content-valoracion {
+    display: block;
+}
+
+.dropdown-valoracion:hover .dropbtn-valoracion {
+    background-color: white;
+}
+
+/****************************************************/
+
+/**********INFORMACION DE LAS PELICULAS**************/
+
+
+.galeria {
+    margin: 40px;
+    border: solid;
+    border-width: 3px;
+    border-color: white;
+    float: left;
+    width: 180px;
+}
+
+.galeria:hover {
+    border:solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+/*Info-container de la ventana login y register*/
+.info-login{
+    text-align: center;
+    font-size: 25px;
+}
+
+.nombre-usuario{
+    height: 20%;
+    width: 20%;
+    margin-bottom: 2%;
+}
+
+.contrasenia{
+    height: 20%;
+    width: 20%;
+}
+
+.log-in-1{
+    height: 20%;
+    width: 10%;
+    margin-top: 2%;
+}
+
+.register-1{
+    height: 20%;
+    width: 10%;
+    margin-top: 2%;
+}
+
+/*Info-container en la ventana de registros*/
+
+.info-register{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-register{
+    float: left;
+    margin-right: 5%;
+}
+
+.rellenar-register{
+    margin-top: 4%;
+    display: flex;
+    flex-direction: row;
+}
+
+.rellenar-register input{
+    margin-left: 10%;
+    width: 40%;
+
+}
+
+.text-register{
+    width: 50%;
+}
+
+.header-register{
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.register-2{
+    height: 40%;
+    width: auto;
+    margin-top: 5%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*CSS para mostrar la informacion de una pelicula*/
+.informacion-pelicula{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.imagen-y-texto{
+    display: flex;
+    height: 70%;
+}
+
+.imagen-y-texto img{
+    width: auto;
+    height: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10%;
+}
+
+.text-pelicula{
+    margin-left: 5%;
+    width: auto;
+    overflow: auto;
+    margin-right: 3%;
+}
+
+.valoracion-boton-y-precio{
+    display: flex;
+    height: 30%;
+}
+
+.valoracion-boton-y-precio img{
+    height: 39%;
+    width: 29%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.valoracion-boton-y-precio button{
+    height:40%;
+    margin-top: 3%;
+    margin-left: 15%;
+}
+
+.valoracion-boton-y-precio label{
+    font-size: 50px;
+    margin-top: 3%;
+    margin-left: 12%;
+}
+
+/*CSS historial de compra*/
+
+.informacion-historial{
+    float: none;
+    height: 100%;
+    overflow: auto;
+    background-color: #E8E8E8;
+}
+
+#historial-title {
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-size: 40px; 
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    padding: 15px;
+    overflow: auto;
+}

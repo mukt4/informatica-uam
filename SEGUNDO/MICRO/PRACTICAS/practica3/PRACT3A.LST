@@ -1,0 +1,241 @@
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 1
+pract3a.ASM
+
+
+
+      1				     ;********************************************************************************
+      2				     ; PRACTICA	3, EJERCICIO A -> TOMAS	HIGUERA	VISO Y GUILLERMO HOYO BRAVO, PAREJA 1*
+      3				     ;********************************************************************************
+      4				     ; DEFINICION DEL SEGMENTO DE CODIGO					     *
+      5				     ;********************************************************************************
+      6
+      7	0000			     PRACT3A SEGMENT BYTE PUBLIC 'CODE'
+      8					     PUBLIC _comprobarNumeroSecreto, _rellenarIntento
+      9
+     10	0000				     DATOS SEGMENT
+     11	0000  04*(00)				     datos_funcion DB 4	DUP (0)
+     12	0004				     DATOS ENDS
+     13
+     14					     ASSUME CS:	PRACT3A, DS: DATOS
+     15
+     16						     ; RUTINA QUE LLAMA	A LA FUNCION COMPROBARUMEROSECRETO DEL FICHERO C
+     17	0000					     _comprobarNumeroSecreto PROC FAR
+     18							     ; PUSHEAMOS BP EN LA PILA PARA PODER MOVERNOS POR LA PILA SIN NECESIDAD+
+     19				     DE	USAR SP
+     20	0000  55					     PUSH BP
+     21							     ; GUARDAMOS EN BP LA POSICION DE MEMORIA EN LA QUE	SE ENCUENTRA LA	PILA
+     22	0001  8B EC					     MOV BP, SP
+     23							     ; GUARDAMOS LOS REGISTROS QUE VAMOS A USAR
+     24	0003  53 51 52 57 56				     PUSH BX CX	DX DI SI
+     25							     ; GUARDAMOS EN BX EL OFFSET
+     26	0008  8B 5E 06					     MOV BX, [BP + 6]
+     27							     ; GUARDAMOS EN DX EL SEGMENT
+     28	000B  8B 56 08					     MOV DX, [BP + 8]
+     29							     ; GUARDAMOS EN DI 0 PARA REALIZAR UN BUCLE
+     30	000E  BF 0000					     MOV DI, 0
+     31							     ; GUARDAMOS EN CX LA POSICION DEL DS
+     32	0011  8C D9					     MOV CX, DS
+     33							     ; PUSHEAMOS EL DS EN LA PILA
+     34	0013  51					     PUSH CX
+     35							     ; COLOCAMOS EL DATA SEGMENT EN LA POSICION	DE MEMORIA DESDE LA QUE	    +
+     36				     EMPIEZAN LOS DATOS
+     37	0014  8E DA					     MOV DS, DX
+     38	0016						     bucle1:
+     39								     ; GUARDAMOS EN AH EL CONTENIDO DE LA DIRECCION DE MEMORIA QUE  +
+     40				     NOS PASAN DE ENTRADA
+     41	0016  8A 21						     MOV AH, DS:[BX][DI]
+     42								     ; GUARDAMOS EN DATOS_FUNCION EL CONTENIDO DE AH
+     43	0018  88 A5 0000r					     MOV datos_funcion[DI], AH
+     44								     ; INCREMENTAMOS EN	UNO EL INDICE DI
+     45	001C  47						     INC DI
+     46								     ; COMPROBAMOS SI YA HEMOS ACABADO EL BUCLE
+     47	001D  83 FF 04						     CMP DI, 4
+     48								     ; SI EL INDICE ES DISTINTO	DE 4 CONTINUAMOS EN EL BUCLE
+     49	0020  75 F4						     JNE bucle1
+     50	0022  E8 002D					     CALL comprobacion_repetidos
+     51	0025						     fin:
+     52								     ; POPEAMOS	EN BX LA POSICION DEL DS
+     53	0025  59						     POP CX
+     54								     ; COLOCAMOS EL DS EN LA POSICION CORRECTA
+     55	0026  8E D9						     MOV DS, CX
+     56								     ; POPEAMOS	TODOS LOS REGISTROS
+     57	0028  5E 5F 5A 59 5B					     POP SI DI DX CX BX
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 2
+pract3a.ASM
+
+
+
+     58								     ; POPEAMOS	BP
+     59	002D  5D						     POP BP
+     60								     ; VOLVEMOS	A LA RUTINA DE C
+     61	002E  CB						     RET
+     62	002F					     _comprobarNumeroSecreto ENDP
+     63
+     64	002F					     _rellenarIntento PROC FAR
+     65							     ; PUSHEAMOS BP EN LA PILA
+     66	002F  55					     PUSH BP
+     67							     ; GUARDAMOS EN BP LA POSICION DE LA PILA
+     68	0030  8B EC					     MOV BP, SP
+     69							     ; GUARDAMOS LOS REGISTROS QUE VAMOS A USAR
+     70	0032  53 51 52 57 56				     PUSH BX CX	DX DI SI
+     71							     ; GUARDAMOS EN AX EL NUMERO EN CUESTION
+     72	0037  8B 46 06					     MOV AX, [BP + 6]
+     73							     ; GUARDAMOS EN BX EL OFFSET EN EL QUE GUARDAREMOS
+     74	003A  8B 5E 08					     MOV BX, [BP + 8]
+     75							     ; GUARDAMOS EN CX EL DATA SEGMENT EN EL QUE GUARDAREMOS
+     76	003D  8B 4E 0A					     MOV CX, [BP + 10]
+     77							     ; GUARDAMOS EN DX LA POSICION ACTUAL DEL DATA SEGMENT
+     78	0040  8C DA					     MOV DX, DS
+     79							     ; PUSHEAMOS DX EN LA PILA
+     80	0042  52					     PUSH DX
+     81							     ; COLOCAMOS EL DATA SEGMENT EN EL SEGMENTO	QUE HEMOS GUARDADO
+     82	0043  8E D9					     MOV DS, CX
+     83							     ; LLAMAMOS	A LA FUNCION PARA DIVIDIR EL NUMERO
+     84	0045  E8 0030					     CALL dividir_numero
+     85							     ; SACAMOS DX DE LA	PILA
+     86	0048  5A					     POP DX
+     87							     ; COLOCAMOS EL DATA SEGMENT EN LA POSICION	EN LA QUE SE ENCONTRABA	AL  +
+     88				     PRINCIPIO
+     89	0049  8E DA					     MOV DS, DX
+     90							     ; POPEAMOS	TODOS LOS REGISTROS
+     91	004B  5E 5F 5A 59 5B				     POP SI DI DX CX BX
+     92							     ; POPEAMOS	BP DE LA PILA
+     93	0050  5D					     POP BP
+     94							     ; VOLVEMOS	DONDE SE HA LLAMADO LA FUNCION
+     95	0051  CB					     RET
+     96	0052					     _rellenarIntento ENDP
+     97
+     98						     ;***********************************
+     99						     ;*FUNCIONES UTILIZADAS EN EL CODIGO*
+    100						     ;***********************************
+    101
+    102	0052					     comprobacion_repetidos PROC
+    103							     ; GUARDAMOS EN DI 0 PARA RECORRER EL ARRAY
+    104	0052  BF 0000					     MOV DI, 0
+    105							     ; REALIZAMOS UN BUCLE DE COMPROBACION DE LOS DATOS	DEL ARRAY
+    106	0055						     bucle2:
+    107								     ; GUARDAMOS EN SI EL CONTENIDO DE DI PARA NO REPETIR	    +
+    108				     COMPROBACION
+    109	0055  8B F7						     MOV SI, DI
+    110								     ; INCREMENTAMOS SI	PARA COMENZAR A	COMPROBAR DESDE	EL NUMERO   +
+    111				     SIGUIENTE
+    112	0057  46						     INC SI
+    113								     ; GUARDAMOS EN AH LOS DATOS DEL NUMERO DE LA FUNCION A COMPROBAR
+    114	0058  8A A5 0000r					     MOV AH, datos_funcion[DI]
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 3
+pract3a.ASM
+
+
+
+    115	005C							     bucle3:
+    116									     ; GUARDAMOS EN BH EL NUMERO DEL ARRAY CON EL QUE	    +
+    117				     COMPARAREMOS
+    118	005C  8A BC 0000r						     MOV BH, datos_funcion[SI]
+    119									     ; COMPROBAMOS SI BH Y AH SON IGUALES
+    120	0060  3A E7							     CMP AH, BH
+    121									     ; SI AMBOS	REGISTROS SON DIFERENTES SALTAMOS A LA	    +
+    122				     RUTINA REPETIDOS
+    123	0062  74 10							     JE	repetidos
+    124									     ; SI SON DIFERENTES CONTINUAMOS CON LA COMPROBACION
+    125									     ; INCREMENTAMOS EN	UNO SI Y SEGUIMOS COMPROBANCO
+    126	0064  46							     INC SI
+    127									     ; COMPROBAMOS SI HEMOS LLEGADO AL FINAL DEL ARRAY
+    128	0065  83 FE 04							     CMP SI, 4
+    129									     ; SI SI ES	DISTINTO DE 4 SEGUIMOS COMPROBANDO
+    130	0068  75 F2							     JNE bucle3
+    131								     ; INCREMENTAMOS DI	PARA COMPROBAR EL SIGUIENTE NUMERO DEL ARRAY
+    132	006A  47						     INC DI
+    133								     ; COMPROBAMOS SI NOS ENCONTRAMOS EN EL ULTIMO NUMERO
+    134	006B  83 FF 03						     CMP DI, 3
+    135								     ; SI DI ES	DISTINTO DE 3 SEGUIMOS COMPROBANDO
+    136	006E  75 E5						     JNE bucle2
+    137							     ; GUARDAMOS EN AX 0 PORQUE
+    138	0070  B8 0000					     MOV AX, 0
+    139							     ; VOLVEMOS	DONDE HEMOS LLAMADO A LA FUNCION
+    140	0073  C3					     RET
+    141	0074						     repetidos:
+    142								     ; GUARDAMOS EN AX 1 PORQUE	SE HA REPETIDO UN NUMERO
+    143	0074  B8 0001						     MOV AX, 1
+    144								     ; VOLVEMOS	DONDE HEMOS LLAMADO A LA FUNCION
+    145	0077  C3						     RET
+    146	0078					     comprobacion_repetidos ENDP
+    147
+    148	0078					     dividir_numero PROC
+    149							     ; COLOCAMOS EL INDICE DI EN LA ULTIMA POSICION DEL	ARRAY
+    150	0078  BF 0003					     MOV DI, 3
+    151	007B						     division:
+    152								     ; INICIALIZAMOS DX	A 0
+    153	007B  BA 0000						     MOV DX, 0
+    154								     ; GUARDAMOS EN CX 10 PARA DIVIDIR
+    155	007E  B9 000A						     MOV CX, 0Ah
+    156								     ; DIVIDIMOS ENTRE CX
+    157	0081  F7 F1						     DIV CX
+    158								     ; GUARDAMOS EL RESTO EN LA	ULTIMA POSICION	DE LA CADENA DE	    +
+    159				     CARACTERES
+    160	0083  88 11						     MOV DS:[BX][DI], DL
+    161								     ; DECREMENTAMOS EL	INDICE EN 1
+    162	0085  4F						     DEC DI
+    163								     ; COMPROBAMOS SI EL COCIENTE ES 0
+    164	0086  3D 0000						     CMP  AX, 0
+    165								     ; SI NO ES	0 CONTINUAMOS DIVIDIENDO
+    166	0089  75 F0						     JNE division
+    167							     ; COMPROBAMOS SI EL NUMERO	ERA DE CUATRO CIFRAS
+    168	008B  83 FF FF					     CMP DI, -1
+    169							     ; SI EL NUMERO NO ES DE CUATRO CIFRAS SALTAMOS A LA RUTINA	RELLENAR
+    170	008E  75 01					     JNE rellenar
+    171							     ; SI EL NUMERO ES DE CUATRO CIFRAS	VOLVEMOS DONDE HAN LLAMADO LA FUNCION
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 4
+pract3a.ASM
+
+
+
+    172	0090  C3					     RET
+    173	0091						     rellenar:
+    174								     ; GUARDAMOS UN 0 EN LAS POSICIONES	RESTANTES
+    175	0091  C6 01 00						     MOV BYTE PTR DS:[BX][DI], 0h
+    176								     ; DECREMENTAMOS EL	INDICE
+    177	0094  4F						     DEC DI
+    178								     ; COMPROBAMOS SI EL ARRAY ESTA LLENO
+    179	0095  83 FF FF						     CMP DI, -1
+    180								     ; SI EL INDICE NO ES -1 CONTINUAMOS EN EL BUCLE
+    181	0098  75 F7						     JNE rellenar
+    182								     ; VOLVEMOS	DONDE HAN LLAMADO LA FUNCION
+    183	009A  C3						     RET
+    184	009B					     dividir_numero ENDP
+    185
+    186	009B			     PRACT3A ENDS ; FIN	DEL SEGMENTO DE	CODIGO
+    187				     END		  ; FIN	DE pract3a.asm
+Turbo Assembler	 Version 2.0	    04/18/18 16:25:52	    Page 5
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??date				  Text	 "04/18/18"
+??filename			  Text	 "pract3a "
+??time				  Text	 "16:25:52"
+??version			  Number 0200
+@Cpu				  Text	 0101H
+@FileName			  Text	 pract3a
+@WordSize			  Text	 2
+@curseg				  Text	 PRACT3A
+_comprobarNumeroSecreto		  Far	 PRACT3A:0000
+_rellenarIntento		  Far	 PRACT3A:002F
+bucle1				  Near	 PRACT3A:0016
+bucle2				  Near	 PRACT3A:0055
+bucle3				  Near	 PRACT3A:005C
+comprobacion_repetidos		  Near	 PRACT3A:0052
+datos_funcion			  Byte	 DATOS:0000
+dividir_numero			  Near	 PRACT3A:0078
+division			  Near	 PRACT3A:007B
+fin				  Near	 PRACT3A:0025
+rellenar			  Near	 PRACT3A:0091
+repetidos			  Near	 PRACT3A:0074
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DATOS				  16  0004 Para	  none
+PRACT3A				  16  009B Byte	  Public  CODE
+

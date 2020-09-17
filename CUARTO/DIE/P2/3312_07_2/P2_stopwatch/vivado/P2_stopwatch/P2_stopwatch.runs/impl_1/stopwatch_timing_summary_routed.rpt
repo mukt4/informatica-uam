@@ -1,0 +1,1121 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
+| Date         : Tue Nov 12 09:19:28 2019
+| Host         : 11-12-11-12 running 64-bit Ubuntu 18.04.2 LTS
+| Command      : report_timing_summary -max_paths 10 -file stopwatch_timing_summary_routed.rpt -pb stopwatch_timing_summary_routed.pb -rpx stopwatch_timing_summary_routed.rpx -warn_on_violation
+| Design       : stopwatch
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 54 register/latch pins with no clock driven by root clock pin: Clk (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 115 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 3 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.830        0.000                      0                   74        0.179        0.000                      0                   74        3.500        0.000                       0                    50  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+Clk    {0.000 4.000}        8.000           125.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+Clk                 4.830        0.000                      0                   74        0.179        0.000                      0                   74        3.500        0.000                       0                    50  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  Clk
+  To Clock:  Clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.830ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.179ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.830ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[11]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.866ns  (logic 0.580ns (20.238%)  route 2.286ns (79.762%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.875     4.623    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X39Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[11]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X39Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[11]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X39Y45         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[11]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.623    
+  -------------------------------------------------------------------
+                         slack                                  4.830    
+
+Slack (MET) :             4.830ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[8]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.866ns  (logic 0.580ns (20.238%)  route 2.286ns (79.762%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.875     4.623    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X39Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[8]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X39Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[8]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X39Y45         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[8]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.623    
+  -------------------------------------------------------------------
+                         slack                                  4.830    
+
+Slack (MET) :             4.868ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[10]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.828ns  (logic 0.580ns (20.513%)  route 2.248ns (79.487%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.837     4.585    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[10]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[10]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X39Y44         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[10]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.585    
+  -------------------------------------------------------------------
+                         slack                                  4.868    
+
+Slack (MET) :             4.868ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[9]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.828ns  (logic 0.580ns (20.513%)  route 2.248ns (79.487%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.837     4.585    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[9]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[9]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X39Y44         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[9]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.585    
+  -------------------------------------------------------------------
+                         slack                                  4.868    
+
+Slack (MET) :             4.878ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[4]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.817ns  (logic 0.580ns (20.587%)  route 2.237ns (79.413%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.827     4.574    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X37Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X37Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[4]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X37Y45         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[4]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.574    
+  -------------------------------------------------------------------
+                         slack                                  4.878    
+
+Slack (MET) :             4.878ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[5]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.817ns  (logic 0.580ns (20.587%)  route 2.237ns (79.413%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.827     4.574    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[5]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X36Y45         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[5]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.574    
+  -------------------------------------------------------------------
+                         slack                                  4.878    
+
+Slack (MET) :             4.878ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[6]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.817ns  (logic 0.580ns (20.587%)  route 2.237ns (79.413%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.827     4.574    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[6]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X36Y45         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[6]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.574    
+  -------------------------------------------------------------------
+                         slack                                  4.878    
+
+Slack (MET) :             4.979ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[12]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.716ns  (logic 0.580ns (21.354%)  route 2.136ns (78.646%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.726     4.473    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[12]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[12]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X39Y46         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[12]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.473    
+  -------------------------------------------------------------------
+                         slack                                  4.979    
+
+Slack (MET) :             4.979ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[13]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.716ns  (logic 0.580ns (21.354%)  route 2.136ns (78.646%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.726     4.473    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[13]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[13]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X39Y46         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[13]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.473    
+  -------------------------------------------------------------------
+                         slack                                  4.979    
+
+Slack (MET) :             5.037ns  (required time - arrival time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[7]/CE
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            8.000ns  (Clk rise@8.000ns - Clk rise@0.000ns)
+  Data Path Delay:        2.659ns  (logic 0.580ns (21.815%)  route 2.079ns (78.185%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        -0.064ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.578ns = ( 9.578 - 8.000 ) 
+    Source Clock Delay      (SCD):    1.757ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.757     1.757    i_display_ctrl/Clk
+    SLICE_X41Y45         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y45         FDCE (Prop_fdce_C_Q)         0.456     2.213 r  i_display_ctrl/FSM_onehot_state_reg[2]/Q
+                         net (fo=31, routed)          1.411     3.624    i_display_ctrl/FSM_onehot_state_reg_n_0_[2]
+    SLICE_X38Y49         LUT6 (Prop_lut6_I4_O)        0.124     3.748 r  i_display_ctrl/shiftReg[23]_i_1/O
+                         net (fo=29, routed)          0.668     4.416    i_display_ctrl/shiftReg[23]_i_1_n_0
+    SLICE_X36Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        8.000     8.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     8.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         1.578     9.578    i_display_ctrl/Clk
+    SLICE_X36Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[7]/C
+                         clock pessimism              0.115     9.693    
+                         clock uncertainty           -0.035     9.658    
+    SLICE_X36Y46         FDPE (Setup_fdpe_C_CE)      -0.205     9.453    i_display_ctrl/shiftReg_reg[7]
+  -------------------------------------------------------------------
+                         required time                          9.453    
+                         arrival time                          -4.416    
+  -------------------------------------------------------------------
+                         slack                                  5.037    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.179ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[4]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[5]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.283ns  (logic 0.186ns (65.755%)  route 0.097ns (34.245%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.256ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.592     0.592    i_display_ctrl/Clk
+    SLICE_X37Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y45         FDPE (Prop_fdpe_C_Q)         0.141     0.733 r  i_display_ctrl/shiftReg_reg[4]/Q
+                         net (fo=1, routed)           0.097     0.829    i_display_ctrl/in5[5]
+    SLICE_X36Y45         LUT4 (Prop_lut4_I2_O)        0.045     0.874 r  i_display_ctrl/shiftReg[5]_i_1/O
+                         net (fo=1, routed)           0.000     0.874    i_display_ctrl/shiftReg[5]
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[5]/C
+                         clock pessimism             -0.256     0.605    
+    SLICE_X36Y45         FDPE (Hold_fdpe_C_D)         0.091     0.696    i_display_ctrl/shiftReg_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -0.696    
+                         arrival time                           0.874    
+  -------------------------------------------------------------------
+                         slack                                  0.179    
+
+Slack (MET) :             0.199ns  (arrival time - required time)
+  Source:                 i_display_ctrl/tenthsReg_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[0]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.335ns  (logic 0.186ns (55.487%)  route 0.149ns (44.513%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.593ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.593     0.593    i_display_ctrl/Clk
+    SLICE_X39Y47         FDCE                                         r  i_display_ctrl/tenthsReg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y47         FDCE (Prop_fdce_C_Q)         0.141     0.734 r  i_display_ctrl/tenthsReg_reg[1]/Q
+                         net (fo=7, routed)           0.149     0.883    i_display_ctrl/tenthsReg[1]
+    SLICE_X38Y46         LUT5 (Prop_lut5_I4_O)        0.045     0.928 r  i_display_ctrl/shiftReg[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.928    i_display_ctrl/shiftReg[0]
+    SLICE_X38Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X38Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[0]/C
+                         clock pessimism             -0.253     0.608    
+    SLICE_X38Y46         FDPE (Hold_fdpe_C_D)         0.121     0.729    i_display_ctrl/shiftReg_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.729    
+                         arrival time                           0.928    
+  -------------------------------------------------------------------
+                         slack                                  0.199    
+
+Slack (MET) :             0.215ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[8]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[9]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.322ns  (logic 0.186ns (57.733%)  route 0.136ns (42.267%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.592     0.592    i_display_ctrl/Clk
+    SLICE_X39Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y45         FDPE (Prop_fdpe_C_Q)         0.141     0.733 r  i_display_ctrl/shiftReg_reg[8]/Q
+                         net (fo=1, routed)           0.136     0.869    i_display_ctrl/in5[9]
+    SLICE_X39Y44         LUT4 (Prop_lut4_I2_O)        0.045     0.914 r  i_display_ctrl/shiftReg[9]_i_1/O
+                         net (fo=1, routed)           0.000     0.914    i_display_ctrl/shiftReg[9]
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[9]/C
+                         clock pessimism             -0.253     0.608    
+    SLICE_X39Y44         FDPE (Hold_fdpe_C_D)         0.091     0.699    i_display_ctrl/shiftReg_reg[9]
+  -------------------------------------------------------------------
+                         required time                         -0.699    
+                         arrival time                           0.914    
+  -------------------------------------------------------------------
+                         slack                                  0.215    
+
+Slack (MET) :             0.216ns  (arrival time - required time)
+  Source:                 i_display_ctrl/FSM_onehot_state_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[17]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.371ns  (logic 0.186ns (50.085%)  route 0.185ns (49.915%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.034ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.862ns
+    Source Clock Delay      (SCD):    0.595ns
+    Clock Pessimism Removal (CPR):    0.233ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.595     0.595    i_display_ctrl/Clk
+    SLICE_X40Y49         FDCE                                         r  i_display_ctrl/FSM_onehot_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y49         FDCE (Prop_fdce_C_Q)         0.141     0.736 r  i_display_ctrl/FSM_onehot_state_reg[1]/Q
+                         net (fo=24, routed)          0.185     0.921    i_display_ctrl/FSM_onehot_state_reg_n_0_[1]
+    SLICE_X38Y48         LUT6 (Prop_lut6_I0_O)        0.045     0.966 r  i_display_ctrl/shiftReg[17]_i_1/O
+                         net (fo=1, routed)           0.000     0.966    i_display_ctrl/shiftReg[17]
+    SLICE_X38Y48         FDPE                                         r  i_display_ctrl/shiftReg_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.862     0.862    i_display_ctrl/Clk
+    SLICE_X38Y48         FDPE                                         r  i_display_ctrl/shiftReg_reg[17]/C
+                         clock pessimism             -0.233     0.629    
+    SLICE_X38Y48         FDPE (Hold_fdpe_C_D)         0.121     0.750    i_display_ctrl/shiftReg_reg[17]
+  -------------------------------------------------------------------
+                         required time                         -0.750    
+                         arrival time                           0.966    
+  -------------------------------------------------------------------
+                         slack                                  0.216    
+
+Slack (MET) :             0.228ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[18]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[19]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.335ns  (logic 0.209ns (62.356%)  route 0.126ns (37.644%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.862ns
+    Source Clock Delay      (SCD):    0.593ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.593     0.593    i_display_ctrl/Clk
+    SLICE_X38Y48         FDPE                                         r  i_display_ctrl/shiftReg_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y48         FDPE (Prop_fdpe_C_Q)         0.164     0.757 r  i_display_ctrl/shiftReg_reg[18]/Q
+                         net (fo=1, routed)           0.126     0.883    i_display_ctrl/in5[19]
+    SLICE_X37Y48         LUT6 (Prop_lut6_I2_O)        0.045     0.928 r  i_display_ctrl/shiftReg[19]_i_1/O
+                         net (fo=1, routed)           0.000     0.928    i_display_ctrl/shiftReg[19]
+    SLICE_X37Y48         FDPE                                         r  i_display_ctrl/shiftReg_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.862     0.862    i_display_ctrl/Clk
+    SLICE_X37Y48         FDPE                                         r  i_display_ctrl/shiftReg_reg[19]/C
+                         clock pessimism             -0.253     0.609    
+    SLICE_X37Y48         FDPE (Hold_fdpe_C_D)         0.091     0.700    i_display_ctrl/shiftReg_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -0.700    
+                         arrival time                           0.928    
+  -------------------------------------------------------------------
+                         slack                                  0.228    
+
+Slack (MET) :             0.232ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[6]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[7]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.339ns  (logic 0.186ns (54.906%)  route 0.153ns (45.094%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.253ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.592     0.592    i_display_ctrl/Clk
+    SLICE_X36Y45         FDPE                                         r  i_display_ctrl/shiftReg_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X36Y45         FDPE (Prop_fdpe_C_Q)         0.141     0.733 r  i_display_ctrl/shiftReg_reg[6]/Q
+                         net (fo=1, routed)           0.153     0.885    i_display_ctrl/in5[7]
+    SLICE_X36Y46         LUT4 (Prop_lut4_I2_O)        0.045     0.930 r  i_display_ctrl/shiftReg[7]_i_1/O
+                         net (fo=1, routed)           0.000     0.930    i_display_ctrl/shiftReg[7]
+    SLICE_X36Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X36Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[7]/C
+                         clock pessimism             -0.253     0.608    
+    SLICE_X36Y46         FDPE (Hold_fdpe_C_D)         0.091     0.699    i_display_ctrl/shiftReg_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -0.699    
+                         arrival time                           0.930    
+  -------------------------------------------------------------------
+                         slack                                  0.232    
+
+Slack (MET) :             0.250ns  (arrival time - required time)
+  Source:                 i_display_ctrl/count_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/count_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.342ns  (logic 0.186ns (54.393%)  route 0.156ns (45.607%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.862ns
+    Source Clock Delay      (SCD):    0.593ns
+    Clock Pessimism Removal (CPR):    0.269ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.593     0.593    i_display_ctrl/Clk
+    SLICE_X39Y49         FDCE                                         r  i_display_ctrl/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y49         FDCE (Prop_fdce_C_Q)         0.141     0.734 r  i_display_ctrl/count_reg[1]/Q
+                         net (fo=6, routed)           0.156     0.890    i_display_ctrl/count_reg_n_0_[1]
+    SLICE_X39Y49         LUT5 (Prop_lut5_I4_O)        0.045     0.935 r  i_display_ctrl/count[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.935    i_display_ctrl/count[3]
+    SLICE_X39Y49         FDCE                                         r  i_display_ctrl/count_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.862     0.862    i_display_ctrl/Clk
+    SLICE_X39Y49         FDCE                                         r  i_display_ctrl/count_reg[3]/C
+                         clock pessimism             -0.269     0.593    
+    SLICE_X39Y49         FDCE (Hold_fdce_C_D)         0.092     0.685    i_display_ctrl/count_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -0.685    
+                         arrival time                           0.935    
+  -------------------------------------------------------------------
+                         slack                                  0.250    
+
+Slack (MET) :             0.251ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[1]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[2]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.209ns (56.167%)  route 0.163ns (43.833%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.269ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.592     0.592    i_display_ctrl/Clk
+    SLICE_X38Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y46         FDPE (Prop_fdpe_C_Q)         0.164     0.756 r  i_display_ctrl/shiftReg_reg[1]/Q
+                         net (fo=1, routed)           0.163     0.919    i_display_ctrl/in5[2]
+    SLICE_X38Y46         LUT4 (Prop_lut4_I2_O)        0.045     0.964 r  i_display_ctrl/shiftReg[2]_i_1/O
+                         net (fo=1, routed)           0.000     0.964    i_display_ctrl/shiftReg[2]
+    SLICE_X38Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X38Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[2]/C
+                         clock pessimism             -0.269     0.592    
+    SLICE_X38Y46         FDPE (Hold_fdpe_C_D)         0.121     0.713    i_display_ctrl/shiftReg_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -0.713    
+                         arrival time                           0.964    
+  -------------------------------------------------------------------
+                         slack                                  0.251    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[9]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[10]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.344ns  (logic 0.186ns (54.053%)  route 0.158ns (45.947%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.269ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.592     0.592    i_display_ctrl/Clk
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[9]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y44         FDPE (Prop_fdpe_C_Q)         0.141     0.733 r  i_display_ctrl/shiftReg_reg[9]/Q
+                         net (fo=1, routed)           0.158     0.891    i_display_ctrl/in5[10]
+    SLICE_X39Y44         LUT2 (Prop_lut2_I1_O)        0.045     0.936 r  i_display_ctrl/shiftReg[10]_i_1/O
+                         net (fo=1, routed)           0.000     0.936    i_display_ctrl/shiftReg[10]
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X39Y44         FDPE                                         r  i_display_ctrl/shiftReg_reg[10]/C
+                         clock pessimism             -0.269     0.592    
+    SLICE_X39Y44         FDPE (Hold_fdpe_C_D)         0.092     0.684    i_display_ctrl/shiftReg_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -0.684    
+                         arrival time                           0.936    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+Slack (MET) :             0.252ns  (arrival time - required time)
+  Source:                 i_display_ctrl/shiftReg_reg[12]/C
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Destination:            i_display_ctrl/shiftReg_reg[13]/D
+                            (rising edge-triggered cell FDPE clocked by Clk  {rise@0.000ns fall@4.000ns period=8.000ns})
+  Path Group:             Clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (Clk rise@0.000ns - Clk rise@0.000ns)
+  Data Path Delay:        0.344ns  (logic 0.186ns (54.053%)  route 0.158ns (45.947%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.861ns
+    Source Clock Delay      (SCD):    0.592ns
+    Clock Pessimism Removal (CPR):    0.269ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.592     0.592    i_display_ctrl/Clk
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y46         FDPE (Prop_fdpe_C_Q)         0.141     0.733 r  i_display_ctrl/shiftReg_reg[12]/Q
+                         net (fo=1, routed)           0.158     0.891    i_display_ctrl/in5[13]
+    SLICE_X39Y46         LUT4 (Prop_lut4_I2_O)        0.045     0.936 r  i_display_ctrl/shiftReg[13]_i_1/O
+                         net (fo=1, routed)           0.000     0.936    i_display_ctrl/shiftReg[13]
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock Clk rise edge)        0.000     0.000 r  
+    BUFGCTRL_X0Y16       BUFG                         0.000     0.000 r  Clk_IBUF_BUFG_inst/O
+                         net (fo=104, routed)         0.861     0.861    i_display_ctrl/Clk
+    SLICE_X39Y46         FDPE                                         r  i_display_ctrl/shiftReg_reg[13]/C
+                         clock pessimism             -0.269     0.592    
+    SLICE_X39Y46         FDPE (Hold_fdpe_C_D)         0.092     0.684    i_display_ctrl/shiftReg_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -0.684    
+                         arrival time                           0.936    
+  -------------------------------------------------------------------
+                         slack                                  0.252    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         Clk
+Waveform(ns):       { 0.000 4.000 }
+Period(ns):         8.000
+Sources:            { i_display_ctrl/Clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     FDPE/C   n/a            1.000         8.000       7.000      SLICE_X40Y49  i_display_ctrl/FSM_onehot_state_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X40Y49  i_display_ctrl/FSM_onehot_state_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X41Y45  i_display_ctrl/FSM_onehot_state_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X40Y49  i_display_ctrl/FSM_onehot_state_reg[3]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X41Y45  i_display_ctrl/RClk_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X41Y45  i_display_ctrl/SClk_reg/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X40Y48  i_display_ctrl/count_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X39Y49  i_display_ctrl/count_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X39Y49  i_display_ctrl/count_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            1.000         8.000       7.000      SLICE_X39Y49  i_display_ctrl/count_reg[3]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y45  i_display_ctrl/FSM_onehot_state_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y45  i_display_ctrl/RClk_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y45  i_display_ctrl/SClk_reg/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y44  i_display_ctrl/secondsReg_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y44  i_display_ctrl/secondsReg_reg[1]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y44  i_display_ctrl/secondsReg_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         4.000       3.500      SLICE_X41Y44  i_display_ctrl/secondsReg_reg[3]/C
+Low Pulse Width   Slow    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X38Y46  i_display_ctrl/shiftReg_reg[0]/C
+Low Pulse Width   Slow    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X39Y44  i_display_ctrl/shiftReg_reg[10]/C
+Low Pulse Width   Slow    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X39Y45  i_display_ctrl/shiftReg_reg[11]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X38Y46  i_display_ctrl/shiftReg_reg[0]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X39Y44  i_display_ctrl/shiftReg_reg[10]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X39Y45  i_display_ctrl/shiftReg_reg[11]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X39Y46  i_display_ctrl/shiftReg_reg[12]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X39Y46  i_display_ctrl/shiftReg_reg[13]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X38Y46  i_display_ctrl/shiftReg_reg[1]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X38Y46  i_display_ctrl/shiftReg_reg[2]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X38Y45  i_display_ctrl/shiftReg_reg[3]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X37Y45  i_display_ctrl/shiftReg_reg[4]/C
+High Pulse Width  Fast    FDPE/C   n/a            0.500         4.000       3.500      SLICE_X36Y45  i_display_ctrl/shiftReg_reg[5]/C
+
+
+

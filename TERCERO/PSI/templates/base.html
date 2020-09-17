@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+		integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+		crossorigin="anonymous">
+
+		<link rel ="stylesheet" type="text/css" href="{% static "css/mycss.css" %}"/>
+
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+
+		<script src="{% static "js/webcomponents/webcomponents-loader.js" %}"></script>
+
+		<link rel="import" href="{% static "scipion-workflow.html" %}">
+	</head>
+
+	<body>
+		<div id = "cabecera">
+			<a id="index" href="/">Pagina principal</a>
+
+			<a id="subir" href="/add_workflow/">Upload workflow</a>
+			
+			<a id="about" href="/about/">About</a>
+		</div>
+
+		<div id = "buscador">
+			<form class="pure-form" method="POST" action = "/workflow_search/">
+				{% csrf_token %}
+				<label>Buscar workflow</label>
+				<input type="text" placeholder="" name = "key">
+				<button type="submit" class="pure-button pure-button-primary" name="byName">Buscar</button>
+			</form>
+		</div>
+
+		{% block body_block %}
+
+		{% endblock %}
+	</body>
+
+	<footer id = "footer" class="footerStyle">
+		Practica realizada por Tomas Higuera Viso
+	</footer>
+</html>

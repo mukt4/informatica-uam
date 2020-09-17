@@ -1,0 +1,628 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Date: Sat, 10 Jan 2009 12:25:28 GMT
+Pragma: no-cache
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+X-Powered-By: PHP/5.2.0-8+etch7
+Server: Apache
+Connection: close
+Set-Cookie: OPENDNS_ACCOUNT=78d84c3b7fcfc725bdffc49c0bd8d2af; expires=Mon, 09 Feb 2009 12:25:28 GMT; path=/; domain=.opendns.com
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+X-Pingback: http://blog.opendns.com/xmlrpc.php
+Content-Length: 39781
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="DNS, OpenDNS, recursive DNS, free DNS, anti-phishing, typo correction, Domain Name System, anycast" />
+	<meta name="description" content="OpenDNS is a better DNS service. We make your Internet safer, faster, smarter and more reliable. It's free, and there's nothing to download." />
+		  <link rel="shortcut icon" href="http://www.opendns.com/favicon.ico" type="image/ico" />
+				<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>OpenDNS Blog    &raquo; Getting started gets even easier</title>
+		<meta name="generator" content="WordPress 2.2.2" /> <!-- leave this for stats -->
+		<link href="http://blog.opendns.com/feed/" rel="alternate" type="application/rss+xml" title="OpenDNS Blog Feed" /> 
+		<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/blog.v100.css" />
+		<link rel="stylesheet" href="http://blog.opendns.com/wp-content/themes/opendns/style.css" type="text/css" media="screen" />
+				<script src="http://www-files.opendns.com/js/mootools.v1.11.js" type="text/javascript"></script>
+				<script src="http://www-files.opendns.com/js/common.v202.js" type="text/javascript"></script>
+		<script src="http://www-files.opendns.com/dashboard/js/tips.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/grid.css" />
+	<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/style.v104.css" />
+	<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/header.v103.css" />
+	<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/header_ie.v100.css" />
+	<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/style_ie.v101.css" />
+	<![endif]-->
+	<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://www-files.opendns.com/css/style_ie6.v101.css" />
+	<![endif]-->
+			</head>
+<body>
+
+<!-- feedback form -->
+<div id="feedback" style="display: none;">
+<form id="feedbackform" name="feedbackform" onsubmit="return false">
+		<h4>Your Comments:</h4><p><textarea name="body" cols="10" rows="4" style="width:260px;height:120px;top:3px;"></textarea></p>
+					<input type="hidden" name="user" value="" />
+			<h4>Your Email:</h4><p><input type="text" name="from" size="20" style="width:260px;" /></p>
+				<p><input type="button" value="Send" name="sendfeedback" onclick="send_feedback('');"/> or <a href="#" onclick="hide('feedback');">cancel</a></p>
+</form>
+</div>
+<!-- / feedback form -->
+
+
+<div style="position: absolute; top: 0; left: 0; height: 83px; width: 50%; z-index: 1; background: url(http://www-files.opendns.com/img/nav_global_bg_1_community.gif) repeat-x;"></div>
+<div style="position: absolute; top: 0; right: 0; height: 83px; width: 60%; z-index: 2; background: url(http://www-files.opendns.com/img/nav_global_bg_2_community.gif) repeat-x;"></div>
+
+<div id="global-header">
+     <div id="logo-wrapper">
+     	<div id="logo"><h2 style="background:url(http://www-files.opendns.com/img/logo_community.gif) no-repeat;"><a title="Go to opendns.com" href="http://www.opendns.com"><span>OpenDNS</span></a></h2></div>
+     	<div id="logo-slash" class="community">
+     		     			<h3 style="background:url(http://www-files.opendns.com/img/logo_slash_community.gif) no-repeat;"><a href="http://www.opendns.com/community/"><span> / community</span></a></h3>
+     		     	</div>
+     </div>
+     <div id="nav-wrapper" class="community">
+     	<div id="account">
+     			     		<a href="https://www.opendns.com/dashboard/signin/back/">Sign in</a> or
+	     		<a href="https://www.opendns.com/start/create_account/">Create a free account</a>
+	     	     	</div>
+     	<ul id="top-nav" class="community">
+     		<li id="top-nav-home"><a href="http://www.opendns.com"><span>OpenDNS.com</span></a></li>
+     		<li id="top-nav-dashboard"><a href="https://www.opendns.com/dashboard/"><span>Dashboard</span></a></li>
+     		<li id="top-nav-community" class="active"><a href="http://www.opendns.com/community/"><span>Community</span></a></li>
+     	</ul>
+     	<div class="clr"></div>
+     	<div id="tab-wrapper">
+     		<ul id="section-tabs" class="community">
+     		     			     			<li id="tab-dt"><a href="http://www.opendns.com/community/domaintagging/"><span>Domain Tagging</span></a></li>
+     			     			<li id="tab-ideabank"><a href="http://www.opendns.com/community/ideabank/"><span>Idea Bank</span></a></li>
+     			<li id="tab-forums"><a href="http://www.opendns.com/community/forums/"><span>Forums</span></a></li>
+     			<li id="tab-blog" class="active"><a href="http://www.opendns.com/community/blog/"><span>Blog</span></a></li>
+					<li id="tab-tellafriend-community"><a href="http://www.opendns.com/community/tell_a_friend/"><span>Tell a Friend</span></a></li>
+     		     		</ul>
+     	</div>
+     </div>
+     <div class="clr"></div>
+</div>
+
+<div style="height: 20px; background: white;">&nbsp;</div>
+
+<div id="maincontent">
+<div class="grid">
+<h2>News &amp; Notes from the OpenDNS team</h2>
+
+<div class="col x3">
+  
+		<div style="padding-bottom: 60px;" id="post-208">
+		<div style="margin-bottom: 10px; padding-bottom: 5px;">
+			
+					     <div style="float: left; width: 60px;"><img src="http://www-files.opendns.com/img/team_allison_sm.jpg" width="50" height="50" /></div>
+		     <div style="float: left; width: 490px;">
+		     		     
+		     <h3 style="padding-bottom: 1px; font-size: 20px; padding-top: 0px;">Getting started gets even easier</h3>
+		     <p class="xsmall slim">by <b>Allison Rhodes</b> on Nov 3rd, 2008</p>
+		     
+		     		     </div>
+		     <div class="clr"></div>
+		     	
+		</div>
+		<div class="entry">
+		     <p>Now that Halloween is over, we embark on the two month journey through the American holiday season. I love the holidays; it&#8217;s all togetherness and helping others and giving thanks from here. </p>
+<p>In that spirit, I got to thinking about all the ways we&#8217;ve been working to make OpenDNS easier for you and yours to use. OpenDNS is really a service every network should be running, regardless of how large or small your network is. So this goodiebag of helpful tools has something for everyone &#8212; from households to schools to large, global enterprises. We&#8217;ll keep thinking up more ways to make OpenDNS better, but as always, if you have suggestions I encourage you to submit them at <a href="http://ideabank.opendns.com/">Idea Bank</a>, post to the <a href="http://forums.opendns.com/">Forums</a> or email me directly at allison at opendns dot com. </p>
+<p><strong>1. A brand new video tutorial.</strong> This is a biggie, and something we&#8217;ve wanted to do for a long time. OpenDNS is not always the easiest thing to explain. All Internet users relate to the frustration of unreliable Internet and slow page-load times, and see the value of free Web content filtering. When we say OpenDNS is a service that&#8217;ll make your Internet safer, faster, smarter and more reliable, free, everyone wants it. But the setting up part &#8212; the finding your DNS settings and swapping your ISP&#8217;s IP addresses for OpenDNS&#8217;s &#8212; sometimes presents a challenge. The <a href="http://www.opendns.com/support/videos/getstarted/">video tutorial</a> walks you through the entire process in under 5 minutes.</p>
+<p><strong>2. Schedule a Demo // Request References services.</strong>  This one is not new, necessarily, but since we&#8217;ve never really called your attention to it, I figured now&#8217;s as good a time as any. The <a href="http://www.opendns.com/support/demo/">Schedule a Demo</a> and <a href="http://www.opendns.com/support/references/">Request References</a> were really designed with larger organizations in mind. We&#8217;ve learned that when you guys make a decision about using a new technology on your network, there are often lots of different folks involved in the decision making process. Sometimes there&#8217;s even paperwork that needs to be filled out, and calls that need to be made to existing, happy users of the service in question. Scheduling a demo couldn&#8217;t be easier. Just tell us a bit about you and your organization to prepare the OpenDNS rep who&#8217;ll do the demoing. Invite coworkers and get all of your questions answered on one snappy call. Same thing for requesting references. We&#8217;ll match you with an organization that&#8217;s similiar to yours.  Have you seen how many <a href="http://www.opendns.com/enterprise/customers/featured/">happy customers</a> we have? </p>
+<p><strong>3. Expanded router selection.</strong> We&#8217;re always working to keep our <a href="https://www.opendns.com/homenetwork/start/router/">selection of routers</a> in the instructions updated, but recently we went big and added several. Today we offer instructions for 16 different router manufacturers from the well-known Linksys, NETGEAR and D-Links to some more rare models. The goal is to have every router represented, to make it as easy as possible for everyone to set up OpenDNS, so look for us to continue adding to our gallery.</p>
+<p>Happy holidays, everyone.</p>
+		</div>
+			<div class="postfooter">
+			<div class="left">
+				<a title="Digg this post" href="http://digg.com/submit?phase=2&url=http://blog.opendns.com/2008/11/03/getting-started-gets-even-easier/&title=Getting started gets even easier"><img src="http://www.opendns.com/img/blog_digg.gif" width="17" height="17" style="border:0" /></a>&nbsp;<a title="Bookmark this post at del.icio.us"
+				href="http://del.icio.us/post?url=http://blog.opendns.com/2008/11/03/getting-started-gets-even-easier/&title=Getting started gets even easier"><img 
+				src="http://www.opendns.com/img/blog_delicious.gif" width="17" height="17" style="border:0" /> </a>
+			</div>
+			<div class="right">
+				Follow responses to this post through the <a href='http://blog.opendns.com/2008/11/03/getting-started-gets-even-easier/feed/'>RSS 2.0 feed</a>.<br />Leave a
+				response below, or send a <a href="http://blog.opendns.com/2008/11/03/getting-started-gets-even-easier/trackback/" rel="trackback">trackback</a> from your own site.
+			</div>
+			<div class="clr"></div>
+		</div>
+		</div>
+					
+	
+<!-- You can start editing here. -->
+
+	<h3 id="comments">12 Responses</h3> 
+
+	<ol class="commentlist">
+
+	
+		<li class="comment" id="comment-259327">
+			<h4><a href='http://www.cyberbullying.info' rel='external nofollow'>Chris Webster</a></h4>
+			<p>Re: point 3, I&#8217;d be interested in seeing an (official OpenDNS) guide for some open-source router firmware such as DD-WRT and Tomato.</p>
+<p>While some may argue that if you&#8217;re tech-savvy enough to set up something like DD-WRT, you should be able to work out OpenDNS, it&#8217;s nice to have a guide that details the &#8220;proper&#8221; way it should be set up, so that everything works as expected.</p>
+<p>Chris</p>
+						<p class="commentmetadata">posted on <a href="#comment-259327" title="">November 3rd, 2008 at 5:09 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-259689">
+			<h4>rchk</h4>
+			<p>lots of info here:</p>
+<p><a href="http://www.dd-wrt.com/wiki/index.php/OpenDNS" rel="nofollow">http://www.dd-wrt.com/wiki/index.php/OpenDNS</a></p>
+						<p class="commentmetadata">posted on <a href="#comment-259689" title="">November 4th, 2008 at 2:44 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-260086">
+			<h4><a href='http://www.cyberbullying.info' rel='external nofollow'>Chris Webster</a></h4>
+			<p>rchk,</p>
+<p>From my point of view (at least), there actually isn&#8217;t a whole lot of information there.</p>
+<p>You can find out about:<br />
+ - Basic Setup (straight from OpenDNS generic instructions<br />
+ - set up a dynamic IP<br />
+ - Intercept DNS Port</p>
+<p>Anyway, like I mentioned above, would be great to have some &#8220;official&#8221; instructions for some of the popular open-source router software, like DD-WRT and Tomato.</p>
+<p>Chris</p>
+						<p class="commentmetadata">posted on <a href="#comment-260086" title="">November 5th, 2008 at 6:57 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-260583">
+			<h4><a href='http://www.dd-wrt.com/wiki/index.php/Main_Page' rel='external nofollow'>OpenDNS fan</a></h4>
+			<p>As a DD-WRT OpenDNS user I can only add,</p>
+<p>/usr/sbin/iptables -I FORWARD 1 -p tcp -d 208.67.222.222 &#8211;dport 53 -j ACCEPT</p>
+<p>/usr/sbin/iptables -I FORWARD 2 -p tcp -d 208.67.220.220 &#8211;dport 53 -j ACCEPT</p>
+<p>/usr/sbin/iptables -I FORWARD 3 -p tcp &#8211;dport 53 -j logdrop</p>
+<p>Thanks for the great service OpenDNS!</p>
+						<p class="commentmetadata">posted on <a href="#comment-260583" title="">November 6th, 2008 at 9:59 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-260955">
+			<h4>Shizzle</h4>
+			<p>Or better yet, when are we going to see an official Linux OpenDNS client that actually works. I have tried some of the hack jobs available out there to no avail. All my home machines run Ubuntu and I really haven&#8217;t had the chance to update my firmware with DD-WRT and configure it.</p>
+						<p class="commentmetadata">posted on <a href="#comment-260955" title="">November 8th, 2008 at 9:49 am</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-262362">
+			<h4><a href='http://jeremy.visser.name/' rel='external nofollow'>Jeremy</a></h4>
+			<p><a href="http://blog.opendns.com/2008/11/03/getting-started-gets-even-easier/#comment-260955" rel="nofollow">@Shizzle</a>. Linux already has an official OpenDNS client. It&#8217;s called /etc/resolv.conf.</p>
+<p>How else do you think your DNS configuration works?</p>
+<p>What would a &#8220;Official Linux OpenDNS&#8221; do? I have no idea, as there exists none for any other operating systems, so I really have no idea what you&#8217;re getting at.</p>
+						<p class="commentmetadata">posted on <a href="#comment-262362" title="">November 13th, 2008 at 4:49 am</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-263606">
+			<h4>Gloria Justice</h4>
+			<p>Your site caught my eye&#8230; looks amazing! I am in the midst of trying to solve a DNS problem with one of the three computers we have on our home wireless internet system. If I installed your software on one of the operational computers would it help me solve my problem, or do I need to have all three computers able to communicate with the web before downloading OpenDNS? Just curious. Thanks.</p>
+						<p class="commentmetadata">posted on <a href="#comment-263606" title="">November 16th, 2008 at 3:05 am</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-265153">
+			<h4>Shizzle</h4>
+			<p>@Jeremy, I meant an updater client, sorry &#8217;bout that. I find it inconvenient to have to log into OpenDNS or DNS-O-Matic to update my network settings and apply my &#8220;filtering&#8221; when I boot up, not DNS configurations. </p>
+<p>There is an updater client for Windows and Mac that update network settings upon boot up to ensure you receive content filtering if you choose to use it. I haven&#8217;t found a Linux one, that works anyway. I tried ddclient but could not get it to work. I guess I could leave my Windows machine on all the time and update my network settings that way but no one&#8217;s home most of the day so why bother.</p>
+<p>My DNS configuration does not work by editing the resolv.conf, I set my DNS configuration at the router level, so all my machines use it automatically. But thanks for the info.</p>
+						<p class="commentmetadata">posted on <a href="#comment-265153" title="">November 20th, 2008 at 4:50 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-265272">
+			<h4><a href='http://www.datahverdag.com/' rel='external nofollow'>Svein</a></h4>
+			<p>I am in the middle of setting up a server at home that will be a model for other networks I will set up.</p>
+<p>The server is running Ubuntu 8.10 with LAMP, BIND9, SSH, SAMBA and some other stuff.</p>
+<p>The server will NOT be exposed to the internet (behind a firewall and NAT), but as networkconnections are slow here, I would like to run it as a caching server for the lan as well as resolving for the servers on the lan (yes, homenetwork with multiple servers <img src='http://blog.opendns.com/wp-includes/images/smilies/icon_smile.gif' alt=':-)' class='wp-smiley' /> ).</p>
+<p>I am not a stranger to editing configuration files, but prefer using Webmin. So it would be very nice to see a step-by-step tutorial on how to set up this using Webmin. And who would be better at doing such a tutorial than the people behind OpenDNS? Of course, I use OpenDNS as the forward DNS (right term?).</p>
+						<p class="commentmetadata">posted on <a href="#comment-265272" title="">November 21st, 2008 at 6:55 am</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-266984">
+			<h4>maintenance</h4>
+			<p>@ Gloria Justice:<br />
+You would change the DNS settings in your router, not on each computer. There is no software to install for this. </p>
+<p>The software is for a dynamic IP updater, which is useful if your ISP assigns IP addresses dynamically (this means that you do not have a static IP address that never changes). If you do not plan to make use of OpenDNS network Dashboard, or the filtering/blocking services, you would not need it. The OpenDNS Updater simply alerts your OpenDNS account when your IP address changes, so that these other services will continue working. Again, it is not needed to simply use the OpenDNS servers rather than your ISP DNS server.</p>
+<p>Unfortunately, I don&#8217;t think any of this is going to resolve an issue internal to your home network. What is the problem you are having?</p>
+<p>@Jeremy, @Shizzle:</p>
+<p>I am thinking Shizzle means an OpenDNS Updater client for Linux. If that is the case, it&#8217;s a cron job.</p>
+						<p class="commentmetadata">posted on <a href="#comment-266984" title="">November 27th, 2008 at 5:31 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-268478">
+			<h4><a href='http://www.TECHNICAL-CHAOS.com' rel='external nofollow'>Tech-Chaos</a></h4>
+			<p>Some help for setting OpenDNS up on Altel/Windstream, DSL for the SpeedStreem 4200 DSL Modem. </p>
+<p>[IMG]http://i36.tinypic.com/2evvlfn.gif[/IMG]<br />
+<a href="http://i36.tinypic.com/2evvlfn.gif" rel="nofollow">http://i36.tinypic.com/2evvlfn.gif</a></p>
+<p>1st. Login to your modem at: <a href="http://192.168.254.254/" rel="nofollow">http://192.168.254.254/</a> </p>
+<p>2nd. Go to &#8220;Setup&#8221; then &#8220;DHCP&#8221;.</p>
+<p>3rd. Change the Primary DNS Server to: 208.67.222.222</p>
+<p>4Th. Change the Secondary DNS Server to: 208.67.220.220</p>
+<p>[IMG]http://i35.tinypic.com/vhufkp.jpg[/IMG]<br />
+<a href="http://i35.tinypic.com/vhufkp.jpg" rel="nofollow">http://i35.tinypic.com/vhufkp.jpg</a></p>
+<p>5th. Click the &#8220;Apply&#8221; button then reboot the modem, so the new setting will take affect. If all went well your network should be using OpenDNS.</p>
+<p>SWEET!</p>
+						<p class="commentmetadata">posted on <a href="#comment-268478" title="">November 30th, 2008 at 2:53 pm</a> </p>
+		</li>
+
+	
+	
+		<li class="comment" id="comment-269522">
+			<h4>Alvaro Gilabert</h4>
+			<p>For those dealing with Linux and/or OpenWRT firmware (that includes DD-WRT), you can update your network if you are using dynamic assignment with the curl command</p>
+<p># curl -k -u username:password <a href="https://updates.opendns.com/nic/update?hotsname=network" rel="nofollow">https://updates.opendns.com/nic/update?hotsname=network</a></p>
+						<p class="commentmetadata">posted on <a href="#comment-269522" title="">December 4th, 2008 at 12:40 am</a> </p>
+		</li>
+
+	
+	
+	</ol>
+
+ 
+
+
+<h3 id="respond">Leave a Reply</h3>
+
+
+<form action="http://blog.opendns.com/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" />
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" />
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3" />
+<label for="url"><small>Website</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+
+<p><textarea name="comment" id="comment" cols="60" rows="15" tabindex="4"></textarea></p>
+
+<p><input name="submit" class="submitbutton" type="submit" id="submit" tabindex="5" value="Submit Comment" />
+<input type="hidden" name="comment_post_ID" value="208" />
+</p>
+
+</form>
+
+
+	
+	</div>
+	
+<div class="col x2 end">
+	<div style="border: 1px solid #ddd; padding: 10px;">
+								
+			
+						
+			<!-- Recent Comments Plugin -->
+							<!-- / end Recent Comments Plugin -->
+
+		
+			
+			<h4>Subscribe</h4>
+			<p>
+				<a href="http://blog.opendns.com/feed/"><img src="http://www.opendns.com/img/feed.gif" style="margin-bottom:-2px;border:0" /></a> <a href="http://blog.opendns.com/feed/">RSS Feed</a>
+			</p>
+			<form action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+			<p style="padding-bottom:0">Get email updates:</p>
+			<p>
+				<input type="text" name="email" style="width:60%;" />
+				<input type="hidden" value="http://feeds.feedburner.com/~e?ffid=484335" name="url" />
+				<input type="hidden" value="OpenDNS Blog" name="title" />
+				<input type="submit" value="Subscribe" class="submitbutton" />
+			</p>
+			</form>
+			
+			<h4>Most Recent Posts</h4>
+			
+			<ul class="bulleted" style="margin-bottom:10px;">
+				<li><a href='http://blog.opendns.com/2008/12/16/news-feed-facebook-became-a-fan-of-opendns/' title='News Feed: Facebook became a fan of OpenDNS.'>News Feed: Facebook became a fan of OpenDNS.</a>
+	<li><a href='http://blog.opendns.com/2008/12/01/webinar-this-week-opendns-for-k-12-schools/' title='Webinar this week: OpenDNS for K-12 schools'>Webinar this week: OpenDNS for K-12 schools</a>
+	<li><a href='http://blog.opendns.com/2008/12/01/free-holiday-gift-idea-give-the-gift-of-safe/' title='FREE Holiday gift idea: Give the Gift of Safe'>FREE Holiday gift idea: Give the Gift of Safe</a>
+	<li><a href='http://blog.opendns.com/2008/11/03/getting-started-gets-even-easier/' title='Getting started gets even easier'>Getting started gets even easier</a>
+	<li><a href='http://blog.opendns.com/2008/09/24/one-web-day-2008-free-the-net/' title='One Web Day 2008 - Free the Net'>One Web Day 2008 - Free the Net</a>
+	<li><a href='http://blog.opendns.com/2008/09/15/yahoo-hack-day/' title='Bleeding Purple at Yahoo Hack Day'>Bleeding Purple at Yahoo Hack Day</a>
+	<li><a href='http://blog.opendns.com/2008/09/08/new-website-design/' title='New design for our website!'>New design for our website!</a>
+	<li><a href='http://blog.opendns.com/2008/07/31/woo-hoo-7000000000-requests-served-in-a-single-day/' title='Woo Hoo! 7,000,000,000 requests served in a single day!'>Woo Hoo! 7,000,000,000 requests served in a single day!</a>
+	<li><a href='http://blog.opendns.com/2008/07/31/welcome-new-opendns-users/' title='Welcome new OpenDNS users'>Welcome new OpenDNS users</a>
+	<li><a href='http://blog.opendns.com/2008/07/25/happy-sysadmin-appreciation-day/' title='Happy SysAdmin Appreciation Day!'>Happy SysAdmin Appreciation Day!</a>
+			</ul>
+			
+						<h4>Search</h4>
+							<form method="get" id="searchform" action="http://blog.opendns.com/">
+<p>
+	<input type="text" value="" name="s" id="s" size="12" style="width:65%;" />
+	<input type="submit" class="submitbutton" id="searchsubmit" value="Search" />
+</p>
+</form>
+
+						 								
+					<h4>OpenDNS Button</h4>
+					<p style="padding-bottom:2px;">
+					<!-- OpenDNS button -->
+					<a title="Use OpenDNS to make your Internet faster, safer, and smarter." href="http://www.opendns.com/buttons/"><img src="http://images.opendns.com/buttons/use_opendns_155x52.gif" width="155" height="52" style="border:0;" alt="Use OpenDNS" /></a>
+					<!-- / end OpenDNS button -->
+					</p>
+					<p class="small" style="padding-bottom: 15px;"><a href="http://www.opendns.com/buttons/">Use this button on your site!</a></p>
+
+				
+					<h4>Archives</h4>
+						<ul>
+								<li><a href='http://blog.opendns.com/2008/12/' title='December 2008'>December 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/11/' title='November 2008'>November 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/09/' title='September 2008'>September 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/07/' title='July 2008'>July 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/06/' title='June 2008'>June 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/05/' title='May 2008'>May 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/04/' title='April 2008'>April 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/03/' title='March 2008'>March 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/02/' title='February 2008'>February 2008</a></li>
+	<li><a href='http://blog.opendns.com/2008/01/' title='January 2008'>January 2008</a></li>
+	<li><a href='http://blog.opendns.com/2007/12/' title='December 2007'>December 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/11/' title='November 2007'>November 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/10/' title='October 2007'>October 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/09/' title='September 2007'>September 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/08/' title='August 2007'>August 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/07/' title='July 2007'>July 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/06/' title='June 2007'>June 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/05/' title='May 2007'>May 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/04/' title='April 2007'>April 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/03/' title='March 2007'>March 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/02/' title='February 2007'>February 2007</a></li>
+	<li><a href='http://blog.opendns.com/2007/01/' title='January 2007'>January 2007</a></li>
+	<li><a href='http://blog.opendns.com/2006/12/' title='December 2006'>December 2006</a></li>
+	<li><a href='http://blog.opendns.com/2006/11/' title='November 2006'>November 2006</a></li>
+	<li><a href='http://blog.opendns.com/2006/10/' title='October 2006'>October 2006</a></li>
+	<li><a href='http://blog.opendns.com/2006/09/' title='September 2006'>September 2006</a></li>
+	<li><a href='http://blog.opendns.com/2006/08/' title='August 2006'>August 2006</a></li>
+	<li><a href='http://blog.opendns.com/2006/07/' title='July 2006'>July 2006</a></li>
+	<li><a href='http://blog.opendns.com/2006/06/' title='June 2006'>June 2006</a></li>
+						</ul>
+
+
+					<h4>Categories</h4>
+						<ul>
+								<li><a href="http://blog.opendns.com/category/accounts/" title="View all posts filed under Accounts">Accounts</a> (12)
+</li>
+	<li><a href="http://blog.opendns.com/category/actiontec/" title="View all posts filed under Actiontec">Actiontec</a> (3)
+</li>
+	<li><a href="http://blog.opendns.com/category/adult-site-blocking/" title="View all posts filed under Adult site blocking">Adult site blocking</a> (6)
+</li>
+	<li><a href="http://blog.opendns.com/category/announcements/" title="Announcements and releases from OpenDNS">Announcements</a> (59)
+</li>
+	<li><a href="http://blog.opendns.com/category/awesomeness/" title="View all posts filed under Awesomeness">Awesomeness</a> (7)
+</li>
+	<li><a href="http://blog.opendns.com/category/blackberry/" title="View all posts filed under Blackberry">Blackberry</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/cache/" title="View all posts filed under Cache">Cache</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/cachecheck/" title="View all posts filed under CacheCheck">CacheCheck</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/cctlds/" title="View all posts filed under ccTLDs">ccTLDs</a> (3)
+</li>
+	<li><a href="http://blog.opendns.com/category/community/" title="View all posts filed under Community">Community</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/customers/" title="View all posts filed under Customers">Customers</a> (17)
+</li>
+	<li><a href="http://blog.opendns.com/category/customization/" title="View all posts filed under Customization">Customization</a> (7)
+</li>
+	<li><a href="http://blog.opendns.com/category/d-link/" title="View all posts filed under D-Link">D-Link</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/dashboard/" title="View all posts filed under Dashboard">Dashboard</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/david/" title="View all posts filed under David">David</a> (10)
+</li>
+	<li><a href="http://blog.opendns.com/category/dns/" title="News and information of note about Domain Name System (DNS) software and services">DNS</a> (21)
+</li>
+	<li><a href="http://blog.opendns.com/category/dns-o-matic/" title="View all posts filed under DNS-O-Matic">DNS-O-Matic</a> (3)
+</li>
+	<li><a href="http://blog.opendns.com/category/domain-blocking/" title="View all posts filed under Domain Blocking">Domain Blocking</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/email/" title="View all posts filed under Email">Email</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/england/" title="View all posts filed under England">England</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/events/" title="View all posts filed under Events">Events</a> (8)
+</li>
+	<li><a href="http://blog.opendns.com/category/everydns/" title="View all posts filed under EveryDNS">EveryDNS</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/facebook/" title="View all posts filed under Facebook">Facebook</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/feedback/" title="View all posts filed under Feedback">Feedback</a> (11)
+</li>
+	<li><a href="http://blog.opendns.com/category/five-questions/" title="View all posts filed under Five Questions">Five Questions</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/gaming/" title="View all posts filed under Gaming">Gaming</a> (1)
+</li>
+	<li><a href="http://blog.opendns.com/category/general/" title="General information">General</a> (138)
+</li>
+	<li><a href="http://blog.opendns.com/category/google/" title="View all posts filed under Google">Google</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/hackers/" title="View all posts filed under Hackers">Hackers</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/holidays/" title="View all posts filed under Holidays">Holidays</a> (9)
+</li>
+	<li><a href="http://blog.opendns.com/category/instructions/" title="View all posts filed under Instructions">Instructions</a> (12)
+</li>
+	<li><a href="http://blog.opendns.com/category/iphone/" title="View all posts filed under iPhone">iPhone</a> (1)
+</li>
+	<li><a href="http://blog.opendns.com/category/ispcon/" title="View all posts filed under ISPCON">ISPCON</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/isps/" title="View all posts filed under ISPs">ISPs</a> (6)
+</li>
+	<li><a href="http://blog.opendns.com/category/job-notice/" title="View all posts filed under Job notice">Job notice</a> (6)
+</li>
+	<li><a href="http://blog.opendns.com/category/links/" title="View all posts filed under Links">Links</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/london/" title="View all posts filed under London">London</a> (3)
+</li>
+	<li><a href="http://blog.opendns.com/category/media-mentions/" title="Mentions and citations of OpenDNS">Media mentions</a> (16)
+</li>
+	<li><a href="http://blog.opendns.com/category/milestones/" title="View all posts filed under Milestones">Milestones</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/mobile/" title="View all posts filed under Mobile">Mobile</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/nanog/" title="View all posts filed under NANOG">NANOG</a> (1)
+</li>
+	<li><a href="http://blog.opendns.com/category/network/" title="View all posts filed under Network">Network</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/opendns-at-school/" title="View all posts filed under OpenDNS at school">OpenDNS at school</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/opendns-at-work/" title="View all posts filed under OpenDNS at Work">OpenDNS at Work</a> (9)
+</li>
+	<li><a href="http://blog.opendns.com/category/opendns-privacy-policy/" title="Use for notes about OpenDNS privacy policy, including notes for ANY updates of the policy, so those who want to can watch this category to stay aware of updates.">OpenDNS Privacy Policy</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/opendns-terms-of-use/" title="View all posts filed under OpenDNS Terms of Use">OpenDNS Terms of Use</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/phishing/" title="Notes about phishing.">Phishing</a> (9)
+</li>
+	<li><a href="http://blog.opendns.com/category/phishtank/" title="Posts about PhishTank.com website and data.">PhishTank</a> (8)
+</li>
+	<li><a href="http://blog.opendns.com/category/podcast/" title="View all posts filed under Podcast">Podcast</a> (3)
+</li>
+	<li><a href="http://blog.opendns.com/category/preferences/" title="View all posts filed under Preferences">Preferences</a> (11)
+</li>
+	<li><a href="http://blog.opendns.com/category/reliability/" title="View all posts filed under Reliability">Reliability</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/routers/" title="View all posts filed under Routers">Routers</a> (5)
+</li>
+	<li><a href="http://blog.opendns.com/category/satellite-broadband/" title="View all posts filed under Satellite broadband">Satellite broadband</a> (1)
+</li>
+	<li><a href="http://blog.opendns.com/category/security/" title="View all posts filed under Security">Security</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/shortcuts/" title="View all posts filed under Shortcuts">Shortcuts</a> (3)
+</li>
+	<li><a href="http://blog.opendns.com/category/software/" title="View all posts filed under Software">Software</a> (1)
+</li>
+	<li><a href="http://blog.opendns.com/category/speed/" title="View all posts filed under Speed">Speed</a> (6)
+</li>
+	<li><a href="http://blog.opendns.com/category/stats/" title="View all posts filed under Stats">Stats</a> (12)
+</li>
+	<li><a href="http://blog.opendns.com/category/status/" title="Information and updates about OpenDNS service uptime and outages (if necessary)">Status</a> (6)
+</li>
+	<li><a href="http://blog.opendns.com/category/support/" title="View all posts filed under Support">Support</a> (26)
+</li>
+	<li><a href="http://blog.opendns.com/category/sysadmin/" title="View all posts filed under SysAdmin">SysAdmin</a> (14)
+</li>
+	<li><a href="http://blog.opendns.com/category/treo/" title="View all posts filed under Treo">Treo</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/typos/" title="View all posts filed under Typos">Typos</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/typosquatting/" title="View all posts filed under Typosquatting">Typosquatting</a> (4)
+</li>
+	<li><a href="http://blog.opendns.com/category/webinars/" title="View all posts filed under webinars">webinars</a> (2)
+</li>
+	<li><a href="http://blog.opendns.com/category/whitelist/" title="View all posts filed under Whitelist">Whitelist</a> (1)
+</li>
+						</ul>
+					
+	</div>
+</div>
+
+<div class="clr"></div>
+	
+	</div><!-- / .grid -->
+</div><!-- / #maincontent -->
+<div id="footer">
+	<div class="grid">
+		<div class="col x1">
+			<h4><a href="http://www.opendns.com/solutions/">Solutions</a></h4>
+			<ul>
+				<li><a href="http://www.opendns.com/redirect.php?p=solutions&a=homenetwork">For Home Network</a></li>
+				<li><a href="http://www.opendns.com/redirect.php?p=solutions&a=k12">For K-12 School</a></li>
+				<li><a href="http://www.opendns.com/redirect.php?p=solutions&a=smb">For Small/Medium Business</a></li>
+				<li><a href="http://www.opendns.com/redirect.php?p=solutions&a=enterprise">For Enterprise</a></li>
+			</ul>
+		</div>
+		<div class="col x1">
+			<h4><a href="http://www.opendns.com/start/">Use OpenDNS</a></h4>
+			<ul>
+				<li><a href="http://www.opendns.com/start/computer/">On your computer</a></li>
+				<li><a href="http://www.opendns.com/start/router/">On your router</a></li>
+				<li><a href="http://www.opendns.com/start/server/">On your DNS server</a></li>
+				<li><a href="http://www.opendns.com/start/best_practices/">Best Practices</a></li>
+				<li><a href="http://www.opendns.com/start/create_account/">Create a free account</a></li>
+			</ul>
+		</div>
+		<div class="col x1">
+			<h4><a href="http://www.opendns.com/support/">Support</a></h4>
+			<ul>
+				<li><a href="http://www.opendns.com/support/kb/">Knowledge Base</a></li>
+				<li><a href="http://forums.opendns.com/">Forums</a></li>
+				<li><a href="http://system.opendns.com/">System Status</a></li>
+				<li><a href="http://www.opendns.com/support/cache/">CacheCheck</a></li>
+				<li><a href="http://www.opendns.com/support/contact/">Contact</a></li>
+			</ul>
+		</div>
+		<div class="col x1">
+			<h4><a href="http://www.opendns.com/about/">About Us</a></h4>
+			<ul>
+				<li><a href="http://www.opendns.com/about/timeline/">Company Timeline</a></li>
+				<li><a href="http://www.opendns.com/about/announcements/">Announcements</a></li>
+				<li><a href="http://www.opendns.com/about/press/">Press & News</a></li>
+				<li><a href="http://www.opendns.com/about/awards/">Awards</a></li>
+				<li><a href="http://www.opendns.com/about/careers/">Careers</a></li>
+			</ul>
+		</div>
+		<div class="col x1 end">
+			<p><a href="http://www.opendns.com"><img src="http://www-files.opendns.com/img/footer_logo.gif"
+			width="100" alt="OpenDNS home" style="border:0" /></a></p>
+			<h4>
+				208.67.222.222<br />
+				208.67.220.220
+			</h4>
+		</div>
+		<div class="clr"></div>
+		<div id="copyright">
+			<p>
+				&copy; 2009 OpenDNS</b> &nbsp;&nbsp;&nbsp;&nbsp;
+				199 Fremont St, 12th Floor, San Francisco, CA 94105 &nbsp;&nbsp;&nbsp;&nbsp;
+				+1-415-344-3118 &nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="http://www.opendns.com/terms/">Terms of Service</a> &nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="http://www.opendns.com/privacy/">Privacy Policy</a>
+			</p>
+		</div>
+	</div>
+</div><!-- / #footer -->
+<script language="JavaScript" type="text/javascript">document.pageEventName = 'ws-';</script>
+<script language="JavaScript" type="text/javascript" src="http://www-files.opendns.com/webstats/tracking.js"></script>
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+window.addEvent('load', function() {
+	var pageTracker = _gat._getTracker("UA-1163522-1");
+	pageTracker._setDomainName("opendns.com");
+	pageTracker._initData();
+
+	if (window.opendns_start_step) {
+		pageTracker._trackPageview(window.opendns_start_step);
+	} else {
+		pageTracker._trackPageview();
+	}
+});
+</script>
+
+
+</body>
+</html>
+

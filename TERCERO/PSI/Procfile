@@ -1,0 +1,1 @@
+web: gunicorn workflowrepository.wsgi --log-file -

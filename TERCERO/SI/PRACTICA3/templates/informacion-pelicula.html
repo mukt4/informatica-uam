@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+    <div class = "informacion-pelicula">
+        <div class = "imagen-y-texto">
+            <img src = "../static/peliculas/{{ pelicula.pelicula.imagen }}" alt = {{ pelicula.pelicula.movietitle }}>
+			<div class = "text-pelicula">
+				<p><b>Titulo: </b>{{ pelicula.pelicula.movietitle }}</p><b>A&ntilde;o: </b>{{ pelicula.pelicula.year }}
+                <p><b>Articulos: </b></p>
+                {% for articulo in pelicula.articulos %}
+                    <p><b>  Articulo {{ articulo.prod_id }}</b>
+                    <p>     Descripcion: {{ articulo.description }}</p>
+                    <div class = "valoracion-boton-y-precio">
+                        <img src = "../static/aplicacion/valoracion.png" alt = "valoracion">
+                        <form name="pelicula-elegida" action = "{{ articulo.prod_id }}/aniadir-carrito">
+                            <input type = "submit" value = "A&ntilde;adir al carrito">
+                        </form>
+                        <label>{{ articulo.price }} $</label>
+                    </div>
+                {% endfor %}
+			</div>
+		</div>
+    </div>
+{% endblock %}

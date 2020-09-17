@@ -1,0 +1,139 @@
+﻿--CREACION DE TABLAS
+
+create table usuario(
+id_usuario int ,
+nombre varchar(200),
+tarjeta_credito varchar(500),
+constraint pk_usuario primary key (id_usuario)
+);
+
+create table venta(
+id_usuario int,
+p_ini float,
+p_fin float,
+id_venta int,
+fecha_venta date,
+constraint fk_venta foreign key (id_usuario) references usuario(id_usuario),
+constraint pk_venta primary key (id_venta)
+);
+
+create table autor(
+nombre varchar(200),
+id_autor serial,
+constraint pk_autor primary key (id_autor) 
+);
+
+create table libro(
+titulo varchar(200),
+id_libro varchar(200),
+constraint pk_libro primary key (id_libro) 
+);
+
+create table oferta(
+f_ini date,
+f_fin date,
+oferta int,
+id_oferta serial,
+constraint pk_oferta primary key (id_oferta)
+);
+
+create table descuento(
+id_venta int,
+id_oferta int,
+constraint fk1_descuento foreign key (id_venta) references venta(id_venta),
+constraint fk2_descuento foreign key (id_oferta) references oferta(id_oferta)
+);
+
+create table edicion(
+id_edicion serial,
+idioma varchar(200),
+editor varchar(200),
+precio float,
+id_libro varchar(200),
+id_oferta int,
+constraint fk_edicion foreign key (id_libro) references libro(id_libro),
+constraint fk_edicion2 foreign key (id_oferta) references oferta(id_oferta),
+constraint pk_edicion primary key (id_edicion)
+);
+
+create table vendes(
+id_venta int,
+id_edicion int,
+constraint fk1_vendes foreign key (id_venta) references venta(id_venta),
+constraint fk2_edicion foreign key (id_edicion) references edicion(id_edicion)
+);
+
+create table escribe(
+id_autor int,
+id_libro varchar(200),
+constraint fk1_escribe foreign key (id_autor) references autor(id_autor),
+constraint fk2_escribe foreign key (id_libro) references libro(id_libro)
+);
+
+
+--CREACION DE TABLAS TEMPORALES
+
+create table isbns_temp(
+isbn varchar(300),
+precio varchar(300)
+);
+
+create table libros_temp(
+autor varchar(300),
+titulo varchar(300),
+formato varchar(300),
+n_pags varchar(300),
+editorial varchar(300),
+f_publicacion varchar(300),
+idioma varchar(300),
+isbn varchar(300)
+);
+
+create table usuario_temp(
+uid varchar(300),
+scrname varchar(300),
+full_name varchar(300),
+join_date varchar(300),
+ccard varchar(300),
+expiration varchar(300)
+);
+
+create table ventas_temp(
+factura_id varchar(300),
+id_usuario varchar(300),
+isbn varchar(300),
+dia_venta varchar(300)
+);
+
+
+--CARGA DE DATOS TABLAS TEMPORALES
+
+COPY isbns_temp from '/home/tomas/Documents/EDAT/PRACTICA2/isbns_precios.txt' with delimiter E'\t' encoding 'ISO-8859-1';
+COPY usuario_temp from '/home/tomas/Documents/EDAT/PRACTICA2/usuarios.txt' with delimiter E'\t' encoding 'ISO-8859-1';
+COPY libros_temp from '/home/tomas/Documents/EDAT/PRACTICA2/LIBROS_FINAL.txt' with delimiter E'\t' encoding 'ISO-8859-1';
+COPY ventas_temp from '/home/tomas/Documents/EDAT/PRACTICA2/ventas.txt' with delimiter E'\t' encoding 'ISO-8859-1';
+
+
+--PASO DE DATOS DE TABLAS TEMPORALES A TABLAS DEFINITIVAS
+
+INSERT INTO usuario(id_usuario,nombre,tarjeta_credito) select cast(uid as int),full_name,ccard from usuario_temp;
+INSERT INTO libro(id_libro,titulo) select min(isbn),min(titulo) from libros_temp GROUP BY isbn;
+INSERT INTO venta(id_venta,id_usuario,fecha_venta) select min(cast(factura_id as int)),min(cast(id_usuario as int)),min(cast(dia_venta as date)) from ventas_temp GROUP BY factura_id;
+INSERT INTO autor(nombre) select distinct autor from libros_temp;
+INSERT INTO edicion(idioma,editor,id_libro) select min(idioma),min(editorial), min(isbn) from libros_temp GROUP BY isbn;
+UPDATE edicion SET (precio, id_oferta) = (cast(isbns_temp.precio as float), NULL) from isbns_temp where isbns_temp.isbn=edicion.id_libro;
+INSERT INTO vendes(id_venta,id_edicion) select cast(factura_id as int), edicion.id_edicion from ventas_temp, edicion where edicion.id_libro=ventas_temp.isbn;
+UPDATE venta SET p_ini = precio from edicion, ventas_temp, vendes where edicion.id_libro=ventas_temp.isbn and venta.id_venta=vendes.id_venta and vendes.id_edicion=edicion.id_edicion;
+INSERT INTO escribe(id_autor, id_libro) select autor.id_autor, libro.id_libro from autor, libro, libros_temp where autor.nombre=libros_temp.autor and libro.id_libro=libros_temp.isbn;
+INSERT INTO oferta(f_ini, f_fin, oferta, id_oferta) VALUES ('1800/01/01', NULL, 10, 1);
+INSERT INTO descuento(id_venta) select id_venta from venta;
+UPDATE descuento SET id_oferta = 1;
+UPDATE venta set p_fin = (venta.p_ini-(venta.p_ini*oferta.oferta/100)) from oferta, descuento where venta.id_venta=descuento.id_venta and oferta.id_oferta=descuento.id_oferta;
+
+
+--ELIMINACION TABLAS TEMPORALES
+
+DROP table isbns_temp;
+DROP table usuario_temp;
+DROP table libros_temp;
+DROP table ventas_temp;

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 19 09:27:40 2019
+# Process ID: 4108
+# Current directory: /home/alumnos/e359327/DIE/P3/P3a/static_timing/static_timing.runs/synth_1
+# Command line: vivado -log mux2_8.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux2_8.tcl
+# Log file: /home/alumnos/e359327/DIE/P3/P3a/static_timing/static_timing.runs/synth_1/mux2_8.vds
+# Journal file: /home/alumnos/e359327/DIE/P3/P3a/static_timing/static_timing.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source mux2_8.tcl -notrace

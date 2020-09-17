@@ -1,0 +1,433 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+X-Cache: MISS from smallbusiness.yahoo.com
+P3P: policyref="http://p3p.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE GOV"
+Date: Fri, 09 Jan 2009 17:16:00 GMT
+Cache-Control: private
+Connection: close
+Content-Length: 38815
+
+   
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+	<title>Getting Started - Yahoo! Small Business</title>
+	<meta name="Description" content="Find information to help grow your online business with business plans, Thomas Register, news articles and more">
+	<meta name="Keywords" content="Business Plans, Package tracking, Small Business resources, Inc, LLC, Non Profit, Small Business Articles, Small Business information">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="http://l.yimg.com/a/combo?yui/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css&smbiz/css/sbr_global_1.2.4.css">
+    	<style type="text/css">
+    			
+		#video-module-getting_started 									{ position: relative; width: 438px; height: 9.6153em; *height: 9.3836em; margin-bottom: 10px; padding-bottom: 0.7692em; *padding-bottom: 0.7506em; }
+	*html #video-module-getting_started 							{ float: left; }
+	#video-module-getting_started.sponsor							{ background: url('') bottom right no-repeat }
+	#video-module-getting_started .video-preview 					{ position: absolute; left: 0; }
+	#video-module-getting_started .video-preview img 				{ border: none; }
+	#video-module-getting_started .video-content 					{ position: absolute; left: 130px; }
+	#video-module-getting_started .video-content .video-headline 	{ font-size: 110%; font-weight: bold; }
+	.video-module .video-content .video-title 						{ display: none; }
+	.video-module .video-content .video-title a 					{ color: #0000ff; }								
+	#video-module-getting_started .video-content .video-description { margin: 4px 0 4px 0; }							
+	.video-module .video-content .video-link a 						{ color: #0000ff; }								
+    	</style>
+        <script type="text/javascript" src="http://l.yimg.com/a/combo?yui/2.5.1/build/utilities/utilities.js&smbiz/js/safety.js&smbiz/js/sbr_top_navigation_1.1.js"></script>
+<script type='text/javascript'>
+	           
+YAHOO.namespace('Smb.NR');
+YAHOO.Smb.NR.Video = function() {
+
+	// Aliases 
+	var YD = YAHOO.util.Dom;
+	var YE = YAHOO.util.Event;
+	var YA = YAHOO.util.Anim;
+	
+	// Video module el
+	var videoModule;
+	
+	// Array of Videos
+	var videos = [
+		{"thumbSrc": "http://l.yimg.com/a/i/us/smbiz/nr/img/iseeme_120x125-1.0.0.gif", "href": "/r-video-a-112771-i_see_me-i"},{"thumbSrc": "http://l.yimg.com/a/i/us/smbiz/nr/img/kazoo_120x125-1.0.1.gif", "href": "/r-video-a-112772-kazoo_and_company-i"},{"thumbSrc": "http://l.yimg.com/a/i/us/smbiz/nr/img/htmarket_120x125-1.0.1.gif", "href": "/r-video-a-112773-htmarket-i"},{"thumbSrc": "http://l.yimg.com/a/i/us/smbiz/nr/img/emitations_120x125-1.0.0.gif", "href": "/r-video-a-112769-emitations-i"}
+	];
+
+	var videoPreviews = [];	// Array to store DOM nodes of Images
+	var videoPos = 3;		// Counter for current position in video rotation
+	var videoWidth = '120px';	
+	var videoHeight = '125px';
+
+	function fetchImages() {
+		var vidPreview, i, len;
+		for(i=0, len=videos.length; i<len; i++) {
+			// Pre-fetch images
+			vidPreview = document.createElement('img');
+			vidPreview.src = videos[i].thumbSrc;
+			vidPreview.alt = "Go to Video";
+			YD.setStyle(vidPreview, 'width', videoWidth);
+			YD.setStyle(vidPreview, 'height', videoHeight);
+			videoPreviews.push(vidPreview);
+		}
+	}
+
+	return {
+		
+		swapVideo: function() {		
+			var videoPreview, videoPreviewLink, videoPreviewImg, videoTitle, videoLink, newVideo, imgCoords, fadeOut;
+			videoPreview = YD.getElementsByClassName('video-preview', 'div', videoModule)[0];
+			videoPreviewLink = videoPreview.getElementsByTagName('a')[0];
+			videoPreviewImg = videoPreview.getElementsByTagName('img')[0];
+			videoTitle = YD.getElementsByClassName('video-title', 'div', videoModule)[0].getElementsByTagName('a')[0];
+			videoLink = YD.getElementsByClassName('video-link', 'span', videoModule)[0].getElementsByTagName('a')[0];
+			YD.setStyle(videoPreviewImg, 'position', 'absolute');
+			YD.setStyle(videoPreviewImg, 'z-index', '10');
+			newVideo = videoPreviews[videoPos];
+			imgCoords = YD.getXY(videoPreviewImg);
+			YD.setXY(newVideo, imgCoords);
+			YD.setStyle(newVideo, 'position', 'absolute');
+			YD.setStyle(newVideo, 'z-index', '5');
+			YD.setStyle(newVideo, 'opacity', 1);
+			YD.insertBefore(newVideo, videoPreviewImg);
+			fadeOut = new YA(videoPreviewImg, {opacity: {to: 0}}, 1.5, YAHOO.util.Easing.easeOut);
+			fadeOut.animate();
+			fadeOut.onComplete.subscribe(function() { 
+				videoPreviewImg.parentNode.removeChild(videoPreviewImg); 
+				videoPreviewLink.href = videos[videoPos].href;
+				videoTitle.href = videos[videoPos].href;
+				videoLink.href = videos[videoPos].href;
+				videoPos = (videoPos + 1) % videoPreviews.length;
+			});
+		},
+		
+		init: function() {
+			// Find video module el
+			videoModule = YD.get('video-module-getting_started');
+			
+			// Pre-fetch images and create videos array
+			fetchImages();
+			
+			// Setup video rotation
+			setInterval(this.swapVideo, 10000);
+		}
+	}
+}();
+YAHOO.util.Event.onContentReady('video-module-getting_started', YAHOO.Smb.NR.Video.init, YAHOO.Smb.NR.Video, true);
+		      </script>
+    <link rel="alternate" title="RSS" href="http://smallbusiness.yahoo.com/rss/destsite.php?m=1" type="application/rss+xml"></head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="headerblock">
+    <div id="top" class="logo"><a href="http://smallbusiness.yahoo.com"><img src="http://l.yimg.com/a/i/us/nt/ma/ma_smbiz_1.gif" width="328" height="33" alt="Yahoo! Small Business"></a></div>
+    <div class="login">
+                    <span class="newuser">
+                New User? <a href="http://edit.yahoo.com/config/eval_register?.done=http%3A%2F%2Fsmallbusiness.yahoo.com%2Fr-mainCat-m-1-getting_started-i&.src=sbs&.intl=us">Sign Up</a>
+            </span>
+            </div>
+    <div class="links">
+        <a href="http://smallbusiness.yahoo.com">Small Business Home</a> - <a href="http://help.yahoo.com/l/us/yahoo/smallbusiness/">Help</a>
+    </div>
+</div>
+<div class="adbox">
+<!-- SpaceID=0 robot -->
+</div>
+<div id="tabs">
+	<ul>
+		<li><div><a href="http://us.rd.yahoo.com/smallbusiness/topnav/hometab/*http://smallbusiness.yahoo.com">Home</a></div></li>
+		<li><div><a href="http://us.rd.yahoo.com/smallbusiness/topnav/productstab/*http://smallbusiness.yahoo.com/business_services/">Products</a></div></li>
+        		<li class="on"><div><a href="/r-index">News &amp; Resources</a></div></li>
+        <li id="sbs-signin-block" class="services">
+            <span class="corner topleft"></span> 
+            <span class="corner botleft"></span>
+            <span class="corner topright"></span>
+            <span class="corner botright"></span>
+            <p>Manage your services:</p>
+            <div class="signin-btn">
+                <div></div>
+                <a href="/servicecheck.php/?http%3A%2F%2Fsmallbusiness.yahoo.com%2Fr-mainCat-m-1-getting_started-i" id="services-smb">Small Business</a>
+            </div>
+            <div class="signin-btn">
+                <div></div>
+                <a href="https://login.marketingsolutions.yahoo.com/" id="services-sem">Search Marketing</a>
+            </div>
+        </li>
+	</ul>
+	<div class="spacer"></div>
+</div>
+<div id="ds_globalNavWrapper">
+<ul id="ds_globalNav">
+    	<li class="first"><a class="first" id='currCat' href='/r-mainCat-m-1-getting_started-i'>Getting Started</a>
+		<ul>
+		<li><a class="ds_last_childs" href='/r-sn_10steps_intro'>Introduction</a></li>
+	<li><a href='/r-subCat-m-1-sc-8-getting_started_franchises-i'>Franchises</a></li>
+	<li><a href='/r-subCat-m-1-sc-11-getting_started_legal-i'>Legal</a></li>
+	<li><a href='/r-subCat-m-1-sc-9-getting_started_home_business-i'>Home Business</a></li>
+	<li><a href='/r-subCat-m-1-sc-12-getting_started_business_opportunities-i'>Business Opportunities</a></li>
+	<li><a href='/r-subCat-m-1-sc-10-getting_started_finance-i'>Finance</a></li>
+	<li><a href='/r-subCat-m-1-sc-13-getting_started_business_plans-i'>Business Plans</a></li>
+	<li style='position:relative;'><a href='/r-video'>Inspiration Video Profiles<img src='http://us.js2.yimg.com/us.yimg.com/i/nt/ic/ut/bsc/new_1.gif' width='23' height='9' alt='' style='position: absolute; color: transparent; top:7px; left:154px; *left: 151px; _left:146px; border: 0; outline: none;' /></a></li>
+			</ul>
+	</li>	
+		<li><a  href='/r-mainCat-m-6-sales_marketing-i'>Sales &amp; Marketing</a>
+	<ul>
+		<li><a href='/r-subCat-m-6-sc-35-sales_marketing_search_engines-i'>Search Engines</a></li>
+		<li><a href='/r-subCat-m-6-sc-36-sales_marketing_paid_search-i'>Paid Search</a></li>
+		<li><a href='/r-subCat-m-6-sc-37-sales_marketing_site_design-i'>Site Design</a></li>
+		<li><a href='/r-subCat-m-6-sc-39-sales_marketing_email_marketing-i'>Email Marketing</a></li>
+		<li><a href='/r-subCat-m-6-sc-41-sales_marketing_market_research-i'>Market Research</a></li>
+		<li><a href='/r-subCat-m-6-sc-42-sales_marketing_advertising-i'>Advertising</a></li>
+		<li><a href='/r-subCat-m-6-sc-43-sales_marketing_lead_generation-i'>Lead Generation</a></li>
+		<li><a href='/r-subCat-m-6-sc-44-sales_marketing_public_relations-i'>Public Relations</a></li>
+		<li><a href='/r-subCat-m-6-sc-45-sales_marketing_branding-i'>Branding</a></li>
+		<li><a class="ds_last_childs" href='/r-subCat-m-6-sc-46-sales_marketing_customer_service-i'>Customer Service</a></li>
+	</ul>
+	</li>
+		<li><a  href='/r-mainCat-m-3-online_business-i'>Online Business</a>
+	<ul>
+		<li><a href='/r-subCat-m-3-sc-14-online_business_connectivity_access-i'>Connectivity &amp; Access</a></li>
+		<li><a href='/r-subCat-m-3-sc-19-online_business_ebay_center-i'>eBay Center</a></li>
+		<li><a href='/r-subCat-m-3-sc-17-online_business_domains_websites-i'>Domains &amp; WebSites</a></li>
+		<li><a class="ds_last_childs" href='/r-subCat-m-3-sc-18-online_business_ecommerce-i'>Ecommerce</a></li>
+	</ul>
+	</li>
+		<li><a  href='/r-mainCat-m-5-management_hr-i'>Management &amp; HR</a>
+	<ul>
+		<li><a href='/r-subCat-m-5-sc-47-management_hr_hiring_recruitment-i'>Hiring &amp; Recruitment</a></li>
+		<li><a href='/r-subCat-m-5-sc-48-management_hr_employee_management-i'>Employee Management</a></li>
+		<li><a href='/r-subCat-m-5-sc-49-management_hr_operations-i'>Operations</a></li>
+		<li><a href='/r-subCat-m-5-sc-50-management_hr_compensation_benefits-i'>Compensation &amp; Benefits</a></li>
+		<li><a class="ds_last_childs" href='/r-subCat-m-5-sc-51-management_hr_employment_law-i'>Employment Law</a></li>
+	</ul>
+	</li>
+		<li><a  href='/r-mainCat-m-4-legal-i'>Legal</a>
+	<ul>
+		<li><a href='/r-subCat-m-4-sc-20-legal_legal_structures-i'>Legal Structures</a></li>
+		<li><a href='/r-subCat-m-4-sc-26-legal_trademark_copyright-i'>Trademark &amp; Copyright</a></li>
+		<li><a href='/r-subCat-m-4-sc-21-legal_business_names-i'>Business Names</a></li>
+		<li><a href='/r-subCat-m-4-sc-23-legal_employment_law-i'>Employment Law</a></li>
+		<li><a href='/r-subCat-m-4-sc-27-legal_independent_contractors-i'>Independent Contractors</a></li>
+		<li><a class="ds_last_childs" href='/r-subCat-m-4-sc-25-legal_patent_trade_law-i'>Patent &amp; Trade Law</a></li>
+	</ul>
+	</li>
+		<li class="ds_shift"><a  href='/r-mainCat-m-2-finance-i'>Finance</a>
+	<ul>
+		<li><a href='/r-subCat-m-2-sc-52-finance_accounting-i'>Accounting</a></li>
+		<li><a href='/r-subCat-m-2-sc-55-finance_venture_capital-i'>Venture Capital</a></li>
+		<li><a href='/r-subCat-m-2-sc-53-finance_financial_management-i'>Financial Management</a></li>
+		<li><a href='/r-subCat-m-2-sc-56-finance_tax-i'>Tax</a></li>
+		<li><a href='/r-subCat-m-2-sc-54-finance_borrowing-i'>Borrowing</a></li>
+		<li><a href='/r-subCat-m-2-sc-58-finance_equity_financing-i'>Equity Financing</a></li>
+		<li><a class="ds_last_childs" href='/r-subCat-m-2-sc-59-finance_general_advice-i'>General Advice</a></li>
+	</ul>
+	</li>
+		
+	<li class="ds_shift next_last"><a  href='../r-mainCat-m-7-office_technology-i'>Office & Tech</a>
+		<ul>
+			<li><a href='/r-subCat-m-7-sc-29-office_technology_computer_it-i'><span>Computer &amp; IT</span></a></li>
+		<li><a href='/r-subCat-m-7-sc-30-office_technology_telecom-i'><span>Telecom</span></a></li>
+		<li><a href='/r-subCat-m-7-sc-31-office_technology_business_services-i'><span>Business Services</span></a></li>
+		<li><a href='/r-subCat-m-7-sc-32-office_technology_office_equipment-i'><span>Office Equipment</span></a></li>
+		<li><a class="ds_last_childs" href='/r-subCat-m-7-sc-33-office_technology_software-i'><span>Software</span></a></li>
+			</ul>
+	</li>	
+	<li id="ds_nav_last" class="ds_shift"><a  href="/r-bizTools">Tools</a>
+		<ul>
+			<li><a href='/r-packageTracker-s-dhl'>DHL Tracking</a></li>
+			<li><a href='/r-packageTracker-s-fedex'>FedEx Tracking</a></li>
+			<li><a href='/r-packageTracker-s-ups'>UPS Tracking</a></li>
+			<li><a href='/r-packageTracker-s-usps'>USPS Tracking</a></li>
+			<li><a href='/r-calculator-loan'>Loan Calculator</a></li>
+			<li><a href='/r-zipCodeLookup'>Zip Code Lookup</a></li>
+			<li><a class="ds_last_childs" href='/r-dictionary'>Business Dictionary</a></li>
+		</ul>		
+	</li>	
+</ul>
+</div>
+<div style="clear:both"></div>
+<br />
+<div id="searchformbox">
+    <form id="searchForm" name="searchForm" action="/bin/search">
+    	<div class="rcTop"><div class="rcLeft"><div class="rcRight"></div></div></div>						
+    	<div id="searchforminner">
+    		<span id="text">Search: </span><input id="keyword" name="p" type="text" size="60" maxlength="500" value="" />
+    		<select id="type" name="type">
+    			<option value="all">Entire Site</option>
+    			<option value="resource" >Resources</option>
+    			<option value="dictionary" >Dictionary</option>
+    			<option value="answers" >Yahoo! Answers</option>
+    			<option value="video" >Videos</option>
+    		</select>
+    		<input type="hidden" name="pg" value="1" />
+    		<input type="hidden" name="sortby" value="0" />
+    		<input id="searchSubmit" type="image" src="http://us.i2.yimg.com/us.yimg.com/i/us/wh/gr/btn_search.gif" />
+    	</div>
+    	<div class="rcBtm"><div class="rcLeft"><div class="rcRight"></div></div></div>
+    </form>
+</div>
+		</div>
+		<div id="body">
+			<div id="main">
+	<div id='LREC' class='ad' style='width:300px'><!-- SpaceID=0 robot -->
+</div>
+<div id='REC1' class='ad' style='width:180px'><!-- SpaceID=0 robot -->
+</div>
+<div id='REC' class='ad' style='width:180px'><!-- SpaceID=0 robot -->
+</div>
+
+	<div class="link1">
+		<div style="width:325px;"><h1>Getting Started</h1></div>
+		<div><img class="dotted" src="http://us.i1.yimg.com/us.yimg.com/i/us/wh/gr/dotted_line430x1.gif" alt="" border="0" /></div>
+		<div style="text-align:right; margin-top:-30px; width:430px;"><a href="http://add.my.yahoo.com/rss?url=http://smallbusiness.yahoo.com/rss/destsite.php?m=1"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/wh/gr/my_yahoo.gif" width="91" height="17" border="0" ALT="Add to My Yahoo"></a></div>
+		<div class="vSpacer15"></div>
+		<div id="video-module-getting_started" class="video-module sponsor">
+	<div class="video-preview">
+		<a href="/r-video-a-112769-emitations-i"><img src="http://l.yimg.com/a/i/us/smbiz/nr/img/emitations_120x125-1.0.0.gif" width="120" height="125" alt="Go to Video" /></a>
+	</div>
+	<div class="video-content">
+		<div class="video-headline">
+			Real Entrepreneurs, Real Inspiration		</div>
+		<div class="video-title">
+			<a href="/r-video-a-112769-emitations-i">Watch the stories of those who've blazed the trail before you.</a>
+		</div>
+		<p class="video-description">
+			Find out how people just like you turned their dreams into successful businesses.		</p>
+		<span class="video-link">
+			<a  href="/r-video-a-112769-emitations-i">See the videos</a>
+		</span>
+	</div>
+</div>
+
+				<div>
+					<span class='articleHead'><a href='/r-article-a-113926-m-1-sc-12-avoiding_tax_pitfalls_when_issuing_stock-i'>Avoiding Tax Pitfalls When Issuing Stock</a></span>
+					<br /><span class='articletext'>If you take a few legal precautions at the outset, you and your employees can sidestep some painful tax consequences</span><!-- End Article Content -->
+				</div>
+				<div style='height:20px'></div>
+				
+				<div>
+					<span class='articleHead'><a href='/r-article-a-113925-m-1-sc-12-gauging_small_business_owners_confidence-i'>Gauging Small Business Owners' Confidence</a></span>
+					<br /><span class='articletext'>Most results of small business surveys released at the end of 2008 were bleak, showing respondents continue to struggle with a...</span><!-- End Article Content -->
+				</div>
+				<div style='height:20px'></div>
+				
+				<div style='width:430px; position:absolute;'>
+					<img style='float:right; vertical-align:text-top' src='http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/p/startupnation-sm.gif' alt='' border='' />
+					<span class='articleHead'><a href='/r-sn_10steps_intro'>10 Steps to Open for Business</a></span>
+					<br /><span class='articletext'>Ready to start your dream business? StartupNation's<br />"10 Steps to Open for Business" provides all the information you need to get your business off the ground.</span>
+				</div>
+				<div style='height:90px'></div>
+										
+		<table cellpadding="0" cellspacing="0" style="border:0px;">
+			<tr>
+				<td colspan="3">
+					<h1>Getting Started Subcategories</h1>
+					<div><img class="dotted" src="http://us.i1.yimg.com/us.yimg.com/i/us/wh/gr/dotted_line550x1.gif" alt="" border="0" /></div>
+			</tr>
+			<tr>
+				<td style="vertical-align:top; width:270px">
+													<div>
+																			<a href="/r-sn_10steps_intro" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-sn_10steps_intro" style="color:#000000">Introduction</a></span>										
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-57745-m-1-sc-112-step_1_create_a_life_plan-i">Step 1: Create a Life Plan</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-57746-m-1-sc-112-step_2_choose_a_business_model-i">Step 2: Choose a Business Model</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-57747-m-1-sc-112-step_3_create_a_business_plan-i">Step 3: Create a Business Plan</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-57748-m-1-sc-112-step_4_select_a_structure-i">Step 4: Select a Structure</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-57749-m-1-sc-112-step_5_create_key_assets-i">Step 5: Create Key Assets</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href='/r-sn_10steps_intro'>View all articles</a></li>									</ul>
+								</div>
+													<div>
+										
+										<a href="/r-subCat-m-1-sc-11-getting_started_legal-i" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-subCat-m-1-sc-11-getting_started_legal-i" style="color:#000000">Legal</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113763-m-1-sc-11-16_lies_of_lawyers-i">16 Lies of Lawyers</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113796-m-1-sc-11-board_relations-i">Board Relations</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113695-m-1-sc-11-the_rules_entrepreneurs_must_know_before_soliciting_investors-i">The Rules Entrepreneurs Must Know Before Soliciting Investors</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113701-m-1-sc-11-easy_strategies_for_setting_up_your_companys_board_of_directors-i">Easy Strategies for Setting Up Your Company's Board of Directors</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113700-m-1-sc-11-how_to_select_a_lawyer_to_help_you_raise_money-i">How to Select a Lawyer to Help You Raise Money</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-subCat-m-1-sc-11-getting_started_legal-i">View all articles</a></li>									</ul>
+								</div>
+													<div>
+										
+										<a href="/r-subCat-m-1-sc-12-getting_started_business_opportunities-i" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-subCat-m-1-sc-12-getting_started_business_opportunities-i" style="color:#000000">Business Opportunities</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113915-m-1-sc-12-making_the_case_for_business_ethics-i">Making the Case for Business Ethics</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113927-m-1-sc-12-where_to_locate_your_business-i">Where to Locate Your Business</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113904-m-1-sc-12-the_credit_outlook_for_small_business-i">The Credit Outlook for Small Business</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113905-m-1-sc-12-before_you_add_an_employee_to_payroll-i">Before You Add an Employee to Payroll</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113898-m-1-sc-12-why_obamas_stimulus_plan_should_include_clean_tech_startups-i">Why Obama's Stimulus Plan Should Include Clean Tech Startups</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-subCat-m-1-sc-12-getting_started_business_opportunities-i">View all articles</a></li>									</ul>
+								</div>
+													<div>
+										
+										<a href="/r-subCat-m-1-sc-13-getting_started_business_plans-i" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-subCat-m-1-sc-13-getting_started_business_plans-i" style="color:#000000">Business Plans</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-112845-m-1-sc-13-unstoppable_moms-i">Unstoppable Moms</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113912-m-1-sc-13-top_5_mistakes_in_forming_your_corporation-i">Top 5 Mistakes in Forming Your Corporation</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113914-m-1-sc-13-3_weeks_to_startup_week_2-i">3 Weeks to Startup: Week 2</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113931-m-1-sc-13-where_its_greener-i">Where it's Greener</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113892-m-1-sc-13-the_best_things_in_life_are_free-i">The Best Things in Life are Free</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-subCat-m-1-sc-13-getting_started_business_plans-i">View all articles</a></li>									</ul>
+								</div>
+									</td>
+				<td style="width:15px"></td>
+				<td style="vertical-align:top; width:270px">
+								
+								<div>
+																			<a href="/r-subCat-m-1-sc-8-getting_started_franchises-i" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-subCat-m-1-sc-8-getting_started_franchises-i" style="color:#000000">Franchises</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113922-m-1-sc-8-get_inked_at_cartridge_world-i">Get Inked at Cartridge World</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113921-m-1-sc-8-roni_deutch_tax_center-i">Roni Deutch Tax Center</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113920-m-1-sc-8-how_play_n_trade_fuels_franchisees-i">How Play N Trade Fuels Franchisees</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113928-m-1-sc-8-anago_cleaning_systems-i">Anago Cleaning Systems</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113900-m-1-sc-8-how_to_research_a_franchise-i">How to Research a Franchise</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-subCat-m-1-sc-8-getting_started_franchises-i">View all articles</a></li>									</ul>
+								</div>
+								
+								<div>
+																			<a href="/r-subCat-m-1-sc-9-getting_started_home_business-i" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-subCat-m-1-sc-9-getting_started_home_business-i" style="color:#000000">Home Business</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113825-m-1-sc-9-family_support_is_paramount-i">Family Support is Paramount</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113761-m-1-sc-9-what_have_you_done_today_to_feel_proud-i">What Have You Done Today to Feel Proud?</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113686-m-1-sc-9-schools_inonline-i">School's In--Online</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113598-m-1-sc-9-you_can_achieve_organizational_bliss-i">You Can Achieve Organizational Bliss</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113573-m-1-sc-9-mama_needs_to_get_out_of_the_home_office-i">Mama Needs To Get Out of the Home Office</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-subCat-m-1-sc-9-getting_started_home_business-i">View all articles</a></li>									</ul>
+								</div>
+								
+								<div>
+																			<a href="/r-subCat-m-1-sc-10-getting_started_finance-i" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-subCat-m-1-sc-10-getting_started_finance-i" style="color:#000000">Finance</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113863-m-1-sc-10-financial_building_blocks-i">Financial Building Blocks</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113772-m-1-sc-10-3_sources_of_franchise_financing-i">3 Sources of Franchise Financing</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113647-m-1-sc-10-3_honest_ways_to_raise_startup_money-i">3 Honest Ways to Raise Startup Money</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113620-m-1-sc-10-think_fast-i">Think Fast</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-article-a-113556-m-1-sc-10-get_your_moneys_worth-i">Get Your Money's Worth</a></li><li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-subCat-m-1-sc-10-getting_started_finance-i">View all articles</a></li>									</ul>
+								</div>
+								
+								<div>
+										
+											<a href="/r-video" style="color:#000000"><img src="http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/gr/bmc_or_arw_1.gif" alt="" border="0" style="margin-right:5px; vertical-align:top" /></a> <span class="subCatListHead"><a href="/r-video" style="color:#000000">Real Entrepreneurs, Real Inspiration</a></span>
+																	</div>
+								<div style="padding-left:23px; margin-bottom:10px">
+									<ul style="margin:5px 0 0 13px; padding-left:0; list-style: none;">
+									<li style="list-style: none; margin: 0 0 0 -12px; padding: 0 0 0 7px; background-image: url(http://us.i1.yimg.com/us.yimg.com/i/us/smbiz/el/blt_blk_sq_1.gif); background-repeat: no-repeat; background-position: 0 .5em;"><a href="/r-video">Watch our videos of real-life business success stories.</a></li>									</ul>
+								</div>
+									</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div id="footer" class="link1">
+		<hr size='1' width="750">
+			<p>Copyright &copy;2009 Yahoo! Inc. All rights reserved</p>
+		<ul class="footerLegal">
+			<li class="footerLegal"><a href='http://us.rd.yahoo.com/smallbusiness/footers/main/privacy/*http://privacy.yahoo.com/privacy/us/'>Privacy Policy</a></li> 
+			<li class="footerLegal">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/copyright/*http://docs.yahoo.com/info/copyright/copyright.html'>Copyright Policy</a> </li>
+			<li class="footerLegal">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/terms/*http://smallbusiness.yahoo.com/tos/tos.php'>Terms of Service</a> </li>
+			<li class="footerLegal">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/help/*http://help.yahoo.com/help/sbiz/'>Help</a></li>
+			<li class="footerLegal">- <a href='http://smallbusiness.yahoo.com/contactus'>Contact Us</a></li>
+			<li class="footerLegal">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/affiliate/*http://smallbusiness.yahoo.com/webhosting/affiliate.php'>Affiliate Program</a></li>
+			<li class="footerLegal">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/partners/*http://smallbusiness.yahoo.com/about/partners.php'>Partners</a></li>
+		</ul>
+		<ul class="footerSBS">
+			<li class="footerSBS"><a href='http://us.rd.yahoo.com/smallbusiness/footers/main/websitetemplates/*http://smallbusiness.yahoo.com/domains/namesearch.php'>Domain Name Search</a></li> 
+			<li class="footerSBS">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/websitetemplates/*http://smallbusiness.yahoo.com/webhosting/websitetemplates.php'>Website Templates</a> </li>
+			<li class="footerSBS">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/websitetemplates/*http://smallbusiness.yahoo.com/webhosting/websitehosting.php'>Web Site Hosting</a> </li>
+			<li class="footerSBS">- <a href='http://us.rd.yahoo.com/smallbusiness/footers/main/sitemap/*http://smallbusiness.yahoo.com/sitemap.php'>Site Map</a></li>
+		</ul>
+	</div>
+		</div>
+	</div>
+	<!-- BEACON START -->
+	<script type="text/javascript">
+		var r 			  = Math.random();
+		var id			  = "";
+		var sBeaconUrl	  = "http://pclick.internal.yahoo.com/p/s="+ id +"/lng=us/rand="+ r;
+        (new Image()).src = sBeaconUrl;
+	</script>
+	<!-- BEACON END -->
+    	
+<!-- spaceId: 97252158 -->
+<!-- beaconId:  -->
+</body>
+</html><!-- sbr01.sbs.re4.yahoo.com compressed/chunked Fri Jan  9 09:16:00 PST 2009 -->
+
+

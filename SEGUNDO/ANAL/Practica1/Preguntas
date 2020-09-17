@@ -1,0 +1,35 @@
+Pregunta 1:
+    El alet_num se basa en generar un número aleatorio el cual dividiremos
+    entre la diferencia del límite superior con el inferiror +1, y el resto
+    de esta división se la sumaremos al límite inferior con esto nos aseguramos de obtener
+    un número aleatorio entre los 2 límites
+    Ejemplo:
+        La función rand() nos devuelve 1525.
+        Hay que generar un número aleatorio entre 15 y 25
+            25-15+1 = 11
+            1525%11 = 7
+            15 + 7 = 22
+        El número aleatorio que hemos generado es 22.
+    
+    El método alternativo en el que hemos pensado
+    
+    
+Pregunta 2:
+    El alg BubbleSort realiza comparaciones recursivamente dejando en cada buble el elemento mas grande ordenado de tal manera que en el siguiente bucle tendrá que realizar una comparación menos
+    Ejemplo:
+        Elementos       nºcomparaciones
+        1 4 3 2         1 (Compara el elemento 1 con el siguiente, al ver que el siguiente es mayor, termina)
+        1 3 2 4         3 (compara el elemento 4 con el siguiente, al ver que es mayor, los cambia, y asi hasta que encuentre un múmero mayor que el 4, que no hay, por lo que se posiciona al final)
+        1 2 3 4         2 (compara el elemento 3 con el siguiente, lo intecambia, y lo compara con el 4, como es menor, termina)
+        1 2 3 4         1 (compara el elemento 2 con el siguiente, como es menor, termina)
+        
+    Este es el motivo por lo que este algorítmo ordena bien
+    
+
+Pregunta 3:
+    El bucle externo no actua sobre el primer elemento porque este es el mas pequeño, y este algoritmo empieza a ordenar desde el final, colocando el elemento mas grande el último, por lo que cuando va comprobar que el primer elemento no está ordenado, no es necesario, ya que es la última comparación restante y el resto de números ya están ordenados (ESTOOOOO NO SE SI VA ASÍ SABES LK)
+    
+pregunta 4:
+    La ob del BubbleSort es la operación de comparación if(tabla[j]>tabla[j+1])
+    
+pregunta 5:
