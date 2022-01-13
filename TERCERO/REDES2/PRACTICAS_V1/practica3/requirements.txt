@@ -4,7 +4,7 @@ chardet==3.0.4
 idna==2.9
 numpy==1.18.3
 opencv-python==4.2.0.34
-Pillow==7.1.1
+Pillow==9.0.0
 pkg-resources==0.0.0
 pycryptodome==3.9.7
 requests==2.23.0
